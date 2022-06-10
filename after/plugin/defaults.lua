@@ -1,11 +1,11 @@
-local g = vim.g
+local v = vim.opt
 
-g.hlsearch = true --Set highlight on search
-g.number = true --Make line numbers default
-g.breakindent = true --Enable break indent
-g.ignorecase = true --Case insensitive searching unless /C or capital in search
-g.updatetime = 250 --Decrease update time
-g.shiftwidth = 4
-g.tabstop = 4
-g.softtabstop = 4
-g.textwidth = 120
+v.hlsearch = true --Set highlight on search
+v.number = true --Make line numbers default
+v.breakindent = true --Enable break indent
+v.ignorecase = true --Case insensitive searching unless /C or capital in search
+v.updatetime = 250 --Decrease update time
+v.shiftwidth = 4
+v.tabstop = 4
+v.softtabstop = 4
+v.textwidth = 120
