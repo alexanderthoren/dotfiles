@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/bin/sh
 
 ssh-keygen -t ed25519 -C "$1"
 
