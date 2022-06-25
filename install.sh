@@ -1,7 +1,5 @@
 #!/bin/sh
 
-echo "Setting up..."
-
 if [ "$(uname)" == "Darwin" ]; then
 	source ./macos/install.sh
 #elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
