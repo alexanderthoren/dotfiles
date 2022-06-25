@@ -13,6 +13,17 @@ echo "  AddKeysToAgent yes" >> ~/.ssh/config
 echo "  UseKeychain yes" >> ~/.ssh/config
 echo "  IdentityFile ~/.ssh/id_ed25519" >> ~/.ssh/config
 
-ssh-add -K ~/.ssh/id_ed25519
+if [ "$(uname)" == "Darwin" ]; then
+	ssh-add -K ~/.ssh/id_ed25519
+	pbcopy < ~/.ssh/id_ed25519.pub
+elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+	ssh-add ~/.ssh/id_ed25519
+	pbcopy < ~/.ssh/id_ed25519.pub
+elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
+	ssh-add ~/.ssh/id_ed25519
+	clip < ~/.ssh/id_ed25519.pub
+elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
+	ssh-add ~/.ssh/id_ed25519
+	clip < ~/.ssh/id_ed25519.pub
+fi
 
-pbcopy < ~/.ssh/id_ed25519.pub
