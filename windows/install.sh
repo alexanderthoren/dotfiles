@@ -2,6 +2,9 @@
 
 echo "Setting up MINGW64_NT"
 
+# Install dependencies with choco
+choco install neovim
+
 # Destination path
 NVIM_PATH=$HOME/AppData/Local/nvim
 
