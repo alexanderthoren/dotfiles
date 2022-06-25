@@ -9,6 +9,7 @@ rm ~/.ssh/config
 touch ~/.ssh/config
 
 echo "Host *" >> ~/.ssh/config
+echo "  IgnoreUnknown AddKeysToAgent,UseKeychain" >> ~/.ssh/config
 echo "  AddKeysToAgent yes" >> ~/.ssh/config
 echo "  UseKeychain yes" >> ~/.ssh/config
 echo "  IdentityFile ~/.ssh/id_ed25519" >> ~/.ssh/config
