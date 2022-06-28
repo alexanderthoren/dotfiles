@@ -28,9 +28,8 @@ mas upgrade
 
 # Copy files to different folders
 echo "Copying files to $HOME"
-echo "$(ls ./)"
-cp -f ../.files/.p10k.zsh $HOME
-cp -f ../.files/.zshrc $HOME
+cp -f .files/.p10k.zsh $HOME
+cp -f .files/.zshrc $HOME
 
 # Neovim config
 NVIM_PATH=$HOME/.config
@@ -45,4 +44,4 @@ rm -rf $NVIM_PATH/nvim
 # Add new folders and files
 echo "Creating Neovim folder"
 mkdir -p $NVIM_PATH/nvim
-cp -rf ../nvim $NVIM_PATH
+cp -rf nvim $NVIM_PATH
