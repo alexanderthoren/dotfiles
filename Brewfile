@@ -26,6 +26,7 @@ brew 'romkatv/powerlevel10k/powerlevel10k'
 
 # Install Casks
 cask 'iterm2'
+cask 'proxyman'
 
 # Install Fonts
 cask 'font-meslo-lg-nerd-font'
