@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 if [[ "$OSTYPE" == "darwin"* ]]; then
 	source ./macos/install.sh
 else

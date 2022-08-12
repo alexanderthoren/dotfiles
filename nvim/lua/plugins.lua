@@ -34,11 +34,6 @@ function M.setup()
 
 	-- Plugins
 	local function plugins(use)
-		
-		-- Load lua path
-		local lua_path = function(name)
-			return string.format("require'config.%s'", name)
-		end
 
 		-- Packer
 		use { "wbthomason/packer.nvim" }
@@ -50,14 +45,6 @@ function M.setup()
 				vim.cmd "colorscheme sonokai"
 			end,
 		}
-
-		-- Tree explorer
-		use {
-			"kyazdani42/nvim-tree.lua",
-			requires = "kyazdani42/nvim-web-devicons", -- optional, for file icon
-			config = lua_path"nvimtree"
-		}
-
 
 		if packer_bootstrap then
 			print "Restart Neovim required after installation!"
