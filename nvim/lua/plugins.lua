@@ -33,7 +33,7 @@ end
 local function plugins(use)
 
 	-- Packer
-	use { 'wbthomason/packer.nvim' }
+	use 'wbthomason/packer.nvim'
 
 	-- Colorscheme
 	use {
@@ -42,6 +42,9 @@ local function plugins(use)
 			vim.cmd 'colorscheme sonokai'
 		end,
 	}
+
+	-- Statusline
+	use 'nvim-lualine/lualine.nvim'
 
 	if packer_bootstrap then
 		print 'Restart Neovim required after installation!'
