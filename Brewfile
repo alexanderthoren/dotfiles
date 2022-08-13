@@ -31,3 +31,6 @@ cask 'stats'
 
 # Install Fonts
 cask 'font-meslo-lg-nerd-font'
+
+# LSPs
+brew 'lua-language-server'

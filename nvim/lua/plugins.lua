@@ -46,6 +46,9 @@ local function plugins(use)
 	-- Statusline
 	use 'nvim-lualine/lualine.nvim'
 
+	-- Neovim LSP
+	use 'neovim/nvim-lspconfig'
+
 	if packer_bootstrap then
 		print 'Restart Neovim required after installation!'
 		require('packer').sync()
