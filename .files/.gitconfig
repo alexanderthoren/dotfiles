@@ -1,3 +1,7 @@
+[user]
+	email = 
+	name = 
+
 [core]
 	editor = nvim
 	ignorecase = false

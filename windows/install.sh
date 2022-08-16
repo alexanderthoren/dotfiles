@@ -16,4 +16,4 @@ rm -rf $HOME/AppData/Local/nvim-data/site
 cp -rf ./nvim $NVIM_PATH
 cp -rf .files/.gitconfig $HOME
 
-wsl --install
+# wsl --install

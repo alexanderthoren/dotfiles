@@ -30,6 +30,7 @@ mas upgrade
 echo "Copying files to $HOME"
 cp -f .files/.p10k.zsh $HOME
 cp -f .files/.zshrc $HOME
+cp -f .files/.gitconfig $HOME
 
 # Neovim config
 NVIM_PATH=$HOME/.config
