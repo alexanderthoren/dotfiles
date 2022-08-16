@@ -15,3 +15,5 @@ rm -rf $HOME/AppData/Local/nvim-data/site
 # Copy nvim directory to destination path
 cp -rf ./nvim $NVIM_PATH
 cp -rf .files/.gitconfig $HOME
+
+wsl --install
