@@ -1,0 +1,14 @@
+[core]
+	editor = nvim
+	ignorecase = false
+
+[diff]
+	tool = nvimdiff
+
+[difftool "nvimdiff"]
+	cmd = nvim -d \"$LOCAL\" \"$REMOTE\"
+	path = 
+
+[mergetool "nvimdiff"]
+	cmd = nvim -d \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
