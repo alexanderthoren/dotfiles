@@ -1,9 +1,9 @@
 #!/bin/sh
 
-echo "Setting up MINGW64_NT"
+echo "Setting up WIN32"
 
-echo "Installing choco dependencies"
-# Install dependencies with choco
+echo "Installing dependencies"
+# Install dependencies
 choco install microsoft-windows-terminal
 choco install neovim
 choco install postman
