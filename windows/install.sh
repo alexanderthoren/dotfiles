@@ -6,6 +6,7 @@ echo "Installing choco dependencies"
 # Install dependencies with choco
 choco install microsoft-windows-terminal
 choco install neovim
+choco install postman
 
 echo "Copying files"
 # Destination path
