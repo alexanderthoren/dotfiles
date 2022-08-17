@@ -2,9 +2,12 @@
 
 echo "Setting up MINGW64_NT"
 
+echo "Installing choco dependencies"
 # Install dependencies with choco
+choco install microsoft-windows-terminal
 choco install neovim
 
+echo "Copying files"
 # Destination path
 NVIM_PATH=$HOME/AppData/Local/nvim
 
@@ -16,4 +19,5 @@ rm -rf $HOME/AppData/Local/nvim-data/site
 cp -rf ./nvim $NVIM_PATH
 cp -rf .files/.gitconfig $HOME
 
-# wsl --install
+echo "Instaling Windows Subsystem for Linux"
+wsl --install
