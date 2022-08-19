@@ -18,18 +18,18 @@ brew update
 echo "Upgrading Homebrew"
 brew upgrade
 
-# Install all our dependencies with bundle (See Brewfile)
+# Install all dependencies with Bundle
 echo "Installing dependencies"
 brew tap homebrew/bundle
-brew bundle
+brew bundle --file macos/Brewfile
 
 # Updated Mac App Store applications
 mas upgrade
 
 # Copy files to different folders
 echo "Copying files to $HOME"
-cp -f .files/.p10k.zsh $HOME
-cp -f .files/.zshrc $HOME
+cp -f macos/.p10k.zsh $HOME
+cp -f macos/.zshrc $HOME
 cp -f .files/.gitconfig $HOME
 
 # Neovim config

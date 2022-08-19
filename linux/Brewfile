@@ -1,0 +1,22 @@
+# Taps
+tap 'homebrew/core'
+tap 'homebrew/bundle'
+tap 'romkatv/powerlevel10k'
+
+# Install ZSH
+brew 'zsh-completions'
+
+# Required for powerlevel10k
+brew 'gcc'
+brew 'make'
+
+# Install Binaries
+brew 'git'
+brew 'neovim'
+brew 'romkatv/powerlevel10k/powerlevel10k'
+
+# Install Fonts
+cask 'font-meslo-lg-nerd-font'
+
+# LSPs
+brew 'lua-language-server'
