@@ -15,20 +15,19 @@ source $(brew --prefix powerlevel10k)/powerlevel10k.zsh-theme
 # git
 # simple
 alias ga="git add ."
+alias gap="ga; gc; gp"
 alias gb="git branch"
+alias gbd="git branch -d"
 alias gc="git commit"
+alias gcb="git checkout -b"
+alias gcc="git checkout"
 alias gcf="git clean -f"
 alias gd="git diff"
 alias gf="git fetch"
-alias gp="git push"
-alias gr="git restore $1"
+alias gps="git push"
+alias gpl="git pull"
+alias gr="git restore"
 alias grc="git restore --staged .; git restore .; git clean -f"
-alias grs="git restore --staged $1"
+alias grs="git restore --staged"
 alias gs="git status"
-
-# compose
-function gap() {
-	ga
-	gc
-	gp
-}
+alias gu="gf; gpl"
