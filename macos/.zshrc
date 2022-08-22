@@ -15,7 +15,7 @@ source $(brew --prefix powerlevel10k)/powerlevel10k.zsh-theme
 # git
 # simple
 alias ga="git add ."
-alias gap="ga; gc; gp"
+alias gap="ga; gc; gps"
 alias gb="git branch"
 alias gbd="git branch -d"
 alias gc="git commit"
