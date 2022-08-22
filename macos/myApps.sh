@@ -12,6 +12,7 @@ mas install 409203825 #Numbers
 mas install 409201541 #Pages
 mas install 497799835 #Xcode
 mas install 1440147259 #AdGuard for Safari
+mas install 1480933944 #Vim for Safari (Vimari) 
 
 #Upgrade Mac App Store apps
 echo 'Upgrading apps'
