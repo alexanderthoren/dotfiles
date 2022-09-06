@@ -14,7 +14,7 @@ source $(brew --prefix powerlevel10k)/powerlevel10k.zsh-theme
 
 # system
 alias ll="ls -la"
-alias lss="du -hs * | sort -h"
+alias lss="du -hs * | sort -hr"
 
 # git
 alias ga="git add ."
