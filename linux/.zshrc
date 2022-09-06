@@ -12,8 +12,11 @@ source $(brew --prefix powerlevel10k)/powerlevel10k.zsh-theme
 
 # ALIAS
 
+# system
+alias ll="ls -la"
+alias lss="du -hs * | sort -h"
+
 # git
-# simple
 alias ga="git add ."
 alias gap="ga; gc; gps"
 alias gb="git branch"
@@ -31,3 +34,8 @@ alias grc="git restore --staged .; git restore .; git clean -f"
 alias grs="git restore --staged"
 alias gs="git status"
 alias gu="gf; gpl"
+
+# Enable vi mode
+bindkey -v
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -22,6 +22,7 @@ brew 'gh'
 brew 'git'
 brew 'mas'
 brew 'neovim'
+brew 'fzf'
 brew 'romkatv/powerlevel10k/powerlevel10k'
 
 # Install Casks

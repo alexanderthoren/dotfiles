@@ -13,6 +13,7 @@ brew 'make'
 # Install Binaries
 brew 'git'
 brew 'neovim'
+brew 'fzf'
 brew 'romkatv/powerlevel10k/powerlevel10k'
 
 # Install Fonts
