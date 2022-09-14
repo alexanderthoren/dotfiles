@@ -37,7 +37,7 @@ brew bundle --file linux/Brewfile
 # Copy files to different folders
 echo "Copying files to $HOME"
 cp -f linux/.p10k.zsh $HOME
-cp -f linux/.zshrc $HOME
+cp -f .files/.zshrc $HOME
 cp -f .files/.gitconfig $HOME
 
 # Destination path

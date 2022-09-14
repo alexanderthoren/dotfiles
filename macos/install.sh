@@ -26,7 +26,7 @@ brew bundle --file macos/Brewfile
 # Copy files to different folders
 echo "Copying files to $HOME"
 cp -f macos/.p10k.zsh $HOME
-cp -f macos/.zshrc $HOME
+cp -f .files/.zshrc $HOME
 cp -f .files/.gitconfig $HOME
 
 # Neovim config

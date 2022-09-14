@@ -17,8 +17,9 @@ alias ll="ls -la"
 alias lss="du -hs * | sort -hr"
 
 # git
-alias ga="git add ."
-alias gap="ga; gc; gps"
+alias ga="git add"
+alias gaa="git add ."
+alias gap="git add .; git commit; git push"
 alias gb="git branch"
 alias gbd="git branch -d"
 alias gc="git commit"
@@ -26,16 +27,23 @@ alias gcb="git checkout -b"
 alias gcc="git checkout"
 alias gcf="git clean -f"
 alias gd="git diff"
+alias gd-1="git diff head~1"
 alias gf="git fetch"
+alias gl="git log"
 alias gps="git push"
 alias gpl="git pull"
-alias gr="git restore"
+alias grb="git rebase"
+alias grba="git rebase --abort"
+alias grbc="git rebase --continue"
+alias grbi="git rebase -i"
+alias gre="git restore"
 alias grc="git restore --staged .; git restore .; git clean -f"
 alias grs="git restore --staged"
 alias gs="git status"
-alias gu="gf; gpl"
+alias gu="git fetch; git pull"
 
 # Enable vi mode
 bindkey -v
 
+# To customize FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
