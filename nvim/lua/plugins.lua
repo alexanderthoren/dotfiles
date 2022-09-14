@@ -46,8 +46,11 @@ local function plugins(use)
 	-- Statusline
 	use 'nvim-lualine/lualine.nvim'
 
-	-- Neovim LSP
+	-- LSP
 	use 'neovim/nvim-lspconfig'
+
+	-- LSP-Installer
+	use 'williamboman/nvim-lsp-installer'
 
 	-- Markdown preview
 	use {
