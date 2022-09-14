@@ -49,6 +49,14 @@ local function plugins(use)
 	-- Neovim LSP
 	use 'neovim/nvim-lspconfig'
 
+	-- Markdown preview
+	use {
+		'iamcco/markdown-preview.nvim',
+		run = function()
+			vim.fn['mkdp#util#install']()
+		end,
+	}
+
 	if packer_bootstrap then
 		print 'Restart Neovim required after installation!'
 		require('packer').sync()
