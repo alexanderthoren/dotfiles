@@ -23,9 +23,6 @@ echo "Installing dependencies"
 brew tap homebrew/bundle
 brew bundle --file macos/Brewfile
 
-# Updated Mac App Store applications
-mas upgrade
-
 # Copy files to different folders
 echo "Copying files to $HOME"
 cp -f macos/.p10k.zsh $HOME
