@@ -18,6 +18,3 @@ brew 'romkatv/powerlevel10k/powerlevel10k'
 
 # Install Fonts
 cask 'font-meslo-lg-nerd-font'
-
-# LSPs
-brew 'lua-language-server'

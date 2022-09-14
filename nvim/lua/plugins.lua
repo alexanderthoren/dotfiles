@@ -60,6 +60,9 @@ local function plugins(use)
 		end,
 	}
 
+	-- WhichKey
+	use 'folke/which-key.nvim'
+
 	if packer_bootstrap then
 		print 'Restart Neovim required after installation!'
 		require('packer').sync()
