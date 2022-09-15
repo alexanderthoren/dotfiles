@@ -15,6 +15,7 @@ source $(brew --prefix powerlevel10k)/powerlevel10k.zsh-theme
 # system
 alias ll="ls -la"
 alias lss="du -hs * | sort -hr"
+alias rdd="rm -rf ~/Library/Developer/Xcode/DerivedData"
 
 # git
 alias ga="git add"
