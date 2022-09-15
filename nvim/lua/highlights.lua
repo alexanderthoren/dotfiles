@@ -1,4 +1,6 @@
-vim.opt.cursorline = true
-vim.opt.wildoptions = 'pum'
-vim.opt.pumblend = 5
-vim.opt.background = 'dark'
+local v = vim.opt
+
+v.cursorline = true
+v.wildoptions = 'pum'
+v.pumblend = 5
+v.background = 'dark'

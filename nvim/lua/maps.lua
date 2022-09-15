@@ -2,8 +2,17 @@ local keymap = vim.keymap
 
 local default_opts = { noremap = true, silent = true }
 
+vim.g.mapleader = ';'
+
+-- Leader maps 
+keymap.set('n', '<leader>e', '<cmd>NvimTreeToggle<cr>')
+keymap.set('n', '<leader>l', '<cmd>LspInstallInfo<cr>')
+
 -- Do not yank with x
 keymap.set('n', 'x', '"_x')
+
+-- Duplicate line
+keymap.set('n', 'yp', 'yyp')
 
 -- Increment/Decrement
 keymap.set('n', '+', '<C-a>', default_opts)

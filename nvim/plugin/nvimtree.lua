@@ -20,5 +20,9 @@ tree.setup {
 	open_on_setup = true,
 	open_on_setup_file = true,
 	remove_keymaps = {'s'},
-	on_attach = 'disabled'
+	on_attach = 'disabled',
+	view = {
+		side = "left",
+		width = 20,
+	}
 }
