@@ -10,3 +10,5 @@ v.tabstop = 4
 v.softtabstop = 4
 v.textwidth = 120
 v.timeoutlen = 500 -- Time in ms to wait for a mapped sequence to complete
+
+vim.g.mkdp_auto_start = 1
