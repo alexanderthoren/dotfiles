@@ -63,6 +63,14 @@ local function plugins(use)
 	-- WhichKey
 	use 'folke/which-key.nvim'
 
+	-- Tree
+	use {
+		'kyazdani42/nvim-tree.lua',
+		requires = {
+			'kyazdani42/nvim-web-devicons', -- optional, for file icons
+		},
+	}
+
 	if packer_bootstrap then
 		print 'Restart Neovim required after installation!'
 		require('packer').sync()

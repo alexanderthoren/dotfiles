@@ -20,7 +20,7 @@ lualine.setup {
 		lualine_x = {
 			{ 'diagnostics',
 				sources = { "nvim_diagnostic" },
-				symbols = { error = ' ', warn = ' ', info = ' ',hint = ' ' } 
+				symbols = { error = ' ', warn = ' ', info = ' ',hint = ' ' }
 			},
       'encoding',
       'filetype'
