@@ -80,6 +80,12 @@ local function plugins(use)
 		}
 	}
 
+	-- Telescope-fzf-native
+	use {
+		'nvim-telescope/telescope-fzf-native.nvim',
+		run = 'make'
+	}
+
 	if packer_bootstrap then
 		print 'Restart Neovim required after installation!'
 		require('packer').sync()

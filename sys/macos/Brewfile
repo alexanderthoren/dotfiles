@@ -15,6 +15,7 @@ brew 'coreutils'
 brew 'git'
 brew 'neovim'
 brew 'fzf'
+brew 'ripgrep'
 brew 'romkatv/powerlevel10k/powerlevel10k'
 
 # Install Casks
