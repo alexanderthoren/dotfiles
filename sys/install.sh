@@ -40,7 +40,7 @@ else
 fi
 
 # Copying files to home
-cp -f sys/linux/.p10k.zsh $HOME
+cp -f sys/.files/.p10k.zsh $HOME
 cp -f sys/.files/.zshrc $HOME
 cp -f sys/.files/.gitconfig $HOME
 
