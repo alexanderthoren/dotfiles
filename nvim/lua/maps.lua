@@ -8,6 +8,7 @@ vim.g.mapleader = ';'
 keymap.set('n', '<leader>q', '<cmd>qall<cr>')
 keymap.set('n', '<leader>e', '<cmd>NvimTreeToggle<cr>')
 keymap.set('n', '<leader>l', '<cmd>LspInstallInfo<cr>')
+keymap.set('n', '<leader>f', '<cmd>Telescope find_files<cr>')
 
 -- Do not yank with x
 keymap.set('n', 'x', '"_x')
