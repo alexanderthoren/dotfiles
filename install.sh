@@ -1,20 +1,15 @@
 #!/bin/sh
 
-if [[ "$OSTYPE" == "darwin"* ]]; then
-	echo "Found darwin"
-	source ./macos/install.sh
+ostype=$OSTYPE
+
+if [[ $ostype == "darwin"* ]]; then
+	source sys/install.sh true
 fi
 
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-	echo "Found linux-gnu"
-	source ./linux/install.sh
+if [[ $ostype == "linux-gnu"* ]]; then
+	source sys/install.sh false
 fi
 
 if [[ "$OSTYPE" == "win32" ]]; then
-	echo "Found win32"
-	source ./windows/install.sh
+	source sys/windows/install.sh
 fi
-
-# Close the terminal
-echo "Installation completed!"
-#exit
