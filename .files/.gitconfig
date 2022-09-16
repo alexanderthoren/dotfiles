@@ -6,8 +6,14 @@
 	editor = nvim
 	ignorecase = false
 
+[difftool]
+	prompt = false
+
 [diff]
 	tool = nvimdiff
+
+[mergetool]
+	prompt = false
 
 [merge]
 	tool = nvimdiff2
