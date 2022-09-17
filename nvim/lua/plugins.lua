@@ -86,6 +86,14 @@ local function plugins(use)
 		run = 'make'
 	}
 
+	-- Treesitter
+	use {
+		'nvim-treesitter/nvim-treesitter',
+		run = function()
+			require('nvim-treesitter.install').update({ with_sync = true })
+		end,
+	}
+
 	if packer_bootstrap then
 		print 'Restart Neovim required after installation!'
 		require('packer').sync()

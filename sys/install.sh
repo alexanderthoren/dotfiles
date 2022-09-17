@@ -64,6 +64,7 @@ biq 'neovim'
 biq 'fzf'
 biq 'ripgrep'
 biq 'powerlevel10k'
+biq 'node'
 
 # Fonts
 biq 'font-meslo-lg-nerd-font'

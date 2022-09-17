@@ -37,3 +37,6 @@ nvim_lsp.marksman.setup {}
 
 -- SourceKit
 nvim_lsp.sourcekit.setup {}
+
+-- Bashls
+nvim_lsp.bashls.setup {}
