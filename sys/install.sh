@@ -28,7 +28,7 @@ if [[ $(command -v brew) == "" ]]; then
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 	# If linux, configure linuxbrew
-	if [ ! $darwin]; then
+	if [ ! $darwin ]; then
 		echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/alexanderthoren/.zprofile
 		eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 	fi
@@ -65,6 +65,7 @@ biq 'fzf'
 biq 'ripgrep'
 biq 'powerlevel10k'
 biq 'node'
+biq 'shellcheck'
 
 # Fonts
 biq 'font-meslo-lg-nerd-font'
