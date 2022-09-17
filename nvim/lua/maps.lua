@@ -24,6 +24,10 @@ keymap.set('n', '-', '<C-x>', default_opts)
 keymap.set('n', 'n', 'nzz', default_opts)
 keymap.set('n', 'N', 'Nzz', default_opts)
 
+-- Center file navigation
+keymap.set('n', '<C-d>', '<C-d>zz', default_opts)
+keymap.set('n', '<C-u>', '<C-u>zz', default_opts)
+
 -- Select all file
 keymap.set('n', '<C-a>', 'gg<S-v>G', default_opts)
 
