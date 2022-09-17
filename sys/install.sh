@@ -2,6 +2,14 @@
 
 darwin=$1
 
+# Copying files to home
+cp -f sys/.files/.p10k.zsh $HOME
+cp -f sys/.files/.zshrc $HOME
+cp -f sys/.files/.gitconfig $HOME
+
+# Source home files
+source $HOME/.zshrc
+
 # If linux:
 #	- apt-get update and upgrade
 #	- install gcc and zsh
@@ -27,22 +35,39 @@ if [[ $(command -v brew) == "" ]]; then
 fi
 
 # Update and upgrade Homebrew
-brew update
-brew upgrade
+buu
 
-# Install all dependencies with Bundle
-brew tap homebrew/bundle
+# Brew dependencies
+bt 'homebrew/core'
+bt 'romkatv/powerlevel10k'
 
 if [ $darwin ]; then
-	brew bundle --file sys/macos/Brewfile
+	bt 'homebrew/cask'
+	bt 'homebrew/cask-fonts'
+
+	# Binaries
+	biq 'coreutils'
+
+	# Casks
+	biq 'iterm2'
+	biq 'proxyman'
+	biq 'stats'
+
 else
-	brew bundle --file sys/linux/Brewfile
+	# Binaries
+	biq 'make'
 fi
 
-# Copying files to home
-cp -f sys/.files/.p10k.zsh $HOME
-cp -f sys/.files/.zshrc $HOME
-cp -f sys/.files/.gitconfig $HOME
+# Binaries
+biq 'git'
+biq 'neovim'
+biq 'fzf'
+biq 'ripgrep'
+biq 'powerlevel10k'
+
+# Fonts
+biq 'font-meslo-lg-nerd-font'
+
 
 # Nvim destination path
 NVIM_PATH=$HOME/.config

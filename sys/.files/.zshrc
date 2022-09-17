@@ -17,6 +17,11 @@ alias ll="ls -la"
 alias lss="du -hs * | sort -hr"
 alias rdd="rm -rf ~/Library/Developer/Xcode/DerivedData"
 
+# brew
+alias biq="brew install -q"
+alias buu="brew update -q; brew upgrade -q"
+alias bt="brew tap -q"
+
 # git
 alias ga="git add"
 alias gaa="git add ."
