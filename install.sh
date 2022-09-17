@@ -1,13 +1,11 @@
 #!/bin/sh
 
-ostype=$OSTYPE
-
-if [[ $ostype == "darwin"* ]]; then
-	source sys/install.sh true
+if [[ "$OSTYPE" == "darwin"* ]]; then
+	source sys/install.sh 1
 fi
 
-if [[ $ostype == "linux-gnu"* ]]; then
-	source sys/install.sh false
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+	source sys/install.sh 0
 fi
 
 if [[ "$OSTYPE" == "win32" ]]; then
