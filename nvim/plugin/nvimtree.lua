@@ -14,6 +14,9 @@ if (not status) then return end
 --end
 
 tree.setup {
+	open_on_setup = true,
+	open_on_setup_file = true,
+	open_on_tab = true,
 	disable_netrw = true,
 	hijack_netrw = true,
 	sort_by = 'case_sensitive',
@@ -23,6 +26,11 @@ tree.setup {
 	on_attach = 'disabled',
 	view = {
 		side = "left",
-		width = 20,
-	}
+		width = 30,
+		height = 30,
+	},
+	update_focused_file = {
+		enable = true,
+		update_root = false,
+	},
 }

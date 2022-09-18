@@ -2,10 +2,11 @@ local keymap = vim.keymap
 
 local default_opts = { noremap = true, silent = true }
 
-vim.g.mapleader = ';'
+vim.g.mapleader = ' '
 
 -- Leader maps 
 keymap.set('n', '<leader>q', '<cmd>qall<cr>')
+keymap.set('n', '<leader>wq', '<cmd>wa<cr><cmd>qall<cr>')
 keymap.set('n', '<leader>e', '<cmd>NvimTreeToggle<cr>')
 keymap.set('n', '<leader>l', '<cmd>LspInstallInfo<cr>')
 keymap.set('n', '<leader>f', '<cmd>Telescope find_files<cr>')
@@ -37,8 +38,7 @@ keymap.set('n', 'sc', ':close<Return>', default_opts )
 keymap.set('n', 'ss', ':split<Return><C-w>w', default_opts )
 keymap.set('n', 'sv', ':vsplit<Return><C-w>w', default_opts )
 
--- Move windows
-keymap.set('n', '<Space>', '<C-w>w', default_opts)
+-- Move through windows
 keymap.set('', 's<left>', '<C-w>h', default_opts)
 keymap.set('', 's<down>', '<C-w>j', default_opts)
 keymap.set('', 's<up>', '<C-w>k', default_opts)
@@ -47,6 +47,12 @@ keymap.set('', 'sh', '<C-w>h', default_opts)
 keymap.set('', 'sj', '<C-w>j', default_opts)
 keymap.set('', 'sk', '<C-w>k', default_opts)
 keymap.set('', 'sl', '<C-w>l', default_opts)
+
+-- Move windows
+keymap.set('', 'sH', '<C-w>H', default_opts)
+keymap.set('', 'sJ', '<C-w>J', default_opts)
+keymap.set('', 'sK', '<C-w>K', default_opts)
+keymap.set('', 'sL', '<C-w>L', default_opts)
 
 -- Resize window
 keymap.set('n', '<C-w><left>', '<C-w><', default_opts)
