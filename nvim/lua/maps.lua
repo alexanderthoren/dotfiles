@@ -5,11 +5,11 @@ local default_opts = { noremap = true, silent = true }
 vim.g.mapleader = ' '
 
 -- Leader maps 
-keymap.set('n', '<leader>q', '<cmd>qall<cr>')
-keymap.set('n', '<leader>wq', '<cmd>wa<cr><cmd>qall<cr>')
-keymap.set('n', '<leader>e', '<cmd>NvimTreeToggle<cr>')
-keymap.set('n', '<leader>l', '<cmd>LspInstallInfo<cr>')
-keymap.set('n', '<leader>f', '<cmd>Telescope find_files<cr>')
+keymap.set('n', '<leader>q', ':qall<cr>')
+keymap.set('n', '<leader>wq', ':wa<cr>:qall<cr>')
+keymap.set('n', '<leader>e', ':NvimTreeToggle<cr>')
+keymap.set('n', '<leader>l', ':LspInstallInfo<cr>')
+keymap.set('n', '<leader>f', ':Telescope find_files<cr>')
 
 -- Do not yank with x
 keymap.set('n', 'x', '"_x')
@@ -33,10 +33,13 @@ keymap.set('n', '<C-u>', '<C-u>zz', default_opts)
 keymap.set('n', '<C-a>', 'gg<S-v>G', default_opts)
 
 -- Tabs and Splits
-keymap.set('n', 'se', ':tabedit<Return>', default_opts )
 keymap.set('n', 'sc', ':close<Return>', default_opts )
 keymap.set('n', 'ss', ':split<Return><C-w>w', default_opts )
 keymap.set('n', 'sv', ':vsplit<Return><C-w>w', default_opts )
+
+keymap.set('n', 'te', ':tabe<Return>', default_opts )
+keymap.set('n', 'tc', ':tabc<Return>', default_opts )
+keymap.set('n', 'tn', 'gt', default_opts )
 
 -- Move through windows
 keymap.set('', 's<left>', '<C-w>h', default_opts)
