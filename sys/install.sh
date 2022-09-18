@@ -13,7 +13,7 @@ source "$HOME"/.zshrc
 # If linux:
 #	- apt-get update and upgrade
 #	- install gcc and zsh
-if [ "$darwin" = 1 ]; then
+if [ "$darwin" = 0 ]; then
 	sudo apt-get update
 	sudo apt-get upgrade
 
