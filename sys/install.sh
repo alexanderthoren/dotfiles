@@ -4,13 +4,35 @@ darwin=$1
 
 # Copying files to home
 echo "Copying .files"
-cp -f sys/.files/.p10k.zsh "$HOME"
-cp -f sys/.files/.zshrc "$HOME"
+(
+cp -f sys/.files/.p10k.zsh "$HOME" &
+cp -f sys/.files/.zshrc "$HOME" &
 cp -f sys/.files/.gitconfig "$HOME"
+)
 
 # Source home files
 echo "Sourcing home files"
+wait
 source "$HOME"/.zshrc
+
+# Nvim destination path
+echo "Removing old Neovim folders"
+wait
+NVIM_PATH=$HOME/.config
+export NVIM_PATH
+
+# Remove old folders and files
+(
+rm -rf "$HOME"/.cache/nvim &
+rm -rf "$HOME"/.local/share/nvim &
+rm -rf "$NVIM_PATH"/nvim
+)
+
+# Add new folders and files
+echo "Copying new Neovim folders"
+wait
+mkdir -p "$NVIM_PATH"/nvim
+cp -rf nvim "$NVIM_PATH"
 
 # If linux:
 #	- apt-get update and upgrade
@@ -48,19 +70,26 @@ buu
 
 # Brew dependencies
 echo "Tap dependencies"
-bt "homebrew/core"
+(
+bt "homebrew/core" &
 bt "romkatv/powerlevel10k"
+)
 
+wait
 if [ "$darwin" = 1 ]; then
 	echo "Tap Darwin dependencies"
-	bt "homebrew/cask"
+	(
+	bt "homebrew/cask" &
 	bt "homebrew/cask-fonts"
+	)
 
 	# Casks
 	echo "Installing Darwin casks"
-	biq "iterm2"
-	biq "proxyman"
+	(
+	biq "iterm2" &
+	biq "proxyman" &
 	biq "stats"
+	)
 
 	# Fonts
 	echo "Installing Darwin fonts"
@@ -73,25 +102,14 @@ fi
 
 # Binaries
 echo "Installing common binaries"
-biq "coreutils"
-biq "git"
-biq "neovim"
-biq "fzf"
-biq "ripgrep"
-biq "powerlevel10k"
-biq "node"
+wait
+(
+biq "coreutils" &
+biq "git" &
+biq "neovim" &
+biq "fzf" &
+biq "ripgrep" &
+biq "powerlevel10k" &
+biq "node" &
 biq "shellcheck"
-
-# Nvim destination path
-echo "Removing and creating new folders"
-NVIM_PATH=$HOME/.config
-export NVIM_PATH
-
-# Remove old folders and files
-rm -rf "$HOME"/.cache/nvim
-rm -rf "$HOME"/.local/share/nvim
-rm -rf "$NVIM_PATH"/nvim
-
-# Add new folders and files
-mkdir -p "$NVIM_PATH"/nvim
-cp -rf nvim "$NVIM_PATH"
+)
