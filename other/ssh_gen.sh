@@ -27,7 +27,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	cat ~/.ssh/id_ed25519.pub | clip.exe
 fi
 
-if [[ "$OSTYPE" == "win32" ]]; then
+if [[ "$OSTYPE" == "msys" ]]; then
 	ssh-add ~/.ssh/id_ed25519
 	clip < ~/.ssh/id_ed25519.pub
 fi

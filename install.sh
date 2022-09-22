@@ -11,7 +11,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 	source sys/install.sh 0
 fi
 
-if [[ "$OSTYPE" == "win32" ]]; then
+if [[ "$OSTYPE" == "msys" ]]; then
 	source sys/windows/install.sh
 fi
 
