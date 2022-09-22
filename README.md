@@ -41,9 +41,22 @@ Required plugins:
 
 * [**nvim-web-devicons**](https://github.com/kyazdani42/nvim-web-devicons)
 
+#### [plenary](https://github.com/nvim-lua/plenary.nvim)
+
 #### [telescope](https://github.com/nvim-telescope/telescope.nvim)
 
 Required plugins:
 
-* [**plenary**](https://github.com/nvim-lua/plenary.nvim)
+* **Plenary**
 
+#### [telescope-fzf-native](https://github.com/nvim-telescope/telescope-fzf-native.nvim)
+
+#### [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+
+#### [image.nvim](https://github.com/samodostal/image.nvim)
+
+Required plugins:
+
+* **Plenary**
+* [**ascii-image-converter**](https://github.com/TheZoraiz/ascii-image-converter) - This plugin was instaled with
+  Homebrew.

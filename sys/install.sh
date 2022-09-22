@@ -47,7 +47,7 @@ if [ "$darwin" = 0 ]; then
 	sudo apt-get install g++ -y
 	sudo apt-get install zsh -y
 
-	chsh -s "$(which zsh)"
+	sudo chsh -s "$(which zsh)"
 fi
 
 # Install Homebrew if it is not installed
@@ -111,5 +111,6 @@ biq "fzf" &
 biq "ripgrep" &
 biq "powerlevel10k" &
 biq "node" &
-biq "shellcheck"
+biq "shellcheck" &
+biq "TheZoraiz/ascii-image-converter/ascii-image-converter"
 )

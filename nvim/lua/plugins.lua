@@ -71,13 +71,13 @@ local function plugins(use)
 		},
 	}
 
+	-- Plenary
+	use 'nvim-lua/plenary.nvim'
+
 	-- Telescope
 	use {
 		'nvim-telescope/telescope.nvim',
-		tag = '0.1.0',
-		requires = {
-			'nvim-lua/plenary.nvim',
-		}
+		tag = '0.1.0'
 	}
 
 	-- Telescope-fzf-native
@@ -93,6 +93,9 @@ local function plugins(use)
 			require('nvim-treesitter.install').update({ with_sync = true })
 		end,
 	}
+
+	-- Image.nvim
+	use 'samodostal/image.nvim'
 
 	if packer_bootstrap then
 		print 'Restart Neovim required after installation!'
