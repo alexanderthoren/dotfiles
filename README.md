@@ -1,5 +1,9 @@
 # DOTFILES - NEOTHOREN 
 
+[**Here**](https://github.com/rockerBOO/awesome-neovim) you can find an awesome list of plugins.
+
+---
+
 ## [zsh](https://www.zsh.org)
 
 ### Theme
@@ -60,3 +64,18 @@ Required plugins:
 * **Plenary**
 * [**ascii-image-converter**](https://github.com/TheZoraiz/ascii-image-converter) - This plugin was instaled with
   Homebrew.
+
+### Try out
+
+---
+
+* https://github.com/folke/trouble.nvim
+* https://github.com/ray-x/lsp_signature.nvim
+* https://github.com/simrat39/symbols-outline.nvim
+* https://github.com/jose-elias-alvarez/null-ls.nvim
+
+---
+
+* https://github.com/ms-jpq/coq_nvimu
+* https://github.com/hrsh7th/nvim-cmp
+
