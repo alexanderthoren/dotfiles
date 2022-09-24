@@ -120,8 +120,12 @@ Marks:
 
 #### Completion
 
-* https://github.com/hrsh7th/nvim-cmp :star:
-* https://github.com/onsails/lspkind.nvim :star:
+* https://github.com/hrsh7th/nvim-cmp :star::fire:
+* https://github.com/hrsh7th/cmp-nvim-lsp :star::fire:
+* https://github.com/hrsh7th/cmp-buffer :star::fire:
+* https://github.com/hrsh7th/cmp-path :star:
+* https://github.com/hrsh7th/cmp-cmdline :star:
+* https://github.com/onsails/lspkind.nvim :star::fire:
 
 #### Syntax
 
@@ -133,7 +137,8 @@ Marks:
 
 #### Snippets
 
-* https://github.com/L3MON4D3/LuaSnip :star:
+* https://github.com/saadparwaiz1/cmp_luasnip :star::fire:
+* https://github.com/L3MON4D3/LuaSnip :star::fire:
 
 #### Registers
 

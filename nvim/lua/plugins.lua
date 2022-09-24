@@ -52,12 +52,8 @@ local function plugins(use)
 
 	use 'folke/which-key.nvim'
 
-	use {
-		'kyazdani42/nvim-tree.lua',
-		requires = {
-			'kyazdani42/nvim-web-devicons', -- optional, for file icons
-		},
-	}
+	use 'kyazdani42/nvim-web-devicons'
+	use 'kyazdani42/nvim-tree.lua'
 
 	use 'nvim-lua/plenary.nvim'
 
