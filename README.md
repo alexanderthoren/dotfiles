@@ -107,20 +107,18 @@ This plugin need to be updated to https://github.com/williamboman/mason.nvim.
 Marks:
 
 * :star: &rarr; Will be tried first.
-* :ok: &rarr; Already tried.
 * :fire: &rarr; Added to current plugins.
 
 #### LSP
 
-* https://github.com/folke/trouble.nvim :star:
+* https://github.com/folke/trouble.nvim :star::fire:
 * https://github.com/ray-x/lsp_signature.nvim
 * https://github.com/simrat39/symbols-outline.nvim
 * https://github.com/jose-elias-alvarez/null-ls.nvim
 
 #### Completion
 
-* https://github.com/ms-jpq/coq_nvimu
-* https://github.com/hrsh7th/nvim-cmp
+* https://github.com/hrsh7th/nvim-cmp :star:
 
 #### Syntax
 
