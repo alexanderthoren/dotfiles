@@ -46,8 +46,6 @@ if [ "$darwin" = 0 ]; then
 	sudo apt-get install gcc -y
 	sudo apt-get install g++ -y
 	sudo apt-get install zsh -y
-
-	sudo chsh -s "$(which zsh)"
 fi
 
 # Install Homebrew if it is not installed

@@ -28,6 +28,11 @@ My current terminal is [iTerm2](https://github.com/gnachman/iTerm2).
 
 My current shell is [zsh](https://www.zsh.org).
 
+```
+# To set zsh as default shell.
+chsh -s "$(which zsh)"
+```
+
 ### 2.1. Theme
 
 My current theme is [**powerlevel10k**](https://github.com/romkatv/powerlevel10k).
@@ -99,9 +104,15 @@ This plugin need to be updated to https://github.com/williamboman/mason.nvim.
 
 ### 3.3. Try out
 
+Marks:
+
+* :star: &rarr; Will be tried first.
+* :ok: &rarr; Already tried.
+* :fire: &rarr; Added to current plugins.
+
 #### LSP
 
-* https://github.com/folke/trouble.nvim
+* https://github.com/folke/trouble.nvim :star:
 * https://github.com/ray-x/lsp_signature.nvim
 * https://github.com/simrat39/symbols-outline.nvim
 * https://github.com/jose-elias-alvarez/null-ls.nvim
@@ -117,7 +128,7 @@ This plugin need to be updated to https://github.com/williamboman/mason.nvim.
 
 #### Terminal integration
 
-* https://github.com/akinsho/toggleterm.nvim
+* https://github.com/akinsho/toggleterm.nvim :star:
 
 #### Snippets
 
@@ -125,7 +136,7 @@ This plugin need to be updated to https://github.com/williamboman/mason.nvim.
 
 #### Registers
 
-* https://github.com/AckslD/nvim-neoclip.lua
+* https://github.com/AckslD/nvim-neoclip.lua :star:
 
 #### Marks
 
@@ -138,9 +149,9 @@ This plugin need to be updated to https://github.com/williamboman/mason.nvim.
 
 #### Colors
 
-* https://github.com/NvChad/nvim-colorizer.lua
-* https://github.com/sunjon/Shade.nvim
-* https://github.com/folke/twilight.nvim
+* https://github.com/NvChad/nvim-colorizer.lua :star:
+* https://github.com/sunjon/Shade.nvim :star:
+* https://github.com/folke/twilight.nvim :star:
 * https://github.com/folke/zen-mode.nvim
 
 #### Debugging
@@ -155,12 +166,12 @@ This plugin need to be updated to https://github.com/williamboman/mason.nvim.
 
 #### Tabline
 
-* https://github.com/romgrk/barbar.nvim
-* https://github.com/akinsho/bufferline.nvim
+* https://github.com/romgrk/barbar.nvim :star:
+* https://github.com/akinsho/bufferline.nvim :star:
 
 #### Cursorline
 
-* https://github.com/RRethy/vim-illuminate
+* https://github.com/RRethy/vim-illuminate :star:
 
 #### Startup
 
@@ -176,7 +187,7 @@ This plugin need to be updated to https://github.com/williamboman/mason.nvim.
 
 #### Git
 
-* https://github.com/lewis6991/gitsigns.nvim
+* https://github.com/lewis6991/gitsigns.nvim :star:
 * https://github.com/sindrets/diffview.nvim
 
 #### Comment
@@ -190,8 +201,8 @@ This plugin need to be updated to https://github.com/williamboman/mason.nvim.
 
 #### Motion
 
-* https://github.com/phaazon/hop.nvim
-* https://github.com/ggandor/lightspeed.nvim
+* https://github.com/phaazon/hop.nvim :star:
+* https://github.com/ggandor/lightspeed.nvim :star:
 
 #### Code runner
 
@@ -203,22 +214,45 @@ This plugin need to be updated to https://github.com/williamboman/mason.nvim.
 
 #### Scrollbar
 
-* https://github.com/petertriho/nvim-scrollbar
+* https://github.com/petertriho/nvim-scrollbar :star:
 
 #### Scrolling
 
-* https://github.com/karb94/neoscroll.nvim
+* https://github.com/karb94/neoscroll.nvim :star:
 
 #### Browser integration
 
-* https://github.com/glacambre/firenvim
+* https://github.com/glacambre/firenvim :star:
 
 #### Editing support
 
-* https://github.com/windwp/nvim-autopairs
+* https://github.com/windwp/nvim-autopairs :star:
 * https://github.com/Pocco81/true-zen.nvim
-* https://github.com/nvim-treesitter/nvim-treesitter-context
+* https://github.com/wellle/context.vim :star:
 * https://github.com/bennypowers/nvim-regexplainer
 
 #### Formatting
 
+* https://github.com/mhartington/formatter.nvim
+* https://github.com/sbdchd/neoformat
+
+#### Command line
+
+* https://github.com/gelguy/wilder.nvim :star:
+
+#### Session
+
+* https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-sessions.md :star:
+
+#### Testing
+
+* https://github.com/nvim-neotest/neotest
+
+#### Competitive programming
+
+* https://github.com/xeluxee/competitest.nvim
+
+#### Split and window
+
+* https://github.com/sindrets/winshift.nvim :star:
+* https://github.com/beauwilliams/focus.nvim 

@@ -21,6 +21,3 @@ v.textwidth = 120
 -- Whichkey
 v.timeoutlen = 500
 
--- MKDP
-g.mkdp_auto_start = 1
-
