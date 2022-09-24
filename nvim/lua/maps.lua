@@ -5,8 +5,9 @@ local default_opts = { noremap = true, silent = true }
 vim.g.mapleader = ' '
 
 -- Leader maps 
-keymap.set('n', '<leader>q', ':qall<cr>')
-keymap.set('n', '<leader>wq', ':wa<cr>:qall<cr>')
+keymap.set('n', '<leader>q', ':qa<cr>')
+keymap.set('n', '<leader>q!', ':qa!<cr>')
+keymap.set('n', '<leader>wq', ':wa<cr>:qa<cr>')
 keymap.set('n', '<leader>e', ':NvimTreeToggle<cr>')
 keymap.set('n', '<leader>l', ':LspInstallInfo<cr>')
 keymap.set('n', '<leader>f', ':Telescope find_files<cr>')

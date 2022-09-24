@@ -13,6 +13,9 @@ source $(brew --prefix powerlevel10k)/powerlevel10k.zsh-theme
 # ALIAS
 
 # system
+alias f="fzf"
+alias fe="fzf -e"
+alias n="nvim"
 alias ll="ls -la"
 alias lss="du -hs * | sort -hr"
 alias rdd="rm -rf ~/Library/Developer/Xcode/DerivedData"
@@ -32,6 +35,7 @@ alias gc="git commit"
 alias gcb="git checkout -b"
 alias gcc="git checkout"
 alias gcf="git clean -f"
+alias gcl="git clone"
 alias gd="git diff"
 alias gd-1="git diff head~1"
 alias gdrg="git diff head~1 | rg"
