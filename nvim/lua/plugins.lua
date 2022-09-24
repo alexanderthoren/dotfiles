@@ -97,6 +97,9 @@ local function plugins(use)
 	-- Image.nvim
 	use 'samodostal/image.nvim'
 
+	-- Trouble
+	use 'folke/trouble.nvim'
+
 	if packer_bootstrap then
 		print 'Restart Neovim required after installation!'
 		require('packer').sync()
