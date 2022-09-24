@@ -94,6 +94,10 @@ local function plugins(use)
 
 	use 'saadparwaiz1/cmp_luasnip'
 
+	use 'hrsh7th/cmp-path'
+
+	use 'hrsh7th/cmp-cmdline'
+
 	if packer_bootstrap then
 		print 'Restart Neovim required after installation!'
 		require('packer').sync()

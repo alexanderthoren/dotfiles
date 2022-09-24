@@ -123,8 +123,8 @@ Marks:
 * https://github.com/hrsh7th/nvim-cmp :star::fire:
 * https://github.com/hrsh7th/cmp-nvim-lsp :star::fire:
 * https://github.com/hrsh7th/cmp-buffer :star::fire:
-* https://github.com/hrsh7th/cmp-path :star:
-* https://github.com/hrsh7th/cmp-cmdline :star:
+* https://github.com/hrsh7th/cmp-path :star::fire:
+* https://github.com/hrsh7th/cmp-cmdline :star::fire:
 * https://github.com/onsails/lspkind.nvim :star::fire:
 
 #### Syntax
