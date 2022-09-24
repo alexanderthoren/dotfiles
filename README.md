@@ -1,8 +1,8 @@
 # DOTFILES - NEOTHOREN 
 
-* [**Here**](https://github.com/rockerBOO/awesome-neovim) you can find an awesome list of plugins.
+* List of plugins &rarr; [Here](https://github.com/rockerBOO/awesome-neovim).
 
-* [Here](https://github.com/nanotee/nvim-lua-guide) you can finde an awesoma lua-guide.
+* Lua-guide &rarr; [Here](https://github.com/nanotee/nvim-lua-guide).
 
 ---
 
@@ -176,4 +176,49 @@ This plugin need to be updated to https://github.com/williamboman/mason.nvim.
 
 #### Git
 
-* 
+* https://github.com/lewis6991/gitsigns.nvim
+* https://github.com/sindrets/diffview.nvim
+
+#### Comment
+
+* https://github.com/numToStr/Comment.nvim
+* https://github.com/folke/todo-comments.nvim
+
+#### Collaborative editing
+
+* https://github.com/jbyuki/instant.nvim
+
+#### Motion
+
+* https://github.com/phaazon/hop.nvim
+* https://github.com/ggandor/lightspeed.nvim
+
+#### Code runner
+
+* https://github.com/michaelb/sniprun
+
+#### Github
+
+* https://github.com/pwntester/octo.nvim
+
+#### Scrollbar
+
+* https://github.com/petertriho/nvim-scrollbar
+
+#### Scrolling
+
+* https://github.com/karb94/neoscroll.nvim
+
+#### Browser integration
+
+* https://github.com/glacambre/firenvim
+
+#### Editing support
+
+* https://github.com/windwp/nvim-autopairs
+* https://github.com/Pocco81/true-zen.nvim
+* https://github.com/nvim-treesitter/nvim-treesitter-context
+* https://github.com/bennypowers/nvim-regexplainer
+
+#### Formatting
+
