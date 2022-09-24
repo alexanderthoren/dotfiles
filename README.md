@@ -4,6 +4,8 @@
 
 * Lua-guide &rarr; [Here](https://github.com/nanotee/nvim-lua-guide).
 
+* CMP-GUIDE &rarr; [Here](https://vonheikemen.github.io/devlog/tools/setup-nvim-lspconfig-plus-nvim-cmp/)
+
 ---
 
 ## Table of contents
@@ -114,11 +116,12 @@ Marks:
 * https://github.com/folke/trouble.nvim :star::fire:
 * https://github.com/ray-x/lsp_signature.nvim
 * https://github.com/simrat39/symbols-outline.nvim
-* https://github.com/jose-elias-alvarez/null-ls.nvim
+* https://github.com/jose-elias-alvarez/null-ls.nvim :star:
 
 #### Completion
 
 * https://github.com/hrsh7th/nvim-cmp :star:
+* https://github.com/onsails/lspkind.nvim :star:
 
 #### Syntax
 
@@ -130,7 +133,7 @@ Marks:
 
 #### Snippets
 
-* https://github.com/L3MON4D3/LuaSnip
+* https://github.com/L3MON4D3/LuaSnip :star:
 
 #### Registers
 

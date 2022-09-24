@@ -21,3 +21,5 @@ v.textwidth = 120
 -- Whichkey
 v.timeoutlen = 500
 
+-- Cmp
+v.completeopt = {'menu', 'menuone', 'noselect'}

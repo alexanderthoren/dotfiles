@@ -32,10 +32,8 @@ end
 -- Plugins
 local function plugins(use)
 
-	-- Packer
 	use 'wbthomason/packer.nvim'
 
-	-- Colorscheme
 	use {
 		'sainnhe/sonokai',
 		config = function()
@@ -43,16 +41,8 @@ local function plugins(use)
 		end,
 	}
 
-	-- Statusline
 	use 'nvim-lualine/lualine.nvim'
 
-	-- LSP
-	use 'neovim/nvim-lspconfig'
-
-	-- LSP-Installer
-	use 'williamboman/nvim-lsp-installer'
-
-	-- Markdown preview
 	use {
 		'iamcco/markdown-preview.nvim',
 		run = function()
@@ -60,10 +50,8 @@ local function plugins(use)
 		end,
 	}
 
-	-- WhichKey
 	use 'folke/which-key.nvim'
 
-	-- Tree
 	use {
 		'kyazdani42/nvim-tree.lua',
 		requires = {
@@ -71,22 +59,18 @@ local function plugins(use)
 		},
 	}
 
-	-- Plenary
 	use 'nvim-lua/plenary.nvim'
 
-	-- Telescope
 	use {
 		'nvim-telescope/telescope.nvim',
 		tag = '0.1.0'
 	}
 
-	-- Telescope-fzf-native
 	use {
 		'nvim-telescope/telescope-fzf-native.nvim',
 		run = 'make'
 	}
 
-	-- Treesitter
 	use {
 		'nvim-treesitter/nvim-treesitter',
 		run = function()
@@ -94,11 +78,25 @@ local function plugins(use)
 		end,
 	}
 
-	-- Image.nvim
 	use 'samodostal/image.nvim'
 
-	-- Trouble
 	use 'folke/trouble.nvim'
+
+	use 'neovim/nvim-lspconfig'
+
+	use 'williamboman/nvim-lsp-installer'
+
+	use 'hrsh7th/cmp-buffer'
+
+	use 'hrsh7th/cmp-nvim-lsp'
+
+	use 'hrsh7th/nvim-cmp'
+
+	use 'onsails/lspkind.nvim'
+
+	use 'L3MON4D3/LuaSnip'
+
+	use 'saadparwaiz1/cmp_luasnip'
 
 	if packer_bootstrap then
 		print 'Restart Neovim required after installation!'
