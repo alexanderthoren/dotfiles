@@ -13,6 +13,7 @@ keymap.set('n', '<leader>l', ':LspInstallInfo<cr>')
 keymap.set('n', '<leader>f', ':Telescope find_files<cr>')
 keymap.set('n', '<leader>p', ':MarkdownPreviewToggle<cr>')
 keymap.set('n', '<leader>t', ':ToggleTerm<cr>')
+keymap.set('n', '<leader>o', ':SymbolsOutline<cr>')
 
 -- Do not yank with x
 keymap.set('n', 'x', '"_x')

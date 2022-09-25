@@ -115,7 +115,7 @@ Marks:
 
 * https://github.com/folke/trouble.nvim :star::fire:
 * https://github.com/ray-x/lsp_signature.nvim
-* https://github.com/simrat39/symbols-outline.nvim :star:
+* https://github.com/simrat39/symbols-outline.nvim :star::fire:
 * https://github.com/jose-elias-alvarez/null-ls.nvim
 
 #### Completion

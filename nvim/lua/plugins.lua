@@ -100,6 +100,8 @@ local function plugins(use)
 
 	use 'akinsho/toggleterm.nvim'
 
+	use 'simrat39/symbols-outline.nvim'
+
 	if packer_bootstrap then
 		print 'Restart Neovim required after installation!'
 		require('packer').sync()

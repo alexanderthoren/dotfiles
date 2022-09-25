@@ -13,6 +13,8 @@ source $(brew --prefix powerlevel10k)/powerlevel10k.zsh-theme
 # ALIAS
 
 # system
+alias s="source"
+alias si="source install.sh"
 alias f="fzf"
 alias fe="fzf -e"
 alias n="nvim"
@@ -26,6 +28,7 @@ alias buu="brew update -q; brew upgrade -q"
 alias bt="brew tap -q"
 
 # git
+alias g="git"
 alias ga="git add"
 alias gaa="git add ."
 alias gap="git add .; git commit; git push"
