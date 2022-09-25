@@ -110,6 +110,7 @@ Marks:
 
 * :star: &rarr; Will be tried first.
 * :fire: &rarr; Added to current plugins.
+* :x: &rarr; Tried; didn't work.
 
 #### LSP
 
@@ -156,8 +157,8 @@ Marks:
 #### Colors
 
 * https://github.com/NvChad/nvim-colorizer.lua :star:
-* https://github.com/sunjon/Shade.nvim :star:
-* https://github.com/folke/twilight.nvim :star:
+* https://github.com/sunjon/Shade.nvim :star::x:
+* https://github.com/folke/twilight.nvim :star::x:
 * https://github.com/folke/zen-mode.nvim
 
 #### Debugging
@@ -177,7 +178,7 @@ Marks:
 
 #### Cursorline
 
-* https://github.com/RRethy/vim-illuminate :star:
+* https://github.com/RRethy/vim-illuminate :star::x:
 
 #### Startup
 
@@ -193,7 +194,7 @@ Marks:
 
 #### Git
 
-* https://github.com/lewis6991/gitsigns.nvim :star:
+* https://github.com/lewis6991/gitsigns.nvim :star::fire:
 * https://github.com/sindrets/diffview.nvim
 
 #### Comment
@@ -241,10 +242,6 @@ Marks:
 
 * https://github.com/mhartington/formatter.nvim
 * https://github.com/sbdchd/neoformat
-
-#### Command line
-
-* https://github.com/gelguy/wilder.nvim :star:
 
 #### Session
 
