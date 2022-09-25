@@ -98,6 +98,8 @@ local function plugins(use)
 
 	use 'hrsh7th/cmp-cmdline'
 
+	use 'akinsho/toggleterm.nvim'
+
 	if packer_bootstrap then
 		print 'Restart Neovim required after installation!'
 		require('packer').sync()
