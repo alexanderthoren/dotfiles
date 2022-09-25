@@ -6,7 +6,6 @@ darwin=$1
 echo "Copying .files"
 cp -f sys/.files/.p10k.zsh "$HOME"
 cp -f sys/.files/.zshrc "$HOME"
-cp -f sys/.files/.gitconfig "$HOME"
 
 # Source home files
 echo "Sourcing home files"

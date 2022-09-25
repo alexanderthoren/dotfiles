@@ -221,7 +221,7 @@ Marks:
 
 #### Scrollbar
 
-* https://github.com/petertriho/nvim-scrollbar :star:
+* https://github.com/petertriho/nvim-scrollbar :star::fire:
 
 #### Scrolling
 
