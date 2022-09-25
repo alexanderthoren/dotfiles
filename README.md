@@ -223,10 +223,6 @@ Marks:
 
 * https://github.com/petertriho/nvim-scrollbar :star::fire:
 
-#### Scrolling
-
-* https://github.com/karb94/neoscroll.nvim :star:
-
 #### Browser integration
 
 * https://github.com/glacambre/firenvim :star:
