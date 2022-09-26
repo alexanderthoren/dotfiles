@@ -240,7 +240,7 @@ Marks:
 
 #### Session
 
-* https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-sessions.md :star:
+* https://github.com/rmagatti/auto-session :star::fire:
 
 #### Testing
 

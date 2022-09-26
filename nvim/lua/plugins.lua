@@ -112,6 +112,8 @@ local function plugins(use)
 
 	use 'nvim-treesitter/nvim-treesitter-context'
 
+	use 'rmagatti/auto-session'
+
 	if packer_bootstrap then
 		print 'Restart Neovim required after installation!'
 		require('packer').sync()
