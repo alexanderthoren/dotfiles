@@ -35,9 +35,9 @@ local function plugins(use)
 	use 'wbthomason/packer.nvim'
 
 	use {
-		'sainnhe/sonokai',
+		'folke/tokyonight.nvim',
 		config = function()
-			vim.cmd 'colorscheme sonokai'
+			vim.cmd 'colorscheme tokyonight-night'
 		end,
 	}
 
