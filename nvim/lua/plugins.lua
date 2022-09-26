@@ -108,6 +108,8 @@ local function plugins(use)
 
 	use 'folke/twilight.nvim'
 
+	use 'nvim-treesitter/nvim-treesitter-context'
+
 	if packer_bootstrap then
 		print 'Restart Neovim required after installation!'
 		require('packer').sync()

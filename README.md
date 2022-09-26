@@ -159,7 +159,7 @@ Marks:
 * https://github.com/NvChad/nvim-colorizer.lua :star:
 * https://github.com/sunjon/Shade.nvim :star::x:
 * https://github.com/folke/twilight.nvim :star::fire:
-* https://github.com/folke/zen-mode.nvim
+* https://github.com/folke/zen-mode.nvim :star:
 
 #### Debugging
 
@@ -225,13 +225,12 @@ Marks:
 
 #### Browser integration
 
-* https://github.com/glacambre/firenvim :star:
+* https://github.com/glacambre/firenvim :x: &rarr; Not available for Safari. **I don't want to use Chrome.**
 
 #### Editing support
 
 * https://github.com/windwp/nvim-autopairs :star:
-* https://github.com/Pocco81/true-zen.nvim
-* https://github.com/wellle/context.vim :star:
+* https://github.com/nvim-treesitter/nvim-treesitter-context :star::fire:
 * https://github.com/bennypowers/nvim-regexplainer
 
 #### Formatting
