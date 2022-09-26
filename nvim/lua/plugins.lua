@@ -106,6 +106,8 @@ local function plugins(use)
 
 	use 'petertriho/nvim-scrollbar'
 
+	use 'folke/twilight.nvim'
+
 	if packer_bootstrap then
 		print 'Restart Neovim required after installation!'
 		require('packer').sync()
