@@ -108,6 +108,8 @@ local function plugins(use)
 
 	use 'folke/twilight.nvim'
 
+	use 'folke/zen-mode.nvim'
+
 	use 'nvim-treesitter/nvim-treesitter-context'
 
 	if packer_bootstrap then

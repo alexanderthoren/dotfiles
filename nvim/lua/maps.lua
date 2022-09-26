@@ -15,6 +15,7 @@ keymap.set('n', '<leader>p', ':MarkdownPreviewToggle<cr>')
 keymap.set('n', '<leader>tt', ':ToggleTerm<cr>')
 keymap.set('n', '<leader>tw', ':Twilight<cr>')
 keymap.set('n', '<leader>o', ':SymbolsOutline<cr>')
+keymap.set('n', '<leader>z', ':ZenMode<cr>')
 
 -- Do not yank with x
 keymap.set('n', 'x', '"_x')

@@ -159,7 +159,7 @@ Marks:
 * https://github.com/NvChad/nvim-colorizer.lua :star:
 * https://github.com/sunjon/Shade.nvim :star::x:
 * https://github.com/folke/twilight.nvim :star::fire:
-* https://github.com/folke/zen-mode.nvim :star:
+* https://github.com/folke/zen-mode.nvim :star::fire:
 
 #### Debugging
 
