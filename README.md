@@ -13,6 +13,7 @@
 - [2. Shell](#2-shell)
   * [2.1. Theme](#21-theme)
   * [2.2. Plugins](#22-plugins)
+  * [2.3. Try out](#23-try-out)
 - [3. Editor](#3-editor)
   * [3.1. Theme](#31-theme)
   * [3.2. Plugins](#32-plugins)
@@ -61,6 +62,25 @@ $(brew --prefix)/opt/fzf/install
 * [shellcheck](https://github.com/koalaman/shellcheck)
 
 * [ascii-image-converter](https://github.com/TheZoraiz/ascii-image-converter)
+
+### 2.3 Try out
+
+:heavy_plus_sign: &rarr; Cross-platform
+
+#### Terminal
+
+* https://github.com/warpdotdev/Warp
+* https://github.com/wez/wezterm :heavy_plus_sign:
+* https://github.com/Eugeny/tabby :heavy_plus_sign:
+* https://github.com/alacritty/alacritty :heavy_plus_sign:
+
+
+#### Shell
+
+* https://github.com/nushell/nushell :heavy_plus_sign:
+* https://github.com/fish-shell/fish-shell/ :heavy_plus_sign:
+* https://github.com/elves/elvish :heavy_plus_sign:
+* https://github.com/xonsh/xonsh :heavy_plus_sign:
 
 ---
 
