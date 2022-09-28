@@ -7,6 +7,12 @@ echo "Copying .files"
 cp -f sys/.files/.p10k.zsh "$HOME"
 cp -f sys/.files/.zshrc "$HOME"
 
+if [ "$darwin" = 1 ]; then
+	alacritty_path=$HOME/.config/alacritty/
+	mkdir -p "$alacritty_path"
+	cp -f sys/macos/alacritty.yml "$alacritty_path"
+fi
+
 # Source home files
 echo "Sourcing home files"
 source "$HOME"/.zshrc
@@ -70,13 +76,9 @@ if [ "$darwin" = 1 ]; then
 
 	# Casks
 	echo "Installing Darwin casks"
-	biq "iterm2"
+	biq "alacritty" --no-quarantine
 	biq "proxyman"
 	biq "stats"
-
-	# Fonts
-	echo "Installing Darwin fonts"
-	biq "font-meslo-lg-nerd-font"
 else
 	# Binaries
 	echo "Installing Linux binaries"
