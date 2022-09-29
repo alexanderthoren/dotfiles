@@ -4,11 +4,11 @@ echo "Installation started..."
 
 echo "Current system is $OSTYPE"
 if [[ "$OSTYPE" == "darwin"* ]]; then
-	source sys/install.sh 1
+	source sys/macos/install.sh
 fi
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-	source sys/install.sh 0
+	source sys/linux/install.sh
 fi
 
 if [[ "$OSTYPE" == "msys" ]]; then

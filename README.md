@@ -23,7 +23,11 @@
 
 ## 1. Terminal
 
-My current terminal is [iTerm2](https://github.com/gnachman/iTerm2).
+My current terminal is [Alacritty](https://github.com/alacritty/alacritty).
+
+My old terminal was [iTerm2](https://github.com/gnachman/iTerm2), but Alacritty improves the performance, which is what I care more of.
+
+Also, Alacritty is cross-platform, which I am interested in as a MacOS and Windows user. I also use WSL2.
 
 ---
 
@@ -66,14 +70,6 @@ $(brew --prefix)/opt/fzf/install
 ### 2.3 Try out
 
 :heavy_plus_sign: &rarr; Cross-platform
-
-#### Terminal
-
-* https://github.com/warpdotdev/Warp
-* https://github.com/wez/wezterm :heavy_plus_sign:
-* https://github.com/Eugeny/tabby :heavy_plus_sign:
-* https://github.com/alacritty/alacritty :heavy_plus_sign:
-
 
 #### Shell
 
