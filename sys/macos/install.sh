@@ -2,31 +2,30 @@
 
 # Copying files to home
 echo "Copying .files"
-cp -f sys/.files/.p10k.zsh "$HOME"
-cp -f sys/.files/.zshrc "$HOME"
-
-alacritty_path=$HOME/.config/alacritty/
-mkdir -p "$alacritty_path"
-cp -f sys/macos/alacritty.yml "$alacritty_path"
+dotfiles_path=sys/.files/
+cp -f "$dotfiles_path".p10k.zsh "$HOME"
+cp -f "$dotfiles_path".zshrc "$HOME"
 
 # Source home files
 echo "Sourcing home files"
 source "$HOME"/.zshrc
 
-# Nvim destination path
-echo "Removing old Neovim folders"
-NVIM_PATH=$HOME/.config
-export NVIM_PATH
+# Config path
+config_path=$HOME/.config/
+mkdir -p "$config_path"
+
+# Alacritty config
+echo "Configuring Alacritty"
+cp -rf sys/macos/alacritty "$config_path"
 
 # Remove old folders and files
+echo "Removing old nvim folders"
 rm -rf "$HOME"/.cache/nvim
 rm -rf "$HOME"/.local/share/nvim
-rm -rf "$NVIM_PATH"/nvim
 
 # Add new folders and files
-echo "Copying new Neovim folders"
-mkdir -p "$NVIM_PATH"/nvim
-cp -rf nvim "$NVIM_PATH"
+echo "Copying new nvim folders"
+cp -rf nvim "$config_path"
 
 # Install Homebrew if it is not installed
 echo "Verifying if Homebrew is installed"
