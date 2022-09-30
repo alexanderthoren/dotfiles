@@ -34,10 +34,17 @@ local function plugins(use)
 
 	use 'wbthomason/packer.nvim'
 
+--	use {
+--		'folke/tokyonight.nvim',
+--		config = function()
+--			vim.cmd 'colorscheme tokyonight-night'
+--		end,
+--	}
+
 	use {
-		'folke/tokyonight.nvim',
+		'navarasu/onedark.nvim',
 		config = function()
-			vim.cmd 'colorscheme tokyonight-night'
+			vim.cmd 'colorscheme onedark'
 		end,
 	}
 
