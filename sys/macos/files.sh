@@ -24,4 +24,12 @@ rm -rf "$HOME"/.local/share/nvim
 # Add new folders and files
 cp -rf nvim "$config_path"
 
+# Installing fonts
+
+fonts_path=sys/fonts/
+cp "$fonts_path"MesloLGS\ NF\ Bold\ Italic.ttf ~/Library/Fonts/
+cp "$fonts_path"MesloLGS\ NF\ Bold.ttf ~/Library/Fonts/
+cp "$fonts_path"MesloLGS\ NF\ Italic.ttf ~/Library/Fonts/
+cp "$fonts_path"MesloLGS\ NF\ Regular.ttf ~/Library/Fonts/
+
 echo "Files installation completed!"
