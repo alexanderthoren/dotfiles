@@ -1,18 +1,23 @@
 #!/bin/sh
 
-echo "Installation started..."
+os_type=$OSTYPE
+#echo "Current system is $os_type"
 
-echo "Current system is $OSTYPE"
-if [[ "$OSTYPE" == "darwin"* ]]; then
-	source sys/macos/install.sh
-fi
+installation_type=$1
+#echo "Installation type is $installation_type"
 
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+if [[ "$os_type" == "darwin"* ]]; then
+	if [[ "$installation_type" == "" ]]; then
+		source sys/macos/install.sh
+	elif [[ "$installation_type" == "f" ]]; then
+		source sys/macos/files.sh
+	elif [[ "$installation_type" == "b" ]]; then
+		source sys/macos/brew.sh
+	else
+		echo "Command not found."
+	fi
+elif [[ "$os_type" == "linux-gnu"* ]]; then
 	source sys/linux/install.sh
-fi
-
-if [[ "$OSTYPE" == "msys" ]]; then
+elif [[ "$os_type" == "msys" ]]; then
 	source sys/windows/install.sh
 fi
-
-echo "Installation completed!"
