@@ -1,23 +1,39 @@
 #!/bin/sh
 
-os_type=$OSTYPE
-#echo "Current system is $os_type"
-
-installation_type=$1
-#echo "Installation type is $installation_type"
-
-if [[ "$os_type" == "darwin"* ]]; then
-	if [[ "$installation_type" == "" ]]; then
-		source sys/macos/install.sh
-	elif [[ "$installation_type" == "f" ]]; then
-		source sys/macos/files.sh
-	elif [[ "$installation_type" == "b" ]]; then
-		source sys/macos/brew.sh
+get_os() {
+	type=$OSTYPE
+	if [[ "$type" == "darwin"* ]]; then
+		echo "macos"
+	elif [[ "$type" == "linux-gnu"* ]]; then
+		echo "linux"
+	elif [[ "$type" == "msys" ]]; then
+		echo "windows"
 	else
-		echo "Command not found."
+		echo "-1"
 	fi
-elif [[ "$os_type" == "linux-gnu"* ]]; then
-	source sys/linux/install.sh
-elif [[ "$os_type" == "msys" ]]; then
-	source sys/windows/install.sh
+}
+
+get_file() {
+	type=$1
+	if [[ "$type" == "" ]]; then
+		echo "install.sh"
+	elif [[ "$type" == "f" ]]; then
+		echo "files.sh"
+	elif [[ "$type" == "b" ]]; then
+		echo "brew.sh"
+	else
+		echo "-1"
+	fi
+}
+
+os=$(get_os)
+file=$(get_file "$1")
+
+if [[ "$os" == "-1"  ]]; then
+	echo "OS not found!"
+elif [[ "$file" == "-1" ]]; then
+	echo "Command not found!"
+else
+	file_path=sys/$os/$file
+	source "$file_path"
 fi
