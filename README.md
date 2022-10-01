@@ -86,7 +86,9 @@ My current editor is [Neovim](https://github.com/neovim/neovim).
 
 ### 3.1 Theme
 
-My current theme is [**sonokai**](https://github.com/sainnhe/sonokai).
+My current theme is [**onedark**](https://github.com/navarasu/onedark.nvim).
+
+Before I was using [sonokai](https://github.com/sainnhe/sonokai), but wasn't compatible with twilight and zen-mode.
 
 ### 3.2. Plugins
 
@@ -108,6 +110,8 @@ This plugin need to be updated to https://github.com/williamboman/mason.nvim.
 
 * [nvim-tree](https://github.com/kyazdani42/nvim-tree.lua)
 
+* [nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons)
+
 * [plenary](https://github.com/nvim-lua/plenary.nvim)
 
 * [telescope](https://github.com/nvim-telescope/telescope.nvim)
@@ -120,6 +124,40 @@ This plugin need to be updated to https://github.com/williamboman/mason.nvim.
 
 * [ascii-image-converter](https://github.com/TheZoraiz/ascii-image-converter)
 
+* [trouble](https://github.com/folke/trouble.nvim)
+
+* [symbols-outline](https://github.com/simrat39/symbols-outline.nvim)
+
+* [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+
+* [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
+
+* [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
+
+* [cmp-path](https://github.com/hrsh7th/cmp-path)
+
+* [cmp-cmdline](https://github.com/hrsh7th/cmp-cmdline)
+
+* [lspkind.nvim](https://github.com/onsails/lspkind.nvim)
+
+* [toggleterm](https://github.com/akinsho/toggleterm.nvim)
+
+* [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)
+
+* [luasnip](https://github.com/L3MON4D3/LuaSnip)
+
+* [twilight](https://github.com/folke/twilight.nvim)
+
+* [zen-mode](https://github.com/folke/zen-mode.nvim)
+
+* [gitsigns](https://github.com/lewis6991/gitsigns.nvim)
+
+* [nvim-scrollbar](https://github.com/petertriho/nvim-scrollbar)
+
+* [nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context)
+
+* [auto-session](https://github.com/rmagatti/auto-session)
+
 ### 3.3. Try out
 
 Marks:
@@ -130,32 +168,12 @@ Marks:
 
 #### LSP
 
-* https://github.com/folke/trouble.nvim :star::fire:
 * https://github.com/ray-x/lsp_signature.nvim
-* https://github.com/simrat39/symbols-outline.nvim :star::fire:
 * https://github.com/jose-elias-alvarez/null-ls.nvim
-
-#### Completion
-
-* https://github.com/hrsh7th/nvim-cmp :star::fire:
-* https://github.com/hrsh7th/cmp-nvim-lsp :star::fire:
-* https://github.com/hrsh7th/cmp-buffer :star::fire:
-* https://github.com/hrsh7th/cmp-path :star::fire:
-* https://github.com/hrsh7th/cmp-cmdline :star::fire:
-* https://github.com/onsails/lspkind.nvim :star::fire:
 
 #### Syntax
 
 * https://github.com/kylechui/nvim-surround
-
-#### Terminal integration
-
-* https://github.com/akinsho/toggleterm.nvim :star::fire:
-
-#### Snippets
-
-* https://github.com/saadparwaiz1/cmp_luasnip :star::fire:
-* https://github.com/L3MON4D3/LuaSnip :star::fire:
 
 #### Registers
 
@@ -174,8 +192,6 @@ Marks:
 
 * https://github.com/NvChad/nvim-colorizer.lua :star:
 * https://github.com/sunjon/Shade.nvim :star::x:
-* https://github.com/folke/twilight.nvim :star::fire:
-* https://github.com/folke/zen-mode.nvim :star::fire:
 
 #### Debugging
 
@@ -210,7 +226,6 @@ Marks:
 
 #### Git
 
-* https://github.com/lewis6991/gitsigns.nvim :star::fire:
 * https://github.com/sindrets/diffview.nvim
 
 #### Comment
@@ -235,9 +250,6 @@ Marks:
 
 * https://github.com/pwntester/octo.nvim
 
-#### Scrollbar
-
-* https://github.com/petertriho/nvim-scrollbar :star::fire:
 
 #### Browser integration
 
@@ -246,17 +258,12 @@ Marks:
 #### Editing support
 
 * https://github.com/windwp/nvim-autopairs :star:
-* https://github.com/nvim-treesitter/nvim-treesitter-context :star::fire:
 * https://github.com/bennypowers/nvim-regexplainer
 
 #### Formatting
 
 * https://github.com/mhartington/formatter.nvim
 * https://github.com/sbdchd/neoformat
-
-#### Session
-
-* https://github.com/rmagatti/auto-session :star::fire:
 
 #### Testing
 
