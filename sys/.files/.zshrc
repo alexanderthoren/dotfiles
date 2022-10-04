@@ -20,7 +20,13 @@ alias fe="fzf -e"
 alias n="nvim"
 alias ll="ls -la"
 alias lss="du -hs * | sort -hr"
-alias rdd="rm -rf ~/Library/Developer/Xcode/DerivedData"
+
+# Xcode
+alias repd="xcodebuild -resolvePackageDependencies"
+alias rmdd="rm -rf ~/Library/Developer/Xcode/DerivedData"
+alias rmspm="rm -rf ~/Library/Caches/org.swift.swiftpm/; rm -rf ~/Library/org.swift.swiftpm/"
+alias respm="rmspm; repd"
+alias rsxcode="killall Xcode; rmdd; respm; xed ."
 
 # brew
 alias biq="brew install -q"
