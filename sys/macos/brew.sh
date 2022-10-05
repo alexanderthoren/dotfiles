@@ -38,6 +38,7 @@ install_casks() {
 install_binaries() {
 	echo "Installing binaries"
 	(
+	biq "tmux" &
 	biq "coreutils" &
 	biq "git" &
 	biq "neovim" &
