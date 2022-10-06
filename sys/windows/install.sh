@@ -4,7 +4,7 @@ echo "Setting up WIN32"
 
 # Install dependencies
 echo "Installing dependencies"
-choco install microsoft-windows-terminal
+choco install alacritty
 choco install postman
 
 # Install WSL2
