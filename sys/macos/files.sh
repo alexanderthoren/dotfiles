@@ -5,7 +5,8 @@ install_source_dotfiles() {
 	dotfiles_path=sys/.files/
 	(
 	cp -f "$dotfiles_path".p10k.zsh "$HOME" &
-	cp -f "$dotfiles_path".zshrc "$HOME"
+	cp -f "$dotfiles_path".zshrc "$HOME" &
+	cp -rf "$dotfiles_path".zsh "$HOME"
 	)
 	wait
 	source "$HOME"/.zshrc
