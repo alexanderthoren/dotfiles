@@ -3,3 +3,5 @@
 
 mkdir C:%HOMEPATH%\AppData\Roaming\alacritty\
 copy .\alacritty\alacritty.yml C:%HOMEPATH%\AppData\Roaming\alacritty\
+
+choco install nushell

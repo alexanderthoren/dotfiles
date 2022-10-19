@@ -73,7 +73,7 @@ $(brew --prefix)/opt/fzf/install
 
 #### Shell
 
-* https://github.com/nushell/nushell :heavy_plus_sign:
+* https://github.com/nushell/nushell :heavy_plus_sign: -> https://www.nushell.sh/book/3rdpartyprompts.html#oh-my-posh
 * https://github.com/fish-shell/fish-shell/ :heavy_plus_sign:
 * https://github.com/elves/elvish :heavy_plus_sign:
 * https://github.com/xonsh/xonsh :heavy_plus_sign:
