@@ -513,3 +513,5 @@ let-env config = {
 
 # Starship
 source ~/.cache/starship/init.nu
+
+cd ~
