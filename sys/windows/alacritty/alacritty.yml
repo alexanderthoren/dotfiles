@@ -439,15 +439,15 @@ font:
 #   - (Linux/BSD/macOS) `$SHELL` or the user's login shell, if `$SHELL` is unset
 #   - (Windows) powershell
 shell:
-  program: C:\Windows\System32\wsl
-  args:
-    - --cd ~
+  program: C:\ProgramData\chocolatey\bin\nu.exe
+#  args:
+#    - --cd ~
 
 # Startup directory
 #
 # Directory the shell is started in. If this is unset, or `None`, the working
 # directory of the parent process will be used.
-  working_directory: C:\Users\
+#  working_directory: C:\Users\
 
 # Send ESC (\x1b) before characters when alt is pressed.
 alt_send_esc: false

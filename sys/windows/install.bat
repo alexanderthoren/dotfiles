@@ -4,4 +4,8 @@
 mkdir C:%HOMEPATH%\AppData\Roaming\alacritty\
 copy .\alacritty\alacritty.yml C:%HOMEPATH%\AppData\Roaming\alacritty\
 
+mkdir C:%HOMEPATH%\AppData\Roaming\nushell\
+copy ..\nushell\ C:%HOMEPATH%\AppData\Roaming\nushell\
+
 choco install nushell
+choco install starship
