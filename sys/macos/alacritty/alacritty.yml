@@ -438,8 +438,8 @@ font:
 # Default:
 #   - (Linux/BSD/macOS) `$SHELL` or the user's login shell, if `$SHELL` is unset
 #   - (Windows) powershell
-#shell:
-#  program: C:\Windows\System32\wsl
+shell:
+  program: /opt/homebrew/bin/nu
 #  args:
 #    - --cd ~
 

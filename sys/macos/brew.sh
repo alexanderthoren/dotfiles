@@ -17,7 +17,6 @@ tap_dependencies() {
 	echo "Tap dependencies"
 	(
 	bt "homebrew/core" &
-	bt "romkatv/powerlevel10k" &
 	bt "homebrew/cask" &
 	bt "homebrew/cask-fonts"
 	)
@@ -39,12 +38,12 @@ install_binaries() {
 	echo "Installing binaries"
 	(
 	biq "tmux" &
+	biq "starship" &
 	biq "coreutils" &
 	biq "git" &
 	biq "neovim" &
 	biq "fzf" &
 	biq "ripgrep" &
-	biq "powerlevel10k" &
 	biq "node" &
 	biq "shellcheck" &
 	biq "TheZoraiz/ascii-image-converter/ascii-image-converter"

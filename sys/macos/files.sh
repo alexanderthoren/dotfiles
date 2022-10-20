@@ -1,17 +1,5 @@
 #!/bin/sh
 
-install_source_dotfiles() {
-	echo "Installing and sourcing .files"
-	dotfiles_path=sys/.files/
-	(
-	cp -f "$dotfiles_path".p10k.zsh "$HOME" &
-	cp -f "$dotfiles_path".zshrc "$HOME" &
-	cp -rf "$dotfiles_path".zsh "$HOME"
-	)
-	wait
-	source "$HOME"/.zshrc
-}
-
 remove_old_files() {
 	echo "Removing old .files"
 	(
@@ -27,7 +15,8 @@ install_config_files() {
 	mkdir -p "$config_path"
 	(
 	cp -rf sys/macos/alacritty "$config_path" &
-	cp -rf nvim "$config_path"
+	cp -rf nvim "$config_path" &
+	cp -rf sys/macos/nushell "$HOME/Library/Application Support/"
 	)
 	wait
 }
@@ -46,7 +35,6 @@ install_fonts() {
 
 echo "-> Installing files"
 (
-install_source_dotfiles &
 remove_old_files &
 install_config_files &
 install_fonts
