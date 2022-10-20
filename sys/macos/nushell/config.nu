@@ -240,7 +240,7 @@ let light_theme = {
 # The default config record. This is where much of your global configuration is setup.
 let-env config = {
   external_completer: $nothing # check 'carapace_completer' above to as example
-  filesize_metric: false # true => (KB, MB, GB), false => (KiB, MiB, GiB)
+  filesize_metric: true # true => (KB, MB, GB), false => (KiB, MiB, GiB)
   table_mode: rounded # basic, compact, compact_double, light, thin, with_love, rounded, reinforced, heavy, none, other
   use_ls_colors: true
   rm_always_trash: false
@@ -272,7 +272,7 @@ let-env config = {
     # A suffix which will be used with 'truncating' methodology
     # truncating_suffix: "..."
   }
-  show_banner: true # true or false to enable or disable the banner
+  show_banner: false # true or false to enable or disable the banner
   show_clickable_links_in_ls: true # true or false to enable or disable clickable links in the ls listing. your terminal has to support links.
 
   hooks: {
