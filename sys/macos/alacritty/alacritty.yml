@@ -439,7 +439,7 @@ font:
 #   - (Linux/BSD/macOS) `$SHELL` or the user's login shell, if `$SHELL` is unset
 #   - (Windows) powershell
 shell:
-  program: /opt/homebrew/bin/nu
+  program: /usr/local/bin/nu
 #  args:
 #    - --cd ~
 

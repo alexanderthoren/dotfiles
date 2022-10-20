@@ -38,6 +38,7 @@ install_binaries() {
 	echo "Installing binaries"
 	(
 	biq "tmux" &
+	biq "nushell" &
 	biq "starship" &
 	biq "coreutils" &
 	biq "git" &
