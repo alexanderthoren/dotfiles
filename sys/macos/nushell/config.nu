@@ -527,11 +527,6 @@ alias rmspm = (rm -rf ~/Library/Caches/org.swift.swiftpm/; rm -rf ~/Library/org.
 alias respm = (rmspm; repd)
 alias rsxcode = (killall Xcode; rmdd; respm; xed .)
 
-# brew
-alias biq = brew install -q
-alias buu = (brew update -q; brew upgrade -q)
-alias bt = brew tap -q
-
 # git
 alias g = git
 alias ga = git add

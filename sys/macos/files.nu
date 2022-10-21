@@ -10,7 +10,8 @@ def installConfigFiles [] {
 	echo 'Installing .config files'
 	let configPath = $'($home)/.config/'
 	mkdir $configPath
-	if (uname -m) == 'arm64' {
+	let arch = (uname -m | str trim)
+	if $arch == 'arm64' {
 		cp -r sys/macos/arm/alacritty $configPath
 	} else {
 		cp -r sys/macos/alacritty $configPath
