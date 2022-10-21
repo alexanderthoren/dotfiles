@@ -21,7 +21,6 @@ def installCasks [] {
 def installBinaries [] {
 	echo 'Installing binaries'
 	brew install -q 'tmux'
-	brew install -q 'nushell'
 	brew install -q 'starship'
 	brew install -q 'coreutils'
 	brew install -q 'git'
