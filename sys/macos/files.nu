@@ -1,12 +1,14 @@
+let home = $env.HOME
+
 def removeOldFiles [] {
 	echo 'Removing old .files'
-	rm -rf ~/.cache/nvim
-	rm -rf ~/.local/share/nvim
+	rm -rf $'($home)/.cache/nvim'
+	rm -rf $'($home)/.local/share/nvim'
 }
 
 def installConfigFiles [] {
 	echo 'Installing .config files'
-	let configPath = '~/.config/'
+	let configPath = $'($home)/.config/'
 	mkdir $configPath
 	if (uname -m) == 'arm64' {
 		cp -r sys/macos/arm/alacritty $configPath
@@ -14,16 +16,16 @@ def installConfigFiles [] {
 		cp -r sys/macos/alacritty $configPath
 	}
 	cp -r nvim $configPath
-	cp -r sys/macos/nushell '~/Library/Application Support/'
+	cp -r sys/macos/nushell $'($home)/Library/Application Support/'
 }
 
 def installFonts [] {
 	echo 'Installing fonts'
 	let fontsPath = 'sys/fonts/'
-	cp $'($fontsPath)MesloLGS NF Bold Italic.ttf' ~/Library/Fonts/
-	cp $'($fontsPath)MesloLGS NF Bold.ttf' ~/Library/Fonts/
-	cp $'($fontsPath)MesloLGS NF Italic.ttf' ~/Library/Fonts/
-	cp $'($fontsPath)MesloLGS NF Regular.ttf' ~/Library/Fonts/
+	cp $'($fontsPath)MesloLGS NF Bold Italic.ttf' $'($home)/Library/Fonts/'
+	cp $'($fontsPath)MesloLGS NF Bold.ttf' $'($home)/Library/Fonts/'
+	cp $'($fontsPath)MesloLGS NF Italic.ttf' $'($home)/Library/Fonts/'
+	cp $'($fontsPath)MesloLGS NF Regular.ttf' $'($home)/Library/Fonts/'
 }
 
 echo '-> Installing files'
