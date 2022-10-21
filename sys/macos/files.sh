@@ -15,7 +15,7 @@ install_config_files() {
 	mkdir -p "$config_path"
 	
 	if [[ $(uname -m) == 'arm64' ]]; then
-		cp -rf sys/macos/m1/alacritty "$config_path"
+		cp -rf sys/macos/arm/alacritty "$config_path"
 	else 
 		cp -rf sys/macos/alacritty "$config_path"
 	fi
