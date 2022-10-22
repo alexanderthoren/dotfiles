@@ -4,10 +4,10 @@ def getOs [] {
 		echo 'macos'
 	} else if $osName == 'linux-gnu' {
 		echo 'linux'
-	} else if $osName == 'msys' {
+	} else if $osName == 'Windows' {
 		echo 'windows'
 	} else {
-		print 'os error'
+		print $'Error: current os name is ($osName)'
 		echo null
 	}
 }
@@ -17,10 +17,10 @@ def getFile [type: string] {
 		echo 'install.nu'
 	} else if $type == 'f' {
 		echo 'files.nu'
-	} else if $type == 'b' {
-		echo 'brew.nu'
+	} else if $type == 'd' {
+		echo 'dependencies.nu'
 	} else {
-		print 'file type error'
+		print $'Error: installation type is ($type)'
 		echo null
 	}
 }
@@ -30,6 +30,7 @@ def main [type: string = ''] {
 	let file = getFile $type
 	if ($os != null and $file != null) {
 		let filePath = $'sys/($os)/($file)'
+		print $filePath
 		nu $filePath
 	} 
 }

@@ -254,7 +254,7 @@ let-env config = {
   buffer_editor: "nvim" # command that will be used to edit the current line buffer with ctrl+o, if unset fallback to $env.EDITOR and $env.VISUAL
   use_ansi_coloring: true
   filesize_format: "auto" # b, kb, kib, mb, mib, gb, gib, tb, tib, pb, pib, eb, eib, zb, zib, auto
-  edit_mode: "nvim" # emacs, vi
+  edit_mode: nvim # emacs, vi
   max_history_size: 10000 # Session has to be reloaded for this to take effect
   sync_history_on_enter: true # Enable to share the history between multiple sessions, else you have to close the session to persist history to file
   history_file_format: "plaintext" # "sqlite" or "plaintext"
@@ -272,7 +272,7 @@ let-env config = {
     # A suffix which will be used with 'truncating' methodology
     # truncating_suffix: "..."
   }
-  show_banner: true # true or false to enable or disable the banner
+  show_banner: false # true or false to enable or disable the banner
   show_clickable_links_in_ls: true # true or false to enable or disable clickable links in the ls listing. your terminal has to support links.
 
   hooks: {
@@ -511,7 +511,45 @@ let-env config = {
   ]
 }
 
+# ALIAS
+
+alias ll = ls -la
+alias f = fzf
+alias fe = fzf -e
+alias n = nvim
+
+# git
+alias g = git
+alias ga = git add
+alias gaa = git add .
+alias gap = (git add .; git commit; git push)
+alias gb = git branch
+alias gbd = git branch -d
+alias gc = git commit
+alias gcb = git checkout -b
+alias gcc = git checkout
+alias gcf = git clean -f
+alias gcl = git clone
+alias gd = git diff
+alias gd-1 = git diff head~1
+alias gdrg = (git diff head~1 | rg)
+alias gdt = git difftool -y
+alias gf = git fetch
+alias gl = git log
+alias gmt = git mergetool -y
+alias gps = git push
+alias gpl = git pull
+alias grb = git rebase
+alias grba = git rebase --abort
+alias grbc = git rebase --continue
+alias grbi = git rebase -i
+alias grc = (git restore --staged .; git restore .; git clean -f)
+alias gre = git restore
+alias grs = git restore --staged
+alias gs = git status
+alias gu = (git fetch; git pull)
+
 # Starship
-source ~/.cache/starship/init.nu
+#source ~/.cache/starship/init.nu
 
 cd ~

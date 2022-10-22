@@ -517,7 +517,6 @@ alias ll = ls -la
 alias f = fzf
 alias fe = fzf -e
 alias n = nvim
-alias ll = ls -la
 alias lss = (du -hs * | sort -hr)
 
 # Xcode
