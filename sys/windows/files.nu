@@ -1,4 +1,3 @@
-
 def installRoamingFiles [] {
 	echo 'Installing roaming files'
 	let appDataPath = $env.APPDATA

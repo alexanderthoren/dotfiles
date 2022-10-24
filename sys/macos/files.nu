@@ -10,11 +10,14 @@ def installConfigFiles [] {
 	echo 'Installing .config files'
 	let configPath = $'($home)/.config/'
 	mkdir $configPath
-	let arch = (uname -m | str trim)
-	if $arch == 'arm64' {
-		cp -r sys/macos/arm/alacritty $configPath
-	} else {
-		cp -r sys/macos/alacritty $configPath
+	cp -r sys/macos/alacritty $configPath
+	if (uname -m | str trim) == 'arm64' {
+		let alacrittyPath = $'($configPath)/alacritty/alacritty.yml'
+		(
+			cat $alacrittyPath |
+			str replace "/usr/local/bin/nu" "/opt/homebrew/bin/nu" |
+			save $alacrittyPath
+		)
 	}
 	cp -r nvim $configPath
 	cp -r sys/macos/nushell $'($home)/Library/Application Support/'
