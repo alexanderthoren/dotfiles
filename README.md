@@ -9,6 +9,7 @@
 ---
 
 ## Table of contents
+- [0. OS](#0-os)
 - [1. Terminal](#1-terminal)
 - [2. Shell](#2-shell)
   * [2.1. Theme](#21-theme)
@@ -18,6 +19,18 @@
   * [3.1. Theme](#31-theme)
   * [3.2. Plugins](#32-plugins)
   * [3.3. Try out](#33-try-out)
+
+---
+
+## 0. OS
+
+### 0.1 Plugins
+
+### 0.2 Try out
+
+# [yabai](https://github.com/koekeishiya/yabai)
+# [skhd](https://github.com/koekeishiya/skhd)
+# [sketchyBar](https://github.com/FelixKratz/SketchyBar)
 
 ---
 
@@ -69,14 +82,9 @@ $(brew --prefix)/opt/fzf/install
 
 ### 2.3 Try out
 
-:heavy_plus_sign: &rarr; Cross-platform
+* [bat](https://github.com/sharkdp/bat)
 
-#### Shell
-
-* https://github.com/nushell/nushell :heavy_plus_sign: -> https://www.nushell.sh/book/3rdpartyprompts.html#oh-my-posh
-* https://github.com/fish-shell/fish-shell/ :heavy_plus_sign:
-* https://github.com/elves/elvish :heavy_plus_sign:
-* https://github.com/xonsh/xonsh :heavy_plus_sign:
+* [btop](https://github.com/aristocratos/btop)
 
 ---
 
