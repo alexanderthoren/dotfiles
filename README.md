@@ -12,9 +12,8 @@
 - [0. OS](#0-os)
 - [1. Terminal](#1-terminal)
 - [2. Shell](#2-shell)
-  * [2.1. Theme](#21-theme)
-  * [2.2. Plugins](#22-plugins)
-  * [2.3. Try out](#23-try-out)
+  * [2.1. Plugins](#21-plugins)
+  * [2.2. Try out](#22-try-out)
 - [3. Editor](#3-editor)
   * [3.1. Theme](#31-theme)
   * [3.2. Plugins](#32-plugins)
@@ -28,17 +27,17 @@
 
 ### 0.2 Try out
 
-# [yabai](https://github.com/koekeishiya/yabai)
-# [skhd](https://github.com/koekeishiya/skhd)
-# [sketchyBar](https://github.com/FelixKratz/SketchyBar)
+* [yabai](https://github.com/koekeishiya/yabai)
+* [skhd](https://github.com/koekeishiya/skhd)
+* [sketchyBar](https://github.com/FelixKratz/SketchyBar)
 
 ---
 
 ## 1. Terminal
 
-My current terminal is [Alacritty](https://github.com/alacritty/alacritty).
+My current terminal is [**Alacritty**](https://github.com/alacritty/alacritty).
 
-My old terminal was [iTerm2](https://github.com/gnachman/iTerm2), but Alacritty improves the performance, which is what I care more of.
+My old terminal was [**iTerm2**](https://github.com/gnachman/iTerm2), but Alacritty improves the performance, which is what I care more of.
 
 Also, Alacritty is cross-platform, which I am interested in as a MacOS and Windows user. I also use WSL2.
 
@@ -46,18 +45,9 @@ Also, Alacritty is cross-platform, which I am interested in as a MacOS and Windo
 
 ## 2. Shell
 
-My current shell is [zsh](https://www.zsh.org).
+My current shell is [**nushell**](https://github.com/nushell/nushell) and prompt is [**starship**](https://github.com/starship/starship).
 
-```
-# To set zsh as default shell.
-chsh -s "$(which zsh)"
-```
-
-### 2.1. Theme
-
-My current theme is [**powerlevel10k**](https://github.com/romkatv/powerlevel10k).
-
-### 2.2. Plugins
+### 2.1. Plugins
 
 Here are listed my current installed plugins in the shell.
 
@@ -72,15 +62,15 @@ $(brew --prefix)/opt/fzf/install
 
 * [ripgrep](https://github.com/BurntSushi/ripgrep)
 
-* [powerlevel10k](https://github.com/romkatv/powerlevel10k)
-
 * [node](https://github.com/nodejs/node)
 
 * [shellcheck](https://github.com/koalaman/shellcheck)
 
 * [ascii-image-converter](https://github.com/TheZoraiz/ascii-image-converter)
 
-### 2.3 Try out
+* [neofetch](https://github.com/dylanaraps/neofetch)
+
+### 2.2 Try out
 
 * [bat](https://github.com/sharkdp/bat)
 
@@ -108,9 +98,7 @@ Here are listed my current installed plugins in the editor.
 
 * [lspconfig](https://github.com/neovim/nvim-lspconfig)
 
-* [lsp-installer](https://github.com/williamboman/nvim-lsp-installer)
-
-This plugin need to be updated to https://github.com/williamboman/mason.nvim.
+* [lsp-installer](https://github.com/williamboman/nvim-lsp-installer) -> This plugin need to be updated to [mason](https://github.com/williamboman/mason.nvim).
 
 * [markdown-preview](https://github.com/iamcco/markdown-preview.nvim)
 
