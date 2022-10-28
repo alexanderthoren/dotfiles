@@ -558,3 +558,9 @@ alias gs = git status
 alias gu = (git fetch; git pull)
 
 source ~/.cache/starship/init.nu
+
+if (tmux ls | str length) > 0 {
+	tmux attach
+} else {
+	tmux
+}
