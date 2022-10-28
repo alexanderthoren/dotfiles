@@ -70,9 +70,9 @@ $(brew --prefix)/opt/fzf/install
 
 * [neofetch](https://github.com/dylanaraps/neofetch)
 
-### 2.2 Try out
-
 * [bat](https://github.com/sharkdp/bat)
+
+### 2.2 Try out
 
 * [btop](https://github.com/aristocratos/btop)
 

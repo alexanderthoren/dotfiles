@@ -31,6 +31,7 @@ def installBinaries [] {
 	brew install -q 'shellcheck'
 	brew install -q 'TheZoraiz/ascii-image-converter/ascii-image-converter'
 	brew install -q 'neofetch'
+	brew install -q 'bat'
 }
 
 echo '-> Brew installation'
