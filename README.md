@@ -185,10 +185,6 @@ Marks:
 * https://github.com/nvim-neorg/neorg
 * https://github.com/jbyuki/venn.nvim
 
-#### Colors
-
-* https://github.com/sunjon/Shade.nvim :star::x:
-
 #### Debugging
 
 * https://github.com/mfussenegger/nvim-dap
