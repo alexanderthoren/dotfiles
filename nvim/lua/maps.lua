@@ -19,6 +19,7 @@ keymap.set('n', '<leader>o', ':SymbolsOutline<cr>')
 keymap.set('n', '<leader>z', ':ZenMode<cr>')
 keymap.set('n', '<leader>wsh', ':WinShift<cr>')
 keymap.set('n', '<leader>wss', ':WinShift swap<cr>')
+keymap.set('n', '<leader>h', ':HopWord<cr>')
 
 -- Do not yank with x
 keymap.set('n', 'x', '"_x')

@@ -153,6 +153,8 @@ Here are listed my current installed plugins in the editor.
 
 * [colorizer](https://github.com/NvChad/nvim-colorizer.lua)
 
+* [hop](https://github.com/phaazon/hop.nvim)
+
 ### 3.3. Try out
 
 Marks:
@@ -231,11 +233,6 @@ Marks:
 
 * https://github.com/jbyuki/instant.nvim
 
-#### Motion
-
-* https://github.com/phaazon/hop.nvim :star:
-* https://github.com/ggandor/lightspeed.nvim :star:
-
 #### Code runner
 
 * https://github.com/michaelb/sniprun
@@ -243,7 +240,6 @@ Marks:
 #### Github
 
 * https://github.com/pwntester/octo.nvim
-
 
 #### Browser integration
 
