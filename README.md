@@ -151,6 +151,8 @@ Here are listed my current installed plugins in the editor.
 
 * [winshift](https://github.com/sindrets/winshift.nvim)
 
+* [colorizer](https://github.com/NvChad/nvim-colorizer.lua)
+
 ### 3.3. Try out
 
 Marks:
@@ -183,7 +185,6 @@ Marks:
 
 #### Colors
 
-* https://github.com/NvChad/nvim-colorizer.lua :star:
 * https://github.com/sunjon/Shade.nvim :star::x:
 
 #### Debugging

@@ -116,6 +116,8 @@ local function plugins(use)
 
 	use 'sindrets/winshift.nvim'
 
+	use 'NvChad/nvim-colorizer.lua'
+
 	if packer_bootstrap then
 		print 'Restart Neovim required after installation!'
 		require('packer').sync()
