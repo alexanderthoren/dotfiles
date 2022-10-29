@@ -8,6 +8,7 @@ vim.g.mapleader = ' '
 keymap.set('n', '<leader>q', ':qa<cr>')
 keymap.set('n', '<leader>q!', ':qa!<cr>')
 keymap.set('n', '<leader>wq', ':wa<cr>:qa<cr>')
+keymap.set('n', '<leader>ww', ':w<cr>')
 keymap.set('n', '<leader>e', ':NvimTreeToggle<cr>')
 keymap.set('n', '<leader>l', ':LspInstallInfo<cr>')
 keymap.set('n', '<leader>f', ':Telescope find_files<cr>')
@@ -16,6 +17,8 @@ keymap.set('n', '<leader>tt', ':ToggleTerm<cr>')
 keymap.set('n', '<leader>tw', ':Twilight<cr>')
 keymap.set('n', '<leader>o', ':SymbolsOutline<cr>')
 keymap.set('n', '<leader>z', ':ZenMode<cr>')
+keymap.set('n', '<leader>wsh', ':WinShift<cr>')
+keymap.set('n', '<leader>wss', ':WinShift swap<cr>')
 
 -- Do not yank with x
 keymap.set('n', 'x', '"_x')
@@ -56,15 +59,3 @@ keymap.set('', 'sh', '<C-w>h', default_opts)
 keymap.set('', 'sj', '<C-w>j', default_opts)
 keymap.set('', 'sk', '<C-w>k', default_opts)
 keymap.set('', 'sl', '<C-w>l', default_opts)
-
--- Move windows
-keymap.set('', 'sH', '<C-w>H', default_opts)
-keymap.set('', 'sJ', '<C-w>J', default_opts)
-keymap.set('', 'sK', '<C-w>K', default_opts)
-keymap.set('', 'sL', '<C-w>L', default_opts)
-
--- Resize window
-keymap.set('n', '<C-w><left>', '<C-w><', default_opts)
-keymap.set('n', '<C-w><right>', '<C-w>>', default_opts)
-keymap.set('n', '<C-w><up>', '<C-w>+', default_opts)
-keymap.set('n', '<C-w><down>', '<C-w>-', default_opts)

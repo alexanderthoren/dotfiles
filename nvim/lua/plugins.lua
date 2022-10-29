@@ -114,6 +114,8 @@ local function plugins(use)
 
 	use 'rmagatti/auto-session'
 
+	use 'sindrets/winshift.nvim'
+
 	if packer_bootstrap then
 		print 'Restart Neovim required after installation!'
 		require('packer').sync()

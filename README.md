@@ -55,11 +55,6 @@ Here are listed my current installed plugins in the shell.
 
 * [fzf](https://github.com/junegunn/fzf)
 
-```
-# To install useful key bindings and fuzzy completion:
-$(brew --prefix)/opt/fzf/install
-```
-
 * [ripgrep](https://github.com/BurntSushi/ripgrep)
 
 * [node](https://github.com/nodejs/node)
@@ -153,6 +148,8 @@ Here are listed my current installed plugins in the editor.
 * [nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context)
 
 * [auto-session](https://github.com/rmagatti/auto-session)
+
+* [winshift](https://github.com/sindrets/winshift.nvim)
 
 ### 3.3. Try out
 
@@ -271,5 +268,4 @@ Marks:
 
 #### Split and window
 
-* https://github.com/sindrets/winshift.nvim :star:
 * https://github.com/beauwilliams/focus.nvim 
