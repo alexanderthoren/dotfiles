@@ -35,17 +35,22 @@
 
 ## 1. Terminal
 
-My current terminal is [**Alacritty**](https://github.com/alacritty/alacritty).
+My current terminal is [**Alacritty**](https://github.com/alacritty/alacritty). It is cross-platform, so +1 for MacOS,
+Linux and Windows.
 
 My old terminal was [**iTerm2**](https://github.com/gnachman/iTerm2), but Alacritty improves the performance, which is what I care more of.
-
-Also, Alacritty is cross-platform, which I am interested in as a MacOS and Windows user. I also use WSL2.
 
 ---
 
 ## 2. Shell
 
 My current shell is [**nushell**](https://github.com/nushell/nushell) and prompt is [**starship**](https://github.com/starship/starship).
+
+```
+#To set nu as the default shell:
+echo $(which nu) | sudo tee -a /etc/shells
+chsh -s $(which nu)
+```
 
 ### 2.1. Plugins
 
