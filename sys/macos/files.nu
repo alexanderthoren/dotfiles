@@ -23,6 +23,11 @@ def installConfigFiles [] {
 	cp -r sys/macos/nushell $'($home)/Library/Application Support/'
 }
 
+def installYabaiFiles [] {
+	sudo cp sys/macos/yabai/yabai /private/etc/sudoers.d/yabai
+	cp sys/macos/yabai/.yabairc $home
+}
+
 def installFonts [] {
 	echo 'Installing fonts'
 	let fontsPath = 'sys/fonts/'
@@ -35,5 +40,6 @@ def installFonts [] {
 echo '-> Installing files'
 removeOldFiles
 installConfigFiles
+installYabaiFiles 
 installFonts
 echo '<- Files installation completed!'
