@@ -26,6 +26,7 @@ def installConfigFiles [] {
 def installYabaiFiles [] {
 	sudo cp sys/macos/yabai/yabai /private/etc/sudoers.d/yabai
 	cp sys/macos/yabai/.yabairc $home
+	chmod +x $'($home)/.yabairc'
 }
 
 def installFonts [] {
