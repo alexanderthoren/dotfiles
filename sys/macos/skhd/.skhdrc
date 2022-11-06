@@ -1,8 +1,29 @@
 cmd - return : /Applications/Alacritty.app/Contents/MacOs/alacritty
-
 cmd + alt - x : /Applications/Xcode.app/Contents/MacOs/Xcode
 
+# space layout
+fn + alt - b : yabai -m space --layout bsp
+fn + alt - f : yabai -m space --layout float
+
+# focus window
 alt - h : yabai -m window --focus west
 alt - j : yabai -m window --focus south
 alt - k : yabai -m window --focus north
 alt - l : yabai -m window --focus east
+alt - r : yabai -m window --focus recent
+alt - m : yabai -m window --focus mouse
+
+# swap window
+shift + alt - h : yabai -m window --swap west
+shift + alt - j : yabai -m window --swap south
+shift + alt - k : yabai -m window --swap north
+shift + alt - l : yabai -m window --swap east
+shift + alt - r : yabai -m window --swap recent
+shift + alt - m : yabai -m window --swap mouse
+
+# move window
+shift + alt + cmd - h : yabai -m window --warp west
+shift + alt + cmd - j : yabai -m window --warp south
+shift + alt + cmd - k : yabai -m window --warp north
+shift + alt + cmd - l : yabai -m window --warp east
+shift + alt + cmd - m : yabai -m window --warp mouse
