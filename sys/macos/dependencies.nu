@@ -33,11 +33,22 @@ def installBinaries [] {
 	brew install -q 'neofetch'
 	brew install -q 'bat'
 	brew install -q 'koekeishiya/formulae/yabai'
+	brew install -q 'koekeishiya/formulae/skhd'
+}
+
+def stopServices [] {
+	brew services stop yabai
+}
+
+def startServices [] {
+	brew services start yabai
 }
 
 echo '-> Brew installation'
+stopServices
 updateAndUpgradeBrew
 tapDependencies
 installCasks
 installBinaries
+startServices
 echo '<- Brew installation completed!'

@@ -29,6 +29,10 @@ def installYabaiFiles [] {
 	chmod +x $'($home)/.yabairc'
 }
 
+def installSkhdFiles [] {
+	cp sys/macos/skhd/.skhdrc $home
+}
+
 def installFonts [] {
 	echo 'Installing fonts'
 	let fontsPath = 'sys/fonts/'
@@ -39,8 +43,9 @@ def installFonts [] {
 }
 
 echo '-> Installing files'
-removeOldFiles
+#removeOldFiles
 installConfigFiles
 installYabaiFiles 
+installSkhdFiles
 installFonts
 echo '<- Files installation completed!'
