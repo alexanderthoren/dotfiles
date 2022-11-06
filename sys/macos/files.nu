@@ -31,6 +31,7 @@ def installYabaiFiles [] {
 
 def installSkhdFiles [] {
 	cp sys/macos/skhd/.skhdrc $home
+	cp sys/macos/skhd/com.koekeishiya.skhd.plist $'($home)/Library/LaunchAgents'
 }
 
 def installFonts [] {

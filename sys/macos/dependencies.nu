@@ -38,10 +38,12 @@ def installBinaries [] {
 
 def stopServices [] {
 	brew services stop yabai
+	brew services stop skhd
 }
 
 def startServices [] {
 	brew services start yabai
+	brew services start skhd
 }
 
 echo '-> Brew installation'
