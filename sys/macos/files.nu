@@ -24,6 +24,13 @@ def installConfigFiles [] {
 }
 
 def installYabaiFiles [] {
+	let whoami = $'(whoami | str trim)'
+	let brewYabai = $'(which yabai | get path | get 0)'
+	let shasum = $'(shasum -a 256 ($brewYabai) | str trim)'
+	let data = $"($whoami) ALL = \(root) NOPASSWD: sha256:($shasum) --load-sa"
+	
+	echo $data | save sys/macos/yabai/yabai
+
 	sudo cp sys/macos/yabai/yabai /private/etc/sudoers.d/yabai
 	cp sys/macos/yabai/.yabairc $home
 	chmod +x $'($home)/.yabairc'
