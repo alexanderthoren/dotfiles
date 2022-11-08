@@ -54,6 +54,8 @@ alt - j : yabai -m window --focus south
 alt - k : yabai -m window --focus north
 alt - l : yabai -m window --focus east
 alt - r : yabai -m window --focus recent
+alt - p : yabai -m window --focus prev
+alt - n : yabai -m window --focus next
 alt - m : yabai -m window --focus mouse
 
 # swap
@@ -62,6 +64,8 @@ alt + ctrl - j : yabai -m window --swap south
 alt + ctrl - k : yabai -m window --swap north
 alt + ctrl - l : yabai -m window --swap east
 alt + ctrl - r : yabai -m window --swap recent
+alt + ctrl - p : yabai -m window --swap prev
+alt + ctrl - n : yabai -m window --swap next
 alt + ctrl - m : yabai -m window --swap mouse
 
 # warp
@@ -69,6 +73,9 @@ alt + cmd - h : yabai -m window --warp west
 alt + cmd - j : yabai -m window --warp south
 alt + cmd - k : yabai -m window --warp north
 alt + cmd - l : yabai -m window --warp east
+alt + cmd - r : yabai -m window --warp recent
+alt + cmd - p : yabai -m window --warp prev
+alt + cmd - n : yabai -m window --warp next
 alt + cmd - m : yabai -m window --warp mouse
 
 # move to space 
