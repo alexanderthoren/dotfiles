@@ -25,10 +25,14 @@
 
 ### 0.1 Plugins
 
-### 0.2 Try out
+Here are listed my current installed plugins in the os.
 
 * [yabai](https://github.com/koekeishiya/yabai)
+
 * [skhd](https://github.com/koekeishiya/skhd)
+
+### 0.2 Try out
+
 * [sketchyBar](https://github.com/FelixKratz/SketchyBar)
 
 ---
@@ -135,8 +139,6 @@ Here are listed my current installed plugins in the editor.
 * [cmp-cmdline](https://github.com/hrsh7th/cmp-cmdline)
 
 * [lspkind.nvim](https://github.com/onsails/lspkind.nvim)
-
-* [toggleterm](https://github.com/akinsho/toggleterm.nvim)
 
 * [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)
 
