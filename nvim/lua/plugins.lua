@@ -98,8 +98,6 @@ local function plugins(use)
 
 	use 'hrsh7th/cmp-cmdline'
 
-	use 'akinsho/toggleterm.nvim'
-
 	use 'simrat39/symbols-outline.nvim'
 
 	use 'lewis6991/gitsigns.nvim'
