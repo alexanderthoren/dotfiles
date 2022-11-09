@@ -31,9 +31,9 @@ Here are listed my current installed plugins in the os.
 
 * [skhd](https://github.com/koekeishiya/skhd)
 
-### 0.2 Try out
-
 * [sketchyBar](https://github.com/FelixKratz/SketchyBar)
+
+### 0.2 Try out
 
 ---
 

@@ -28,10 +28,10 @@ def installYabaiFiles [] {
 	let brewYabai = $'(which yabai | get path | get 0)'
 	let shasum = $'(shasum -a 256 ($brewYabai) | str trim)'
 	let data = $"($whoami) ALL = \(root) NOPASSWD: sha256:($shasum) --load-sa"
-	
 	echo $data | save sys/macos/yabai/yabai
-
 	sudo cp sys/macos/yabai/yabai /private/etc/sudoers.d/yabai
+	rm sys/macos/yabai/yabai
+
 	cp sys/macos/yabai/.yabairc $home
 	chmod +x $'($home)/.yabairc'
 }
@@ -39,6 +39,10 @@ def installYabaiFiles [] {
 def installSkhdFiles [] {
 	cp sys/macos/skhd/.skhdrc $home
 	cp sys/macos/skhd/com.koekeishiya.skhd.plist $'($home)/Library/LaunchAgents'
+}
+
+def installSketchybarFiles [] {
+	cp -r sys/macos/sketchybar $'($home)/.config/'
 }
 
 def installFonts [] {
@@ -55,5 +59,6 @@ echo '-> Installing files'
 installConfigFiles
 installYabaiFiles 
 installSkhdFiles
+installSketchybarFiles
 installFonts
 echo '<- Files installation completed!'

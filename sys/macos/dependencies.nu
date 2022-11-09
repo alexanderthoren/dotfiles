@@ -34,16 +34,19 @@ def installBinaries [] {
 	brew install -q 'bat'
 	brew install -q 'koekeishiya/formulae/yabai'
 	brew install -q 'koekeishiya/formulae/skhd'
+	brew install -q 'FelixKratz/formulae/sketchybar'
 }
 
 def stopServices [] {
 	brew services stop yabai
 	brew services stop skhd
+	brew services stop sketchybar
 }
 
 def startServices [] {
 	brew services start yabai
 	brew services start skhd
+	brew services start sketchybar
 }
 
 echo '-> Brew installation'
