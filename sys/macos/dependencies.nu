@@ -15,7 +15,6 @@ def installCasks [] {
 	echo 'Installing casks'
 	brew install -q 'alacritty' --no-quarantine
 	brew install -q 'proxyman'
-	brew install -q 'stats'
 }
 
 def installBinaries [] {
