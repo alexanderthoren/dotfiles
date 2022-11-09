@@ -1,3 +1,6 @@
+# INIT
+ITEM_DIR="$HOME/.config/sketchybar/items"
+
 # BAR
 sketchybar --bar height=30 \
 				 color=0xff2e3440 \
@@ -14,7 +17,7 @@ sketchybar --default updates=when_shown \
 					 drawing=on \
 					 background.height=22 \
 					 background.drawing=on \
-					 icon.font="MesloLGS NF:Bold:15.0" \
+					 icon.font="MesloLGS NF:Bold:18.0" \
 					 icon.color=0xffffffff \
 					 icon.padding_left=8 \
 					 icon.padding_right=8 \
@@ -23,33 +26,12 @@ sketchybar --default updates=when_shown \
 					 label.padding_left=8 \
 					 label.padding_right=8
 
+
 # LEFT 
-sketchybar --add item logo left \
-		   --set logo icon= \
-				 background.color=0x44ffffff \
-				 background.drawing=on
+source "$ITEM_DIR/logo.sh"
 
 # CENTER - SPACE_INDICATORS
-SPACE_ICONS=("1" "2" "3" "4" "5" "6" "7" "8" "9" "10")
-for i in "${!SPACE_ICONS[@]}"
-do
-  sid=$(($i+1))
-  sketchybar --add space space.$sid center \
-             --set space.$sid associated_space=$sid \
-                              background.padding_left=2 \
-                              background.padding_right=2 \
-                              background.color=0x44ffffff \
-                              background.corner_radius=4 \
-                              background.height=22 \
-                              background.drawing=on \
-                              icon=${SPACE_ICONS[i]} \
-							  icon.color=0xffffffff \
-							  icon.highlight_color=0x77ffffff \
-							  icon.highlight=off \
-                              label.drawing=off \
-                              script="$PLUGIN_DIR/space.sh" \
-                              click_script="yabai -m space --focus $sid"
-done
+source "$ITEM_DIR/spaces.sh"
 
 #RIGHT
 

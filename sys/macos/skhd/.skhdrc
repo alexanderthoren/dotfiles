@@ -3,13 +3,13 @@ cmd + alt - x : /Applications/Xcode.app/Contents/MacOs/Xcode
 
 # display
 # focus
-fn + ctrl - r : yabai -m display --focus recent
-fn + ctrl - p : yabai -m display --focus prev
-fn + ctrl - n : yabai -m display --focus next
+shift + ctrl - r : yabai -m display --focus recent
+shift + ctrl - p : yabai -m display --focus prev
+shift + ctrl - n : yabai -m display --focus next
 
-fn + ctrl - 1 : yabai -m display --focus 1
-fn + ctrl - 2 : yabai -m display --focus 2
-fn + ctrl - 3 : yabai -m display --focus 3
+shift + ctrl - 1 : yabai -m display --focus 1
+shift + ctrl - 2 : yabai -m display --focus 2
+shift + ctrl - 3 : yabai -m display --focus 3
 
 # space
 # create - destroy
