@@ -9,6 +9,8 @@ def tapDependencies [] {
 	brew tap -q 'homebrew/core'
 	brew tap -q 'homebrew/cask'
 	brew tap -q 'homebrew/cask-fonts'
+	brew tap -q 'koekeishiya/formulae'
+	brew tap -q 'FelixKratz/formulae'
 }
 
 def installCasks [] {
@@ -31,9 +33,9 @@ def installBinaries [] {
 	brew install -q 'TheZoraiz/ascii-image-converter/ascii-image-converter'
 	brew install -q 'neofetch'
 	brew install -q 'bat'
-	brew install -q 'koekeishiya/formulae/yabai'
-	brew install -q 'koekeishiya/formulae/skhd'
-	brew install -q 'FelixKratz/formulae/sketchybar'
+	brew install -q 'yabai'
+	brew install -q 'skhd'
+	brew install -q 'sketchybar'
 }
 
 def stopServices [] {
