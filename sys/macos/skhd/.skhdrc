@@ -1,5 +1,5 @@
-cmd - return : /Applications/Alacritty.app/Contents/MacOs/alacritty
-cmd + alt - x : /Applications/Xcode.app/Contents/MacOs/Xcode
+lctrl + lalt + lcmd - return : /Applications/Alacritty.app/Contents/MacOS/Alacritty
+lctrl + lalt + lcmd - x : /Applications/Xcode.app/Contents/MacOS/Xcode
 
 # display
 # focus
