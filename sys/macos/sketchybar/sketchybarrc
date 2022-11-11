@@ -3,12 +3,12 @@ ITEM_DIR="$HOME/.config/sketchybar/items"
 
 # BAR
 sketchybar --bar height=30 \
-				 color=0xff2e3440 \
+				 color=0x00000000 \
 				 sticky=on \
 				 position=top \
 				 y_offset=10 \
 				 margin=10 \
-				 corner_radius=8 \
+				 corner_radius=12 \
 				 padding_left=10 \
 				 padding_right=10
 
@@ -29,9 +29,9 @@ sketchybar --default updates=when_shown \
 
 # LEFT 
 source "$ITEM_DIR/logo.sh"
-
-# CENTER - SPACE_INDICATORS
 source "$ITEM_DIR/spaces.sh"
+
+# CENTER
 
 #RIGHT
 
