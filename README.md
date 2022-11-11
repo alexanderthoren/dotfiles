@@ -23,6 +23,8 @@
 
 ## 0. OS
 
+I use [Vimac](https://github.com/dexterleng/vimac) to move trough the system.
+
 ### 0.1 Plugins
 
 Here are listed my current installed plugins in the os.
