@@ -30,10 +30,11 @@ sketchybar --default updates=when_shown \
 # LEFT 
 source "$ITEM_DIR/logo.sh"
 source "$ITEM_DIR/spaces.sh"
-
-# CENTER
+source "$ITEM_DIR/frontapp.sh"
 
 #RIGHT
+source "$ITEM_DIR/battery.sh"
+source "$ITEM_DIR/clock.sh"
 
 # FINISH
 sketchybar --update

@@ -18,6 +18,6 @@ do
                               background.corner_radius=4 \
                               background.height=22 \
                               background.drawing=on \
-                              script="$PLUGINS_DIR/space.sh" \
+                              script="$PLUGINS_DIR/space_script.sh" \
                               click_script="yabai -m space --focus $sid"
 done
