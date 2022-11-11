@@ -19,6 +19,8 @@ def getFile [type: string] {
 		echo 'files.nu'
 	} else if $type == 'd' {
 		echo 'dependencies.nu'
+	} else if $type == 'a' {
+		echo 'apps.nu'
 	} else {
 		print $'Error: installation type is ($type)'
 		echo null
