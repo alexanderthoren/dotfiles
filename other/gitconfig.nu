@@ -1,7 +1,5 @@
-#!/bin/sh
+let home = $env.HOME
 
 echo "Installing new .gitconfig..."
-
-cp -f ../sys/.files/.gitconfig "$HOME"
-
+cp ../sys/.files/.gitconfig $home
 echo "Installation completed!"
