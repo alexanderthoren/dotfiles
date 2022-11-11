@@ -8,7 +8,7 @@ if [ $PERCENTAGE = "" ]; then
 fi
 
 sketchybar --set $NAME label="${PERCENTAGE}%" \
-				       label.highlight=on
+				       label.highlight=off
 
 if [[ $CHARGING != "" ]]; then
   sketchybar --set $NAME label.highlight=on
