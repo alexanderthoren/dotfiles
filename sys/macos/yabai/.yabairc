@@ -1,16 +1,18 @@
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 sudo yabai --load-sa
 
+# Space settings
 yabai -m config layout bsp
-
-yabai -m config window_placement second_child
-
+yabai -m config external_bar all:30:0
 yabai -m config top_padding 20
 yabai -m config bottom_padding 20
 yabai -m config left_padding 20
 yabai -m config right_padding 20
 yabai -m config window_gap 20
 
+# Window settings
+yabai -m config window_placement second_child
+yabai -m config window_shadow off
 yabai -m config window_opacity off
 yabai -m config active_window_opacity 1.0
 yabai -m config normal_window_opacity 0.8
@@ -23,4 +25,37 @@ yabai -m config active_window_border_color 0xffffffff
 yabai -m config normal_window_border_color 0x55ffffff
 yabai -m config window_border_blur off
 
-yabai -m config external_bar all:30:0
+# Unmanaged apps
+yabai -m rule --add app="^System Settings$"  manage=off border=off
+yabai -m rule --add app="^Calculator$"  manage=off border=off
+
+# Space labels
+yabai -m space 1 --label "Communication"
+yabai -m space 2 --label "Tools"
+yabai -m space 3 --label "Web"
+yabai -m space 4 --label "Development"
+yabai -m space 5 --label "Terminal"
+
+# Space config
+yabai -m config --space 1 layout bsp
+yabai -m config --space 2 layout bsp
+yabai -m config --space 3 layout stack
+yabai -m config --space 4 layout bsp
+yabai -m config --space 5 layout bsp
+
+# Space 1 apps
+yabai -m rule --add app="Mail" space=1
+
+# Space 2 apps
+yabai -m rule --add app="Calendar" space=2
+yabai -m rule --add app="Notes" space=2
+yabai -m rule --add app="Reminders" space=2
+
+# Space 3 apps
+yabai -m rule --add app="Safari" space=3
+
+# Space 4 apps
+yabai -m rule --add app="Xcode" space=4
+
+# Space 5 apps
+yabai -m rule --add app="Alacritty" space=5
