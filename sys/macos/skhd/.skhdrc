@@ -1,5 +1,6 @@
 lctrl + lalt + lcmd - return : /Applications/Alacritty.app/Contents/MacOS/Alacritty
 lctrl + lalt + lcmd - x : /Applications/Xcode.app/Contents/MacOS/Xcode
+lctrl + lalt + lcmd - s : /Applications/Safari.app/Contents/MacOS/Safari
 
 # display
 # focus
