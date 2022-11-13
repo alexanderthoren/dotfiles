@@ -512,12 +512,12 @@ let-env config = {
 }
 
 # ALIAS
-
+alias .. = cd ..
 alias ll = ls -la
 alias f = fzf
 alias fe = fzf -e
 alias n = nvim
-alias lss = (du -hs * | sort -hr)
+alias lss = (ls -d | sort-by size -r)
 
 # Xcode
 alias repd = xcodebuild -resolvePackageDependencies
