@@ -82,7 +82,21 @@ lalt + lcmd - m : yabai -m window --warp mouse
 # move to space 
 lalt + ralt - p : yabai -m window --space prev
 lalt + ralt - n : yabai -m window --space next
+lalt + ralt - 1 : yabai -m window --space 1
+lalt + ralt - 2 : yabai -m window --space 2
+lalt + ralt - 3 : yabai -m window --space 3
+lalt + ralt - 4 : yabai -m window --space 4
+lalt + ralt - 5 : yabai -m window --space 5
+lalt + ralt - 6 : yabai -m window --space 6
+lalt + ralt - 7 : yabai -m window --space 7
+lalt + ralt - 8 : yabai -m window --space 8
+lalt + ralt - 9 : yabai -m window --space 9
+
 
 # move to display 
 lalt + rcmd - p : yabai -m window --display prev
 lalt + rcmd - n : yabai -m window --display next
+lalt + rcmd - 1 : yabai -m window --display 1
+lalt + rcmd - 2 : yabai -m window --display 2
+lalt + rcmd - 3 : yabai -m window --display 3
+

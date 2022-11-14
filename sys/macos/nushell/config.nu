@@ -542,7 +542,6 @@ alias gd = git diff
 alias gd-1 = git diff head~1
 alias gdrg = (git diff head~1 | rg)
 alias gdt = git difftool -y
-alias gf = git fetch
 alias gf = git fetch --all -p
 alias gl = git log
 alias gmt = git mergetool -y

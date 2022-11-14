@@ -28,6 +28,7 @@ yabai -m config window_border_blur off
 # Unmanaged apps
 yabai -m rule --add app="^System Settings$"  manage=off border=off
 yabai -m rule --add app="^Calculator$"  manage=off border=off
+yabai -m rule --add app="^Xcode$"  manage=off border=off
 
 # Space labels
 yabai -m space 1 --label "Communication"
@@ -44,10 +45,10 @@ yabai -m config --space 4 layout bsp
 yabai -m config --space 5 layout bsp
 
 # Space 1 apps
-yabai -m rule --add app="Mail" space=1
 
 # Space 2 apps
 yabai -m rule --add app="Calendar" space=2
+yabai -m rule --add app="Mail" space=2
 yabai -m rule --add app="Notes" space=2
 yabai -m rule --add app="Reminders" space=2
 
