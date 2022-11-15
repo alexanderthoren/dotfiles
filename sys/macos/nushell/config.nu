@@ -522,8 +522,8 @@ alias lss = (ls -d | sort-by size -r)
 # Xcode
 alias repd = xcodebuild -resolvePackageDependencies
 alias rmdd = rm -rf ~/Library/Developer/Xcode/DerivedData
-alias rmspm = (rm -rf ~/Library/Caches/org.swift.swiftpm/; rm -rf ~/Library/org.swift.swiftpm/)
-alias respm = (rmspm; repd)
+alias rmspm = rm -rf ~/Library/org.swift.swiftpm/
+alias rmcspm = rm -rf ~/Library/Caches/org.swift.swiftpm/
 alias rsxcode = (killall Xcode; rmdd; respm; xed .)
 
 # git
