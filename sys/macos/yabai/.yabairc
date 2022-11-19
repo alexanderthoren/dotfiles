@@ -44,12 +44,14 @@ yabai -m config --space 4 layout float
 yabai -m config --space 5 layout bsp
 
 # Space 1 apps
+yabai -m rule --add app="Messages" space=^1
 
 # Space 2 apps
 yabai -m rule --add app="Calendar" space=^2
 yabai -m rule --add app="Mail" space=^2
 yabai -m rule --add app="Notes" space=^2
 yabai -m rule --add app="Reminders" space=^2
+yabai -m rule --add app="Finder" space=^2
 
 # Space 3 apps
 yabai -m rule --add app="Safari" space=^3
