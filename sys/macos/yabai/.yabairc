@@ -28,6 +28,7 @@ yabai -m config window_border_blur off
 # Unmanaged apps
 yabai -m rule --add app="^System Settings$"  manage=off border=off
 yabai -m rule --add app="^Calculator$"  manage=off border=off
+yabai -m rule --add app="^Finder$"  manage=off
 
 # Space labels
 yabai -m space 1 --label "Communication"
@@ -54,7 +55,6 @@ yabai -m rule --add app="Reminders" space=^2
 yabai -m rule --add app="Finder" space=^2
 
 # Space 3 apps
-yabai -m rule --add app="Safari" space=^3
 
 # Space 4 apps
 yabai -m rule --add app="Xcode" space=^4
