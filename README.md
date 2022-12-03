@@ -172,6 +172,8 @@ Here are listed my current installed plugins in the editor.
 
 * [nvim-surround](https://github.com/kylechui/nvim-surround)
 
+* [octo](https://github.com/pwntester/octo.nvim)
+
 ### 3.3. Try out
 
 Marks:
@@ -220,10 +222,6 @@ Marks:
 #### Code runner
 
 * https://github.com/michaelb/sniprun
-
-#### Github
-
-* https://github.com/pwntester/octo.nvim :star:
 
 #### Editing support
 

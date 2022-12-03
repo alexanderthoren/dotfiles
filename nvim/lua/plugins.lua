@@ -124,6 +124,8 @@ local function plugins(use)
 
 	use 'kylechui/nvim-surround'
 
+	use 'pwntester/octo.nvim'
+
 	if packer_bootstrap then
 		print 'Restart Neovim required after installation!'
 		require('packer').sync()
