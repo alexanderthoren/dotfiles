@@ -78,6 +78,8 @@ Here are listed my current installed plugins in the shell.
 
 * [bat](https://github.com/sharkdp/bat)
 
+* [github-cli](https://github.com/cli/cli)
+
 ### 2.2 Try out
 
 * [btop](https://github.com/aristocratos/btop)

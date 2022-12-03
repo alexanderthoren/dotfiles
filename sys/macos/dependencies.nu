@@ -36,6 +36,7 @@ def installBinaries [] {
 	brew install -q 'yabai'
 	brew install -q 'skhd'
 	brew install -q 'sketchybar'
+	brew install -q 'gh'
 }
 
 def stopServices [] {
