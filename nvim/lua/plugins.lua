@@ -120,6 +120,10 @@ local function plugins(use)
 
 	use {'romgrk/barbar.nvim', wants = 'nvim-web-devicons'}
 
+	use 'windwp/nvim-autopairs'
+
+	use 'kylechui/nvim-surround'
+
 	if packer_bootstrap then
 		print 'Restart Neovim required after installation!'
 		require('packer').sync()

@@ -168,6 +168,10 @@ Here are listed my current installed plugins in the editor.
 
 * [barbar](https://github.com/romgrk/barbar.nvim)
 
+* [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
+
+* [nvim-surround](https://github.com/kylechui/nvim-surround)
+
 ### 3.3. Try out
 
 Marks:
@@ -180,10 +184,6 @@ Marks:
 
 * https://github.com/ray-x/lsp_signature.nvim
 * https://github.com/jose-elias-alvarez/null-ls.nvim
-
-#### Syntax
-
-* https://github.com/kylechui/nvim-surround :star:
 
 #### Marks
 
@@ -227,7 +227,6 @@ Marks:
 
 #### Editing support
 
-* https://github.com/windwp/nvim-autopairs :star:
 * https://github.com/bennypowers/nvim-regexplainer :star:
 
 #### Formatting
@@ -242,7 +241,3 @@ Marks:
 #### Competitive programming
 
 * https://github.com/xeluxee/competitest.nvim
-
-#### Split and window
-
-* https://github.com/beauwilliams/focus.nvim :star:
