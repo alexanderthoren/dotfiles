@@ -164,6 +164,8 @@ Here are listed my current installed plugins in the editor.
 
 * [hop](https://github.com/phaazon/hop.nvim)
 
+* [barbar](https://github.com/romgrk/barbar.nvim)
+
 ### 3.3. Try out
 
 Marks:
@@ -179,11 +181,7 @@ Marks:
 
 #### Syntax
 
-* https://github.com/kylechui/nvim-surround
-
-#### Registers
-
-* https://github.com/AckslD/nvim-neoclip.lua :star:
+* https://github.com/kylechui/nvim-surround :star:
 
 #### Marks
 
@@ -204,26 +202,9 @@ Marks:
 
 * https://github.com/lewis6991/spellsitter.nvim
 
-#### Tabline
-
-* https://github.com/romgrk/barbar.nvim :star:
-* https://github.com/akinsho/bufferline.nvim :star:
-
-#### Cursorline
-
-* https://github.com/RRethy/vim-illuminate :star::x:
-
-#### Startup
-
-* https://github.com/glepnir/dashboard-nvim
-
 #### Indent
 
 * https://github.com/lukas-reineke/indent-blankline.nvim
-
-#### Games
-
-* https://github.com/ThePrimeagen/vim-be-good
 
 #### Git
 
@@ -231,12 +212,8 @@ Marks:
 
 #### Comment
 
-* https://github.com/numToStr/Comment.nvim
-* https://github.com/folke/todo-comments.nvim
-
-#### Collaborative editing
-
-* https://github.com/jbyuki/instant.nvim
+* https://github.com/numToStr/Comment.nvim :star:
+* https://github.com/folke/todo-comments.nvim :star:
 
 #### Code runner
 
@@ -244,16 +221,12 @@ Marks:
 
 #### Github
 
-* https://github.com/pwntester/octo.nvim
-
-#### Browser integration
-
-* https://github.com/glacambre/firenvim :x: &rarr; Not available for Safari. **I don't want to use Chrome.**
+* https://github.com/pwntester/octo.nvim :star:
 
 #### Editing support
 
 * https://github.com/windwp/nvim-autopairs :star:
-* https://github.com/bennypowers/nvim-regexplainer
+* https://github.com/bennypowers/nvim-regexplainer :star:
 
 #### Formatting
 
@@ -270,4 +243,4 @@ Marks:
 
 #### Split and window
 
-* https://github.com/beauwilliams/focus.nvim 
+* https://github.com/beauwilliams/focus.nvim :star:

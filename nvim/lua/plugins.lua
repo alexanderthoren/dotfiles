@@ -118,6 +118,8 @@ local function plugins(use)
 
 	use 'phaazon/hop.nvim'
 
+	use {'romgrk/barbar.nvim', wants = 'nvim-web-devicons'}
+
 	if packer_bootstrap then
 		print 'Restart Neovim required after installation!'
 		require('packer').sync()
