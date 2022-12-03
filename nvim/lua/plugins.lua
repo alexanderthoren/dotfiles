@@ -128,6 +128,8 @@ local function plugins(use)
 
 	use 'folke/todo-comments.nvim'
 
+	use 'numToStr/Comment.nvim'
+
 	if packer_bootstrap then
 		print 'Restart Neovim required after installation!'
 		require('packer').sync()

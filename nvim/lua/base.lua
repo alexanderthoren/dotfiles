@@ -20,7 +20,7 @@ v.softtabstop = 4
 v.textwidth = 120
 
 -- Whichkey
-v.timeoutlen = 500
+v.timeoutlen = 1000
 
 -- Cmp
 v.completeopt = {'menu', 'menuone', 'noselect'}

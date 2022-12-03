@@ -176,6 +176,8 @@ Here are listed my current installed plugins in the editor.
 
 * [todo-comments](https://github.com/folke/todo-comments.nvim)
 
+* [comment](https://github.com/numToStr/Comment.nvim)
+
 ### 3.3. Try out
 
 Marks:
@@ -186,8 +188,8 @@ Marks:
 
 #### LSP
 
-* https://github.com/ray-x/lsp_signature.nvim
-* https://github.com/jose-elias-alvarez/null-ls.nvim
+* https://github.com/ray-x/lsp_signature.nvim :star:
+* https://github.com/jose-elias-alvarez/null-ls.nvim :star:
 
 #### Marks
 
@@ -195,8 +197,8 @@ Marks:
 
 #### Note taking
 
-* https://github.com/nvim-neorg/neorg
-* https://github.com/jbyuki/venn.nvim
+* https://github.com/nvim-neorg/neorg :star:
+* https://github.com/jbyuki/venn.nvim :star:
 
 #### Debugging
 
@@ -206,19 +208,15 @@ Marks:
 
 #### Language
 
-* https://github.com/lewis6991/spellsitter.nvim
+* https://github.com/lewis6991/spellsitter.nvim :star:
 
 #### Indent
 
-* https://github.com/lukas-reineke/indent-blankline.nvim
+* https://github.com/lukas-reineke/indent-blankline.nvim :star:
 
 #### Git
 
 * https://github.com/sindrets/diffview.nvim
-
-#### Comment
-
-* https://github.com/numToStr/Comment.nvim :star:
 
 #### Code runner
 
@@ -226,8 +224,8 @@ Marks:
 
 #### Formatting
 
-* https://github.com/mhartington/formatter.nvim
-* https://github.com/sbdchd/neoformat
+* https://github.com/mhartington/formatter.nvim :star:
+* https://github.com/sbdchd/neoformat :star:
 
 #### Testing
 
