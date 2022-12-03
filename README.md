@@ -174,6 +174,8 @@ Here are listed my current installed plugins in the editor.
 
 * [octo](https://github.com/pwntester/octo.nvim)
 
+* [todo-comments](https://github.com/folke/todo-comments.nvim)
+
 ### 3.3. Try out
 
 Marks:
@@ -217,15 +219,10 @@ Marks:
 #### Comment
 
 * https://github.com/numToStr/Comment.nvim :star:
-* https://github.com/folke/todo-comments.nvim :star:
 
 #### Code runner
 
 * https://github.com/michaelb/sniprun
-
-#### Editing support
-
-* https://github.com/bennypowers/nvim-regexplainer :star:
 
 #### Formatting
 
