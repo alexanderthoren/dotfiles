@@ -133,6 +133,8 @@ local function plugins(use)
 
 	use 'numToStr/Comment.nvim'
 
+	use 'ray-x/lsp_signature.nvim'
+
 	use {
 		'nvim-neorg/neorg',
 		run = ':Neorg sync-parsers'

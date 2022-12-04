@@ -180,6 +180,8 @@ Here are listed my current installed plugins in the editor.
 
 * [neorg](https://github.com/nvim-neorg/neorg)
 
+* [lsp_signature](https://github.com/ray-x/lsp_signature.nvim)
+
 ### 3.3. Try out
 
 Marks:
@@ -190,44 +192,4 @@ Marks:
 
 #### LSP
 
-* https://github.com/ray-x/lsp_signature.nvim :star:
 * https://github.com/jose-elias-alvarez/null-ls.nvim :star:
-
-#### Marks
-
-* https://github.com/ThePrimeagen/harpoon
-
-#### Debugging
-
-* https://github.com/mfussenegger/nvim-dap
-* https://github.com/rcarriga/nvim-dap-ui
-* https://github.com/Pocco81/dap-buddy.nvim
-
-#### Language
-
-* https://github.com/lewis6991/spellsitter.nvim :star:
-
-#### Indent
-
-* https://github.com/lukas-reineke/indent-blankline.nvim :star:
-
-#### Git
-
-* https://github.com/sindrets/diffview.nvim
-
-#### Code runner
-
-* https://github.com/michaelb/sniprun
-
-#### Formatting
-
-* https://github.com/mhartington/formatter.nvim :star:
-* https://github.com/sbdchd/neoformat :star:
-
-#### Testing
-
-* https://github.com/nvim-neotest/neotest
-
-#### Competitive programming
-
-* https://github.com/xeluxee/competitest.nvim
