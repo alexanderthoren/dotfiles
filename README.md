@@ -178,6 +178,8 @@ Here are listed my current installed plugins in the editor.
 
 * [comment](https://github.com/numToStr/Comment.nvim)
 
+* [neorg](https://github.com/nvim-neorg/neorg)
+
 ### 3.3. Try out
 
 Marks:
@@ -194,11 +196,6 @@ Marks:
 #### Marks
 
 * https://github.com/ThePrimeagen/harpoon
-
-#### Note taking
-
-* https://github.com/nvim-neorg/neorg :star:
-* https://github.com/jbyuki/venn.nvim :star:
 
 #### Debugging
 

@@ -118,7 +118,10 @@ local function plugins(use)
 
 	use 'phaazon/hop.nvim'
 
-	use {'romgrk/barbar.nvim', wants = 'nvim-web-devicons'}
+	use {
+		'romgrk/barbar.nvim',
+		wants = 'nvim-web-devicons'
+	}
 
 	use 'windwp/nvim-autopairs'
 
@@ -129,6 +132,11 @@ local function plugins(use)
 	use 'folke/todo-comments.nvim'
 
 	use 'numToStr/Comment.nvim'
+
+	use {
+		'nvim-neorg/neorg',
+		run = ':Neorg sync-parsers'
+	}
 
 	if packer_bootstrap then
 		print 'Restart Neovim required after installation!'
