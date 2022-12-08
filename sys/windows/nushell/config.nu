@@ -550,6 +550,6 @@ alias gs = git status
 alias gu = (git fetch; git pull)
 
 # Starship
-#source ~/.cache/starship/init.nu
+source ~/.cache/starship/init.nu
 
 cd ~
