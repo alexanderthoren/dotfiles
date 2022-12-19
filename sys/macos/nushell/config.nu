@@ -557,6 +557,9 @@ alias grs = git restore --staged
 alias gs = git status
 alias gu = (git fetch; git pull)
 
+# github cli
+alias ghprrr = gh pr list --search 'review-requested:alexanderthoren'
+
 source ~/.cache/starship/init.nu
 
 if (tmux ls | str length) > 0 {
