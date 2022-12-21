@@ -65,4 +65,4 @@ let-env PATH = ($env.PATH | append "/usr/local/bin/")
 let-env PATH = ($env.PATH | append "/opt/homebrew/bin/")
 
 mkdir ~/.cache/starship
-starship init nu | str replace --string "size -c" "size" | save ~/.cache/starship/init.nu
+starship init nu | str replace --string "size -c" "size" | save -f ~/.cache/starship/init.nu

@@ -16,7 +16,7 @@ def installConfigFiles [] {
 		(
 			cat $alacrittyPath |
 			str replace "/usr/local/bin/nu" "/opt/homebrew/bin/nu" |
-			save $alacrittyPath
+			save -f $alacrittyPath
 		)
 	}
 	cp -r nvim $configPath
