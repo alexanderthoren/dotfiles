@@ -568,18 +568,20 @@ if (tmux ls | str length) > 0 {
 	let session = 'hacking'
 	tmux new-session -d -s $session
 	tmux rename-window -t 0 'home'
-	tmux send-keys -t 0 'cd Developer/dotfiles' C-m
+	tmux send -t 0 'cd Developer/dotfiles'
 	tmux new-window -n 'ios-dev'
-	tmux send-keys -t 1 'cd Developer/iOS/develop' C-m
+	tmux send -t 1 'cd Developer/iOS/develop'
 	tmux new-window -n 'ios-wip'
-	tmux send-keys -t 2 'cd Developer/iOS/wip' C-m
+	tmux send -t 2 'cd Developer/iOS/wip'
 	tmux new-window -n 'ios-rev'
-	tmux send-keys -t 3 'cd Developer/iOS/review' C-m
+	tmux send -t 3 'cd Developer/iOS/review'
 	tmux new-window -n 'android-dev'
-	tmux send-keys -t 4 'cd Developer/android/develop' C-m
+	tmux send -t 4 'cd Developer/android/develop'
 	tmux new-window -n 'android-wip'
-	tmux send-keys -t 5 'cd Developer/android/wip' C-m
+	tmux send -t 5 'cd Developer/android/wip'
 	tmux new-window -n 'android-rev'
-	tmux send-keys -t 6 'cd Developer/android/review' C-m
+	tmux send -t 6 'cd Developer/android/review'
+	tmux new-window -n 'fever2'
+	tmux send -t 7 'cd Developer/fever2'
 	tmux attach-session -t $session
 }
