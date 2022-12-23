@@ -559,6 +559,12 @@ alias gu = (git fetch; git pull)
 
 # github cli
 alias ghprrr = gh pr list --search 'review-requested:alexanderthoren'
+alias ghprv = gh pr view
+alias ghprd = gh pr diff
+alias ghprr = gh pr review
+alias ghpra = gh pr review -a
+alias ghprc = gh pr create
+alias ghpre = gh pr edit
 
 source ~/.cache/starship/init.nu
 
