@@ -45,6 +45,10 @@ def installSketchybarFiles [] {
 	cp -r sys/macos/sketchybar $'($home)/.config/'
 }
 
+def installTmuxFiles [] {
+	cp -r sys/macos/tmux/.tmux.conf $home
+}
+
 def installFonts [] {
 	echo 'Installing fonts'
 	let fontsPath = 'sys/fonts/'
@@ -60,5 +64,6 @@ installConfigFiles
 installYabaiFiles 
 installSkhdFiles
 installSketchybarFiles
+installTmuxFiles
 installFonts
 echo '<- Files installation completed!'
