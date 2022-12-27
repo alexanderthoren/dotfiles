@@ -565,6 +565,7 @@ alias ghprr = gh pr review
 alias ghpra = gh pr review -a
 alias ghprc = gh pr create
 alias ghpre = gh pr edit
+alias ghprl = gh pr list
 
 source ~/.cache/starship/init.nu
 
