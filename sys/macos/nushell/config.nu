@@ -520,19 +520,19 @@ alias n = nvim
 alias lss = (ls -d | sort-by size -r)
 
 # Xcode
+alias kx = killall Xcode
 alias repd = xcodebuild -resolvePackageDependencies
 alias rmdd = rm -rf ~/Library/Developer/Xcode/DerivedData
 alias rmspm = rm -rf ~/Library/org.swift.swiftpm/
 alias rmcspm = rm -rf ~/Library/Caches/org.swift.swiftpm/
-alias rsxcode = (killall Xcode; rmdd; respm; xed .)
+alias xo = xed .
 
 # git
 alias g = git
 alias ga = git add
 alias gaa = git add .
-alias gap = (git add .; git commit; git push)
 alias gb = git branch
-alias gbd = git branch -d
+alias gbd = git branch -D
 alias gc = git commit
 alias gcb = git checkout -b
 alias gcc = git checkout
@@ -546,6 +546,7 @@ alias gf = git fetch --all -p
 alias gl = git log
 alias gmt = git mergetool -y
 alias gps = git push
+alias gpso = git push -u origin $'(git branch --show-current | into string | str trim)'
 alias gpl = git pull
 alias grb = git rebase
 alias grba = git rebase --abort
@@ -555,7 +556,6 @@ alias grc = (git restore --staged .; git restore .; git clean -f)
 alias gre = git restore
 alias grs = git restore --staged
 alias gs = git status
-alias gu = (git fetch; git pull)
 
 # github cli
 alias ghprrr = gh pr list --search 'review-requested:alexanderthoren'
