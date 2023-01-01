@@ -100,13 +100,14 @@ Before I was using [sonokai](https://github.com/sainnhe/sonokai), but wasn't com
 
 Here are listed my current installed plugins in the editor.
 
-* [packer](https://github.com/wbthomason/packer.nvim)
+* [packer](https://github.com/wbthomason/packer.nvim) -> Check [lazy.nvim](https://github.com/folke/lazy.nvim) and
+  migrate to it if it's better and faster.
 
 * [lualine](https://github.com/nvim-lualine/lualine.nvim)
 
 * [lspconfig](https://github.com/neovim/nvim-lspconfig)
 
-* [lsp-installer](https://github.com/williamboman/nvim-lsp-installer) -> This plugin need to be updated to [mason](https://github.com/williamboman/mason.nvim).
+* [mason](https://github.com/williamboman/mason.nvim)
 
 * [markdown-preview](https://github.com/iamcco/markdown-preview.nvim)
 

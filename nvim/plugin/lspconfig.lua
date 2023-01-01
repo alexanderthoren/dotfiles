@@ -70,11 +70,6 @@ lspconfig.prosemd_lsp.setup {
 	on_attach = on_attach,
 }
 
-lspconfig.remark_ls.setup {
-	capabilities = capabilities,
-	on_attach = on_attach,
-}
-
 lspconfig.zk.setup {
 	capabilities = capabilities,
 	on_attach = on_attach,
