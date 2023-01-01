@@ -58,12 +58,18 @@ def installFonts [] {
 	cp $'($fontsPath)MesloLGS NF Regular.ttf' $'($home)/Library/Fonts/'
 }
 
-echo '-> Installing files'
-#removeOldFiles
-installConfigFiles
-installYabaiFiles 
-installSkhdFiles
-installSketchybarFiles
-installTmuxFiles
-installFonts
-echo '<- Files installation completed!'
+def main [--clean (-c): int] {
+	if $clean == 1 {
+		echo '-> Removing old files'
+		removeOldFiles
+		echo '<- Old files removed!'
+	}
+	echo '-> Installing files'
+	installConfigFiles
+	installYabaiFiles 
+	installSkhdFiles
+	installSketchybarFiles
+	installTmuxFiles
+	installFonts
+	echo '<- Files installation completed!'
+}

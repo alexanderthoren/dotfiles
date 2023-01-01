@@ -78,9 +78,11 @@ local function plugins(use)
 
 	use 'folke/trouble.nvim'
 
-	use 'neovim/nvim-lspconfig'
+	use 'williamboman/mason.nvim'
 
-	use 'williamboman/nvim-lsp-installer'
+	use 'williamboman/mason-lspconfig.nvim'
+
+	use 'neovim/nvim-lspconfig'
 
 	use 'hrsh7th/cmp-buffer'
 

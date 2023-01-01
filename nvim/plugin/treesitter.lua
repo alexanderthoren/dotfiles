@@ -3,7 +3,11 @@ if (not status) then return end
 
 treesitter.setup {
 	ensure_installed = {
+		'c',
+		'cpp',
 		'bash',
+		'json',
+		'kotlin',
 		'lua',
 		'markdown',
 		'swift'

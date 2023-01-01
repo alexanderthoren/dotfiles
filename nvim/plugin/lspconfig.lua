@@ -1,14 +1,16 @@
 local nvim_lsp_status, lspconfig = pcall(require, 'lspconfig')
 if (not nvim_lsp_status) then return end
 
-local nvim_lsp_installer_status, nvim_lsp_installer = pcall(require, 'nvim-lsp-installer')
-if (not nvim_lsp_installer_status) then return end
+local mason_status, mason = pcall(require, 'mason')
+if (not mason_status) then return end
+
+local mason_lsp_status, mason_lsp = pcall(require, 'mason-lspconfig')
+if (not mason_lsp_status) then return end
 
 local cmp_nvim_lsp_status, cmp_nvim_lsp = pcall(require, 'cmp_nvim_lsp')
 if (not cmp_nvim_lsp_status) then return end
 
-nvim_lsp_installer.setup {
-	automatic_installation = true,
+mason.setup {
 	ui = {
 		icons = {
 			server_installed = "✓",
@@ -16,6 +18,10 @@ nvim_lsp_installer.setup {
 			server_uninstalled = "✗"
 		}
 	}
+}
+
+mason_lsp.setup {
+	automatic_installation = true
 }
 
 local capabilities = cmp_nvim_lsp.default_capabilities(vim.lsp.protocol.make_client_capabilities())
@@ -47,8 +53,47 @@ lspconfig.sumneko_lua.setup {
  	}
 }
 
+-- Bashls
+lspconfig.bashls.setup {
+	capabilities = capabilities,
+	on_attach = on_attach,
+}
+
 -- Markdown
 lspconfig.marksman.setup {
+	capabilities = capabilities,
+	on_attach = on_attach,
+}
+
+lspconfig.prosemd_lsp.setup {
+	capabilities = capabilities,
+	on_attach = on_attach,
+}
+
+lspconfig.remark_ls.setup {
+	capabilities = capabilities,
+	on_attach = on_attach,
+}
+
+lspconfig.zk.setup {
+	capabilities = capabilities,
+	on_attach = on_attach,
+}
+
+-- C/C++
+lspconfig.clangd.setup {
+	capabilities = capabilities,
+	on_attach = on_attach,
+}
+
+-- JSON
+lspconfig.jsonls.setup {
+	capabilities = capabilities,
+	on_attach = on_attach,
+}
+
+-- Kotlin
+lspconfig.kotlin_language_server.setup {
 	capabilities = capabilities,
 	on_attach = on_attach,
 }
@@ -58,10 +103,3 @@ lspconfig.sourcekit.setup {
 	capabilities = capabilities,
 	on_attach = on_attach,
 }
-
--- Bashls
-lspconfig.bashls.setup {
-	capabilities = capabilities,
-	on_attach = on_attach,
-}
-
