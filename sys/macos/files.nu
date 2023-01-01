@@ -51,7 +51,7 @@ def installTmuxFiles [] {
 
 def installFonts [] {
 	echo 'Installing fonts'
-	let fontsPath = 'sys/fonts/'
+	let fontsPath = 'sys/shared/fonts/'
 	cp $'($fontsPath)MesloLGS NF Bold Italic.ttf' $'($home)/Library/Fonts/'
 	cp $'($fontsPath)MesloLGS NF Bold.ttf' $'($home)/Library/Fonts/'
 	cp $'($fontsPath)MesloLGS NF Italic.ttf' $'($home)/Library/Fonts/'
