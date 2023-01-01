@@ -7,4 +7,4 @@ fi
 brew install -q "nushell"
 
 sudo sh -c "echo $(which nu) >> /etc/shells"
-chsh -s $(which nu)
+chsh -s "$(which nu)"
