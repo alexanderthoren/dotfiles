@@ -559,6 +559,17 @@ alias ghprc = gh pr create
 alias ghpre = gh pr edit
 alias ghprl = gh pr list
 
+# kotlin
+def kc [input: string, output: string] {
+	kotlinc $input -include-runtime -d $output
+}
+
+def kr [input: string] {
+	java -jar $input
+}
+
+alias ks = kotlinc-jvm
+
 source ~/.cache/starship/init.nu
 
 let osName = (sys | get host | get name)
