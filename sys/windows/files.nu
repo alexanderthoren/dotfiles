@@ -2,7 +2,7 @@ def installRoamingFiles [] {
 	echo 'Installing roaming files'
 	let appDataPath = $env.APPDATA
 	cp -r sys/windows/alacritty $appDataPath
-	cp -r sys/windows/nushell $appDataPath
+	cp -r sys/shared/nushell $appDataPath
 }
 
 def installLocalFiles [] {

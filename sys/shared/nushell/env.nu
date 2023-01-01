@@ -61,8 +61,11 @@ let-env NU_PLUGIN_DIRS = [
 # To add entries to PATH (on Windows you might use Path), you can use the following pattern:
 # let-env PATH = ($env.PATH | split row (char esep) | prepend '/some/path')
 
-let-env PATH = ($env.PATH | append "/usr/local/bin/")
-let-env PATH = ($env.PATH | append "/opt/homebrew/bin/")
+let osName = (sys | get host | get name)
+if $osName == 'Darwin' {
+	let-env PATH = ($env.PATH | append "/usr/local/bin/")
+	let-env PATH = ($env.PATH | append "/opt/homebrew/bin/")
+}
 
 mkdir ~/.cache/starship
 starship init nu | str replace --string "size -c" "size" | save -f ~/.cache/starship/init.nu

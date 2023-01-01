@@ -101,7 +101,7 @@ module completions {
     --dry-run(-n)                                   # dry run
     --exec: string                                  # receive pack program
     --follow-tags                                   # push missing but relevant tags
-    --force-with-lease: string                      # require old value of ref to be at this value
+    --force-with-lease                              # require old value of ref to be at this value
     --force(-f)                                     # force updates
     --ipv4(-4)                                      # use IPv4 addresses only
     --ipv6(-6)                                      # use IPv6 addresses only
@@ -240,7 +240,7 @@ let light_theme = {
 # The default config record. This is where much of your global configuration is setup.
 let-env config = {
   external_completer: $nothing # check 'carapace_completer' above to as example
-  filesize_metric: false
+  filesize_metric: true # true => (KB, MB, GB), false => (KiB, MiB, GiB)
   table_mode: rounded # basic, compact, compact_double, light, thin, with_love, rounded, reinforced, heavy, none, other
   use_ls_colors: true
   rm_always_trash: false
@@ -259,7 +259,7 @@ let-env config = {
   sync_history_on_enter: true # Enable to share the history between multiple sessions, else you have to close the session to persist history to file
   history_file_format: "plaintext" # "sqlite" or "plaintext"
   shell_integration: true # enables terminal markers and a workaround to arrow keys stop working issue
-  disable_table_indexes: false # set to true to remove the index column from tables
+  table_index_mode: always # "always" show indexes, "never" show indexes, "auto" = show indexes when a table has "index" column
   cd_with_abbreviations: false # set to true to allow you to do things like cd s/o/f and nushell expand it to cd some/other/folder
   case_sensitive_completions: false # set to true to enable case-sensitive completions
   enable_external_completion: true # set to false to prevent nushell looking into $env.PATH to find more suggestions, `false` recommended for WSL users as this look up my be very slow
@@ -512,19 +512,19 @@ let-env config = {
 }
 
 # ALIAS
-
+alias .. = cd ..
 alias ll = ls -la
 alias f = fzf
 alias fe = fzf -e
 alias n = nvim
+alias lss = (ls -d | sort-by size -r)
 
 # git
 alias g = git
 alias ga = git add
 alias gaa = git add .
-alias gap = (git add .; git commit; git push)
 alias gb = git branch
-alias gbd = git branch -d
+alias gbd = git branch -D
 alias gc = git commit
 alias gcb = git checkout -b
 alias gcc = git checkout
@@ -534,10 +534,11 @@ alias gd = git diff
 alias gd-1 = git diff head~1
 alias gdrg = (git diff head~1 | rg)
 alias gdt = git difftool -y
-alias gf = git fetch
+alias gf = git fetch --all -p
 alias gl = git log
 alias gmt = git mergetool -y
 alias gps = git push
+alias gpso = git push -u origin $'(git branch --show-current | into string | str trim)'
 alias gpl = git pull
 alias grb = git rebase
 alias grba = git rebase --abort
@@ -547,9 +548,50 @@ alias grc = (git restore --staged .; git restore .; git clean -f)
 alias gre = git restore
 alias grs = git restore --staged
 alias gs = git status
-alias gu = (git fetch; git pull)
 
-# Starship
+# github cli
+alias ghprrr = gh pr list --search 'review-requested:alexanderthoren'
+alias ghprv = gh pr view
+alias ghprd = gh pr diff
+alias ghprr = gh pr review
+alias ghpra = gh pr review -a
+alias ghprc = gh pr create
+alias ghpre = gh pr edit
+alias ghprl = gh pr list
+
 source ~/.cache/starship/init.nu
 
-cd ~
+let osName = (sys | get host | get name)
+if $osName == 'Darwin' {
+	# Xcode
+	alias kx = killall Xcode
+	alias repd = xcodebuild -resolvePackageDependencies
+	alias rmdd = rm -rf ~/Library/Developer/Xcode/DerivedData
+	alias rmspm = rm -rf ~/Library/org.swift.swiftpm/
+	alias rmcspm = rm -rf ~/Library/Caches/org.swift.swiftpm/
+	alias xo = xed .
+
+	if (tmux ls | str length) > 0 {
+		tmux attach
+	} else {
+		let session = 'hacking'
+		tmux new-session -d -s $session
+		tmux rename-window -t 0 'home'
+		tmux send -t 0 'cd Developer/dotfiles'
+		tmux new-window -n 'ios-dev'
+		tmux send -t 1 'cd Developer/iOS/develop'
+		tmux new-window -n 'ios-wip'
+		tmux send -t 2 'cd Developer/iOS/wip'
+		tmux new-window -n 'ios-rev'
+		tmux send -t 3 'cd Developer/iOS/review'
+		tmux new-window -n 'android-dev'
+		tmux send -t 4 'cd Developer/android/develop'
+		tmux new-window -n 'android-wip'
+		tmux send -t 5 'cd Developer/android/wip'
+		tmux new-window -n 'android-rev'
+		tmux send -t 6 'cd Developer/android/review'
+		tmux new-window -n 'fever2'
+		tmux send -t 7 'cd Developer/fever2'
+		tmux attach-session -t $session
+	}
+}

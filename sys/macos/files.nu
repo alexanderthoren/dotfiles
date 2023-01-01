@@ -20,7 +20,7 @@ def installConfigFiles [] {
 		)
 	}
 	cp -r nvim $configPath
-	cp -r sys/macos/nushell $'($home)/Library/Application Support/'
+	cp -r sys/shared/nushell $'($home)/Library/Application Support/'
 }
 
 def installYabaiFiles [] {
