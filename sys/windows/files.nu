@@ -13,7 +13,11 @@ def installLocalFiles [] {
 	cp -r nvim $appDataLocalPath
 }
 
-echo '-> Installing files'
-installRoamingFiles
-installLocalFiles
-echo '<- Files installation completed!'
+def main [--clean (-c): int] {
+	if $clean == 1 {
+	}
+	echo '-> Installing files'
+	installRoamingFiles
+	installLocalFiles
+	echo '<- Files installation completed!'
+}
