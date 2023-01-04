@@ -137,11 +137,6 @@ local function plugins(use)
 
 	use 'ray-x/lsp_signature.nvim'
 
-	use {
-		'nvim-neorg/neorg',
-		run = ':Neorg sync-parsers'
-	}
-
 	if packer_bootstrap then
 		print 'Restart Neovim required after installation!'
 		require('packer').sync()

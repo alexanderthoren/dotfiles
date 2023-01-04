@@ -29,8 +29,8 @@ yabai -m config window_border_blur off
 yabai -m rule --add app="^System Settings$"  manage=off border=off
 yabai -m rule --add app="^Calculator$"  manage=off border=off
 yabai -m rule --add app="^Finder$"  manage=off
-yabai -m rule --add app="^Xcode$"  manage=off
-yabai -m rule --add app="^Simulator$"  manage=off
+#yabai -m rule --add app="^Xcode$"  manage=off
+#yabai -m rule --add app="^Simulator$"  manage=off
 
 # Space labels
 yabai -m space 1 --label "Communication"
@@ -59,8 +59,8 @@ yabai -m rule --add app="Finder" space=^2
 # Space 3 apps
 
 # Space 4 apps
-# yabai -m rule --add app="Xcode" space=^4
-# yabai -m rule --add app="Simulator" space=^4
+yabai -m rule --add app="Xcode" space=^4
+yabai -m rule --add app="Simulator" space=^4
 
 # Space 5 apps
 yabai -m rule --add app="Alacritty" space=^5
