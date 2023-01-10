@@ -558,6 +558,8 @@ alias ghpra = gh pr review -a
 alias ghprc = gh pr create
 alias ghpre = gh pr edit
 alias ghprl = gh pr list
+alias ghrev = gh repo view
+alias ghrevw = gh repo view -w
 
 # kotlin
 def kc [input: string, output: string] {
@@ -570,18 +572,18 @@ def kr [input: string] {
 
 alias ks = kotlinc-jvm
 
+# Xcode
+alias kx = killall Xcode
+alias repd = xcodebuild -resolvePackageDependencies
+alias rmdd = rm -rf ~/Library/Developer/Xcode/DerivedData
+alias rmspm = rm -rf ~/Library/org.swift.swiftpm/
+alias rmcspm = rm -rf ~/Library/Caches/org.swift.swiftpm/
+alias xo = xed .
+
 source ~/.cache/starship/init.nu
 
 let osName = (sys | get host | get name)
 if $osName == 'Darwin' {
-	# Xcode
-	alias kx = killall Xcode
-	alias repd = xcodebuild -resolvePackageDependencies
-	alias rmdd = rm -rf ~/Library/Developer/Xcode/DerivedData
-	alias rmspm = rm -rf ~/Library/org.swift.swiftpm/
-	alias rmcspm = rm -rf ~/Library/Caches/org.swift.swiftpm/
-	alias xo = xed .
-
 	if (tmux ls | str length) > 0 {
 		tmux attach
 	} else {
