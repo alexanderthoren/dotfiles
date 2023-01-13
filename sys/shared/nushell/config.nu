@@ -552,6 +552,7 @@ alias gs = git status
 # github cli
 alias ghprrr = gh pr list --search 'review-requested:alexanderthoren'
 alias ghprv = gh pr view
+alias ghprvw = gh pr view -w
 alias ghprd = gh pr diff
 alias ghprr = gh pr review
 alias ghpra = gh pr review -a
@@ -605,6 +606,5 @@ if $osName == 'Darwin' {
 		tmux send -t 6 'cd Developer/android/review'
 		tmux new-window -n 'fever2'
 		tmux send -t 7 'cd Developer/fever2'
-		tmux attach-session -t $session
 	}
 }

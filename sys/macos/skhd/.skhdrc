@@ -28,8 +28,8 @@ ralt - y : yabai -m space --mirror y-axis
 
 # focus
 ralt - r : yabai -m space --focus recent
-ralt - p : yabai -m space --focus prev || yabai -m space --focus last
-ralt - n : yabai -m space --focus next || yabai -m space --focus first
+ralt - p : yabai -m space --focus prev
+ralt - n : yabai -m space --focus next
 
 ralt - 1 : yabai -m space --focus 1
 ralt - 2 : yabai -m space --focus 2
@@ -99,4 +99,3 @@ lalt + rcmd - n : yabai -m window --display next
 lalt + rcmd - 1 : yabai -m window --display 1
 lalt + rcmd - 2 : yabai -m window --display 2
 lalt + rcmd - 3 : yabai -m window --display 3
-

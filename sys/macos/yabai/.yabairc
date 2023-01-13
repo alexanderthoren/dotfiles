@@ -29,13 +29,11 @@ yabai -m config window_border_blur off
 yabai -m rule --add app="^System Settings$"  manage=off border=off
 yabai -m rule --add app="^Calculator$"  manage=off border=off
 yabai -m rule --add app="^Finder$"  manage=off
-#yabai -m rule --add app="^Xcode$"  manage=off
-#yabai -m rule --add app="^Simulator$"  manage=off
 
 # Space labels
 yabai -m space 1 --label "Communication"
 yabai -m space 2 --label "Tools"
-yabai -m space 3 --label "Web"
+yabai -m space 3 --label "Stacky"
 yabai -m space 4 --label "Development"
 yabai -m space 5 --label "Terminal"
 
@@ -57,10 +55,20 @@ yabai -m rule --add app="Reminders" space=^2
 yabai -m rule --add app="Finder" space=^2
 
 # Space 3 apps
+yabai -m rule --add app="^Google Chrome$" space=^3
+yabai -m rule --add app="Keynote" space=^3
+yabai -m rule --add app="Numbers" space=^3
+yabai -m rule --add app="Pages" space=^3
 
 # Space 4 apps
 yabai -m rule --add app="Xcode" space=^4
 yabai -m rule --add app="Simulator" space=^4
+yabai -m rule --add app="^Android Studio$" space=^4
+yabai -m rule --add app="PyCharm" space=^4
+yabai -m rule --add app="WebStorm" space=^4
 
 # Space 5 apps
 yabai -m rule --add app="Alacritty" space=^5
+yabai -m rule --add app="Docker" space=^5
+yabai -m rule --add app="Postman" space=^5
+yabai -m rule --add app="Proxyman" space=^5
