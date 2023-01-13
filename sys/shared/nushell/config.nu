@@ -585,26 +585,64 @@ source ~/.cache/starship/init.nu
 
 let osName = (sys | get host | get name)
 if $osName == 'Darwin' {
-	if (tmux ls | str length) > 0 {
-		tmux attach
-	} else {
-		let session = 'hacking'
-		tmux new-session -d -s $session
+	def tmuxCreateDefaultSession [] {
+		echo 'tmuxCreateDefaultSession'
+		tmux new -d -s 'default'
 		tmux rename-window -t 0 'home'
 		tmux send -t 0 'cd Developer/dotfiles'
-		tmux new-window -n 'ios-dev'
-		tmux send -t 1 'cd Developer/iOS/develop'
-		tmux new-window -n 'ios-wip'
-		tmux send -t 2 'cd Developer/iOS/wip'
-		tmux new-window -n 'ios-rev'
-		tmux send -t 3 'cd Developer/iOS/review'
-		tmux new-window -n 'android-dev'
-		tmux send -t 4 'cd Developer/android/develop'
-		tmux new-window -n 'android-wip'
-		tmux send -t 5 'cd Developer/android/wip'
-		tmux new-window -n 'android-rev'
-		tmux send -t 6 'cd Developer/android/review'
-		tmux new-window -n 'fever2'
-		tmux send -t 7 'cd Developer/fever2'
 	}
+
+	def tmuxCreateIOSSession [] {
+		echo 'tmuxCreateIOSSession'
+		tmux new -d -s 'ios'
+		tmux rename-window -t 0 'ios-dev'
+		tmux send -t 0 'cd Developer/iOS/develop'
+		tmux new-window -n 'ios-wip'
+		tmux send -t 1 'cd Developer/iOS/wip'
+		tmux new-window -n 'ios-rev'
+		tmux send -t 2 'cd Developer/iOS/review'
+	}
+
+	def tmuxCreateAndroidSession [] {
+		echo 'tmuxCreateAndroidSession'
+		tmux new -d -s 'android'
+		tmux rename-window -t 0 'android-dev'
+		tmux send -t 0 'cd Developer/android/develop'
+		tmux new-window -n 'android-wip'
+		tmux send -t 1 'cd Developer/android/wip'
+		tmux new-window -n 'android-rev'
+		tmux send -t 2 'cd Developer/android/review'
+	}
+
+	def tmuxCreateBackendSession [] {
+		echo 'tmuxCreateBackendSession'
+		tmux new -d -s 'backend'
+		tmux rename-window -t 0 'fever2'
+		tmux send -t 0 'cd Developer/fever2'
+	}
+
+	def tmuxCreateSession [value: string] {
+		if ($value == "default") {
+			tmuxCreateDefaultSession
+		} else if ($value == "ios") {
+			tmuxCreateIOSSession
+		} else if ($value == "android") {
+			tmuxCreateAndroidSession
+		} else if ($value == "backend") {
+			tmuxCreateBackendSession
+		} else {
+			echo "Session not found!"
+		}
+	}
+
+	let currentSessions = (tmux ls | into string)
+	let sessions = ['default', 'ios', 'android', 'backend']
+	$sessions | each { |it|
+		if (not ($currentSessions | str contains $it)) {
+			echo $'($it)'
+			tmuxCreateSession $it
+		}
+	}
+
+	tmux attach -t "default"
 }
