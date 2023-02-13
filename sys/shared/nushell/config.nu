@@ -523,6 +523,7 @@ alias lss = (ls -d | sort-by size -r)
 alias g = git
 alias ga = git add
 alias gaa = git add .
+alias gapb = (pbpaste | git apply)
 alias gb = git branch
 alias gba = git branch -a
 alias gbd = git branch -D
