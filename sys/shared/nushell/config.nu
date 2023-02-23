@@ -648,4 +648,6 @@ if $osName == 'Darwin' {
 	}
 
 	tmux attach -t "default"
+} else {
+	tmux attach
 }

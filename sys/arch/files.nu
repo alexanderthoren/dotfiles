@@ -12,6 +12,7 @@ def installConfigFiles [] {
 	mkdir $configPath
 	cp -r sys/arch/alacritty $configPath
 	cp -r nvim $configPath
+	cp -r sys/shared/nushell $'($home)/.config/'
 }
 
 def installTmuxFiles [] {

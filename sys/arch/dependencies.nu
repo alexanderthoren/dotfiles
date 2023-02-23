@@ -19,7 +19,9 @@ def installDependencies [] {
 	sudo pacman -Sy --needed github-cli
 }
 
-echo '-> Dependencies installation'
-updateAndUpgrade
-installDependencies
-echo '<- Dependencies installation completed!'
+def main [] {
+	echo '-> Dependencies installation'
+	updateAndUpgrade
+	installDependencies
+	echo '<- Dependencies installation completed!'
+}
