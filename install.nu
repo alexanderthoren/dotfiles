@@ -2,10 +2,8 @@ def getOs [] {
 	let osName = (sys | get host | get name)
 	if $osName == 'Darwin' {
 		echo 'macos'
-	} else if $osName == 'linux-gnu' {
-		echo 'linux'
-	} else if $osName == 'Windows' {
-		echo 'windows'
+	} else if $osName == 'Arch Linux' {
+		echo 'arch'
 	} else {
 		print $'Error: current os name is ($osName)'
 		echo null
