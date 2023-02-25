@@ -1,3 +1,4 @@
+#!/usr/bin/env nu
 def getOs [] {
 	let osName = (sys | get host | get name)
 	if $osName == 'Darwin' {

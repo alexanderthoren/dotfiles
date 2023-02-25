@@ -1,3 +1,5 @@
+#!/usr/bin/env nu
+
 def main [--clean (-c): int] {
 	echo '-> Full installation'
 	let arch_path = 'sys/arch'

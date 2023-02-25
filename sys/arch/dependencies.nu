@@ -1,3 +1,4 @@
+#!/usr/bin/env nu
 def updateAndUpgrade [] {
 	echo 'Updating and upgrading'
 	sudo pacman -Syu

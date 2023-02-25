@@ -1,3 +1,5 @@
+#!/usr/bin/env nu
+
 let home = $env.HOME
 let configPath = $'($home)/.config/'
 
@@ -14,7 +16,9 @@ def createDirectories [] {
 
 def installSystemHomeFiles [] {
 	echo 'Installing system home files'
-	let myConfigPath = $'sys/arch/.home/'
+	let myHomePath = $'sys/arch/.home/'
+	cp -r $'($myHomePath)/.xsession' $home
+	cp -r $'($myHomePath)/.screenlayout' $home
 }
 
 def installSharedHomeFiles [] {
