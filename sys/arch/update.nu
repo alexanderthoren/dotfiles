@@ -19,24 +19,32 @@ def updateSharedHomeFiles [] {
 def updateSystemConfigFiles [] {
 	echo '-> Updating system config files'
 	let myConfigPath = $'sys/arch/.config/'
-	cp -r $'(configPath)/alacritty' $myConfigPath
-	cp -r $'(configPath)/bspwm' $myConfigPath
-	cp -r $'(configPath)/rofi' $myConfigPath
-	cp -r $'(configPath)/sxhkd' $myConfigPath
+	cp -r $'($configPath)/alacritty/' $myConfigPath
+	cp -r $'($configPath)/bspwm/' $myConfigPath
+	cp -r $'($configPath)/rofi/' $myConfigPath
+	cp -r $'($configPath)/sxhkd/' $myConfigPath
 }
 
 def updateSharedConfigFiles [] {
 	echo '-> Updating shared config files'
 	let myConfigPath = $'sys/shared/.config/'
-	cp -r $'(configPath)/nvim' $myConfigPath
-	cp -r $'(configPath)/nushell' $myConfigPath
+	cp -r $'($configPath)/nvim' $myConfigPath
+	cp -r $'($configPath)/nushell' $myConfigPath
+}
+
+def updateSystemFiles [] {
+	updateSystemHomeFiles
+	updateSystemConfigFiles
+}
+
+def updateSharedFiles [] {
+	updateSharedHomeFiles
+	updateSharedConfigFiles
 }
 
 def main [] {
 	echo '-> Upding .files'
-	updateSystemHomeFiles
-	updateSharedHomeFiles
-	updateSystemHomeFiles
-	updateSharedHomeFiles
+	updateSystemFiles
+	updateSharedFiles
 	echo '<- Files updated!'
 }
