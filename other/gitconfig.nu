@@ -1,3 +1,5 @@
+#!/usr/bin/env nu
+
 let home = $env.HOME
 
 echo "Installing new .gitconfig..."

@@ -1,3 +1,5 @@
+#!/usr/bin/env nu
+
 def updateAndUpgradeBrew [] {
 	echo 'Updating and upgrading Hombrew'
 	brew update -q

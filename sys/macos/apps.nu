@@ -1,3 +1,5 @@
+#!/usr/bin/env nu
+
 def main [] {
 	echo '-> Installing apps'
 	cp -r sys/macos/apps/Vimac.zip /Applications/
