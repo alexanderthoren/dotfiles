@@ -38,7 +38,7 @@ local on_attach = function(client, bufnr)
 end
 
 -- Lua
-lspconfig.sumneko_lua.setup {
+lspconfig.lua_ls.setup {
 	capabilities = capabilities,
 	on_attach = on_attach,
 	settings = {
@@ -71,12 +71,6 @@ lspconfig.prosemd_lsp.setup {
 }
 
 lspconfig.zk.setup {
-	capabilities = capabilities,
-	on_attach = on_attach,
-}
-
--- C/C++
-lspconfig.clangd.setup {
 	capabilities = capabilities,
 	on_attach = on_attach,
 }
