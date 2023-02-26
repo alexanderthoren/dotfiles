@@ -48,13 +48,13 @@ def installSystemConfigFiles [] {
 	}
 	cp -r $'($myConfigPath)/alacritty' $configPath
 	cp -r $'($myConfigPath)/sketchybar' $configPath
+	cp -r $'sys/shared/.config/nushell' $'($home)/Library/Application Support/'
 }
 
 def installSharedConfigFiles [] {
 	echo 'Installing shared config files'
 	let myConfigPath = $'sys/shared/.config/'
 	cp -r $'($myConfigPath)/nvim' $configPath
-	cp -r $'($myConfigPath)/nushell' $'($home)/Library/Application Support/'
 }
 
 def installFonts [] {
@@ -67,17 +67,17 @@ def installFonts [] {
 }
 
 def main [--clean (-c): int] {
+	echo '-> Installing macOS files'
 	if $clean == 1 {
 		echo '-> Removing old files'
 		removeOldFiles
 		echo '<- Old files removed!'
 	}
-	echo '-> Installing files'
 	createDirectories
 	installSystemHomeFiles
 	installSharedHomeFiles
 	installSystemConfigFiles
 	installSharedConfigFiles
 	installFonts
-	echo '<- Files installation completed!'
+	echo '<- macOS files installation completed!'
 }

@@ -15,6 +15,6 @@ def getOs [] {
 def main [] {
 	let os = getOs
 	if $os != null {
-		nu $'./sys/($os)/update.nu'
+		nu $'sys/update.nu' $os
 	} 
 }
