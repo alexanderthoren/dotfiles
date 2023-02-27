@@ -43,6 +43,18 @@ def installSharedConfigFiles [] {
 	cp -r $'($myConfigPath)/nushell' $configPath
 }
 
+def installFonts [] {
+	echo 'Installing fonts'
+	let fontsPath = '/usr/local/share/fonts'
+	let ttfFontsPath = $'($fontsPath)/ttf'
+	let otfFontsPath = $'($fontsPath)/otf'
+	let myFontsPath = 'sys/shared/fonts/'
+	sudo mkdir $fontsPath
+	sudo mkdir $ttfFontsPath
+	sudo mkdir $otfFontsPath
+	sudo cp -r $'($myFontsPath)/MesloLGS' $ttfFontsPath
+}
+
 def main [--clean (-c): int] {
 	if $clean == 1 {
 		echo '-> Removing old files'
@@ -55,5 +67,6 @@ def main [--clean (-c): int] {
 	installSharedHomeFiles
 	installSystemConfigFiles
 	installSharedConfigFiles
+	installFonts
 	echo '<- Files installation completed!'
 }
