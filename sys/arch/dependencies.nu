@@ -10,7 +10,6 @@ def installDependencies [] {
 	sudo pacman -Sy --needed lightdm lightdm-gtk-greeter
 	sudo pacman -Sy --needed sxhkd
 	sudo pacman -Sy --needed rofi
-	sudo pacman -Sy --needed min
 	sudo pacman -Sy --needed git
 	sudo pacman -Sy --needed neovim
 	sudo pacman -Sy --needed alacritty

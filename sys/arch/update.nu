@@ -10,12 +10,6 @@ def updateSystemHomeFiles [] {
 	cp -r $'($home)/.screenlayout' $myHomePath
 }
 
-def updateSharedHomeFiles [] {
-	echo '-> Updating shared home files'
-	let myHomePath = $'sys/shared/.home/'
-	cp -r $'($home)/.tmux.conf' $myHomePath
-}
-
 def updateSystemConfigFiles [] {
 	echo '-> Updating system config files'
 	let myConfigPath = $'sys/arch/.config/'
@@ -23,28 +17,12 @@ def updateSystemConfigFiles [] {
 	cp -r $'($configPath)/bspwm/' $myConfigPath
 	cp -r $'($configPath)/rofi/' $myConfigPath
 	cp -r $'($configPath)/sxhkd/' $myConfigPath
-}
-
-def updateSharedConfigFiles [] {
-	echo '-> Updating shared config files'
-	let myConfigPath = $'sys/shared/.config/'
-	cp -r $'($configPath)/nvim' $myConfigPath
-	cp -r $'($configPath)/nushell' $myConfigPath
-}
-
-def updateSystemFiles [] {
-	updateSystemHomeFiles
-	updateSystemConfigFiles
-}
-
-def updateSharedFiles [] {
-	updateSharedHomeFiles
-	updateSharedConfigFiles
+	cp -r $'($configPath)/nushell' $'sys/shared/.config/'
 }
 
 def main [] {
 	echo '-> Upding .files'
-	updateSystemFiles
-	updateSharedFiles
+	updateSystemHomeFiles
+	updateSystemConfigFiles
 	echo '<- Files updated!'
 }
