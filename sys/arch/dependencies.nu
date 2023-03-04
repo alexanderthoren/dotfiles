@@ -6,22 +6,23 @@ def updateAndUpgrade [] {
 
 def installDependencies [] {
 	echo 'Installing dependencies'
-	sudo pacman -Sy --needed bspwm
-	sudo pacman -Sy --needed lightdm lightdm-gtk-greeter
-	sudo pacman -Sy --needed sxhkd
-	sudo pacman -Sy --needed rofi
-	sudo pacman -Sy --needed git
-	sudo pacman -Sy --needed neovim
-	sudo pacman -Sy --needed alacritty
-	sudo pacman -Sy --needed tmux
-	sudo pacman -Sy --needed starship
-	sudo pacman -Sy --needed neofetch
-	sudo pacman -Sy --needed fzf
-	sudo pacman -Sy --needed ripgrep
-	sudo pacman -Sy --needed nodejs npm
-	sudo pacman -Sy --needed shellcheck
-	sudo pacman -Sy --needed bat
-	sudo pacman -Sy --needed github-cli
+	sudo pacman -Syu --needed bspwm
+	sudo pacman -Syu --needed lightdm lightdm-gtk-greeter
+	sudo pacman -Syu --needed sxhkd
+	sudo pacman -Syu --needed rofi
+	sudo pacman -Syu --needed feh
+	sudo pacman -Syu --needed git
+	sudo pacman -Syu --needed neovim
+	sudo pacman -Syu --needed alacritty
+	sudo pacman -Syu --needed tmux
+	sudo pacman -Syu --needed starship
+	sudo pacman -Syu --needed neofetch
+	sudo pacman -Syu --needed fzf
+	sudo pacman -Syu --needed ripgrep
+	sudo pacman -Syu --needed nodejs npm
+	sudo pacman -Syu --needed shellcheck
+	sudo pacman -Syu --needed bat
+	sudo pacman -Syu --needed github-cli
 }
 
 def main [] {

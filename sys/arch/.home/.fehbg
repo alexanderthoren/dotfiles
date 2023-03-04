@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-scale '/usr/share/pixmaps/wallpaper.jpg' 
+feh --no-fehbg --bg-fill '/usr/share/pixmaps/wallpaper.jpg' 
