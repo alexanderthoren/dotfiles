@@ -43,15 +43,23 @@ def installSharedConfigFiles [] {
 	cp -r $'($myConfigPath)/nushell' $configPath
 }
 
+def installEtcConfigFiles [] {
+	echo 'Installing etc config files'
+	sudo cp -r sys/arch/etc /
+	sudo cp -r sys/shared/wallpapers/wallpaper.jpg /usr/share/pixmaps/
+}
+
 def installFonts [] {
 	echo 'Installing fonts'
 	let fontsPath = '/usr/local/share/fonts'
 	let ttfFontsPath = $'($fontsPath)/ttf'
 	let otfFontsPath = $'($fontsPath)/otf'
 	let myFontsPath = 'sys/shared/fonts/'
-	sudo mkdir $fontsPath
-	sudo mkdir $ttfFontsPath
-	sudo mkdir $otfFontsPath
+	if not ($fontsPath | path exists) {
+		sudo mkdir $fontsPath
+		sudo mkdir $ttfFontsPath
+		sudo mkdir $otfFontsPath
+	}
 	sudo cp -r $'($myFontsPath)/MesloLGS' $ttfFontsPath
 }
 
@@ -67,6 +75,7 @@ def main [--clean (-c): int] {
 	installSharedHomeFiles
 	installSystemConfigFiles
 	installSharedConfigFiles
+	installEtcConfigFiles
 	installFonts
 	echo '<- Files installation completed!'
 }

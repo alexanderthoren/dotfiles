@@ -3,14 +3,15 @@
 let home = $env.HOME
 let configPath = $'($home)/.config/'
 
-def updateSystemHomeFiles [] {
+def updateHomeFiles [] {
 	echo '-> Updating system home files'
 	let myHomePath = $'sys/arch/.home/'
 	cp -r $'($home)/.xsession' $myHomePath
 	cp -r $'($home)/.screenlayout' $myHomePath
+	cp -r $'($home)/.fehbg' $myHomePath
 }
 
-def updateSystemConfigFiles [] {
+def updateConfigFiles [] {
 	echo '-> Updating system config files'
 	let myConfigPath = $'sys/arch/.config/'
 	cp -r $'($configPath)/alacritty/' $myConfigPath
@@ -22,7 +23,7 @@ def updateSystemConfigFiles [] {
 
 def main [] {
 	echo '-> Upding .files'
-	updateSystemHomeFiles
-	updateSystemConfigFiles
+	updateHomeFiles
+	updateConfigFiles
 	echo '<- Files updated!'
 }
