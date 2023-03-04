@@ -14,10 +14,11 @@ def updateHomeFiles [] {
 def updateConfigFiles [] {
 	echo '-> Updating system config files'
 	let myConfigPath = $'sys/arch/.config/'
-	cp -r $'($configPath)/alacritty/' $myConfigPath
-	cp -r $'($configPath)/bspwm/' $myConfigPath
-	cp -r $'($configPath)/rofi/' $myConfigPath
-	cp -r $'($configPath)/sxhkd/' $myConfigPath
+	cp -r $'($configPath)/alacritty' $myConfigPath
+	cp -r $'($configPath)/bspwm' $myConfigPath
+	cp -r $'($configPath)/rofi' $myConfigPath
+	cp -r $'($configPath)/sxhkd' $myConfigPath
+	cp -r $'($configPath)/picom' $myConfigPath
 	cp -r $'($configPath)/nushell' $'sys/shared/.config/'
 }
 
