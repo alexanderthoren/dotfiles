@@ -19,6 +19,7 @@ def installSystemHomeFiles [] {
 	let myHomePath = $'sys/arch/.home/'
 	cp -r $'($myHomePath)/.xsession' $home
 	cp -r $'($myHomePath)/.screenlayout' $home
+	cp -r $'($myHomePath)/.fehbg' $home
 }
 
 def installSharedHomeFiles [] {
@@ -34,7 +35,6 @@ def installSystemConfigFiles [] {
 	cp -r $'($myConfigPath)/bspwm' $configPath
 	cp -r $'($myConfigPath)/rofi' $configPath
 	cp -r $'($myConfigPath)/sxhkd' $configPath
-	cp -r $'($myConfigPath)/picom' $configPath
 }
 
 def installSharedConfigFiles [] {
