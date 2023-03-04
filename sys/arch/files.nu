@@ -35,6 +35,7 @@ def installSystemConfigFiles [] {
 	cp -r $'($myConfigPath)/bspwm' $configPath
 	cp -r $'($myConfigPath)/rofi' $configPath
 	cp -r $'($myConfigPath)/sxhkd' $configPath
+	cp -r $'($myConfigPath)/polybar' $configPath
 }
 
 def installSharedConfigFiles [] {
