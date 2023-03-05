@@ -1,44 +1,85 @@
-/**
- * ROFI Color theme
- * User: Qball
- * Copyright: Dave Davenport
- */
+configuration {
+  font: "Iosevka Nerd Font Medium 12";
+
+  drun {
+    display-name: "";
+  }
+
+  run {
+    display-name: "";
+  }
+
+  window {
+    display-name: "";
+  }
+
+  timeout {
+    delay: 10;
+    action: "kb-cancel";
+  }
+}
 
 * {
-    background-color:      Black;
-    border-color:          White;
-    text-color:           White;
-    font:            "Times New Roman 12";
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+
+  bg: #111111;
+  fg: #ABB2BF;
+  purple: #5500DD;
+  purple-alt: #5500DD15;
+  purple-background: #5500DD05;
+
+  background-color: @bg;
+  text-color: @fg;
 }
+
 window {
-    anchor:     north;
-    location:   north;
-    width:      100%;
-    padding:    4px;
-    children:   [ horibox ];
+  border: 4px;
+  border-color: @purple-alt;
+  border-radius: 4px;
+  padding: 6px;
+  transparency: "real";
 }
-horibox {
-    orientation: horizontal;
-    children:   [ prompt, entry, listview ];
+
+mainbox {
+  children: [inputbar, listview];
 }
-listview {
-    layout:     horizontal;
-    spacing:    5px;
-    lines:      100;
+
+inputbar {
+  border: 0 0 0 2px;
+  border-color: @purple;
+  border-radius: 0px;
+  children: [entry];
+  margin: 0 0 6px 0;
 }
+
 entry {
-    expand:     false;
-    width:      10em;
+  background-color: @purple-background;
+  padding: 12px;
+  text-color: @purple;
 }
+
+listview {
+  lines: 10;
+}
+
 element {
-    padding: 0px 2px;
+  border: 0 0 0 2px;
+  children: [element-text];
 }
+
 element selected {
-    background-color: SteelBlue;
+  border-color: @purple;
+  border-radius: 20px;
 }
 
-element-text, element-icon {
-  background-color: inherit;
-  text-color: inherit;
+element-text {
+  padding: 10px;
 }
 
+element-text selected {
+  background-color: @purple-alt;
+  text-color: @purple;
+}
