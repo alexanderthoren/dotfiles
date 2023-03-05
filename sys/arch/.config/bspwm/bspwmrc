@@ -2,6 +2,9 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
+wmname LG3D
+export _JAVA_AWT_WM_NONREPARENTING=1
+
 bspc monitor DP-1 -d 1 2 3 4 5 
 bspc monitor HDMI-1 -d 6 7 8 9 10
 
@@ -16,5 +19,6 @@ bspc config gapless_monocle      true
 
 bspc rule -a alacritty desktop='^1' 
 bspc rule -a firefox desktop='^6'
+bspc rule -a jetbrains-studio desktop='^2'
 
 alacritty
