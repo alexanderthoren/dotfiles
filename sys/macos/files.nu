@@ -59,7 +59,7 @@ def installSharedConfigFiles [] {
 
 def installFonts [] {
 	echo 'Installing fonts'
-	let fontsPath = 'sys/shared/fonts/'
+	let fontsPath = 'sys/shared/fonts/MesloLGS/'
 	cp $'($fontsPath)MesloLGS NF Bold Italic.ttf' $'($home)/Library/Fonts/'
 	cp $'($fontsPath)MesloLGS NF Bold.ttf' $'($home)/Library/Fonts/'
 	cp $'($fontsPath)MesloLGS NF Italic.ttf' $'($home)/Library/Fonts/'
