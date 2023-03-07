@@ -38,14 +38,6 @@ def installSharedHomeFiles [] {
 def installSystemConfigFiles [] {
 	echo 'Installing system config files'
 	let myConfigPath = $'sys/macos/.config/'
-	if (uname -m | str trim) == 'arm64' {
-		let alacrittyPath = $'($myConfigPath)/alacritty/alacritty.yml'
-		(
-			cat $alacrittyPath |
-			str replace "/usr/local/bin/nu" "/opt/homebrew/bin/nu" |
-			save -f $alacrittyPath
-		)
-	}
 	cp -r $'($myConfigPath)/alacritty' $configPath
 	cp -r $'($myConfigPath)/sketchybar' $configPath
 	cp -r $'sys/shared/.config/nushell' $'($home)/Library/Application Support/'
