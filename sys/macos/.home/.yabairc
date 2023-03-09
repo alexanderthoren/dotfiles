@@ -38,14 +38,15 @@ yabai -m space 4 --label "Development"
 yabai -m space 5 --label "Terminal"
 
 # Space config
-yabai -m config --space 1 layout bsp
+yabai -m config --space 1 layout stack
 yabai -m config --space 2 layout bsp
 yabai -m config --space 3 layout stack
-yabai -m config --space 4 layout float
+yabai -m config --space 4 layout stack
 yabai -m config --space 5 layout bsp
 
 # Space 1 apps
 yabai -m rule --add app="Messages" space=^1
+yabai -m rule --add app="Music" space=^1
 
 # Space 2 apps
 yabai -m rule --add app="Calendar" space=^2
@@ -56,6 +57,7 @@ yabai -m rule --add app="Finder" space=^2
 
 # Space 3 apps
 yabai -m rule --add app="^Google Chrome$" space=^3
+yabai -m rule --add app="^App Store$" space=^3
 yabai -m rule --add app="Keynote" space=^3
 yabai -m rule --add app="Numbers" space=^3
 yabai -m rule --add app="Pages" space=^3
