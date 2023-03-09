@@ -1,52 +1,48 @@
-lctrl + lalt + lcmd - return : /Applications/Alacritty.app/Contents/MacOS/Alacritty
-lctrl + lalt + lcmd - x : /Applications/Xcode.app/Contents/MacOS/Xcode
-lctrl + lalt + lcmd - s : /Applications/Safari.app/Contents/MacOS/Safari
-
 # display
 # focus
-rcmd - r : yabai -m display --focus recent
-rcmd - p : yabai -m display --focus prev
-rcmd - n : yabai -m display --focus next
+rctrl - r : yabai -m display --focus recent
+rctrl + rshift - 0x2B : yabai -m display --focus prev
+rctrl + rshift - 0x2F : yabai -m display --focus next
 
-rcmd - 1 : yabai -m display --focus 1
-rcmd - 2 : yabai -m display --focus 2
-rcmd - 3 : yabai -m display --focus 3
+rctrl - 1 : yabai -m display --focus 1
+rctrl - 2 : yabai -m display --focus 2
+rctrl - 3 : yabai -m display --focus 3
 
 # space
 # create - destroy
-ralt - c : yabai -m space --create
-ralt - d : yabai -m space --destroy
+rcmd - c : yabai -m space --create
+rcmd - d : yabai -m space --destroy
 
 # layout
-ralt - b : yabai -m space --layout bsp
-ralt - f : yabai -m space --layout float
-ralt - s : yabai -m space --layout stack
+rcmd - b : yabai -m space --layout bsp
+rcmd - f : yabai -m space --layout float
+rcmd - s : yabai -m space --layout stack
 
-ralt - 0 : yabai -m space --balance
-ralt - x : yabai -m space --mirror x-axis
-ralt - y : yabai -m space --mirror y-axis
+rcmd - 0 : yabai -m space --balance
+rcmd - x : yabai -m space --mirror x-axis
+rcmd - y : yabai -m space --mirror y-axis
 
 # focus
-ralt - r : yabai -m space --focus recent
-ralt - p : yabai -m space --focus prev
-ralt - n : yabai -m space --focus next
+rcmd - r : yabai -m space --focus recent
+rcmd + rshift - 0x2B : yabai -m space --focus prev
+rcmd + rshift - 0x2F : yabai -m space --focus next
 
-ralt - 1 : yabai -m space --focus 1
-ralt - 2 : yabai -m space --focus 2
-ralt - 3 : yabai -m space --focus 3
-ralt - 4 : yabai -m space --focus 4
-ralt - 5 : yabai -m space --focus 5
-ralt - 6 : yabai -m space --focus 6
-ralt - 7 : yabai -m space --focus 7
-ralt - 8 : yabai -m space --focus 8
-ralt - 9 : yabai -m space --focus 9
+rcmd - 1 : yabai -m space --focus 1
+rcmd - 2 : yabai -m space --focus 2
+rcmd - 3 : yabai -m space --focus 3
+rcmd - 4 : yabai -m space --focus 4
+rcmd - 5 : yabai -m space --focus 5
+rcmd - 6 : yabai -m space --focus 6
+rcmd - 7 : yabai -m space --focus 7
+rcmd - 8 : yabai -m space --focus 8
+rcmd - 9 : yabai -m space --focus 9
 
 # move
-ralt + ctrl - p : yabai -m space --move prev
-ralt + ctrl - n : yabai -m space --move next
-ralt + ctrl - 1 : yabai -m space --display 1
-ralt + ctrl - 2 : yabai -m space --display 2
-ralt + ctrl - 3 : yabai -m space --display 3
+rcmd + rctrl + rshift - 0x2B : yabai -m space --move prev
+rcmd + rctrl + rshift - 0x2F : yabai -m space --move next
+rcmd + rctrl - 1 : yabai -m space --display 1
+rcmd + rctrl - 2 : yabai -m space --display 2
+rcmd + rctrl - 3 : yabai -m space --display 3
 
 # window
 # focus
@@ -55,19 +51,17 @@ lalt - j : yabai -m window --focus south
 lalt - k : yabai -m window --focus north
 lalt - l : yabai -m window --focus east
 lalt - r : yabai -m window --focus recent
-lalt - p : yabai -m window --focus prev
-lalt - n : yabai -m window --focus next
-lalt - m : yabai -m window --focus mouse
+lalt + rshift - 0x2B : yabai -m window --focus prev
+lalt + rshift - 0x2F : yabai -m window --focus next
 
 # swap
-lalt + ctrl - h : yabai -m window --swap west
-lalt + ctrl - j : yabai -m window --swap south
-lalt + ctrl - k : yabai -m window --swap north
-lalt + ctrl - l : yabai -m window --swap east
-lalt + ctrl - r : yabai -m window --swap recent
-lalt + ctrl - p : yabai -m window --swap prev
-lalt + ctrl - n : yabai -m window --swap next
-lalt + ctrl - m : yabai -m window --swap mouse
+lalt + lctrl - h : yabai -m window --swap west
+lalt + lctrl - j : yabai -m window --swap south
+lalt + lctrl - k : yabai -m window --swap north
+lalt + lctrl - l : yabai -m window --swap east
+lalt + lctrl - r : yabai -m window --swap recent
+lalt + lctrl + rshift - 0x2B : yabai -m window --swap prev
+lalt + lctrl + rshift - 0x2F : yabai -m window --swap next
 
 # warp
 lalt + lcmd - h : yabai -m window --warp west
@@ -75,27 +69,25 @@ lalt + lcmd - j : yabai -m window --warp south
 lalt + lcmd - k : yabai -m window --warp north
 lalt + lcmd - l : yabai -m window --warp east
 lalt + lcmd - r : yabai -m window --warp recent
-lalt + lcmd - p : yabai -m window --warp prev
-lalt + lcmd - n : yabai -m window --warp next
-lalt + lcmd - m : yabai -m window --warp mouse
+lalt + lcmd + rshift - 0x2B : yabai -m window --warp prev
+lalt + lcmd + rshift - 0x2F : yabai -m window --warp next
 
 # move to space 
-lalt + ralt - p : yabai -m window --space prev
-lalt + ralt - n : yabai -m window --space next
-lalt + ralt - 1 : yabai -m window --space 1
-lalt + ralt - 2 : yabai -m window --space 2
-lalt + ralt - 3 : yabai -m window --space 3
-lalt + ralt - 4 : yabai -m window --space 4
-lalt + ralt - 5 : yabai -m window --space 5
-lalt + ralt - 6 : yabai -m window --space 6
-lalt + ralt - 7 : yabai -m window --space 7
-lalt + ralt - 8 : yabai -m window --space 8
-lalt + ralt - 9 : yabai -m window --space 9
-
+lalt + rcmd + rshift - 0x2B : yabai -m window --space prev
+lalt + rcmd + rshift - 0x2F : yabai -m window --space next
+lalt + rcmd - 1 : yabai -m window --space 1
+lalt + rcmd - 2 : yabai -m window --space 2
+lalt + rcmd - 3 : yabai -m window --space 3
+lalt + rcmd - 4 : yabai -m window --space 4
+lalt + rcmd - 5 : yabai -m window --space 5
+lalt + rcmd - 6 : yabai -m window --space 6
+lalt + rcmd - 7 : yabai -m window --space 7
+lalt + rcmd - 8 : yabai -m window --space 8
+lalt + rcmd - 9 : yabai -m window --space 9
 
 # move to display 
-lalt + rcmd - p : yabai -m window --display prev
-lalt + rcmd - n : yabai -m window --display next
-lalt + rcmd - 1 : yabai -m window --display 1
-lalt + rcmd - 2 : yabai -m window --display 2
-lalt + rcmd - 3 : yabai -m window --display 3
+lalt + rctrl + rshift - 0x2B : yabai -m window --display prev
+lalt + rctrl + rshift - 0x2F : yabai -m window --display next
+lalt + rctrl - 1 : yabai -m window --display 1
+lalt + rctrl - 2 : yabai -m window --display 2
+lalt + rctrl - 3 : yabai -m window --display 3
