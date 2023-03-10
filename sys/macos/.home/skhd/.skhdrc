@@ -1,5 +1,6 @@
 # display
 # focus
+# keychron k12
 rctrl - r : yabai -m display --focus recent
 rctrl + rshift - 0x2B : yabai -m display --focus prev
 rctrl + rshift - 0x2F : yabai -m display --focus next
@@ -7,6 +8,15 @@ rctrl + rshift - 0x2F : yabai -m display --focus next
 rctrl - 1 : yabai -m display --focus 1
 rctrl - 2 : yabai -m display --focus 2
 rctrl - 3 : yabai -m display --focus 3
+
+# mac
+ralt - r : yabai -m display --focus recent
+ralt + rshift - 0x2B : yabai -m display --focus prev
+ralt + rshift - 0x2F : yabai -m display --focus next
+
+ralt - 1 : yabai -m display --focus 1
+ralt - 2 : yabai -m display --focus 2
+ralt - 3 : yabai -m display --focus 3
 
 # space
 # create - destroy
@@ -38,11 +48,19 @@ rcmd - 8 : yabai -m space --focus 8
 rcmd - 9 : yabai -m space --focus 9
 
 # move
+# keychron k12
 rcmd + rctrl + rshift - 0x2B : yabai -m space --move prev
 rcmd + rctrl + rshift - 0x2F : yabai -m space --move next
 rcmd + rctrl - 1 : yabai -m space --display 1
 rcmd + rctrl - 2 : yabai -m space --display 2
 rcmd + rctrl - 3 : yabai -m space --display 3
+
+# mac
+rcmd + ralt + rshift - 0x2B : yabai -m space --move prev
+rcmd + ralt + rshift - 0x2F : yabai -m space --move next
+rcmd + ralt - 1 : yabai -m space --display 1
+rcmd + ralt - 2 : yabai -m space --display 2
+rcmd + ralt - 3 : yabai -m space --display 3
 
 # window
 # focus
@@ -86,8 +104,16 @@ lalt + rcmd - 8 : yabai -m window --space 8
 lalt + rcmd - 9 : yabai -m window --space 9
 
 # move to display 
+# keychron k12
 lalt + rctrl + rshift - 0x2B : yabai -m window --display prev
 lalt + rctrl + rshift - 0x2F : yabai -m window --display next
 lalt + rctrl - 1 : yabai -m window --display 1
 lalt + rctrl - 2 : yabai -m window --display 2
 lalt + rctrl - 3 : yabai -m window --display 3
+
+# mac
+lalt + ralt + rshift - 0x2B : yabai -m window --display prev
+lalt + ralt + rshift - 0x2F : yabai -m window --display next
+lalt + ralt - 1 : yabai -m window --display 1
+lalt + ralt - 2 : yabai -m window --display 2
+lalt + ralt - 3 : yabai -m window --display 3
