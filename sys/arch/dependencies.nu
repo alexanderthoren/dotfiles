@@ -23,6 +23,7 @@ def installDependencies [] {
 	sudo pacman -Syu --needed shellcheck
 	sudo pacman -Syu --needed bat
 	sudo pacman -Syu --needed github-cli
+	sudo pacman -Syu --needed kotlin
 }
 
 def main [] {
