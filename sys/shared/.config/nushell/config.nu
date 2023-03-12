@@ -585,3 +585,42 @@ alias rmcspm = rm -rf ~/Library/Caches/org.swift.swiftpm/
 alias xo = xed .
 
 source ~/.cache/starship/init.nu
+
+# tmux
+
+let currentUser = (whoami | into string | str trim)
+let currentSessions = (tmux ls | into string)
+
+def createSession [value: string] {
+	if $value == 'default' {
+		tmux new -d -s 'default' -n 'Home' -c ~
+		tmux neww -d -t 'default:1' -n 'Dotfiles' -c ~/Developer/dotfiles
+	} else if $value == 'iOS' {
+		tmux new -d -s 'iOS' -n 'iOS-dev' -c ~/Developer/iOS/develop
+		tmux neww -d -t 'iOS:1' -n 'iOS-wip' -c ~/Developer/iOS/wip
+		tmux neww -d -t 'iOS:2' -n 'iOS-rev' -c ~/Developer/iOS/review
+	} else if $value == 'android' {
+		tmux new -d -s 'android' -n 'android-dev' -c ~/Developer/android/develop
+		tmux neww -d -t 'android:1' -n 'android-wip' -c ~/Developer/android/wip
+		tmux neww -d -t 'android:2' -n 'android-rev' -c ~/Developer/android/review
+	} else if $value == 'backend' {
+		tmux new -d -s 'backend' -n 'master' -c ~/Developer/fever2
+	}
+}
+
+def createSessions [sessions: list] {
+	$sessions | each { |it|
+		if (not ($currentSessions | str contains $it)) {
+			createSession $it
+		}
+	}
+}
+
+if ($currentUser == 'alexanderthoren') {
+	createSessions ['default']
+} else if ($currentUser == 'fever') {
+	createSessions ['default', 'iOS', 'android', 'backend']
+} else {
+	echo "Who is the current user?"
+}
+tmux attach -t 'default'
