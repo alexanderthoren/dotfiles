@@ -7,6 +7,7 @@ g.loaded = 1
 g.loaded_netrwPlugin = 1
 
 -- General
+v.clipboard:append { 'unnamedplus' }
 v.termguicolors = true
 v.hlsearch = true
 v.number = true

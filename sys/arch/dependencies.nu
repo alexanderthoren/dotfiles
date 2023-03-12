@@ -11,7 +11,6 @@ def installDependencies [] {
 	sudo pacman -Syu --needed sxhkd
 	sudo pacman -Syu --needed rofi
 	sudo pacman -Syu --needed feh
-	sudo pacman -Syu --needed picom
 	sudo pacman -Syu --needed git
 	sudo pacman -Syu --needed neovim
 	sudo pacman -Syu --needed alacritty

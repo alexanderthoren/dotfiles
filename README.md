@@ -1,12 +1,4 @@
-# DOTFILES - NEOTHOREN 
-
-* List of plugins &rarr; [Here](https://github.com/rockerBOO/awesome-neovim).
-
-* Lua-guide &rarr; [Here](https://github.com/nanotee/nvim-lua-guide).
-
-* CMP-GUIDE &rarr; [Here](https://vonheikemen.github.io/devlog/tools/setup-nvim-lspconfig-plus-nvim-cmp/)
-
----
+# DOTFILES 
 
 ## Table of contents
 - [0. OS](#0-os)
@@ -23,28 +15,26 @@
 
 ## 0. OS
 
-I use [Vimac](https://github.com/dexterleng/vimac) to move trough the system.
-
 ### 0.1 Plugins
 
-Here are listed my current installed plugins in the os.
+* MacOS
+  * [Vimac](https://github.com/dexterleng/vimac) to move through the system without a mouse.
+  * [Vimari](https://github.com/televator-apps/vimari) to move through the web browser, Safari.
+  * [yabai](https://github.com/koekeishiya/yabai)
+  * [skhd](https://github.com/koekeishiya/skhd)
+  * [sketchyBar](https://github.com/FelixKratz/SketchyBar)
 
-* [yabai](https://github.com/koekeishiya/yabai)
-
-* [skhd](https://github.com/koekeishiya/skhd)
-
-* [sketchyBar](https://github.com/FelixKratz/SketchyBar)
-
-### 0.2 Try out
-
----
+* Arch Linux
+  * [Vimium](https://github.com/philc/vimium) to move through the web browser, Firefox.
+  * [BSPWM](https://github.com/baskerville/bspwm).
+  * [LightDM](https://github.com/canonical/lightdm) and [LightDM-gtk-greeter](https://github.com/Xubuntu/lightdm-gtk-greeter).
+  * [SXHKD](https://github.com/baskerville/sxhkd).
+  * [Rofi](https://github.com/davatorium/rofi).
+  * [Feh](https://github.com/derf/feh).
 
 ## 1. Terminal
 
-My current terminal is [**Alacritty**](https://github.com/alacritty/alacritty). It is cross-platform, so +1 for MacOS,
-Linux and Windows.
-
-My old terminal was [**iTerm2**](https://github.com/gnachman/iTerm2), but Alacritty improves the performance, which is what I care more of.
+My current terminal is [**Alacritty**](https://github.com/alacritty/alacritty).
 
 ---
 
@@ -79,10 +69,6 @@ Here are listed my current installed plugins in the shell.
 * [bat](https://github.com/sharkdp/bat)
 
 * [github-cli](https://github.com/cli/cli)
-
-### 2.2 Try out
-
-* [btop](https://github.com/aristocratos/btop)
 
 ---
 
