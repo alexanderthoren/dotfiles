@@ -24,6 +24,7 @@ def installDependencies [] {
 	sudo pacman -Syu --needed bat
 	sudo pacman -Syu --needed github-cli
 	sudo pacman -Syu --needed kotlin
+	sudo pacman -Syu --needed gradle
 }
 
 def main [] {
