@@ -20,5 +20,8 @@ bspc config gapless_monocle      true
 bspc rule -a alacritty desktop='^1' 
 bspc rule -a firefox desktop='^6'
 bspc rule -a jetbrains-studio desktop='^2'
+bspc rule -a slack desktop='^2'
 
 alacritty
+slack
+jetbrains-studio 
