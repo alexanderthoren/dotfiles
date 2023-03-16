@@ -1,5 +1,5 @@
 configuration {
-  font: "Iosevka Nerd Font Medium 12";
+  font: "MesloLGS NF Bold 9";
 
   drun {
     display-name: "";

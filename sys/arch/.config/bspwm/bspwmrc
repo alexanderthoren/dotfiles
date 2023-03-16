@@ -24,4 +24,3 @@ bspc rule -a firefox desktop=^6 -o
 
 alacritty &
 firefox &
-Slack &
