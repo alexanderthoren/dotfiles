@@ -9,12 +9,6 @@ return {
 	},
 	'nvim-lualine/lualine.nvim',
 	'folke/which-key.nvim',
-	{
-		'iamcco/markdown-preview.nvim',
-		run = function()
-			vim.fn['mkdp#util#install']()
-		end,
-	},
 	'kyazdani42/nvim-web-devicons',
 	'kyazdani42/nvim-tree.lua',
 	'nvim-lua/plenary.nvim',
@@ -82,5 +76,12 @@ return {
 	{
 		'hrsh7th/cmp-cmdline',
 		lazy = false,
+	},
+	{
+		'iamcco/markdown-preview.nvim',
+		lazy = false,
+		run = function()
+			vim.fn['mkdp#util#install']()
+		end,
 	}
 }
