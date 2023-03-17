@@ -20,27 +20,17 @@ configuration {
 }
 
 * {
-  border: 0;
-  margin: 0;
-  padding: 0;
-  spacing: 0;
+  background-color: #000000;
+  text-color: #FFFFFF;
 
-  bg: #111111;
-  fg: #ABB2BF;
-  purple: #5500DD;
-  purple-alt: #5500DD15;
-  purple-background: #5500DD05;
-
-  background-color: @bg;
-  text-color: @fg;
+  accent: #5500DD;
+  surface: #5500DD33;
 }
 
 window {
-  border: 4px;
-  border-color: @purple-alt;
-  border-radius: 4px;
-  padding: 6px;
-  transparency: "real";
+  width: 15%;
+  border: 6;
+  border-color: @accent;
 }
 
 mainbox {
@@ -48,38 +38,36 @@ mainbox {
 }
 
 inputbar {
-  border: 0 0 0 2px;
-  border-color: @purple;
-  border-radius: 0px;
+  border: 0 0 6 0;
+  padding: 12;
+  border-color: @accent;
   children: [entry];
-  margin: 0 0 6px 0;
 }
 
 entry {
-  background-color: @purple-background;
-  padding: 12px;
-  text-color: @purple;
+  padding: 8;
+  text-color: @accent;
 }
 
 listview {
-  lines: 10;
+  padding: 12;
+  lines: 7;
 }
 
 element {
-  border: 0 0 0 2px;
   children: [element-text];
 }
 
 element selected {
-  border-color: @purple;
-  border-radius: 20px;
+  border: 2;
+  border-color: @accent;
 }
 
 element-text {
-  padding: 10px;
+  padding: 8;
 }
 
 element-text selected {
-  background-color: @purple-alt;
-  text-color: @purple;
+  background-color: @surface;
+  text-color: @accent;
 }
