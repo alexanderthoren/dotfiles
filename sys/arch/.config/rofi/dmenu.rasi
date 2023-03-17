@@ -1,17 +1,8 @@
 configuration {
   font: "MesloLGS NF Bold 9";
 
-  drun {
-    display-name: "";
-  }
-
-  run {
-    display-name: "";
-  }
-
-  window {
-    display-name: "";
-  }
+  display-window: "";
+  display-drun: "";
 
   timeout {
     delay: 10;
@@ -20,33 +11,50 @@ configuration {
 }
 
 * {
-  background-color: #000000;
-  text-color: #FFFFFF;
-
+  white: #FFFFFF;
+  black: #000000;
   accent: #5500DD;
   surface: #5500DD33;
+
+  background-color: @black;
+  text-color: @white;
 }
 
 window {
-  width: 15%;
-  border: 6;
+  width: 250;
+  border: 3;
   border-color: @accent;
 }
 
 mainbox {
-  children: [inputbar, listview];
+  children: [mode-switcher, listview, inputbar];
+}
+
+mode-switcher {
+  border: 0 0 3 0;
+  border-color: @accent;
+  padding: 12;
+}
+
+button {
+  text-color: @white;
+}
+
+button selected {
+  text-color: @accent;
 }
 
 inputbar {
-  border: 0 0 6 0;
-  padding: 12;
+  border: 3 0 0 0;
   border-color: @accent;
+  padding: 8;
   children: [entry];
 }
 
 entry {
   padding: 8;
   text-color: @accent;
+  blink: false;
 }
 
 listview {
