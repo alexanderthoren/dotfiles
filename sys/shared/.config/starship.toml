@@ -40,6 +40,8 @@ format = '[ $symbol $branch ]($style)'
 
 [git_status]
 style = "bg:#5500BB"
+ahead = "🐇"
+behind = "🐢"
 conflicted = "🔪"
 untracked = "🚫×${count}"
 stashed = "🥡"
