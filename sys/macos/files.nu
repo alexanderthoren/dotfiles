@@ -40,13 +40,13 @@ def installSystemConfigFiles [] {
 	let myConfigPath = $'sys/macos/.config/'
 	cp -r $'($myConfigPath)/alacritty' $configPath
 	cp -r $'($myConfigPath)/sketchybar' $configPath
-	cp -r $'($myConfigPath)/starship.toml' $configPath
 	cp -r $'sys/shared/.config/nushell' $'($home)/Library/Application Support/'
 }
 
 def installSharedConfigFiles [] {
 	echo 'Installing shared config files'
 	let myConfigPath = $'sys/shared/.config/'
+	cp -r $'($myConfigPath)/starship.toml' $configPath
 	cp -r $'($myConfigPath)/nvim' $configPath
 }
 
