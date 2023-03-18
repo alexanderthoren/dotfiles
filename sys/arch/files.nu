@@ -37,7 +37,6 @@ def installSystemConfigFiles [] {
 	cp -r $'($myConfigPath)/sxhkd' $configPath
 	cp -r $'($myConfigPath)/polybar' $configPath
 	cp -r $'($myConfigPath)/pavucontrol.ini' $configPath
-	cp -r $'($myConfigPath)/starship.toml' $configPath
 }
 
 def installSharedConfigFiles [] {
@@ -45,6 +44,7 @@ def installSharedConfigFiles [] {
 	let myConfigPath = $'sys/shared/.config/'
 	cp -r $'($myConfigPath)/nvim' $configPath
 	cp -r $'($myConfigPath)/nushell' $configPath
+	cp -r $'($myConfigPath)/starship.toml' $configPath
 }
 
 def installEtcConfigFiles [] {

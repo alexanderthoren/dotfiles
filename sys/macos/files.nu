@@ -40,6 +40,7 @@ def installSystemConfigFiles [] {
 	let myConfigPath = $'sys/macos/.config/'
 	cp -r $'($myConfigPath)/alacritty' $configPath
 	cp -r $'($myConfigPath)/sketchybar' $configPath
+	cp -r $'($myConfigPath)/starship.toml' $configPath
 	cp -r $'sys/shared/.config/nushell' $'($home)/Library/Application Support/'
 }
 
