@@ -67,5 +67,7 @@ if $osName == 'Darwin' {
 	let-env PATH = ($env.PATH | append "/opt/homebrew/bin/")
 }
 
+let-env MANPAGER = "sh -c 'col -bx | bat -l man -p'"
+
 mkdir ~/.cache/starship
 starship init nu | str replace --string "size -c" "size" | save -f ~/.cache/starship/init.nu
