@@ -31,7 +31,7 @@ truncation_length = 3
 truncation_symbol = "…/"
 
 [directory.substitutions]
-"dotfiles" = "🍌"
+"dotfiles" = "🍆"
 
 [git_branch]
 symbol = "🌱"
