@@ -58,6 +58,10 @@ def installFonts [] {
 	cp $'($fontsPath)MesloLGS NF Regular.ttf' $'($home)/Library/Fonts/'
 }
 
+def cloneGitRepositories [] {
+	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+}
+
 def main [--clean (-c): int] {
 	echo '-> Installing macOS files'
 	if $clean == 1 {
@@ -71,5 +75,6 @@ def main [--clean (-c): int] {
 	installSystemConfigFiles
 	installSharedConfigFiles
 	installFonts
+	cloneGitRepositories
 	echo '<- macOS files installation completed!'
 }

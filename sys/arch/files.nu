@@ -67,6 +67,10 @@ def installFonts [] {
 	sudo cp -r $'($myFontsPath)/MesloLGS' $ttfFontsPath
 }
 
+def cloneGitRepositories [] {
+	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+}
+
 def main [--clean (-c): int] {
 	if $clean == 1 {
 		echo '-> Removing old files'
@@ -81,5 +85,6 @@ def main [--clean (-c): int] {
 	installSharedConfigFiles
 	installEtcConfigFiles
 	installFonts
+	cloneGitRepositories
 	echo '<- Files installation completed!'
 }
