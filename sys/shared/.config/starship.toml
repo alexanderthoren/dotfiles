@@ -40,6 +40,13 @@ format = '[ $symbol $branch ]($style)'
 
 [git_status]
 style = "bg:#5500BB"
+conflicted = "🔪"
+untracked = "🚫×${count}"
+stashed = "🥡"
+modified = "📝×${count}"
+staged = "🍱×${count}"
+renamed = "📛×${count}"
+deleted = "🚮×${count}"
 format = '[$all_status$ahead_behind ]($style)'
 
 [gradle]
