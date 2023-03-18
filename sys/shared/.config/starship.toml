@@ -31,13 +31,10 @@ truncation_length = 3
 truncation_symbol = "…/"
 
 [directory.substitutions]
-"Documents" = " "
-"Downloads" = " "
-"Music" = " "
-"Pictures" = " "
+"dotfiles" = "🍌"
 
 [git_branch]
-symbol = ""
+symbol = "🌱"
 style = "bg:#5500BB"
 format = '[ $symbol $branch ]($style)'
 
@@ -45,72 +42,33 @@ format = '[ $symbol $branch ]($style)'
 style = "bg:#5500BB"
 format = '[$all_status$ahead_behind ]($style)'
 
-[c]
-symbol = " "
-style = "bg:#550099"
-format = '[ $symbol ($version) ]($style)'
-
-[docker_context]
-symbol = " "
-style = "bg:#550066"
-format = '[ $symbol $context ]($style) $path'
-
-[elixir]
-symbol = " "
-style = "bg:#550099"
-format = '[ $symbol ($version) ]($style)'
-
-[elm]
-symbol = " "
-style = "bg:#550099"
-format = '[ $symbol ($version) ]($style)'
-
-[golang]
-symbol = " "
-style = "bg:#550099"
-format = '[ $symbol ($version) ]($style)'
-
 [gradle]
-style = "bg:#550099"
-format = '[ $symbol ($version) ]($style)'
-
-[haskell]
-symbol = " "
+symbol = "🐘"
 style = "bg:#550099"
 format = '[ $symbol ($version) ]($style)'
 
 [java]
-symbol = " "
-style = "bg:#550099"
-format = '[ $symbol ($version) ]($style)'
-
-[julia]
-symbol = " "
-style = "bg:#550099"
-format = '[ $symbol ($version) ]($style)'
-
-[nodejs]
-symbol = ""
-style = "bg:#550099"
-format = '[ $symbol ($version) ]($style)'
-
-[nim]
-symbol = " "
+symbol = "🧋"
 style = "bg:#550099"
 format = '[ $symbol ($version) ]($style)'
 
 [rust]
-symbol = ""
+symbol = "🦀"
 style = "bg:#550099"
 format = '[ $symbol ($version) ]($style)'
 
-[scala]
-symbol = " "
+[swift]
+symbol = "🦜"
 style = "bg:#550099"
 format = '[ $symbol ($version) ]($style)'
+
+[docker_context]
+symbol = "🐋"
+style = "bg:#550066"
+format = '[ $symbol $context ]($style) $path'
 
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
 style = "bg:#770066"
-format = '[ $time ]($style)'
+format = '[ ⏰ $time ]($style)'
