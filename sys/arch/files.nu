@@ -26,7 +26,6 @@ def installSharedHomeFiles [] {
 	echo 'Installing shared home files'
 	let myHomePath = $'sys/shared/.home/'
 	cp -r $'($myHomePath)/.tmux.conf' $home
-	cp -r $'($myHomePath)/.tmux' $home
 }
 
 def installSystemConfigFiles [] {
@@ -37,6 +36,8 @@ def installSystemConfigFiles [] {
 	cp -r $'($myConfigPath)/rofi' $configPath
 	cp -r $'($myConfigPath)/sxhkd' $configPath
 	cp -r $'($myConfigPath)/polybar' $configPath
+	cp -r $'($myConfigPath)/pavucontrol.ini' $configPath
+	cp -r $'($myConfigPath)/starship.toml' $configPath
 }
 
 def installSharedConfigFiles [] {

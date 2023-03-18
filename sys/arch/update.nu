@@ -19,6 +19,7 @@ def updateConfigFiles [] {
 	cp -r $'($configPath)/rofi' $myConfigPath
 	cp -r $'($configPath)/sxhkd' $myConfigPath
 	cp -r $'($configPath)/polybar' $myConfigPath
+	cp -r $'($configPath)/pavucontrol.ini' $myConfigPath
 	cp -r $'($configPath)/nushell' $'sys/shared/.config/'
 }
 
