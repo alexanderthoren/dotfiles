@@ -1,5 +1,5 @@
 format = """
-[](#5500DD)\
+[ ](#5500DD)\
 $directory\
 [](fg:#5500DD bg:#5500BB)\
 $git_branch\
@@ -19,22 +19,30 @@ $rust\
 $scala\
 [](fg:#550099 bg:#550066)\
 $docker_context\
-[](fg:#550066 bg:#770066)\
-$time\
-[ ](fg:#770066)\
+[ ](fg:#550066)\
+$line_break \
 """
+
+right_format = """
+[](#770066)\
+$time\
+[ ](#770066)
+"""
+
+[line_break]
+disable = true
 
 [directory]
 style = "bg:#5500DD"
 format = "[ $path ]($style)"
-truncation_length = 3
-truncation_symbol = "…/"
 
 [directory.substitutions]
+"~" = "🏡 "
+"Developer" = "📱"
 "dotfiles" = "🍆"
 
 [git_branch]
-symbol = "🌱"
+symbol = " "
 style = "bg:#5500BB"
 format = '[ $symbol $branch ]($style)'
 
@@ -80,4 +88,4 @@ format = '[ $symbol $context ]($style) $path'
 disabled = false
 time_format = "%R" # Hour:Minute Format
 style = "bg:#770066"
-format = '[ ⏰ $time ]($style)'
+format = '[ $time ⏰]($style)'
