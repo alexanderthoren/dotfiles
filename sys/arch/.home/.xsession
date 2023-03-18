@@ -1,4 +1,3 @@
-./.screenlayout/base_layout.sh
+~/.screenlayout/base_layout.sh
 ~/.fehbg &
-picom &
 polybar &
