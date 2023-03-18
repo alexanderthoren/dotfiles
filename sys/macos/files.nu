@@ -33,6 +33,7 @@ def installSharedHomeFiles [] {
 	echo 'Installing shared home files'
 	let myHomePath = $'sys/shared/.home/'
 	cp -r $'($myHomePath)/.tmux.conf' $home
+	cp -r $'($myHomePath)/.tmux' $home
 }
 
 def installSystemConfigFiles [] {

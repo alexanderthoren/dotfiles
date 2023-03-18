@@ -7,6 +7,7 @@ def updateHomeFiles [] {
 	echo '-> Updating home files'
 	let myHomePath = $'sys/shared/.home/'
 	cp -r $'($home)/.tmux.conf' $myHomePath
+	cp -r $'($home)/.tmux' $myHomePath
 }
 
 def updateConfigFiles [] {
