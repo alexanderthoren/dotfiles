@@ -25,6 +25,7 @@ def installDependencies [] {
 	sudo pacman -Syu --needed github-cli
 	sudo pacman -Syu --needed kotlin
 	sudo pacman -Syu --needed gradle
+	sudo pacman -Syu --needed discord
 }
 
 def main [] {

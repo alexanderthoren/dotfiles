@@ -20,7 +20,9 @@ bspc config gapless_monocle      true
 bspc rule -a alacritty desktop=^1 -o
 bspc rule -a jetbrains-studio desktop=^2 -o
 bspc rule -a Slack desktop=^3 -o
+bspc rule -a discord desktop=^4 -o
 bspc rule -a firefox desktop=^6 -o
 
 alacritty &
 firefox &
+discord &
