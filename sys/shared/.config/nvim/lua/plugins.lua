@@ -49,24 +49,6 @@ return {
 	'numToStr/Comment.nvim',
 	'ray-x/lsp_signature.nvim',
 	{
-		"nvim-neorg/neorg",
-		build = ":Neorg sync-parsers",
-		opts = {
-			load = {
-				["core.defaults"] = {}, -- Loads default behaviour
-				["core.norg.concealer"] = {}, -- Adds pretty icons to your documents
-				["core.norg.dirman"] = { -- Manages Neorg workspaces
-					config = {
-						workspaces = {
-							notes = "~/notes",
-						},
-					},
-				},
-			},
-		},
-		dependencies = { { "nvim-lua/plenary.nvim" } },
-	},
-	{
 		'romgrk/barbar.nvim',
 		lazy = false,
 		wants = 'nvim-web-devicons'

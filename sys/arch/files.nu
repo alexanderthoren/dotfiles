@@ -7,6 +7,7 @@ def removeOldFiles [] {
 	echo 'Removing old .files'
 	rm -rf $'($home)/.cache/nvim'
 	rm -rf $'($home)/.local/share/nvim'
+	rm -rf $'($configPath)/nvim'
 }
 
 def createDirectories [] {
