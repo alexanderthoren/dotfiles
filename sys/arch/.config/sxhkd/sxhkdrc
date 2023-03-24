@@ -1,6 +1,8 @@
 #
 # wm independent hotkeys
-#
+
+super + alt + p
+    /usr/bin/flameshot gui
 
 # terminal emulator
 alt + Return

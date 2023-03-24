@@ -26,6 +26,7 @@ def installDependencies [] {
 	sudo pacman -Syu --needed kotlin
 	sudo pacman -Syu --needed gradle
 	sudo pacman -Syu --needed discord
+	sudo pacman -Syu --needed flameshot
 }
 
 def main [] {
