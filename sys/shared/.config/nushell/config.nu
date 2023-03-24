@@ -528,7 +528,11 @@ alias gb = git branch
 alias gba = git branch -a
 alias gbd = git branch -D
 alias gc = git commit
-alias gcb = git checkout -b
+
+def gcb [input: string] {
+	git checkout -b $input
+}
+
 alias gcc = git checkout
 alias gcf = git clean -f .
 alias gcl = git clone
