@@ -40,6 +40,7 @@ def installBinaries [] {
 	brew install -q 'sketchybar'
 	brew install -q 'gh'
 	brew install -q 'kotlin'
+	brew install -q 'fnm'
 }
 
 def stopServices [] {

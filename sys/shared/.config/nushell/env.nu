@@ -69,5 +69,9 @@ if $osName == 'Darwin' {
 
 let-env MANPAGER = "sh -c 'col -bx | bat -l man -p'"
 
+let-env PATH = ($env.PATH | prepend "~/.fnm")
+load-env (fnm env --shell bash | lines | str replace 'export ' '' | str replace -a '"' '' | split column = | rename name value | where name != "FNM_ARCH" and name != "PATH" | reduce -f {} {|it, acc| $acc | upsert $it.name $it.value })
+let-env PATH = ($env.PATH | prepend $"($env.FNM_MULTISHELL_PATH)/bin")
+
 mkdir ~/.cache/starship
 starship init nu | str replace --string "size -c" "size" | save -f ~/.cache/starship/init.nu
