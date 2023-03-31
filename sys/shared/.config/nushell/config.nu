@@ -609,6 +609,8 @@ def createSession [value: string] {
 		tmux neww -d -t 'android:2' -n 'android-rev' -c ~/Developer/android/review
 	} else if $value == 'backend' {
 		tmux new -d -s 'backend' -n 'master' -c ~/Developer/fever2
+	} else if $value == 'webclient' {
+		tmux new -d -s 'webclient' -n 'master' -c ~/Developer/webclient3
 	}
 }
 
@@ -623,7 +625,7 @@ def createSessions [sessions: list] {
 if ($currentUser == 'alexanderthoren') {
 	createSessions ['default']
 } else if ($currentUser == 'fever') {
-	createSessions ['default', 'iOS', 'android', 'backend']
+	createSessions ['default', 'iOS', 'android', 'backend', 'webclient']
 } else {
 	echo "Who is the current user?"
 }
