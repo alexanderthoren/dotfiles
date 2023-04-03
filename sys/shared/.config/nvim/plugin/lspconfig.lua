@@ -47,7 +47,8 @@ lspconfig.lua_ls.setup {
  				globals = { 'vim' }
  			},
  			workspace = {
- 				library = vim.api.nvim_get_runtime_file("", true)
+ 				library = vim.api.nvim_get_runtime_file("", true),
+				checkThirdParty = false,
  			}
  		}
  	}
@@ -91,4 +92,10 @@ lspconfig.kotlin_language_server.setup {
 lspconfig.sourcekit.setup {
 	capabilities = capabilities,
 	on_attach = on_attach,
+}
+
+-- Solargraph
+lspconfig.solargraph.setup {
+	capabilities = capabilities,
+	on_attach = on_attach
 }
