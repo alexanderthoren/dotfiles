@@ -1,25 +1,25 @@
 #!/usr/bin/env nu
 
-let home = $env.HOME
-let configPath = $'($home)/.config/'
+let home = ($env.HOME)
+let configPath = ($'($home)/.config/')
 
 def updateHomeFiles [] {
-	echo '-> Updating home files'
-	let myHomePath = $'sys/shared/.home/'
+	print '-> Updating home files'
+	let myHomePath = ($'sys/shared/.home/')
 	cp -r $'($home)/.tmux.conf' $myHomePath
 }
 
 def updateConfigFiles [] {
-	echo '-> Updating config files'
-	let myConfigPath = $'sys/shared/.config/'
+	print '-> Updating config files'
+	let myConfigPath = ($'sys/shared/.config/')
 	cp -r $'($configPath)/nvim' $myConfigPath
 	cp -r $'($configPath)/starship.toml' $myConfigPath
 }
 
 def main [os: string] {
-	echo '-> Updating shared files'
+	print '-> Updating shared files'
 	updateHomeFiles
 	updateConfigFiles
-	echo '<- Shared files updated!'
+	print '<- Shared files updated!'
 	nu $'sys/($os)/update.nu'
 }

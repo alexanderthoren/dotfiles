@@ -30,10 +30,10 @@ def main [
 	--type (-t): string = '',
 	--clean (-c): bool
 ] {
-	let os = getOs
-	let file = getFile $type
+	let os = (getOs)
+	let file = (getFile $type)
 	if ($os != null and $file != null) {
-		let filePath = $'sys/($os)/($file)'
+		let filePath = ($'sys/($os)/($file)')
 		print $filePath
 		if $clean {
 			nu $filePath -c 1
