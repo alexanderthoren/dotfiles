@@ -54,7 +54,7 @@ lspconfig.lua_ls.setup {
  	}
 }
 
--- Bashls
+-- Shell
 lspconfig.bashls.setup {
 	capabilities = capabilities,
 	on_attach = on_attach,
@@ -88,18 +88,19 @@ lspconfig.kotlin_language_server.setup {
 	on_attach = on_attach,
 }
 
--- SourceKit
+-- Swift
 lspconfig.sourcekit.setup {
 	capabilities = capabilities,
 	on_attach = on_attach,
 }
 
--- Solargraph
+-- Ruby
 lspconfig.solargraph.setup {
 	capabilities = capabilities,
 	on_attach = on_attach
 }
 
+-- Python
 lspconfig.pylsp.setup {
 	capabilities = capabilities,
 	on_attach = on_attach

@@ -1,11 +1,9 @@
 #!/usr/bin/env nu
-def updateAndUpgrade [] {
+
+def pacman [] {
 	print 'Updating and upgrading'
 	sudo pacman -Syu
-}
-
-def installDependencies [] {
-	print 'Installing dependencies'
+	print 'Installing pacman dependencies'
 	sudo pacman -S --needed bspwm
 	sudo pacman -S --needed lightdm lightdm-gtk-greeter
 	sudo pacman -S --needed sxhkd
@@ -30,9 +28,15 @@ def installDependencies [] {
 	sudo pacman -S --needed python-pip
 }
 
+def pip [] {
+	print 'Install pip dependencies'
+	pip install python-lsp-server
+	pip install 'python-lsp-server[all]'
+}
+
 def main [] {
 	print '-> Dependencies installation'
-	updateAndUpgrade
-	installDependencies
+	pacman
+	pip
 	print '<- Dependencies installation completed!'
 }
