@@ -1,37 +1,37 @@
 #!/usr/bin/env nu
 
-let home = $env.HOME
-let configPath = $'($home)/.config/'
+let home = ($env.HOME)
+let configPath = ($'($home)/.config/')
 
 def removeOldFiles [] {
-	echo 'Removing old .files'
+	print 'Removing old .files'
 	rm -rf $'($home)/.cache/nvim'
 	rm -rf $'($home)/.local/share/nvim'
 	rm -rf $'($configPath)/nvim'
 }
 
 def createDirectories [] {
-	echo 'Creating directories'
+	print 'Creating directories'
 	mkdir $configPath
 }
 
 def installSystemHomeFiles [] {
-	echo 'Installing system home files'
-	let myHomePath = $'sys/arch/.home/'
+	print 'Installing system home files'
+	let myHomePath = ($'sys/arch/.home/')
 	cp -r $'($myHomePath)/.xsession' $home
 	cp -r $'($myHomePath)/.screenlayout' $home
 	cp -r $'($myHomePath)/.fehbg' $home
 }
 
 def installSharedHomeFiles [] {
-	echo 'Installing shared home files'
-	let myHomePath = $'sys/shared/.home/'
+	print 'Installing shared home files'
+	let myHomePath = ($'sys/shared/.home/')
 	cp -r $'($myHomePath)/.tmux.conf' $home
 }
 
 def installSystemConfigFiles [] {
-	echo 'Installing system config files'
-	let myConfigPath = $'sys/arch/.config/'
+	print 'Installing system config files'
+	let myConfigPath = ($'sys/arch/.config/')
 	cp -r $'($myConfigPath)/alacritty' $configPath
 	cp -r $'($myConfigPath)/bspwm' $configPath
 	cp -r $'($myConfigPath)/rofi' $configPath
@@ -41,25 +41,25 @@ def installSystemConfigFiles [] {
 }
 
 def installSharedConfigFiles [] {
-	echo 'Installing shared config files'
-	let myConfigPath = $'sys/shared/.config/'
+	print 'Installing shared config files'
+	let myConfigPath = ($'sys/shared/.config/')
 	cp -r $'($myConfigPath)/nvim' $configPath
 	cp -r $'($myConfigPath)/nushell' $configPath
 	cp -r $'($myConfigPath)/starship.toml' $configPath
 }
 
 def installEtcConfigFiles [] {
-	echo 'Installing etc config files'
+	print 'Installing etc config files'
 	sudo cp -r sys/arch/etc /
 	sudo cp -r sys/shared/wallpapers/wallpaper.jpg /usr/share/pixmaps/
 }
 
 def installFonts [] {
-	echo 'Installing fonts'
-	let fontsPath = '/usr/local/share/fonts'
-	let ttfFontsPath = $'($fontsPath)/ttf'
-	let otfFontsPath = $'($fontsPath)/otf'
-	let myFontsPath = 'sys/shared/fonts/'
+	print 'Installing fonts'
+	let fontsPath = ('/usr/local/share/fonts')
+	let ttfFontsPath = ($'($fontsPath)/ttf')
+	let otfFontsPath = ($'($fontsPath)/otf')
+	let myFontsPath = ('sys/shared/fonts/')
 	if not ($fontsPath | path exists) {
 		sudo mkdir $fontsPath
 		sudo mkdir $ttfFontsPath
@@ -69,8 +69,8 @@ def installFonts [] {
 }
 
 def cloneGitRepositories [] {
-	echo 'Cloning git repositories'
-	let tpmPath = '~/.tmux/plugins/tpm'
+	print 'Cloning git repositories'
+	let tpmPath = ('~/.tmux/plugins/tpm')
 	if not ($tpmPath | path exists) {
 		git clone https://github.com/tmux-plugins/tpm $tpmPath
 	}
@@ -78,11 +78,11 @@ def cloneGitRepositories [] {
 
 def main [--clean (-c): int] {
 	if $clean == 1 {
-		echo '-> Removing old files'
+		print '-> Removing old files'
 		removeOldFiles
-		echo '<- Old files removed!'
+		print '<- Old files removed!'
 	}
-	echo '-> Installing files'
+	print '-> Installing files'
 	createDirectories
 	installSystemHomeFiles
 	installSharedHomeFiles
@@ -91,5 +91,5 @@ def main [--clean (-c): int] {
 	installEtcConfigFiles
 	installFonts
 	cloneGitRepositories
-	echo '<- Files installation completed!'
+	print '<- Files installation completed!'
 }
