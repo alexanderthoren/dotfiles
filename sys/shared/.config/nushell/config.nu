@@ -626,6 +626,8 @@ def createSession [value: string] {
 	if $value == 'default' {
 		tmux new -d -s 'default' -n 'Home' -c ~
 		tmux neww -d -t 'default:1' -n 'Dotfiles' -c ~/Developer/dotfiles
+	} else if $value == 'development' {
+		tmux new -d -s 'development' -n 'dev1' -c ~/Developer
 	} else if $value == 'iOS' {
 		tmux new -d -s 'iOS' -n 'iOS-dev' -c ~/Developer/iOS/develop
 		tmux neww -d -t 'iOS:1' -n 'iOS-wip' -c ~/Developer/iOS/wip
@@ -650,7 +652,7 @@ def createSessions [sessions: list] {
 }
 
 if ($currentUser == 'alexanderthoren') {
-	createSessions ['default']
+	createSessions ['default', 'development']
 } else if ($currentUser == 'fever') {
 	createSessions ['default', 'iOS', 'android', 'backend', 'webclient']
 } else {
