@@ -27,6 +27,7 @@ def installDependencies [] {
 	sudo pacman -S --needed gradle
 	sudo pacman -S --needed discord
 	sudo pacman -S --needed flameshot
+	sudo pacman -S --needed python-pip
 }
 
 def main [] {
