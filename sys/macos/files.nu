@@ -61,7 +61,11 @@ def installFonts [] {
 }
 
 def cloneGitRepositories [] {
-	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+	echo 'Cloning git repositories'
+	let tpmPath = '~/.tmux/plugins/tpm'
+	if not ($tpmPath | path exists) {
+		git clone https://github.com/tmux-plugins/tpm $tpmPath
+	}
 }
 
 def main [--clean (-c): int] {
