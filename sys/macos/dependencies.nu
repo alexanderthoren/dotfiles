@@ -41,6 +41,8 @@ def installBinaries [] {
 	brew install -q 'gh'
 	brew install -q 'kotlin'
 	brew install -q 'fnm'
+	brew install -q 'rbenv'
+	brew install -q 'ruby-build'
 }
 
 def stopServices [] {
