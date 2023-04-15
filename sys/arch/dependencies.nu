@@ -1,5 +1,7 @@
 #!/usr/bin/env nu
 
+let home = $env.HOME
+
 def pacman [] {
 	print 'Updating and upgrading'
 	sudo pacman -Syu
@@ -28,9 +30,21 @@ def pacman [] {
 	sudo pacman -S --needed python-pip
 }
 
-def main [] {
+def github [] {
+	print 'Downloading github repositories'
+	let repositories = ['rbenv', 'ruby-build']
+	$repositories | each { |it|
+		let url = $'https://aur.archlinux.org/($it).git'
+		let repoPath = $'($home)/Downloads/($it)/'
+		if not ($repoPath | path exists) {
+			git clone $url $repoPath
+		}
+	}
+}
+
+def main [--clean (-c): int] {
 	print '-> Dependencies installation'
 	pacman
-	pip
+	github
 	print '<- Dependencies installation completed!'
 }
