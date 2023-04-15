@@ -1,7 +1,7 @@
 #!/usr/bin/env nu
 
-let home = ($env.HOME)
-let configPath = ($'($home)/.config/')
+let home = $env.HOME
+let configPath = $'($home)/.config/'
 
 def removeOldFiles [] {
 	print 'Removing old .files'
@@ -17,7 +17,7 @@ def createDirectories [] {
 
 def installSystemHomeFiles [] {
 	print 'Installing system home files'
-	let myHomePath = ($'sys/arch/.home/')
+	let myHomePath = $'sys/arch/.home/'
 	cp -r $'($myHomePath)/.xsession' $home
 	cp -r $'($myHomePath)/.screenlayout' $home
 	cp -r $'($myHomePath)/.fehbg' $home
@@ -25,13 +25,13 @@ def installSystemHomeFiles [] {
 
 def installSharedHomeFiles [] {
 	print 'Installing shared home files'
-	let myHomePath = ($'sys/shared/.home/')
+	let myHomePath = $'sys/shared/.home/'
 	cp -r $'($myHomePath)/.tmux.conf' $home
 }
 
 def installSystemConfigFiles [] {
 	print 'Installing system config files'
-	let myConfigPath = ($'sys/arch/.config/')
+	let myConfigPath = $'sys/arch/.config/'
 	cp -r $'($myConfigPath)/alacritty' $configPath
 	cp -r $'($myConfigPath)/bspwm' $configPath
 	cp -r $'($myConfigPath)/rofi' $configPath
@@ -42,7 +42,7 @@ def installSystemConfigFiles [] {
 
 def installSharedConfigFiles [] {
 	print 'Installing shared config files'
-	let myConfigPath = ($'sys/shared/.config/')
+	let myConfigPath = $'sys/shared/.config/'
 	cp -r $'($myConfigPath)/nvim' $configPath
 	cp -r $'($myConfigPath)/nushell' $configPath
 	cp -r $'($myConfigPath)/starship.toml' $configPath
@@ -56,10 +56,10 @@ def installEtcConfigFiles [] {
 
 def installFonts [] {
 	print 'Installing fonts'
-	let fontsPath = ('/usr/local/share/fonts')
-	let ttfFontsPath = ($'($fontsPath)/ttf')
-	let otfFontsPath = ($'($fontsPath)/otf')
-	let myFontsPath = ('sys/shared/fonts/')
+	let fontsPath = '/usr/local/share/fonts'
+	let ttfFontsPath = $'($fontsPath)/ttf'
+	let otfFontsPath = $'($fontsPath)/otf'
+	let myFontsPath = 'sys/shared/fonts/'
 	if not ($fontsPath | path exists) {
 		sudo mkdir $fontsPath
 		sudo mkdir $ttfFontsPath
@@ -70,7 +70,7 @@ def installFonts [] {
 
 def cloneGitRepositories [] {
 	print 'Cloning git repositories'
-	let tpmPath = ('~/.tmux/plugins/tpm')
+	let tpmPath = $'($home)/.tmux/plugins/tpm'
 	if not ($tpmPath | path exists) {
 		git clone https://github.com/tmux-plugins/tpm $tpmPath
 	}

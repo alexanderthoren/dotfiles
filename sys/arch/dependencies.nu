@@ -28,12 +28,6 @@ def pacman [] {
 	sudo pacman -S --needed python-pip
 }
 
-def pip [] {
-	print 'Install pip dependencies'
-	pip install python-lsp-server
-	pip install 'python-lsp-server[all]'
-}
-
 def main [] {
 	print '-> Dependencies installation'
 	pacman
