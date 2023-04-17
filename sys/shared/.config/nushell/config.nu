@@ -608,15 +608,12 @@ def kr [input: string] {
 alias ks = kotlinc-jvm
 
 # Xcode
-let osName = (sys | get host | get name)
-if $osName == 'Darwin' {
-	alias kx = killall Xcode
-	alias repd = xcodebuild -resolvePackageDependencies
-	alias rmdd = rm -rf ~/Library/Developer/Xcode/DerivedData
-	alias rmspm = rm -rf ~/Library/org.swift.swiftpm/
-	alias rmcspm = rm -rf ~/Library/Caches/org.swift.swiftpm/
-	alias xo = xed .
-}
+alias kx = killall Xcode
+alias repd = xcodebuild -resolvePackageDependencies
+alias rmdd = rm -rf ~/Library/Developer/Xcode/DerivedData
+alias rmspm = rm -rf ~/Library/org.swift.swiftpm/
+alias rmcspm = rm -rf ~/Library/Caches/org.swift.swiftpm/
+alias xo = xed .
 
 source ~/.cache/starship/init.nu
 
