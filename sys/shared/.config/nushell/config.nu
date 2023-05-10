@@ -544,41 +544,49 @@ alias ll = ls -la
 alias f = fzf
 alias fe = fzf -e
 alias n = nvim
-alias lss = (ls -d | sort-by size -r)
+def lss [] {
+	(ls -d | sort-by size -r)
+}
 
 # git
 alias g = git
 alias ga = git add
 alias gaa = git add .
-alias gapb = (pbpaste | git apply)
+def gapb [] {
+	(pbpaste | git apply)
+}
 alias gb = git branch
 alias gba = git branch -a
 alias gbd = git branch -D
 alias gc = git commit
-
 def gcb [input: string] {
 	git checkout -b $input
 }
-
 alias gcc = git checkout
 alias gcf = git clean -f .
 alias gcl = git clone
 alias gd = git diff
 alias gd-1 = git diff head~1
-alias gdrg = (git diff head~1 | rg)
+def gdrg [] {
+	(git diff head~1 | rg)
+}
 alias gdt = git difftool -y
 alias gf = git fetch --all -p
 alias gl = git log
 alias gmt = git mergetool -y
 alias gps = git push
-alias gpso = git push -u origin $'(git branch --show-current | into string | str trim)'
+def gpso [] {
+	git push -u origin $'(git branch --show-current | into string | str trim)'
+} 
 alias gpsd = git push -d origin
 alias gpl = git pull
 alias grb = git rebase
 alias grba = git rebase --abort
 alias grbc = git rebase --continue
 alias grbi = git rebase -i
-alias grc = (git restore --staged .; git restore .; git clean -f)
+def grc [] {
+	(git restore --staged .; git restore .; git clean -f)
+}
 alias gre = git restore
 alias grs = git restore --staged
 alias gs = git status
