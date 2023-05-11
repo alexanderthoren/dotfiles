@@ -566,6 +566,9 @@ alias gcc = git checkout
 alias gcf = git clean -f .
 alias gcl = git clone
 alias gd = git diff
+def gds [input: string] {
+	git diff $input --stat
+}
 alias gd-1 = git diff head~1
 def gdrg [] {
 	(git diff head~1 | rg)
