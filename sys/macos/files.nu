@@ -27,7 +27,6 @@ def installSystemHomeFiles [] {
 	rm -r $'($myHomePath)/yabai' 
 	cp -r $'($myHomePath)/.yabairc' $home
 	cp -r $'($myHomePath)/skhd/.skhdrc' $home
-	cp -r $'($myHomePath)/skhd/com.koekeishiya.skhd.plist' $'($home)/Library/LaunchAgents'
 }
 
 def installSharedHomeFiles [] {
