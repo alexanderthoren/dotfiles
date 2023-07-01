@@ -8,6 +8,7 @@ treesitter.setup {
 		'kotlin',
 		'lua',
 		'markdown',
+		'markdown_inline',
 		'swift'
 	},
 	sync_install = true,

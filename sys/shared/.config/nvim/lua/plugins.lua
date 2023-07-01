@@ -25,6 +25,10 @@ return {
 			require('nvim-treesitter.install').update({ with_sync = true })
 		end,
 	},
+	{
+		'glepnir/lspsaga.nvim',
+		event = "LspAttach"
+	},
 	'samodostal/image.nvim',
 	'folke/trouble.nvim',
 	'williamboman/mason.nvim',
