@@ -21,7 +21,24 @@ mason.setup {
 }
 
 mason_lsp.setup {
-	automatic_installation = true
+	automatic_installation = false,
+	ensure_installed = {
+		'lua_ls',
+		'bashls',
+		'clangd',
+		'dockerls',
+		'gradle_ls',
+		'marksman',
+		'prosemd_lsp',
+		'zk',
+		'jsonls',
+		'kotlin_language_server',
+		'sourcekit',
+		'solargraph',
+		'pylsp',
+		'terraformls',
+		'tsserver'
+	}
 }
 
 local capabilities = cmp_nvim_lsp.default_capabilities(vim.lsp.protocol.make_client_capabilities())
