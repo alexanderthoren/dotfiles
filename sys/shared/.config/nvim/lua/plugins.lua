@@ -79,8 +79,8 @@ return {
 	},
 	{
 		'iamcco/markdown-preview.nvim',
-		lazy = false,
-		run = function()
+		event = 'BufRead',
+		build = function()
 			vim.fn['mkdp#util#install']()
 		end,
 	}
