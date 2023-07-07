@@ -563,6 +563,9 @@ def gcb [input: string] {
 	git checkout -b $input
 }
 alias gcc = git checkout
+alias gcp = git cherry-pick
+alias gcpa = git cherry-pick --abort
+alias gcpc = git cherry-pick --continue
 alias gcf = git clean -f .
 alias gcl = git clone
 alias gd = git diff
@@ -576,6 +579,10 @@ def gdrg [] {
 alias gdt = git difftool -y
 alias gf = git fetch --all -p
 alias gl = git log
+alias gm = git merge
+alias gma = git merge --abort
+alias gmc = git merge --continue
+alias gmi = git merge -i
 alias gmt = git mergetool -y
 alias gps = git push
 def gpso [] {
