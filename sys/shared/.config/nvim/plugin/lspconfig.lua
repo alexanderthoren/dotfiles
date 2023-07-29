@@ -122,3 +122,24 @@ lspconfig.pylsp.setup {
 	capabilities = capabilities,
 	on_attach = on_attach,
 }
+
+-- Unity
+local pid = vim.fn.getpid()
+local omnisharp_bin = '/home/alexanderthoren/.local/share/nvim/mason/packages/omnisharp-mono/run'
+lspconfig.omnisharp_mono.setup {
+	capabilities = capabilities,
+	on_attach = on_attach,
+	cmd = {
+		omnisharp_bin,
+		'--languageserver',
+		"--hostPID",
+		tostring(pid)
+	},
+	 enable_editorconfig_support = true,
+	 enable_ms_build_load_projects_on_demand = false,
+	 enable_roslyn_analyzers = false,
+	 organize_imports_on_format = false,
+	 enable_import_completion = false,
+	 sdk_include_prereleases = true,
+	 analyze_open_documents_only = false,
+}
