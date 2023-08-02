@@ -847,6 +847,9 @@ def gdrg [] {
 	(git diff head~1 | rg)
 }
 alias gdt = git difftool -y
+def gdpb [] {
+	(git diff | pbcopy)
+}
 alias gf = git fetch --all -p
 alias gl = git log
 alias gm = git merge
