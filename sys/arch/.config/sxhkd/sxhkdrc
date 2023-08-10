@@ -19,6 +19,14 @@ super + @space
 alt + Escape
 	pkill -USR1 -x sxhkd
 
+# show hidden node
+ctrl + shift + s
+	bspc node (bspc query -N -n .hidden -d focused) -g hidden=off
+
+# hide node
+ctrl + shift + h
+	bspc node focused -g hidden=on
+
 #
 # bspwm hotkeys
 #
