@@ -31,46 +31,52 @@ yabai -m rule --add app="^Calculator$"  manage=off border=off
 yabai -m rule --add app="^Finder$"  manage=off
 
 # Space labels
-yabai -m space 1 --label "Communication"
-yabai -m space 2 --label "Tools"
-yabai -m space 3 --label "Stacky"
-yabai -m space 4 --label "Development"
-yabai -m space 5 --label "Terminal"
+yabai -m space 1 --label "Terminal" --display 1
+yabai -m space 2 --label "Development" --display 1
+yabai -m space 3 --label "System" --display 1
+yabai -m space 4 --label "Communication" --display 2
+yabai -m space 5 --label "Browser" --display 2
+yabai -m space 6 --label "Tools" --display 2
 
 # Space config
 yabai -m config --space 1 layout stack
-yabai -m config --space 2 layout bsp
+yabai -m config --space 2 layout stack
 yabai -m config --space 3 layout stack
 yabai -m config --space 4 layout stack
 yabai -m config --space 5 layout bsp
+yabai -m config --space 6 layout stack
 
 # Space 1 apps
-yabai -m rule --add app="Messages" space=^1
-yabai -m rule --add app="Music" space=^1
+yabai -m rule --add app="Alacritty" space=^1
 
 # Space 2 apps
-yabai -m rule --add app="Calendar" space=^2
-yabai -m rule --add app="Mail" space=^2
-yabai -m rule --add app="Notes" space=^2
-yabai -m rule --add app="Reminders" space=^2
-yabai -m rule --add app="Finder" space=^2
+yabai -m rule --add app="Xcode" space=^2
+yabai -m rule --add app="Simulator" space=^2
+yabai -m rule --add app="^Android Studio$" space=^2
+yabai -m rule --add app="PyCharm" space=^2
+yabai -m rule --add app="WebStorm" space=^2
 
 # Space 3 apps
-yabai -m rule --add app="^Google Chrome$" space=^3
+yabai -m rule --add app="Music" space=^3
 yabai -m rule --add app="^App Store$" space=^3
 yabai -m rule --add app="Keynote" space=^3
 yabai -m rule --add app="Numbers" space=^3
 yabai -m rule --add app="Pages" space=^3
+yabai -m rule --add app="Calendar" space=^3
+yabai -m rule --add app="Mail" space=^3
+yabai -m rule --add app="Notes" space=^3
+yabai -m rule --add app="Reminders" space=^3
+yabai -m rule --add app="Finder" space=^3
+yabai -m rule --add app="Notion" space=^3
 
 # Space 4 apps
-yabai -m rule --add app="Xcode" space=^4
-yabai -m rule --add app="Simulator" space=^4
-yabai -m rule --add app="^Android Studio$" space=^4
-yabai -m rule --add app="PyCharm" space=^4
-yabai -m rule --add app="WebStorm" space=^4
+yabai -m rule --add app="Messages" space=^4
+yabai -m rule --add app="Slack" space=^4
 
 # Space 5 apps
-yabai -m rule --add app="Alacritty" space=^5
-yabai -m rule --add app="Docker" space=^5
-yabai -m rule --add app="Postman" space=^5
-yabai -m rule --add app="Proxyman" space=^5
+yabai -m rule --add app="Arc" space=^5
+
+# Space 6 apps
+yabai -m rule --add app="Docker" space=^6
+yabai -m rule --add app="Postman" space=^6
+yabai -m rule --add app="Proxyman" space=^6
