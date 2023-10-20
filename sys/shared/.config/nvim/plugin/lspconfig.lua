@@ -33,7 +33,6 @@ mason_lsp.setup {
 		'zk',
 		'jsonls',
 		'kotlin_language_server',
-		'sourcekit',
 		'solargraph',
 		'pylsp',
 		'terraformls',

@@ -31,9 +31,15 @@ return {
 	},
 	'samodostal/image.nvim',
 	'folke/trouble.nvim',
-	'williamboman/mason.nvim',
-	'williamboman/mason-lspconfig.nvim',
 	'neovim/nvim-lspconfig',
+	'williamboman/mason.nvim',
+	{
+		'williamboman/mason-lspconfig.nvim',
+		requires = {
+			'neovim/nvim-lspconfig',
+			'williamboman/mason.nvim'
+		}
+	},
 	'hrsh7th/nvim-cmp',
 	'onsails/lspkind.nvim',
 	'L3MON4D3/LuaSnip',
