@@ -88,6 +88,7 @@ def 'nu-complete rbenv' [] {
 
 let osName = (sys | get host | get name)
 if $osName == 'Darwin' {
+	$env.PATH = ($env.PATH | append $"($env.HOME)/.modular/pkg/packages.modular.com_mojo/bin/")
 	$env.PATH = ($env.PATH | append "/usr/local/bin/")
 	$env.PATH = ($env.PATH | append "/opt/homebrew/bin/")
 	$env.PATH = ($env.PATH | prepend "~/.fnm")
