@@ -71,7 +71,6 @@ yabai -m rule --add app="Messages" space=^3
 yabai -m rule --add app="Slack" space=^3
 
 # Space 4 apps
-yabai -m rule --add app="Arc" space=^4
 
 # Space 5 apps
 yabai -m rule --add app="Docker" space=^5
