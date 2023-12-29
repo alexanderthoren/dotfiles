@@ -9,7 +9,6 @@ def updateAndUpgradeBrew [] {
 def tapDependencies [] {
 	echo 'Tap dependencies'
 	brew tap -q 'homebrew/core'
-	brew tap -q 'homebrew/cask'
 	brew tap -q 'homebrew/cask-fonts'
 	brew tap -q 'koekeishiya/formulae'
 	brew tap -q 'FelixKratz/formulae'
@@ -46,14 +45,10 @@ def installBinaries [] {
 }
 
 def stopServices [] {
-	brew services stop yabai
-	brew services stop skhd
 	brew services stop sketchybar
 }
 
 def startServices [] {
-	brew services start yabai
-	brew services start skhd
 	brew services start sketchybar
 }
 
