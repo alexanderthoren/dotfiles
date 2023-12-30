@@ -859,7 +859,7 @@ alias rmspm = rm -rf ~/Library/org.swift.swiftpm/
 alias rmcspm = rm -rf ~/Library/Caches/org.swift.swiftpm/
 alias xo = xed .
 
-source ~/.cache/starship/init.nu
+use ~/.cache/starship/init.nu
 
 # tmux
 

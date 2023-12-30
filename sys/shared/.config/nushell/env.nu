@@ -102,53 +102,59 @@ $env.NU_PLUGIN_DIRS = [
 # To add entries to PATH (on Windows you might use Path), you can use the following pattern:
 # $env.PATH = ($env.PATH | split row (char esep) | prepend '/some/path')
 
-# rbenv
-export-env {
-    load-env {
-        PATH: ($env.PATH | split row (char esep) | prepend [$"($env.HOME)/.rbenv/bin" $"($env.HOME)/.rbenv/shims"])
-        RBENV_VERSION: ""
-        RBENV_VERSION_OLD: ""
-        RBENV_SHELL: "nu"
-    }
-}
-
-export def --env rbenv [
-	command?: string@'nu-complete rbenv',
-	...args
-] {
-    let new_env = if $command in ["rehash", "shell"] {
-        # implement each on indiviudaly e.g.
-        if $command == "shell" {
-            { RBENV_VERSION_OLD: $env.RBENV_VERSION RBENV_VERSION: $args.0 }
-        } else {
-            error make { msg: $"`($command)` command is not supported yet" }
-        }
-    } else {
-        if ($command | is-empty) {
-                ^rbenv
-        } else {
-                ^rbenv $command $args
-        }
-        {}
-    }
-    load-env $new_env
-}
-
-def 'nu-complete rbenv' [] {
-    ^rbenv help
-    | lines
-    | where ($it | str starts-with "   ")
-    | each {|entry| $entry | split row ' ' | get 0 }
-}
 
 let osName = (sys | get host | get name)
 if $osName == 'Darwin' {
+
+	# rbenv
+	export-env {
+		load-env {
+			PATH: ($env.PATH | split row (char esep) | prepend [$"($env.HOME)/.rbenv/bin" $"($env.HOME)/.rbenv/shims"])
+			RBENV_VERSION: ""
+			RBENV_VERSION_OLD: ""
+			RBENV_SHELL: "nu"
+		}
+	}
+
+	export def --env rbenv [
+		command?: string@'nu-complete rbenv',
+		...args
+	] {
+		let new_env = if $command in ["rehash", "shell"] {
+			# implement each on indiviudaly e.g.
+			if $command == "shell" {
+				{ RBENV_VERSION_OLD: $env.RBENV_VERSION RBENV_VERSION: $args.0 }
+			} else {
+				error make { msg: $"`($command)` command is not supported yet" }
+			}
+		} else {
+			if ($command | is-empty) {
+					^rbenv
+			} else {
+					^rbenv $command $args
+			}
+			{}
+		}
+		load-env $new_env
+	}
+
+	def 'nu-complete rbenv' [] {
+		^rbenv help
+		| lines
+		| where ($it | str starts-with "   ")
+		| each {|entry| $entry | split row ' ' | get 0 }
+	}
+
 	$env.PATH = ($env.PATH | append $"($env.HOME)/.modular/pkg/packages.modular.com_mojo/bin/")
 	$env.PATH = ($env.PATH | append "/usr/local/bin/")
 	$env.PATH = ($env.PATH | append "/opt/homebrew/bin/")
 	$env.PATH = ($env.PATH | prepend "~/.fnm")
 	load-env (fnm env --shell bash | lines | str replace 'export ' '' | str replace -a '"' '' | split column = | rename name value | where name != "FNM_ARCH" and name != "PATH" | reduce -f {} {|it, acc| $acc | upsert $it.name $it.value })
 	$env.PATH = ($env.PATH | prepend $"($env.FNM_MULTISHELL_PATH)/bin")
+} else if $osName == 'Ubuntu' {
+	$env.PATH = ($env.PATH | split row (char esep) | prepend '/home/linuxbrew/.linuxbrew/bin')
+	mkdir ~/.cache/STARSHIP_SHELL
+	starship init nu | save -f ~/.cache/starship/init.nu
 }
 
 $env.MANPAGER = "sh -c 'col -bx | bat -l man -p'"

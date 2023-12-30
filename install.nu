@@ -5,6 +5,8 @@ def getOs [] {
 		echo 'macos'
 	} else if $osName == 'Arch Linux' {
 		echo 'arch'
+	} else if $osName == 'Ubuntu' {
+		echo 'ubuntu'
 	} else {
 		print $'Error: current os name is ($osName)'
 		echo null
@@ -28,7 +30,7 @@ def getFile [type: string] {
 
 def main [
 	--type (-t): string = '',
-	--clean (-c): bool
+	--clean (-c): bool = false
 ] {
 	let os = (getOs)
 	let file = (getFile $type)

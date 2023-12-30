@@ -1,0 +1,26 @@
+# alacritty.toml
+
+[window]
+decorations = "none"
+opacity = 0.6
+title = "Alacritty"
+
+[font]
+size = 12.0
+
+[font.bold]
+family = "MesloLGS NF"
+style  = "Bold"
+
+[font.bold_italic]
+family = "MesloLGS NF"
+style  = "Bold Italic"
+
+[font.italic]
+family = "MesloLGS NF"
+style  = "Italic"
+
+[font.normal]
+family = "MesloLGS NF"
+style  = "Regular"
+
