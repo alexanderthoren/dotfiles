@@ -25,6 +25,9 @@ def installBinaries [] {
 	brew install -q 'neofetch'
 	brew install -q 'bat'
 	brew install -q 'gh'
+	brew install -q 'node'
+	brew install -q 'rbenv'
+	brew install -q 'ruby-build'
 }
 
 echo '-> Brew installation'
