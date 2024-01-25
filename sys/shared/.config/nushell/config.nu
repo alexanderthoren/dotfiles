@@ -840,6 +840,11 @@ alias ghprl = gh pr list
 alias ghrev = gh repo view
 alias ghrevw = gh repo view -w
 
+# docker
+alias dcu = docker compose up
+alias dcud = docker compose up -d
+alias dcla = docker compose logs -f api
+
 # kotlin
 def kc [input: string, output: string] {
 	kotlinc $input -include-runtime -d $output

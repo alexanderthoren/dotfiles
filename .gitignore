@@ -2,3 +2,4 @@ Brewfile.lock.json
 .luarc.json
 history.txt
 packer_compiled.lua
+*.DS_Store
