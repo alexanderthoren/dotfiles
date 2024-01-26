@@ -28,6 +28,11 @@ def installBinaries [] {
 	brew install -q 'node'
 	brew install -q 'rbenv'
 	brew install -q 'ruby-build'
+	brew install -q 'python'
+}
+
+def installFrameworksWithPip [] {
+	pip install "fastapi[all]"
 }
 
 echo '-> Brew installation'

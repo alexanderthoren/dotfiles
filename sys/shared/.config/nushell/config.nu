@@ -232,7 +232,7 @@ $env.config = {
     buffer_editor: "" # command that will be used to edit the current line buffer with ctrl+o, if unset fallback to $env.EDITOR and $env.VISUAL
     use_ansi_coloring: true
     bracketed_paste: true # enable bracketed paste, currently useless on windows
-    edit_mode: emacs # emacs, vi
+    edit_mode: vi # emacs, vi
     shell_integration: false # enables terminal shell integration. Off by default, as some terminals have issues with this.
     render_right_prompt_on_last_line: false # true or false to enable or disable right prompt to be rendered on last line of the prompt.
     use_kitty_protocol: false # enables keyboard enhancement protocol implemented by kitty console, only if your terminal support this.
@@ -856,6 +856,10 @@ def kr [input: string] {
 }
 
 alias ks = kotlinc-jvm
+
+# Python
+alias python = python3
+alias pip = pip3
 
 # Xcode
 alias kx = killall Xcode
