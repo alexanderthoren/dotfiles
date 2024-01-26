@@ -8,7 +8,7 @@ vim.g.mapleader = ' '
 keymap.set('n', '<leader>q', ':qa<cr>')
 keymap.set('n', '<leader>q!', ':qa!<cr>')
 keymap.set('n', '<leader>wq', ':wa<cr>:qa<cr>')
-keymap.set('n', '<leader>ww', ':w<cr>')
+keymap.set('n', '<leader>ww', ':w!<cr>')
 keymap.set('n', '<leader>e', ':NvimTreeToggle<cr>')
 keymap.set('n', '<leader>ms', ':Mason<cr>')
 keymap.set('n', '<leader>ff', ':Telescope find_files<cr>')

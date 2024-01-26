@@ -6,6 +6,8 @@ def getOs [] {
 		echo 'macos'
 	} else if $osName == 'Arch Linux' {
 		echo 'arch'
+	} else if $osName == 'Ubuntu' {
+		echo 'ubuntu'
 	} else {
 		print $'Error: current os name is ($osName)'
 		echo null
