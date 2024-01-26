@@ -142,3 +142,6 @@ lspconfig.omnisharp_mono.setup {
 	 sdk_include_prereleases = true,
 	 analyze_open_documents_only = false,
 }
+
+-- Gdscript
+lspconfig.gdscript.setup {}
