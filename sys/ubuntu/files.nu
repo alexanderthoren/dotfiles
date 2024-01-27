@@ -45,8 +45,8 @@ def installFonts [] {
 		sudo mkdir $fontsPath
 		sudo mkdir $ttfFontsPath
 		sudo mkdir $otfFontsPath
+		sudo cp -r $'($myFontsPath)/MesloLGS' $ttfFontsPath
 	}
-	sudo cp -r $'($myFontsPath)/MesloLGS' $ttfFontsPath
 }
 
 def cloneGitRepositories [] {
