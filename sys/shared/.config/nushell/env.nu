@@ -153,7 +153,7 @@ if $osName == 'Darwin' {
 	$env.PATH = ($env.PATH | prepend $"($env.FNM_MULTISHELL_PATH)/bin")
 } else if $osName == 'Ubuntu' {
 	$env.PATH = ($env.PATH | split row (char esep) | prepend '/home/linuxbrew/.linuxbrew/bin')
-	$env.PATH = ($env.PATH | prepend $"($envHOME)/.cargo/bin")
+	$env.PATH = ($env.PATH | prepend $"($env.HOME)/.cargo/bin")
 	mkdir ~/.cache/STARSHIP_SHELL
 	starship init nu | save -f ~/.cache/starship/init.nu
 }
