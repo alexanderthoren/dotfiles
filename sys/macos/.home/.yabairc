@@ -47,6 +47,7 @@ yabai -m config --space 5 layout bsp
 # Space 1 apps
 yabai -m rule --add app="Alacritty" space=^1
 yabai -m rule --add app="Xcode" space=^1
+yabai -m rule --add app="Simulator" space=^1
 yabai -m rule --add app="^Android Studio$" space=^1
 yabai -m rule --add app="PyCharm" space=^1
 yabai -m rule --add app="WebStorm" space=^1
