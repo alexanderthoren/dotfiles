@@ -31,7 +31,6 @@ def installBinaries [] {
 	brew install -q 'ripgrep'
 	brew install -q 'node'
 	brew install -q 'shellcheck'
-	brew install -q 'TheZoraiz/ascii-image-converter/ascii-image-converter'
 	brew install -q 'neofetch'
 	brew install -q 'bat'
 	brew install -q 'yabai'
@@ -42,6 +41,8 @@ def installBinaries [] {
 	brew install -q 'fnm'
 	brew install -q 'rbenv'
 	brew install -q 'ruby-build'
+	brew install -q 'swiftlint'
+	brew install -q 'swiftformat'
 	brew install -q 'sourcery'
 	brew install -q 'peripheryapp/periphery/periphery'
 }
