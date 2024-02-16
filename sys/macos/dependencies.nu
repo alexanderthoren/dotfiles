@@ -42,6 +42,8 @@ def installBinaries [] {
 	brew install -q 'fnm'
 	brew install -q 'rbenv'
 	brew install -q 'ruby-build'
+	brew install -q 'sourcery'
+	brew install -q 'peripheryapp/periphery/periphery'
 }
 
 def stopServices [] {
