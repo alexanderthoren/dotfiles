@@ -804,6 +804,9 @@ def gdpb [] {
 	(git diff | pbcopy)
 }
 alias gf = git fetch --all -p
+def gff [input: string] {
+	git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -S $input
+}
 alias gl = git log
 alias gm = git merge
 alias gma = git merge --abort
