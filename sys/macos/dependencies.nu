@@ -43,6 +43,7 @@ def installBinaries [] {
 	brew install -q 'ruby-build'
 	brew install -q 'swiftlint'
 	brew install -q 'swiftformat'
+	brew install -q 'pre-commit'
 	brew install -q 'sourcery'
 	brew install -q 'peripheryapp/periphery/periphery'
 }
