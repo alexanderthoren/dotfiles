@@ -30,7 +30,7 @@ def getFile [type: string] {
 
 def main [
 	--type (-t): string = '',
-	--clean (-c): bool = false
+	--clean (-c) = false
 ] {
 	let os = (getOs)
 	let file = (getFile $type)

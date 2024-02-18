@@ -8,7 +8,6 @@ def updateAndUpgradeBrew [] {
 
 def tapDependencies [] {
 	echo 'Tap dependencies'
-	brew tap -q 'homebrew/core'
 	brew tap -q 'homebrew/cask-fonts'
 	brew tap -q 'koekeishiya/formulae'
 	brew tap -q 'FelixKratz/formulae'
