@@ -44,7 +44,6 @@ def installBinaries [] {
 	brew install -q 'pre-commit'
 	brew install -q 'sourcery'
 	brew install -q 'peripheryapp/periphery/periphery'
-	brew install -q 'devutils'
 }
 
 def stopServices [] {
