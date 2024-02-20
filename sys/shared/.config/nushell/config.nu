@@ -872,6 +872,11 @@ alias rmspm = rm -rf ~/Library/org.swift.swiftpm/
 alias rmcspm = rm -rf ~/Library/Caches/org.swift.swiftpm/
 alias xo = xed .
 
+# Sourcery
+def souw [] {
+	sourcery --config .sourcery.yaml --watch
+}
+
 use ~/.cache/starship/init.nu
 
 # tmux
