@@ -877,6 +877,10 @@ def souw [] {
 	sourcery --config .sourcery.yaml --watch
 }
 
+# Periphery
+alias psc = periphery scan
+alias pscs = periphery scan --setup
+
 use ~/.cache/starship/init.nu
 
 # tmux
