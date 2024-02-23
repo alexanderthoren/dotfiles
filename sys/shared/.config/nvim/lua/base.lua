@@ -25,3 +25,5 @@ v.timeoutlen = 1000
 
 -- Cmp
 v.completeopt = {'menu', 'menuone', 'noselect'}
+
+vim.cmd('autocmd BufRead,BufNewFile *.stencil set filetype=htmldjango')
