@@ -771,6 +771,10 @@ def lss [] {
 	(ls -d | sort-by size -r)
 }
 
+def llss [] {
+	ls -lda | sort-by size -r
+}
+
 # git
 alias g = git
 alias ga = git add
