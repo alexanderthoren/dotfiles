@@ -148,6 +148,7 @@ if $osName == 'Darwin' {
 	$env.PATH = ($env.PATH | append $"($env.HOME)/.modular/pkg/packages.modular.com_mojo/bin/")
 	$env.PATH = ($env.PATH | append "/usr/local/bin/")
 	$env.PATH = ($env.PATH | append "/opt/homebrew/bin/")
+	$env.PATH = ($env.PATH | append "/opt/homebrew/opt/")
 	$env.PATH = ($env.PATH | prepend "~/.fnm")
 	load-env (fnm env --shell bash | lines | str replace 'export ' '' | str replace -a '"' '' | split column = | rename name value | where name != "FNM_ARCH" and name != "PATH" | reduce -f {} {|it, acc| $acc | upsert $it.name $it.value })
 	$env.PATH = ($env.PATH | prepend $"($env.FNM_MULTISHELL_PATH)/bin")
