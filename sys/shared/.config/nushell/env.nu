@@ -145,6 +145,9 @@ if $osName == 'Darwin' {
 		| each {|entry| $entry | split row ' ' | get 0 }
 	}
 
+	$env.LC_ALL = "en_US.UTF-8"
+	$env.LANG = "en_US.UTF-8"
+
 	$env.PATH = ($env.PATH | append $"($env.HOME)/.modular/pkg/packages.modular.com_mojo/bin/")
 	$env.PATH = ($env.PATH | append "/usr/local/bin/")
 	$env.PATH = ($env.PATH | append "/opt/homebrew/bin/")
