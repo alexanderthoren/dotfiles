@@ -851,6 +851,7 @@ alias ghrevw = gh repo view -w
 alias dcu = docker compose up
 alias dcud = docker compose up -d
 alias dcd = docker compose down
+alias dcs = docker compose stop
 alias dcla = docker compose logs -f api
 
 # kotlin
