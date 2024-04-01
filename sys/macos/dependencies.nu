@@ -34,6 +34,7 @@ def installBinaries [] {
 	brew install -q 'bat'
 	brew install -q 'yabai'
 	brew install -q 'skhd'
+	brew install -q 'borders'
 	brew install -q 'sketchybar'
 	brew install -q 'gh'
 	brew install -q 'kotlin'

@@ -76,3 +76,6 @@ yabai -m rule --add app="Slack" space=^3
 yabai -m rule --add app="Docker" space=^5
 yabai -m rule --add app="Postman" space=^5
 yabai -m rule --add app="Proxyman" space=^5
+
+# Janky borders
+borders active_color=0xffffffff inactive_color=0xff333333 width=8.0 &
