@@ -19,12 +19,6 @@ yabai -m config normal_window_opacity 0.8
 yabai -m config window_animation_duration 0.0
 yabai -m config window_opacity_duration 0.0
 
-yabai -m config window_border on
-yabai -m config window_border_width 4
-yabai -m config active_window_border_color 0xffffffff
-yabai -m config normal_window_border_color 0x55ffffff
-yabai -m config window_border_blur off
-
 # Unmanaged apps
 yabai -m rule --add app="^System Settings$"  manage=off
 yabai -m rule --add app="^Calculator$"  manage=off
@@ -65,6 +59,7 @@ yabai -m rule --add app="Reminders" space=^2
 yabai -m rule --add app="Finder" space=^2
 yabai -m rule --add app="Notion" space=^2
 yabai -m rule --add app="Rise" space=^2
+yabai -m rule --add app="Superlist" space=^2
 
 # Space 3 apps
 yabai -m rule --add app="Messages" space=^3
@@ -73,7 +68,6 @@ yabai -m rule --add app="Slack" space=^3
 # Space 4 apps
 
 # Space 5 apps
-yabai -m rule --add app="Docker" space=^5
 yabai -m rule --add app="Postman" space=^5
 yabai -m rule --add app="Proxyman" space=^5
 
