@@ -1,5 +1,13 @@
+# start tmux if it is not already running
+if [ -z "$TMUX" ]
+then
+    tmux attach -t TMUX || tmux new -s TMUX
+fi
+
+# run starship
 eval "$(starship init zsh)"
 
+# aliases
 # system
 alias szsh="source ~/.zshrc"
 alias ..="cd .."
