@@ -35,8 +35,10 @@ cp sys/shared/.config/starship.toml ~/.config
 cp -r sys/shared/.config/nvim ~/.config
 
 # Install nerd fonts
-brew tap homebrew/cask-fonts
-brew install font-source-code-pro
+cp sys/shared/fonts/MesloLGS/MesloLGS\ NF\ Bold\ Italic.ttf ~/Library/Fonts
+cp sys/shared/fonts/MesloLGS/MesloLGS\ NF\ Bold.ttf ~/Library/Fonts
+cp sys/shared/fonts/MesloLGS/MesloLGS\ NF\ Italic.ttf ~/Library/Fonts
+cp sys/shared/fonts/MesloLGS/MesloLGS\ NF\ Regular.ttf ~/Library/Fonts
 
 # Install apps
 brew install --no-quarantine alacritty
