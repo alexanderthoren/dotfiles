@@ -3,6 +3,8 @@
 # This file only adds the latest changes of your dotfiles to your system
 
 # Copy macos home files
+cp sys/macos/.home/.zprofile ~
+cp sys/macos/.home/.zshrc ~
 
 # Copy macos ~/.config files
 cp sys/macos/.config/alacritty ~/.config

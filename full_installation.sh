@@ -1,8 +1,8 @@
 #!/bin/zsh
 
 # 1. Copy this file from the dotfiles repo to your ~ (root)
-# 2. run chmod -x basic_installation.sh
-# 3. source basic_installation.sh
+# 2. run chmod -x full_installation.sh
+# 3. source full_installation.sh
 
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -20,6 +20,8 @@ gh repo clone dotfiles
 cd dotfiles
 
 # Copy macos home files
+cp sys/macos/.home/.zprofile ~
+cp sys/macos/.home/.zshrc ~
 
 # Copy macos ~/.config files
 cp sys/macos/.config/alacritty ~/.config
