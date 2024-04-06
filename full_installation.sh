@@ -19,11 +19,18 @@ cd Developer
 gh repo clone dotfiles
 cd dotfiles
 
-# TODO: copy macos files
+# Copy macos home files
 
-# TODO: copy shared files
+# Copy macos ~/.config files
+cp sys/macos/.config/alacritty ~/.config
 
-cd ~
+# Copy shared home files
+cp sys/shared/.home/.gitconfig ~
+cp sys/shared/.home/.tmux.conf ~
+
+# Copy shared ~/.config files
+cp sys/shared/.config/starship.toml ~/.config
+cp -r sys/shared/.config/nvim ~/.config
 
 # Install nerd fonts
 brew tap homebrew/cask-fonts
@@ -33,4 +40,6 @@ brew install font-source-code-pro
 brew install --no-quarantine alacritty
 
 # Install terminal plugins
+brew install tmux
 brew install starship
+brew install nvim
