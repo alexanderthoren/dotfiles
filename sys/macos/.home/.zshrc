@@ -7,6 +7,8 @@ alias ll="ls -la"
 alias f="fzf"
 alias fe="fzf -e"
 alias n="nvim"
+alias bupd="brew update"
+alias bupg="brew upgrade"
 
 # git
 alias g="git"
