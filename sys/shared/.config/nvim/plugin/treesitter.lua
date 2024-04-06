@@ -4,11 +4,7 @@ if (not status) then return end
 treesitter.setup {
 	ensure_installed = {
 		'bash',
-		'json',
-		'kotlin',
 		'lua',
-		'markdown',
-		'markdown_inline',
 		'swift'
 	},
 	sync_install = true,

@@ -24,19 +24,7 @@ mason_lsp.setup {
 	automatic_installation = false,
 	ensure_installed = {
 		'lua_ls',
-		'bashls',
-		'clangd',
-		'dockerls',
-		'gradle_ls',
-		'marksman',
-		'prosemd_lsp',
-		'zk',
-		'jsonls',
-		'kotlin_language_server',
-		'solargraph',
-		'pylsp',
-		'terraformls',
-		'tsserver'
+		'bashls'
 	}
 }
 
@@ -76,52 +64,11 @@ lspconfig.bashls.setup {
 	on_attach = on_attach,
 }
 
--- Markdown
-lspconfig.marksman.setup {
-	capabilities = capabilities,
-	on_attach = on_attach,
-}
-
-lspconfig.prosemd_lsp.setup {
-	capabilities = capabilities,
-	on_attach = on_attach,
-}
-
-lspconfig.zk.setup {
-	capabilities = capabilities,
-	on_attach = on_attach,
-}
-
--- JSON
-lspconfig.jsonls.setup {
-	capabilities = capabilities,
-	on_attach = on_attach,
-}
-
--- Kotlin
-lspconfig.kotlin_language_server.setup {
-	capabilities = capabilities,
-	on_attach = on_attach,
-}
-
 -- Swift
 lspconfig.sourcekit.setup {
 	capabilities = capabilities,
 	on_attach = on_attach,
 }
-
--- Ruby
-lspconfig.solargraph.setup {
-	capabilities = capabilities,
-	on_attach = on_attach,
-}
-
--- Python
-lspconfig.pylsp.setup {
-	capabilities = capabilities,
-	on_attach = on_attach,
-}
-
 -- Unity
 local pid = vim.fn.getpid()
 local omnisharp_bin = '/home/alexanderthoren/.local/share/nvim/mason/packages/omnisharp-mono/run'

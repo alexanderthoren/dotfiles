@@ -7,13 +7,13 @@ cp sys/macos/.home/.zprofile ~
 cp sys/macos/.home/.zshrc ~
 
 # Copy macos ~/.config files
-cp sys/macos/.config/alacritty ~/.config
+cp -r sys/macos/.config/alacritty ~/.config
 
 # Copy shared home files
 cp sys/shared/.home/.tmux.conf ~
 
 # Copy shared ~/.config files
 cp sys/shared/.config/starship.toml ~/.config
-rm -r ~/.cache/nvim
-rm -r ~/.local/share/nvim
+rm -rf ~/.cache/nvim
+rm -rf ~/.local/share/nvim
 cp -r sys/shared/.config/nvim ~/.config

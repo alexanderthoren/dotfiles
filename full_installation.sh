@@ -60,3 +60,4 @@ brew install pre-commit
 brew install xcodes
 brew install sourcery
 brew install peripheryapp/periphery/periphery
+brew install node
