@@ -11,6 +11,7 @@ cp -r sys/macos/.config/alacritty ~/.config
 
 # Copy shared home files
 cp sys/shared/.home/.tmux.conf ~
+cp sys/shared/.home/.tmuxsessions ~
 
 # Copy shared ~/.config files
 cp sys/shared/.config/starship.toml ~/.config

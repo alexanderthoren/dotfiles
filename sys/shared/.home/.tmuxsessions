@@ -1,0 +1,9 @@
+# start tmux if it is not already running
+
+tmux new -d -s 'default' -n 'Home' -c ~
+tmux neww -d -t 'default:1' -n 'Dotfiles' -c ~/Developer/dotfiles
+
+if [ -z "$TMUX" ]
+then
+	tmux attach -t 'default'
+fi
