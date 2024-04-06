@@ -14,6 +14,6 @@ cp sys/shared/.home/.tmux.conf ~
 
 # Copy shared ~/.config files
 cp sys/shared/.config/starship.toml ~/.config
-rm -rf ~/.cache/nvim
-rm -rf ~/.local/share/nvim
+#rm -rf ~/.cache/nvim
+#rm -rf ~/.local/share/nvim
 cp -r sys/shared/.config/nvim ~/.config

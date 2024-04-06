@@ -1,10 +1,10 @@
 format = """
-[ ](#5500DD)\
+[ ](#333333)\
 $directory\
-[](fg:#5500DD bg:#5500BB)\
+[](fg:#333333 bg:#555555)\
 $git_branch\
 $git_status\
-[](fg:#5500BB bg:#550099)\
+[](fg:#555555 bg:#777777)\
 $c\
 $elixir\
 $elm\
@@ -17,23 +17,13 @@ $nodejs\
 $nim\
 $rust\
 $scala\
-[](fg:#550099 bg:#550066)\
+[](fg:#777777 bg:#999999)\
 $docker_context\
-[ ](fg:#550066)\
-$line_break \
+[ ](fg:#999999)
 """
-
-right_format = """
-[](#770066)\
-$time\
-[ ](#770066)
-"""
-
-[line_break]
-disable = true
 
 [directory]
-style = "bg:#5500DD"
+style = "bg:#333333"
 format = "[ $path ]($style)"
 
 [directory.substitutions]
@@ -43,11 +33,11 @@ format = "[ $path ]($style)"
 
 [git_branch]
 symbol = " "
-style = "bg:#5500BB"
+style = "bg:#555555"
 format = '[ $symbol $branch ]($style)'
 
 [git_status]
-style = "bg:#5500BB"
+style = "bg:#555555"
 ahead = "🐇"
 behind = "🐢"
 conflicted = "🔪"
@@ -61,31 +51,25 @@ format = '[$all_status$ahead_behind ]($style)'
 
 [gradle]
 symbol = "🐘"
-style = "bg:#550099"
+style = "bg:#777777"
 format = '[ $symbol ($version) ]($style)'
 
 [java]
 symbol = "🧋"
-style = "bg:#550099"
+style = "bg:#777777"
 format = '[ $symbol ($version) ]($style)'
 
 [rust]
 symbol = "🦀"
-style = "bg:#550099"
+style = "bg:#777777"
 format = '[ $symbol ($version) ]($style)'
 
 [swift]
 symbol = "🦜"
-style = "bg:#550099"
+style = "bg:#777777"
 format = '[ $symbol ($version) ]($style)'
 
 [docker_context]
 symbol = "🐋"
-style = "bg:#550066"
+style = "bg:#999999"
 format = '[ $symbol $context ]($style) $path'
-
-[time]
-disabled = false
-time_format = "%R" # Hour:Minute Format
-style = "bg:#770066"
-format = '[ $time ⏰]($style)'
