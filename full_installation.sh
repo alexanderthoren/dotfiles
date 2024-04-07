@@ -22,6 +22,7 @@ cd dotfiles
 # Copy macos home files
 cp sys/macos/.home/.zprofile ~
 cp sys/macos/.home/.zshrc ~
+cp sys/macos/.home/.aerospace.toml ~
 
 # Copy macos ~/.config files
 cp sys/macos/.config/alacritty ~/.config
@@ -45,12 +46,10 @@ cp sys/shared/fonts/MesloLGS/MesloLGS\ NF\ Regular.ttf ~/Library/Fonts
 brew install --no-quarantine alacritty
 
 # Install system plugins
-brew tap koekeishiya/formulae
 brew tap FelixKratz/formulae
-brew install yabai
-brew install skhd
 brew install borders
 brew install sketchybar
+brew install nikitabobko/tap/aerospace
 
 # Install terminal plugins
 brew install tmux
@@ -75,3 +74,6 @@ rm /Applications/SourceryPro.zip
 
 # Git Clone
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+# Defaults configuration
+defaults write -g NSAutomaticWindowAnimationsEnabled -bool false

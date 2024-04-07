@@ -5,6 +5,7 @@
 # Copy macos home files
 cp sys/macos/.home/.zprofile ~
 cp sys/macos/.home/.zshrc ~
+cp sys/macos/.home/.aerospace.toml ~
 
 # Copy macos ~/.config files
 cp -r sys/macos/.config/alacritty ~/.config
