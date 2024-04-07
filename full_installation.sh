@@ -42,14 +42,9 @@ cp sys/shared/fonts/MesloLGS/MesloLGS\ NF\ Bold.ttf ~/Library/Fonts
 cp sys/shared/fonts/MesloLGS/MesloLGS\ NF\ Italic.ttf ~/Library/Fonts
 cp sys/shared/fonts/MesloLGS/MesloLGS\ NF\ Regular.ttf ~/Library/Fonts
 
-# Install apps
-brew install --no-quarantine alacritty
-
-# Install system plugins
-brew tap FelixKratz/formulae
-brew install borders
-brew install sketchybar
-brew install nikitabobko/tap/aerospace
+# Install Xcode
+brew install xcodes
+xcodes install --latest
 
 # Install terminal plugins
 brew install tmux
@@ -59,10 +54,18 @@ brew install bat
 brew install fzf
 brew install ripgrep
 brew install pre-commit
-brew install xcodes
 brew install sourcery
 brew install peripheryapp/periphery/periphery
 brew install node
+
+# Install apps
+brew install --no-quarantine alacritty
+
+# Install system plugins
+brew tap FelixKratz/formulae
+brew install borders
+brew install sketchybar
+brew install nikitabobko/tap/aerospace
 
 # Install zip apps
 cp -r sys/macos/apps/Vimac.zip /Applications/
