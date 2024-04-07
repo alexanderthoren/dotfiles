@@ -9,6 +9,7 @@ cp ~/.aerospace.toml sys/macos/.home
 
 # Copy macos ~/.config files
 cp -r ~/.config/alacritty sys/macos/.config
+cp -r ~/.config/sketchybar sys/macos/.config
 
 # Copy shared home files
 cp ~/.tmux.conf sys/shared/.home

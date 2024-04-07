@@ -29,7 +29,6 @@ sketchybar --default updates=when_shown \
 
 # LEFT 
 source "$ITEM_DIR/logo.sh"
-source "$ITEM_DIR/spaces.sh"
 source "$ITEM_DIR/frontapp.sh"
 
 #RIGHT
