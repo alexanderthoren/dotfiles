@@ -61,6 +61,13 @@ brew install node
 
 # Install apps
 brew install --no-quarantine alacritty
+brew install raycast
+brew install notion
+brew install superlist
+brew install monitorcontrol
+brew install postman
+brew install proxyman
+brew install linear-linear
 
 # Install system plugins
 brew tap FelixKratz/formulae
