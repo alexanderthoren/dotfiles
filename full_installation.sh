@@ -59,6 +59,7 @@ brew install sourcery
 brew install peripheryapp/periphery/periphery
 brew install node
 brew install zoxide
+brew install zsh-autocomplete
 
 # Install apps
 brew install --no-quarantine alacritty
