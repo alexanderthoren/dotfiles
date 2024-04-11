@@ -58,6 +58,7 @@ brew install pre-commit
 brew install sourcery
 brew install peripheryapp/periphery/periphery
 brew install node
+brew install zoxide
 
 # Install apps
 brew install --no-quarantine alacritty
