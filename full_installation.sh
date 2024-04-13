@@ -65,6 +65,7 @@ brew install grex
 brew install thefuck
 brew install shellcheck
 brew install slides
+brew install bartib
 
 # Install apps
 brew install --no-quarantine alacritty
