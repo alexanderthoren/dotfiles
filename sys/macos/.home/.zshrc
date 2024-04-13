@@ -1,7 +1,7 @@
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 eval $(thefuck --alias fuck)
 
-source .tmuxsessions
+source ~/.tmuxsessions
 
 # run starship
 eval "$(starship init zsh)"
@@ -29,7 +29,7 @@ alias g="git"
 alias ga="git add"
 alias gaa="git add ."
 alias gapb="pbpaste | git apply"
-alias gb="git branch"
+alias gb="git branch | bat"  
 alias gba="git branch -a"
 alias gbd="git branch -D"
 alias gc="git commit"
@@ -40,14 +40,14 @@ alias gcpa="git cherry-pick --abort"
 alias gcpc="git cherry-pick --continue"
 alias gcf="git clean -f ."
 alias gcl="git clone"
-alias gd="git diff"
-alias gds="git diff $1 --stat"
-alias gd-1="git diff head~1"
-alias gdrg="git diff head~1 | rg"
+alias gd="git diff | bat" 
+alias gds="git diff $1 --stat | bat"
+alias gd-1="git diff head~1 | bat" 
+alias gdrg="git diff head~1 | rg | bat" 
 alias gdt="git difftool -y"
 alias gdpb="git diff | pbcopy"
 alias gf="git fetch --all -p"
-alias gl="git log"
+alias gl="git log | bat" 
 alias gm="git merge"
 alias gma="git merge --abort"
 alias gmc="git merge --continue"
@@ -64,7 +64,7 @@ alias grbi="git rebase -i"
 alias grc="git restore --staged .; git restore .; git clean -f"
 alias gre="git restore"
 alias grs="git restore --staged"
-alias gs="git status"
+alias gs="git status | bat"
 
 # xcode
 alias kx="killall Xcode"
