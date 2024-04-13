@@ -83,6 +83,9 @@ brew install borders
 brew install sketchybar
 brew install nikitabobko/tap/aerospace
 
+# Install npm packages
+npm i -g carbon-now-cli
+
 # Install zip apps
 cp -r sys/macos/apps/Vimac.zip /Applications/
 tar -xf /Applications/Vimac.zip -C /Applications/
