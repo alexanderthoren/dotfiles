@@ -60,6 +60,7 @@ brew install peripheryapp/periphery/periphery
 brew install node
 brew install zoxide
 brew install eza
+brew install zsh-autosuggestions
 
 # Install apps
 brew install --no-quarantine alacritty
