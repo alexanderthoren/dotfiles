@@ -60,6 +60,7 @@ lspconfig.lua_ls.setup {
 
 -- Shell
 lspconfig.bashls.setup {
+	filetypes = { 'sh', 'zsh' },
 	capabilities = capabilities,
 	on_attach = on_attach,
 }

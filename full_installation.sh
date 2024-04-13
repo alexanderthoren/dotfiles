@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 
 # 1. Copy this file from the dotfiles repo to your ~ (root)
 # 2. run chmod -x full_installation.sh
@@ -62,6 +62,8 @@ brew install zoxide
 brew install eza
 brew install zsh-autosuggestions
 brew install grex
+brew install thefuck
+brew install shellcheck
 
 # Install apps
 brew install --no-quarantine alacritty
@@ -72,7 +74,6 @@ brew install monitorcontrol
 brew install postman
 brew install proxyman
 brew install linear-linear
-brew install thefuck
 
 # Install system plugins
 brew tap FelixKratz/formulae

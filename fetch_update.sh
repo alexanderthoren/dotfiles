@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 
 # This file only adds the latest changes of your dotfiles to your system
 
