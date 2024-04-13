@@ -72,6 +72,7 @@ brew install monitorcontrol
 brew install postman
 brew install proxyman
 brew install linear-linear
+brew install thefuck
 
 # Install system plugins
 brew tap FelixKratz/formulae

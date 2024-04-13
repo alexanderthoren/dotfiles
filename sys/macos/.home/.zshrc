@@ -1,4 +1,5 @@
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+eval $(thefuck --alias fuck)
 
 source .tmuxsessions
 
@@ -20,6 +21,8 @@ alias n="nvim"
 alias bupd="brew update"
 alias bupg="brew upgrade"
 alias grex="grex -c"
+alias fuk='fuck'
+alias fuky='fuck --yeah'
 
 # git
 alias g="git"
