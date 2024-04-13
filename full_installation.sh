@@ -61,6 +61,7 @@ brew install node
 brew install zoxide
 brew install eza
 brew install zsh-autosuggestions
+brew install grex
 
 # Install apps
 brew install --no-quarantine alacritty

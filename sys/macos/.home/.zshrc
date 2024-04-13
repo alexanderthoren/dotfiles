@@ -19,6 +19,7 @@ alias fe="fzf -e"
 alias n="nvim"
 alias bupd="brew update"
 alias bupg="brew upgrade"
+alias grex="grex -c"
 
 # git
 alias g="git"
