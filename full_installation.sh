@@ -64,6 +64,7 @@ brew install zsh-autosuggestions
 brew install grex
 brew install thefuck
 brew install shellcheck
+brew install slides
 
 # Install apps
 brew install --no-quarantine alacritty
