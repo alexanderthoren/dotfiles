@@ -5,15 +5,18 @@ eval "$(starship init zsh)"
 
 # aliases
 # system
-alias szsh="source ~/.zshrc"
+alias cd="z"
 alias ..="cd .."
+alias ls="eza --oneline --icons=always --group-directories-first"
+alias lss="eza --oneline --icons=always --reverse --sort=size"
+alias lsg="eza --oneline --icons=always --long --header --inode --git"
+alias szsh="source ~/.zshrc"
 alias ll="ls -la"
 alias f="fzf"
 alias fe="fzf -e"
 alias n="nvim"
 alias bupd="brew update"
 alias bupg="brew upgrade"
-alias cd="z"
 
 # git
 alias g="git"
