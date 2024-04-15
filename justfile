@@ -4,7 +4,7 @@
 # Cheatsheet -> https://cheatography.com/linux-china/cheat-sheets/justfile/
 
 # This recipe only adds the latest changes of your dotfiles to your system
-fetch_and_update:
+fetch:
 	# Copy macos home files
 	cp sys/macos/.home/.zprofile ~
 	cp sys/macos/.home/.zshrc ~
@@ -18,7 +18,6 @@ fetch_and_update:
 
 	# Copy shared home files
 	cp sys/shared/.home/.tmux.conf ~
-	cp sys/shared/.home/.tmuxsessions ~
 
 	# Copy shared ~/.config files
 	cp sys/shared/.config/starship.toml ~/.config
@@ -28,7 +27,7 @@ fetch_and_update:
 	cp -r sys/shared/.config/nvim ~/.config
 
 # This recipe only adds the latest changes of your system to your dotfiles
-update_dotfiles:
+update:
 	# Copy macos home files
 	cp ~/.zshrc sys/macos/.home
 	cp ~/.zprofile sys/macos/.home
@@ -42,7 +41,6 @@ update_dotfiles:
 
 	# Copy shared home files
 	cp ~/.tmux.conf sys/shared/.home
-	cp ~/.tmuxsessions sys/shared/.home
 
 	# Copy shared ~/.config files
 	cp  ~/.config/starship.toml sys/shared/.config
