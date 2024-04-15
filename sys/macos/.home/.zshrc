@@ -6,6 +6,9 @@ source ~/.tmuxsessions
 # run starship
 eval "$(starship init zsh)"
 
+# vim mode in zsh
+bindkey -v
+
 # aliases
 # system
 alias cd="z"
