@@ -15,6 +15,8 @@ fetch:
 	cp -r sys/macos/.config/alacritty ~/.config
 	rm -r ~/.config/sketchybar
 	cp -r sys/macos/.config/sketchybar ~/.config
+	rm -r ~/.config/borders
+	cp -r sys/macos/.config/borders ~/.config
 
 	# Copy shared home files
 	cp sys/shared/.home/.tmux.conf ~
@@ -38,6 +40,8 @@ update:
 	cp -r ~/.config/alacritty sys/macos/.config
 	rm -r sys/macos/.config/sketchybar
 	cp -r ~/.config/sketchybar sys/macos/.config
+	rm -r sys/macos/.config/borders
+	cp -r ~/.config/borders sys/macos/.config
 
 	# Copy shared home files
 	cp ~/.tmux.conf sys/shared/.home
