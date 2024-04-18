@@ -26,6 +26,7 @@ alias bupg="brew upgrade"
 alias grex="grex -c"
 alias fuk='fuck'
 alias fuky='fuck --yeah'
+fappname () { mdls -name kMDItemCFBundleIdentifier -r /Applications/"$1".app; }
 
 # git
 alias g="git"
@@ -77,6 +78,7 @@ alias rmdd="rm -rf ~/Library/Developer/Xcode/DerivedData"
 alias rmspm="rm -rf ~/Library/org.swift.swiftpm/"
 alias rmcspm="rm -rf ~/Library/Caches/org.swift.swiftpm/"
 alias xo="xed ."
+alias xcsim="xcrun simctl openurl booted $1"
 
 # swift
 alias souw="sourcery --config .sourcery.yaml --watch"
