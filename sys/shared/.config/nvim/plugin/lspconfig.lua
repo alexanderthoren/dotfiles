@@ -93,3 +93,6 @@ lspconfig.omnisharp_mono.setup {
 
 -- Gdscript
 lspconfig.gdscript.setup {}
+
+-- Groovy
+lspconfig.groovyls.setup {}
