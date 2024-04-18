@@ -104,6 +104,7 @@ full_installation:
 	brew install nikitabobko/tap/aerospace
 
 	# Install npm packages
+	curl -fsSL https://bun.sh/install | bash
 	npm i -g carbon-now-cli
 
 	# Install zip apps

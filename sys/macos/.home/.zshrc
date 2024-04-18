@@ -6,6 +6,13 @@ source ~/.tmuxsessions
 # run starship
 eval "$(starship init zsh)"
 
+# bun completions
+[ -s "/Users/fever/.bun/_bun" ] && source "/Users/fever/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
 # vim mode in zsh
 bindkey -v
 
@@ -94,3 +101,4 @@ alias dcu="docker compose up"
 alias dcud="docker compose up -d"
 alias dcd="docker compose down"
 alias dcs="docker compose stop"
+
