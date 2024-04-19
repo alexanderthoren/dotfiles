@@ -191,10 +191,6 @@ if.app-name-regex-substring = 'slack'
 run = ['move-node-to-workspace 3']
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'Arc'
-run = ['move-node-to-workspace 4']
-
-[[on-window-detected]]
 if.app-name-regex-substring = 'postman'
 run = ['move-node-to-workspace 5']
 
