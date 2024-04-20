@@ -23,10 +23,8 @@ fetch:
 
   # Copy shared ~/.config files
   cp sys/shared/.config/starship.toml ~/.config
-  rm -rf ~/.cache/nvim
-  rm -rf ~/.local/share/nvim
-  # rm -r ~/.config/nvim
-  cp -r sys/shared/.config/nvim ~/.config
+  rm -r ~/.config/lvim
+  cp -r sys/shared/.config/lvim ~/.config
 
 # This recipe only adds the latest changes of your system to your dotfiles
 update:
@@ -48,8 +46,8 @@ update:
 
   # Copy shared ~/.config files
   cp  ~/.config/starship.toml sys/shared/.config
-  rm -r sys/shared/.config/nvim
-  cp -r ~/.config/nvim sys/shared/.config
+  rm -r sys/shared/.config/lvim
+  cp -r ~/.config/lvim sys/shared/.config
 
 # This recipe installs all the required plugins and apps
 full_installation:
