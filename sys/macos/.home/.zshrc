@@ -90,7 +90,6 @@ alias xo="xed ."
 # xcode server
 alias xbsw="xcode-build-server config -workspace *.xcworkspace -scheme $1"
 alias xbsp="xcode-build-server config -project *.xcodeproj -scheme $1"
-
 xbsrb () {
   rm -rf .bundle;
   xcodebuild -workspace *.xcworkspace -scheme "$1" -destination "generic/platform=iOS Simulator" -resultBundlePath .bundle build
@@ -99,11 +98,14 @@ xbsrb () {
 # xcode build
 xcblw () { xcodebuild -list -workspace $1.xcworkspace }
 xcblp () { xcodebuild -list -project $1.xcodeproj }
+xcbs () { xcodebuild build -scheme $1 }
 
-# xcode build and run
-alias xco="open -a Simulator --args -CurrentDeviceUDID $1"
+# simulator
+xcrb () { xcrun simctl boot $1; open -a Simulator }
+alias xcri="xcrun simctl install booted $1"
+alias xcro="xcrun simctl launch booted $1"
 alias xcrou="xcrun simctl openurl booted $1"
-alias xcbr="xcodebuild -scheme $1 -destination $2 build && xcrun simctl launch booted $3"
+alias xcrsa="xcrun simctl shutdown all"
 
 # swift
 alias souw="sourcery --config .sourcery.yaml --watch"
