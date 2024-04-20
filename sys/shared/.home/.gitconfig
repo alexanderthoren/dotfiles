@@ -3,7 +3,7 @@
 	name = 
 
 [core]
-	editor = nvim
+	editor = ~/.local/bin/lvim
 	ignorecase = false
 
 [difftool]

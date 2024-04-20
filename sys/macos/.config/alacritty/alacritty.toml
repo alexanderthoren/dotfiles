@@ -9,17 +9,17 @@ title = ""
 size = 12.0
 
 [font.bold]
-family = "MesloLGS NF"
+family = "FiraCode Nerd Font"
 style  = "Bold"
 
 [font.bold_italic]
-family = "MesloLGS NF"
+family = "FiraCode Nerd Font"
 style  = "Bold Italic"
 
 [font.italic]
-family = "MesloLGS NF"
+family = "FiraCode Nerd Font"
 style  = "Italic"
 
 [font.normal]
-family = "MesloLGS NF"
+family = "FiraCode Nerd Font"
 style  = "Regular"

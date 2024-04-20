@@ -27,13 +27,15 @@ alias szsh="source ~/.zshrc"
 alias ll="ls -la"
 alias f="fzf"
 alias fe="fzf -e"
-alias n="nvim"
+alias nvim="~/.local/bin/lvim"
+alias n="~/.local/bin/lvim"
 alias bupd="brew update"
 alias bupg="brew upgrade"
 alias grex="grex -c"
 alias fuk='fuck'
 alias fuky='fuck --yeah'
 fappname () { mdls -name kMDItemCFBundleIdentifier -r /Applications/"$1".app; }
+alias getnf="~/.local/bin/getnf"
 
 # git
 alias g="git"
