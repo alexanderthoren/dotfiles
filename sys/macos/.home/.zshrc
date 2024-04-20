@@ -87,6 +87,9 @@ alias rmspm="rm -rf ~/Library/org.swift.swiftpm/"
 alias rmcspm="rm -rf ~/Library/Caches/org.swift.swiftpm/"
 alias xo="xed ."
 alias xcsim="xcrun simctl openurl booted $1"
+alias xbsw="xcode-build-server config -workspace *.xcworkspace -scheme $1"
+alias xbsp="xcode-build-server config -project *.xcodeproj -scheme $1"
+alias xbsr="rm .bundle; xcodebuild -workspace *.xcworkspace -scheme $1 -destination 'generic/platform=iOS Simulator' -resultBundlePath .bundle build"
 
 # swift
 alias souw="sourcery --config .sourcery.yaml --watch"

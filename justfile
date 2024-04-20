@@ -84,6 +84,7 @@ full_installation:
   brew install shellcheck
   brew install slides
   brew install bartib
+  brew install xcode-build-server
 
   # Install apps
   brew install --no-quarantine alacritty
