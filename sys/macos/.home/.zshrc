@@ -86,10 +86,24 @@ alias rmdd="rm -rf ~/Library/Developer/Xcode/DerivedData"
 alias rmspm="rm -rf ~/Library/org.swift.swiftpm/"
 alias rmcspm="rm -rf ~/Library/Caches/org.swift.swiftpm/"
 alias xo="xed ."
-alias xcsim="xcrun simctl openurl booted $1"
+
+# xcode server
 alias xbsw="xcode-build-server config -workspace *.xcworkspace -scheme $1"
 alias xbsp="xcode-build-server config -project *.xcodeproj -scheme $1"
-alias xbsr="rm .bundle; xcodebuild -workspace *.xcworkspace -scheme $1 -destination 'generic/platform=iOS Simulator' -resultBundlePath .bundle build"
+
+xbsrb () {
+  rm -rf .bundle;
+  xcodebuild -workspace *.xcworkspace -scheme "$1" -destination "generic/platform=iOS Simulator" -resultBundlePath .bundle build
+}
+
+# xcode build
+xcblw () { xcodebuild -list -workspace $1.xcworkspace }
+xcblp () { xcodebuild -list -project $1.xcodeproj }
+
+# xcode build and run
+alias xco="open -a Simulator --args -CurrentDeviceUDID $1"
+alias xcrou="xcrun simctl openurl booted $1"
+alias xcbr="xcodebuild -scheme $1 -destination $2 build && xcrun simctl launch booted $3"
 
 # swift
 alias souw="sourcery --config .sourcery.yaml --watch"
