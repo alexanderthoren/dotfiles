@@ -13,11 +13,20 @@ lvim.plugins = {
     name = "gruvbox",
     priority = 1000
   },
+  {
+    "phaazon/hop.nvim",
+    event = "BufRead",
+    config = function()
+      require("hop").setup()
+    end,
+  },
 }
 
 lvim.keys.normal_mode["|"] = ":vsplit<CR>"
 lvim.keys.normal_mode["-"] = ":split<CR>"
 lvim.keys.normal_mode["sc"] = ":close<CR>"
+lvim.keys.normal_mode["sh"] = ":HopChar2<CR>"
+lvim.keys.normal_mode["sH"] = ":HopWord<CR>"
 
 vim.opt.relativenumber = true
 vim.opt.wrap = true
