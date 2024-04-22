@@ -85,6 +85,7 @@ full_installation:
   brew install slides
   brew install bartib
   brew install xcode-build-server
+  brew install lazygit
 
   # Install apps
   brew install --no-quarantine alacritty
