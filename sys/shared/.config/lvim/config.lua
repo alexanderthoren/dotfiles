@@ -19,4 +19,8 @@ lvim.keys.normal_mode["|"] = ":vsplit<CR>"
 lvim.keys.normal_mode["-"] = ":split<CR>"
 lvim.keys.normal_mode["sc"] = ":close<CR>"
 
+vim.opt.relativenumber = true
+vim.opt.wrap = true
+vim.opt.textwidth = 120
+
 lvim.colorscheme = "gruvbox-material"
