@@ -90,9 +90,13 @@ alias xo="xed ."
 # xcode server
 alias xbsw="xcode-build-server config -workspace *.xcworkspace -scheme $1"
 alias xbsp="xcode-build-server config -project *.xcodeproj -scheme $1"
-xbsrb () {
+xbbw () {
   rm -rf .bundle;
   xcodebuild -workspace *.xcworkspace -scheme "$1" -destination "generic/platform=iOS Simulator" -resultBundlePath .bundle build
+}
+xbbp () {
+  rm -rf .bundle;
+  xcodebuild build -alltargets -project $1.xcodeproj -destination "generic/platform=iOS Simulator" -resultBundlePath .bundle
 }
 
 # xcode build

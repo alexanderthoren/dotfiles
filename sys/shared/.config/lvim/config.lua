@@ -15,4 +15,8 @@ lvim.plugins = {
   },
 }
 
+lvim.keys.normal_mode["|"] = ":vsplit<CR>"
+lvim.keys.normal_mode["-"] = ":split<CR>"
+lvim.keys.normal_mode["sc"] = ":close<CR>"
+
 lvim.colorscheme = "gruvbox-material"
