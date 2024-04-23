@@ -86,6 +86,7 @@ full_installation:
   brew install bartib
   brew install xcode-build-server
   brew install lazygit
+  brew install xcbeautify
 
   # Install apps
   brew install --no-quarantine alacritty
