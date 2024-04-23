@@ -35,6 +35,7 @@ alias fuk='fuck'
 alias fuky='fuck --yeah'
 fappname () { mdls -name kMDItemCFBundleIdentifier -r /Applications/"$1".app; }
 alias getnf="~/.local/bin/getnf"
+alias lg="lazygit"
 
 # git
 alias g="git"
@@ -102,7 +103,7 @@ xbbp () {
 # xcode build
 xcblw () { xcodebuild -list -workspace $1.xcworkspace }
 xcblp () { xcodebuild -list -project $1.xcodeproj }
-xcbs () { xcodebuild build -scheme $1 }
+xcbs () { xcodebuild build -workspace *.xcworkspace -scheme $1 -destination "platform=iOS Simulator,name=$2" -archivePath . }
 
 # simulator
 xcrb () { xcrun simctl boot $1; open -a Simulator }
