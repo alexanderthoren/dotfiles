@@ -1,0 +1,9 @@
+buildserver.json
+.bundle
+*.bundle
+.bundle.xcresult
+info.plist
+SourcePackages
+Index.noindex
+ModuleCache.noindex
+SDKStatCaches.noindex

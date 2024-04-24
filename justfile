@@ -9,6 +9,7 @@ fetch:
   cp sys/macos/.home/.zprofile ~
   cp sys/macos/.home/.zshrc ~
   cp sys/macos/.home/.aerospace.toml ~
+  cp sys/macos/.home/.gitignore ~
 
   # Copy macos ~/.config files
   rm -r ~/.config/alacritty
@@ -32,6 +33,7 @@ update:
   cp ~/.zshrc sys/macos/.home
   cp ~/.zprofile sys/macos/.home
   cp ~/.aerospace.toml sys/macos/.home
+  cp ~/.gitignore sys/macos/.home
 
   # Copy macos ~/.config files
   rm -r sys/macos/.config/alacritty

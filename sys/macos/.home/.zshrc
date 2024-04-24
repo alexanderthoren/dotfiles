@@ -1,5 +1,6 @@
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-eval $(thefuck --alias fuck)
+eval "$(thefuck --alias fuck)"
+eval "$(rbenv init - zsh)"
 
 source ~/.tmuxsessions
 
@@ -93,17 +94,18 @@ alias xbsw="xcode-build-server config -workspace *.xcworkspace -scheme $1"
 alias xbsp="xcode-build-server config -project *.xcodeproj -scheme $1"
 xbbw () {
   rm -rf .bundle;
-  xcodebuild -workspace *.xcworkspace -scheme "$1" -destination "generic/platform=iOS Simulator" -resultBundlePath .bundle build
+  xcodebuild -workspace *.xcworkspace -scheme "$1" -destination "generic/platform=iOS Simulator" -resultBundlePath .bundle build | xcbeautify
 }
 xbbp () {
   rm -rf .bundle;
-  xcodebuild build -alltargets -project $1.xcodeproj -destination "generic/platform=iOS Simulator" -resultBundlePath .bundle
+  xcodebuild build -alltargets -project $1.xcodeproj -destination "generic/platform=iOS Simulator" -resultBundlePath .bundle | xcbeautify
 }
 
 # xcode build
-xcblw () { xcodebuild -list -workspace $1.xcworkspace }
-xcblp () { xcodebuild -list -project $1.xcodeproj }
-xcbs () { xcodebuild build -workspace *.xcworkspace -scheme $1 -destination "platform=iOS Simulator,name=$2" -archivePath . }
+xcblw () { xcodebuild -list -workspace $1.xcworkspace | xcbeautify }
+xcblp () { xcodebuild -list -project $1.xcodeproj | xcbeautify }
+xcbs () { xcodebuild build -workspace *.xcworkspace -scheme $1 -destination "platform=iOS Simulator,name=$2" -derivedDataPath . -archivePath . | xcbeautify }
+xcbst () { xcodebuild test -workspace *.xcworkspace -scheme $1 -destination "platform=iOS Simulator,name=$2" | xcbeautify }
 
 # simulator
 xcrb () { xcrun simctl boot $1; open -a Simulator }
