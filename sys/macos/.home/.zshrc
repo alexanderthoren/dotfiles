@@ -105,7 +105,7 @@ xbbp () {
 xcblw () { xcodebuild -list -workspace $1.xcworkspace | xcbeautify }
 xcblp () { xcodebuild -list -project $1.xcodeproj | xcbeautify }
 xcbs () { xcodebuild build -workspace *.xcworkspace -scheme $1 -destination "platform=iOS Simulator,name=$2" -derivedDataPath . -archivePath . | xcbeautify }
-xcbst () { xcodebuild test -workspace *.xcworkspace -scheme $1 -destination "platform=iOS Simulator,name=$2" | xcbeautify }
+xcbst () { xcodebuild test -workspace *.xcworkspace -scheme $1 -destination "platform=iOS Simulator,name=$2" -derivedDataPath . | xcbeautify }
 
 # simulator
 xcrb () { xcrun simctl boot $1; open -a Simulator }
