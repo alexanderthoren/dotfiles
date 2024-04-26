@@ -23,7 +23,9 @@ lvim.plugins = {
 }
 
 lvim.builtin.telescope.defaults.layout_config.width = 0.8
-lvim.builtin.telescope.defaults.layout_config.height = 0.8
+lvim.builtin.telescope.defaults.layout_config.height = 0.7
+lvim.builtin.telescope.defaults.layout_config.preview_width = 0.6
+lvim.builtin.telescope.defaults.layout_strategy = "horizontal"
 
 lvim.builtin.which_key.mappings["f"] = {
   name = "Find",
