@@ -22,11 +22,23 @@ lvim.plugins = {
   },
 }
 
+lvim.builtin.telescope.defaults.layout_config.width = 0.8
+
+lvim.keys.normal_mode["<leader>f"] = false
+lvim.keys.normal_mode["<leader>sf"] = false
+lvim.keys.normal_mode["<leader>sl"] = false
+
+lvim.keys.normal_mode["yp"] = "yyp"
+lvim.keys.normal_mode["<C-a>"] = "gg<S-v>G"
 lvim.keys.normal_mode["|"] = ":vsplit<CR>"
 lvim.keys.normal_mode["-"] = ":split<CR>"
 lvim.keys.normal_mode["sc"] = ":close<CR>"
 lvim.keys.normal_mode["sh"] = ":HopChar2<CR>"
 lvim.keys.normal_mode["sH"] = ":HopWord<CR>"
+lvim.keys.normal_mode["<leader>ff"] = ":Telescope find_files<CR>"
+lvim.keys.normal_mode["<leader>fg"] = ":Telescope git_files<CR>"
+lvim.keys.normal_mode["<leader>fs"] = ":Telescope grep_string<CR>"
+lvim.keys.normal_mode["<leader>fl"] = ":Telescope live_grep<CR>"
 
 vim.opt.relativenumber = true
 vim.opt.wrap = true
