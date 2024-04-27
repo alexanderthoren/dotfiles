@@ -1,6 +1,6 @@
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 eval "$(thefuck --alias fuck)"
-eval "$(rbenv init - zsh)"
+#eval "$(rbenv init - zsh)"
 
 source ~/.tmuxsessions
 
@@ -28,7 +28,8 @@ alias szsh="source ~/.zshrc"
 alias ll="ls -la"
 alias f="fzf"
 alias fe="fzf -e"
-alias n="~/.local/bin/lvim"
+alias lvim="~/.local/bin/lvim"
+alias n="nvim"
 alias bupd="brew update"
 alias bupg="brew upgrade"
 alias grex="grex -c"

@@ -1,34 +1,13 @@
-#!/bin/sh
 #!/usr/bin/env -S just --justfile
 
 # Cheatsheet -> https://cheatography.com/linux-china/cheat-sheets/justfile/
 
 # This recipe only adds the latest changes of your dotfiles to your system
-fetch:
-  # Copy macos home files
-  cp sys/macos/.home/.zprofile ~
-  cp sys/macos/.home/.zshrc ~
-  cp sys/macos/.home/.aerospace.toml ~
-  cp sys/macos/.home/.gitignore ~
-
-  # Copy macos ~/.config files
-  rm -r ~/.config/alacritty
-  cp -r sys/macos/.config/alacritty ~/.config
-  rm -r ~/.config/sketchybar
-  cp -r sys/macos/.config/sketchybar ~/.config
-  rm -r ~/.config/borders
-  cp -r sys/macos/.config/borders ~/.config
-
-  # Copy shared home files
-  cp sys/shared/.home/.tmux.conf ~
-
-  # Copy shared ~/.config files
-  cp sys/shared/.config/starship.toml ~/.config
-  rm -r ~/.config/lvim
-  cp -r sys/shared/.config/lvim ~/.config
+update:
+  source update.sh
 
 # This recipe only adds the latest changes of your system to your dotfiles
-update:
+fetch:
   # Copy macos home files
   cp ~/.zshrc sys/macos/.home
   cp ~/.zprofile sys/macos/.home
@@ -50,6 +29,8 @@ update:
   cp  ~/.config/starship.toml sys/shared/.config
   rm -r sys/shared/.config/lvim
   cp -r ~/.config/lvim sys/shared/.config
+  rm -r sys/shared/.config/nvim
+  cp -r ~/.config/nvim sys/shared/.config
 
 # This recipe installs all the required plugins and apps
 full_installation:
