@@ -3,7 +3,7 @@
 	name = 
 
 [core]
-	editor = ~/.local/bin/lvim
+	editor = nvim
 	pager = bat
 	ignorecase = false
 	excludesfile = ~/.gitignore
