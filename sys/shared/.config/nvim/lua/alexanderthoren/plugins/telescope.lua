@@ -22,6 +22,38 @@ return {
           },
         },
       },
+      pickers = {
+        find_files = {
+          hidden = true,
+          file_ignore_patterns = {
+            ".git/",
+          },
+        },
+        oldfiles = {
+          hidden = true,
+          file_ignore_patterns = {
+            ".git/",
+          },
+        },
+        live_grep = {
+          hidden = true,
+          file_ignore_patterns = {
+            ".git/",
+          },
+          additional_args = function()
+            return { "--hidden" }
+          end,
+        },
+        grep_string = {
+          hidden = true,
+          file_ignore_patterns = {
+            ".git/",
+          },
+          additional_args = function()
+            return { "--hidden" }
+          end,
+        },
+      },
     })
 
     telescope.load_extension("fzf")
