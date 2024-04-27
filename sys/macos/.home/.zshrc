@@ -2,6 +2,7 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 eval "$(thefuck --alias fuck)"
 #eval "$(rbenv init - zsh)"
 
+
 source ~/.tmuxsessions
 
 # run starship
