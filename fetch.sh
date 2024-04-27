@@ -21,7 +21,5 @@ cp ~/.tmux.conf "$dotfiles_dir/sys/shared/.home"
 
 # Copy shared ~/.config files
 cp  ~/.config/starship.toml "$dotfiles_dir/sys/shared/.config"
-rm -r "$dotfiles_dir/sys/shared/.config/lvim"
-cp -r ~/.config/lvim "$dotfiles_dir/sys/shared/.config"
 rm -r "$dotfiles_dir/sys/shared/.config/nvim"
 cp -r ~/.config/nvim "$dotfiles_dir/sys/shared/.config"
