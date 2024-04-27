@@ -13,6 +13,7 @@ dependencies = {
   "rafamadriz/friendly-snippets",
   "onsails/lspkind.nvim",
 },
+
 config = function()
   local cmp = require("cmp")
 
@@ -41,6 +42,7 @@ config = function()
       ["<CR>"] = cmp.mapping.confirm({ select = false }),
     }),
     sources = cmp.config.sources({
+      { name = "nvim_lsp"},
       { name = "luasnip" },
       { name = "buffer" },
       { name = "path" },
