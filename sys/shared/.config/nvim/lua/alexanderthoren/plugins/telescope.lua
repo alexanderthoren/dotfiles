@@ -5,6 +5,7 @@ return {
     "nvim-lua/plenary.nvim",
     { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
     "nvim-tree/nvim-web-devicons",
+    "folke/todo-comments.nvim",
   },
   config = function()
     local telescope = require("telescope")
@@ -27,10 +28,11 @@ return {
 
     local keymap = vim.keymap
 
-    keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Find files in current working directory" })
-    keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Find recently open files" })
-    keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Find string in current working directory" })
-    keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in current working directory" })
-    keymap.set("n", "<leader>fd", "<cmd>Telescope git_status<cr>", { desc = "Find changed files in Git" })
+    keymap.set("n", "<leader>ff", ":Telescope find_files<cr>", { desc = "Find files in current working directory" })
+    keymap.set("n", "<leader>fr", ":Telescope oldfiles<cr>", { desc = "Find recently open files" })
+    keymap.set("n", "<leader>fs", ":Telescope live_grep<cr>", { desc = "Find string in current working directory" })
+    keymap.set("n", "<leader>fc", ":Telescope grep_string<cr>", { desc = "Find string under cursor in current working directory" })
+    keymap.set("n", "<leader>fd", ":Telescope git_status<cr>", { desc = "Find changed files in Git" })
+    keymap.set("n", "<leader>ft", ":TodoTelescope<cr>", { desc = "Find TODOs" })
   end,
 }
