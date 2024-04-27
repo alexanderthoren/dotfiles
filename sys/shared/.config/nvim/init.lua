@@ -1,2 +1,2 @@
-require("core")
-require("lazy")
+require("alexanderthoren.core")
+require("alexanderthoren.lazy")
