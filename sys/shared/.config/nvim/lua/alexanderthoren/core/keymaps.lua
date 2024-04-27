@@ -35,5 +35,5 @@ keymap.set("n", "<leader>t.", "<cmd>tabn<CR>", { desc = "Go to next tab" })
 keymap.set("n", "<leader>t,", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
 keymap.set("n", "<leader>to", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" })
 
-keymap.set("n", "<leader>l", ":Lazy<CR>", { desc = "Open Lazy" })
-keymap.set("n", "<leader>m", ":Mason<CR>", { desc = "Open Mason" })
+keymap.set("n", "<leader>lz", ":Lazy<CR>", { desc = "Open Lazy" })
+keymap.set("n", "<leader>mn", ":Mason<CR>", { desc = "Open Mason" })
