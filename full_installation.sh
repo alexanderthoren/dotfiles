@@ -15,6 +15,7 @@ brew install xcodes
 xcodes install --latest
 
 # Install terminal plugins
+brew install tree
 brew install tmux
 brew install starship
 brew install nvim
