@@ -15,6 +15,10 @@ eval "$(starship init zsh)"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+# sourcekit-lsp
+export SOURCEKIT_PATH=/usr/bin/sourcekit-lsp
+export PATH="$SOURCEKIT_PATH:$PATH"
+
 # vim mode in zsh
 bindkey -v
 

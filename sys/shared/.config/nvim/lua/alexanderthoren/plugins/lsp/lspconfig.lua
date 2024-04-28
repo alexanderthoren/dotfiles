@@ -67,6 +67,10 @@ return {
       vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
     end
 
+    lspconfig.sourcekit.setup({
+      capabilities = capabilities,
+    })
+
     mason_lspconfig.setup_handlers({
       function(server_name)
         lspconfig[server_name].setup({
