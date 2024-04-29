@@ -20,6 +20,19 @@ return {
       end,
     })
 
+    local file_ignore_patterns = {
+      ".git/",
+      ".bundle/",
+      ".bundle.xcresult/",
+      "Build/",
+      "Index.noindex",
+      "Logs/",
+      "ModuleCache.noindex/",
+      "SDKStatCaches.noindex/",
+      "SourcePackages/",
+      "TestResults/",
+    }
+
     telescope.setup({
       defaults = {
         path_display = { "smart" },
@@ -35,30 +48,22 @@ return {
       pickers = {
         find_files = {
           hidden = true,
-          file_ignore_patterns = {
-            ".git/",
-          },
+          file_ignore_patterns = file_ignore_patterns,
         },
         oldfiles = {
           hidden = true,
-          file_ignore_patterns = {
-            ".git/",
-          },
+          file_ignore_patterns = file_ignore_patterns,
         },
         live_grep = {
           hidden = true,
-          file_ignore_patterns = {
-            ".git/",
-          },
+          file_ignore_patterns = file_ignore_patterns,
           additional_args = function()
             return { "--hidden" }
           end,
         },
         grep_string = {
           hidden = true,
-          file_ignore_patterns = {
-            ".git/",
-          },
+          file_ignore_patterns = file_ignore_patterns,
           additional_args = function()
             return { "--hidden" }
           end,
