@@ -1,7 +1,19 @@
+ostype=$OSTYPE
+if [[ $ostype == "linux-gnu"* ]]; then
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
+
+eval "$(fzf --zsh)"
+eval "$(zoxide init zsh)"
+
+if [[ $ostype == "darwin"* ]]; then
+  # Added by OrbStack: command-line tools and integration
+  source ~/.orbstack/shell/init.zsh 2>/dev/null || :
+fi
+
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 eval "$(thefuck --alias fuck)"
 #eval "$(rbenv init - zsh)"
-
 
 source ~/.tmuxsessions
 
@@ -135,4 +147,3 @@ alias dcu="docker compose up"
 alias dcud="docker compose up -d"
 alias dcd="docker compose down"
 alias dcs="docker compose stop"
-
