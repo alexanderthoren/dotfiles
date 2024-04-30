@@ -11,7 +11,6 @@ if [[ $(command -v brew) == "" ]]; then
 	brew install gcc
 fi
 
-brew install nushell
-sudo sh -c "echo $(which nu) >> /etc/shells"
-chsh -s "$(which nu)"
-sudo chsh -s "$(which nu)"
+sudo apt-get install zsh
+chsh -s "$(which zsh)"
+sudo chsh -s "$(which zsh)"

@@ -1,17 +1,19 @@
 #!/bin/sh
 
+dotfiles_dir="$(dirname "$0")"
+
 # Copy home files
-cp ~/.zshrc ./sys/shared/.home
-cp ~/.gitignore ./sys/shared/.home
+cp ~/.zshrc "$dotfiles_dir/../shared/.home"
+cp ~/.gitignore "$dotfiles_dir/../shared/.home"
 
 # Copy ~/.config files
-rm -r ./sys/ubuntu/.config/alacritty
-cp -r ~/.config/alacritty ./sys/ubuntu/.config
+rm -r "$dotfiles_dir/.config/alacritty"
+cp -r ~/.config/alacritty "$dotfiles_dir/.config"
 
 # Copy shared home files
-cp ~/.tmux.conf ./sys/shared/.home
+cp ~/.tmux.conf "$dotfiles_dir/../shared/.home"
 
 # Copy shared ~/.config files
-cp  ~/.config/starship.toml ./sys/shared/.config
-rm -r ./sys/shared/.config/nvim
-cp -r ~/.config/nvim ./sys/shared/.config
+cp  ~/.config/starship.toml "$dotfiles_dir/../shared/.config"
+rm -r "$dotfiles_dir/../shared/.config/nvim"
+cp -r ~/.config/nvim "$dotfiles_dir/../shared/.config"
