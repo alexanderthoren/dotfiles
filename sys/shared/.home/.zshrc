@@ -15,6 +15,8 @@ eval "$(zoxide init zsh)"
 eval "$(thefuck --alias fuck)"
 #eval "$(rbenv init - zsh)"
 
+# run tmux
+source .tmuxtheme.conf
 source ~/.tmuxsessions
 
 # run starship

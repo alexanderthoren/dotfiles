@@ -15,6 +15,7 @@ cp -r ~/.config/borders "$dotfiles_dir/.config"
 
 # Copy shared home files
 cp ~/.tmux.conf "$dotfiles_dir/../shared/.home"
+cp ~/.tmuxtheme.conf "$dotfiles_dir/../shared/.home"
 cp ~/.zshrc "$dotfiles_dir/../shared/.home"
 cp ~/.gitignore "$dotfiles_dir/../shared/.home"
 
