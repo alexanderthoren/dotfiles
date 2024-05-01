@@ -3,8 +3,6 @@
 dotfiles_dir="$(dirname "$0")"
 
 # Copy home files
-cp "$dotfiles_dir/../shared/.home/.zshrc" ~
-cp "$dotfiles_dir/../shared/.home/.gitignore" ~
 
 # Copy ~/.config files
 alacrity_path=~/.config/alacritty
@@ -13,6 +11,8 @@ cp -r "$dotfiles_dir/.config/alacritty" ~/.config
 
 # Copy shared home files
 cp "$dotfiles_dir/../shared/.home/.tmux.conf" ~
+cp "$dotfiles_dir/../shared/.home/.zshrc" ~
+cp "$dotfiles_dir/../shared/.home/.gitignore" ~
 
 # Copy shared ~/.config files
 cp "$dotfiles_dir/../shared/.config/starship.toml" ~/.config
