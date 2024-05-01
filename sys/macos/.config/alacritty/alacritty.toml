@@ -28,7 +28,6 @@ style  = "Regular"
 # Default colors
 [colors.primary]
 background = '#1b1b1b'
-# foreground = '#d4be98'
 foreground = '#ddc7a1'
 
 [colors.cursor]
