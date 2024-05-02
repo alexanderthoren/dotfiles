@@ -2,15 +2,16 @@
 
 dotfiles_dir="$(dirname "$0")"
 
-# Copy home files
+# Copy ubuntu home files
 
-# Copy ~/.config files
+# Copy ubuntu ~/.config files
 alacrity_path=~/.config/alacritty
 if [ -d "$alacrity_path" ]; then rm -rf "$alacrity_path"; fi
 cp -r "$dotfiles_dir/.config/alacritty" ~/.config
 
 # Copy shared home files
 cp "$dotfiles_dir/../shared/.home/.tmux.conf" ~
+cp "$dotfiles_dir/../shared/.tmuxtheme.conf" ~
 cp "$dotfiles_dir/../shared/.home/.zshrc" ~
 cp "$dotfiles_dir/../shared/.home/.gitignore" ~
 
