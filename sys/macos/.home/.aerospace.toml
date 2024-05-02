@@ -12,9 +12,7 @@ after-login-command = []
 # You can use it to add commands that run after AeroSpace startup.
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
-after-startup-command = [
-	'exec-and-forget /opt/homebrew/opt/sketchybar/bin/sketchybar'
-]
+after-startup-command = []
 
 # Start AeroSpace at login
 start-at-login = true
@@ -52,7 +50,7 @@ inner.horizontal = 20
 inner.vertical =   20
 outer.left =       20
 outer.bottom =     20
-outer.top =        50
+outer.top =        20
 outer.right =      20
 
 # See https://nikitabobko.github.io/AeroSpace/guide#exec-env-vars

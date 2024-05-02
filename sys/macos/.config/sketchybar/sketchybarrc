@@ -2,29 +2,31 @@
 ITEM_DIR="$HOME/.config/sketchybar/items"
 
 # BAR
-sketchybar --bar height=30 \
-				 color=0x00000000 \
-				 sticky=on \
-				 position=top \
-				 y_offset=10 \
-				 margin=10 \
-				 corner_radius=12 \
-				 padding_left=10 \
-				 padding_right=10
+sketchybar --bar \
+  height=30 \
+  color=0x00000000 \
+  sticky=on \
+  position=top \
+  y_offset=10 \
+  margin=10 \
+  corner_radius=12 \
+  padding_left=10 \
+  padding_right=10
 
 # DEFAULT
-sketchybar --default updates=when_shown \
-					 drawing=on \
-					 background.height=22 \
-					 background.drawing=on \
-					 icon.font="MesloLGS NF:Bold:18.0" \
-					 icon.color=0xffffffff \
-					 icon.padding_left=8 \
-					 icon.padding_right=8 \
-					 label.font="MesloLGS NF:Bold:13.0" \
-					 label.color=0xffffffff \
-					 label.padding_left=8 \
-					 label.padding_right=8
+sketchybar --default \
+  updates=when_shown \
+  drawing=on \
+  background.height=22 \
+  background.drawing=on \
+  icon.font="MesloLGS NF:Bold:18.0" \
+  icon.color=0xff1b1b1b \
+  icon.padding_left=8 \
+  icon.padding_right=8 \
+  label.font="MesloLGS NF:Bold:13.0" \
+  label.color=0xffffffff \
+  label.padding_left=8 \
+  label.padding_right=8
 
 
 # LEFT 
