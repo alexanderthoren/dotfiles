@@ -69,8 +69,5 @@ cp -r sys/macos/apps/SourceryPro.zip /Applications/
 tar -xf /Applications/SourceryPro.zip -C /Applications/
 rm /Applications/SourceryPro.zip
 
-# Git Clone
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
 # Defaults configuration
 defaults write -g NSAutomaticWindowAnimationsEnabled -bool false
