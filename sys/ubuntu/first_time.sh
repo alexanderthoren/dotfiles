@@ -11,6 +11,14 @@ if [[ $(command -v brew) == "" ]]; then
 	brew install gcc
 fi
 
+# Install zsh
 sudo apt-get install zsh
 chsh -s "$(which zsh)"
 sudo chsh -s "$(which zsh)"
+
+# Install alacritty
+sudo apt-get install snap
+sudo snap install alacritty --classic
+
+# Install nerd fonts script
+curl -fsSL https://raw.githubusercontent.com/getnf/getnf/main/install.sh | bash
