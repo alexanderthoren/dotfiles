@@ -1,10 +1,12 @@
 format = """
 [ ](#7daea3)\
 $directory\
-[](fg:#7daea3 bg:#89b482)\
+[](fg:#7daea3)\
+[ ](#89b482)\
 $git_branch\
 $git_status\
-[](fg:#89b482 bg:#a9b665)\
+[](fg:#89b482)\
+[ ](#a9b665)\
 $c\
 $elixir\
 $elm\
@@ -17,19 +19,15 @@ $nodejs\
 $nim\
 $rust\
 $scala\
-[](fg:#a9b665 bg:#d8a657)\
+[](fg:#a9b665)\
+[ ](#d8a657)\
 $docker_context\
-[ ](fg:#d8a657)
+[ ](fg:#d8a657)\
 """
 
 [directory]
 style = "bg:#7daea3 fg:black"
 format = "[ $path ]($style)"
-
-[directory.substitutions]
-"~" = "🏡 "
-"Developer" = "📱"
-"dotfiles" = "🍆"
 
 [git_branch]
 symbol = " "
@@ -38,15 +36,15 @@ format = '[ $symbol $branch ]($style)'
 
 [git_status]
 style = "bg:#89b482 fg:black"
-ahead = "🐇"
-behind = "🐢"
-conflicted = "🔪"
-untracked = "🚫×${count}"
-stashed = "🥡"
-modified = "📝×${count}"
-staged = "🍱×${count}"
-renamed = "📛×${count}"
-deleted = "🚮×${count}"
+# ahead = "🐇"
+# behind = "🐢"
+# conflicted = "🔪"
+# untracked = "🚫×${count}"
+# stashed = "🥡"
+# modified = "📝×${count}"
+# staged = "🍱×${count}"
+# renamed = "📛×${count}"
+# deleted = "🚮×${count}"
 format = '[$all_status$ahead_behind ]($style)'
 
 [gradle]
