@@ -20,5 +20,21 @@ sudo chsh -s "$(which zsh)"
 sudo apt-get install snap
 sudo snap install alacritty --classic
 
+sudo apt-get install bspwm
+sudo apt-get install sxhkd
+sudo apt-get install rofi
+sudo apt-get install arandr
+
+brew install bat
+brew install feh
+brew install neovim
+brew install ripgrep
+brew install starship
+brew install thefuck
+brew install tmux
+brew install tree
+brew install zoxide
+brew install zsh-autosuggestions
+
 # Install nerd fonts script
 curl -fsSL https://raw.githubusercontent.com/getnf/getnf/main/install.sh | bash
