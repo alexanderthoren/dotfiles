@@ -92,6 +92,11 @@ return {
           },
         })
       end,
+      ["jedi_language_server"] = function()
+        lspconfig["jedi_language_server"].setup({
+          capabilities = capabilities,
+        })
+      end,
     })
   end,
 }
