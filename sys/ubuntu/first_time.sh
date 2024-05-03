@@ -38,3 +38,5 @@ brew install zsh-autosuggestions
 
 # Install nerd fonts script
 curl -fsSL https://raw.githubusercontent.com/getnf/getnf/main/install.sh | bash
+
+cp ./../shared/wallpapers/Gruvbox Astro.jpg ~/Pictures/desktop_background.jpg
