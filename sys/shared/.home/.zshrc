@@ -1,6 +1,7 @@
 ostype=$OSTYPE
 if [[ $ostype == "linux-gnu"* ]]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+  feh --no-fehbg --bg-fill ~/Pictures/desktop_background.jpg
 fi
 
 if [[ $ostype == "darwin"* ]]; then
