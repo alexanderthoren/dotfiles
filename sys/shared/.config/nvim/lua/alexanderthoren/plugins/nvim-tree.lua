@@ -1,5 +1,5 @@
 return {
-"nvim-tree/nvim-tree.lua",
+  "nvim-tree/nvim-tree.lua",
   dependencies = "nvim-tree/nvim-web-devicons",
   config = function()
     local nvimtree = require("nvim-tree")
@@ -28,7 +28,7 @@ return {
       actions = {
         open_file = {
           window_picker = {
-            enable = false,
+            enable = true,
           },
         },
       },
@@ -45,5 +45,5 @@ return {
     keymap.set("n", "<leader>ee", "<cmd>NvimTreeOpen<CR>", { desc = "Open file explorer" })
     keymap.set("n", "<leader>ec", "<cmd>NvimTreeClose<CR>", { desc = "Close file explorer" })
     keymap.set("n", "<leader>ef", "<cmd>NvimTreeFindFile<CR>", { desc = "Find current file in explorer" })
-  end
+  end,
 }
