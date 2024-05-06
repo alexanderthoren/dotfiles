@@ -50,7 +50,7 @@ inner.horizontal = 20
 inner.vertical =   20
 outer.left =       20
 outer.bottom =     20
-outer.top =        20
+outer.top = [{ monitor."^built-in retina display$" = 20}, 50]
 outer.right =      20
 
 # See https://nikitabobko.github.io/AeroSpace/guide#exec-env-vars
