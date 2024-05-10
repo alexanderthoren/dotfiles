@@ -117,6 +117,7 @@ alias xbsw="xcode-build-server config -workspace *.xcworkspace -scheme $1"
 alias xbsp="xcode-build-server config -project *.xcodeproj -scheme $1"
 xbbw () {
   rm -rf .bundle;
+  rm -rf .bundle.xcresult;
   xcodebuild -workspace *.xcworkspace -scheme "$1" -destination "generic/platform=iOS Simulator" -resultBundlePath .bundle build | xcbeautify
 }
 xbbp () {
@@ -151,3 +152,7 @@ alias dcu="docker compose up"
 alias dcud="docker compose up -d"
 alias dcd="docker compose down"
 alias dcs="docker compose stop"
+
+# httpie
+alias http="http --pretty all"
+httpb() { http --pretty all $1 | bat }
