@@ -45,12 +45,12 @@ return {
     keymap.set("n", "<leader>xx", ":XcodebuildQuickfixLine<CR>", { desc = "Quickfix Line" })
     keymap.set("n", "<leader>xa", ":XcodebuildCodeActions<CR>", { desc = "Show Code Actions" })
 
-    keymap.set("n", "<leader>xdd", xcodebuild.build_and_debug, { desc = "Build & Debug" })
-    keymap.set("n", "<leader>xdr", xcodebuild.debug_without_build, { desc = "Debug Without Building" })
-    keymap.set("n", "<leader>xdt", xcodebuild.debug_tests, { desc = "Debug Tests" })
-    keymap.set("n", "<leader>xdT", xcodebuild.debug_class_tests, { desc = "Debug Class Tests" })
-    keymap.set("n", "<leader>xdb", xcodebuild.toggle_breakpoint, { desc = "Toggle Breakpoint" })
-    keymap.set("n", "<leader>xdB", xcodebuild.toggle_message_breakpoint, { desc = "Toggle Message Breakpoint" })
-    keymap.set("n", "<leader>xdx", xcodebuild.terminate_session, { desc = "Terminate Debugger" })
+    keymap.set("n", "<leader>xdd", dap.build_and_debug, { desc = "Build & Debug" })
+    keymap.set("n", "<leader>xdr", dap.debug_without_build, { desc = "Debug Without Building" })
+    keymap.set("n", "<leader>xdt", dap.debug_tests, { desc = "Debug Tests" })
+    keymap.set("n", "<leader>xdT", dap.debug_class_tests, { desc = "Debug Class Tests" })
+    keymap.set("n", "<leader>xdb", dap.toggle_breakpoint, { desc = "Toggle Breakpoint" })
+    keymap.set("n", "<leader>xdB", dap.toggle_message_breakpoint, { desc = "Toggle Message Breakpoint" })
+    keymap.set("n", "<leader>xdx", dap.terminate_session, { desc = "Terminate Debugger" })
   end,
 }
