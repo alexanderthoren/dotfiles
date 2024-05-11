@@ -4,8 +4,10 @@ local keymap = vim.keymap
 
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 
-keymap.set("n", "<leader>q", ":qa<cr>", { desc = "Quit all buffers and exit" })
-keymap.set("n", "<leader>q!", ":qa!<cr>", { desc = "Quit all buffers and exit without saving them" })
+keymap.set("n", "sf", ":source %<CR>", { desc = "Source file" })
+
+keymap.set("n", "<leader>q", ":qa<CR>", { desc = "Quit all buffers and exit" })
+keymap.set("n", "<leader>q!", ":qa!<CR>", { desc = "Quit all buffers and exit without saving them" })
 keymap.set("n", "<leader>w", ":w!<CR>", { desc = "Save current buffer" })
 
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
