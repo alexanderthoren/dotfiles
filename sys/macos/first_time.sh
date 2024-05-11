@@ -38,6 +38,9 @@ brew install xcode-build-server
 brew install lazygit
 brew install xcbeautify
 brew install httpie
+brew install lua
+brew install swiftlint
+brew install swiftformat
 
 # Install apps
 brew install --no-quarantine alacritty

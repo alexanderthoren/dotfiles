@@ -11,6 +11,7 @@ return {
         markdown = { "prettier" },
         lua = { "stylua" },
         python = { "black" },
+        swift = { "swiftformat" },
       },
       format_on_save = {
         lsp_fallback = true,

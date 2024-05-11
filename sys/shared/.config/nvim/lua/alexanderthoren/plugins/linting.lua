@@ -6,6 +6,7 @@ return {
 
     lint.linters_by_ft = {
       python = { "mypy", "flake8" },
+      swift = { "swiftlint" },
     }
 
     local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
@@ -19,6 +20,6 @@ return {
 
     vim.keymap.set("n", "<leader>ml", function()
       lint.try_lint()
-    end, { desc = "Trigger linting for current file" })
+    end, { desc = "Lint file" })
   end,
 }
