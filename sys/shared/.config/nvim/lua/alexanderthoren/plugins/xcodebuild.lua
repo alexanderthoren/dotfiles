@@ -18,10 +18,9 @@ return {
       },
     })
 
-    local codelldbPath = os.getenv("HOME")
-      .. "/Users/alexanderthoren/Developer/codelldb-aarch64-darwin/extension/adapter/codelldb"
-
-    dap.setup(codelldbPath)
+    local codelldbPath = os.getenv("HOME") .. "/Developer/codelldb-aarch64-darwin/extension/adapter/codelldb"
+    local lldbdap = "/opt/homebrew/opt/llvm/bin/lldb-dap"
+    dap.setup(lldbdap)
 
     local keymap = vim.keymap
 

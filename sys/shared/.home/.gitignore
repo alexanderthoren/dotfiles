@@ -9,3 +9,4 @@ ModuleCache.noindex
 SDKStatCaches.noindex
 TestResults
 Logs
+.nvim
