@@ -138,6 +138,10 @@ alias xcrou="xcrun simctl openurl booted $1"
 alias xcrsa="xcrun simctl shutdown all"
 
 # swift
+alias sb="swift build"
+alias sr="swift run"
+
+# swift tools
 alias souw="sourcery --config .sourcery.yaml --watch"
 alias psc="periphery scan"
 alias pscs="periphery scan --setup"
