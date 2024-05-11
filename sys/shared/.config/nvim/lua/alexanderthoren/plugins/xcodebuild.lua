@@ -6,6 +6,7 @@ return {
     "nvim-tree/nvim-tree.lua",
     -- "stevearc/oil.nvim", -- (optional) to manage project files
     "nvim-treesitter/nvim-treesitter",
+    "mfussenegger/nvim-dap",
   },
   config = function()
     local xcodebuild = require("xcodebuild")
