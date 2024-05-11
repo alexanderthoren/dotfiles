@@ -1,5 +1,5 @@
 return {
-  "mfussenegger/nvim-dap.git",
+  "mfussenegger/nvim-dap",
   dependencies = { "jbyuki/one-small-step-for-vimkind" },
   config = function()
     local dap = require("dap")
