@@ -4,29 +4,6 @@ return {
   config = function()
     local dap = require("dap")
 
-    local codelldbPath = os.getenv("HOME") .. "/Developer/codelldb-aarch64-darwin/extension/adapter/codelldb"
-    local lldbdap = "/opt/homebrew/opt/llvm/bin/lldb-dap"
-    dap.adapters.lldb = {
-      type = "executable",
-      command = lldbdap,
-      name = "lldb",
-      port = 13000, -- ?? Use the port printed out or specified with `--port`
-    }
-
-    -- dap.configurations.swift = {
-    --   {
-    --     name = "Launch",
-    --     type = "lldb",
-    --     request = "launch",
-    --     program = function()
-    --       return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
-    --     end,
-    --     cwd = "${workspaceFolder}",
-    --     stopOnEntry = false,
-    --     args = {},
-    --   },
-    -- }
-
     local keymap = vim.keymap
 
     keymap.set("n", "<leader>db", ":DapToggleBreakpoint<CR>", { desc = "Toggle breakpoint" })
