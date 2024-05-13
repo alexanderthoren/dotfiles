@@ -44,6 +44,7 @@ return {
     keymap.set("n", "<leader>xq", ":Telescope quickfix<CR>", { desc = "Show QuickFix List" })
     keymap.set("n", "<leader>xx", ":XcodebuildQuickfixLine<CR>", { desc = "Quickfix Line" })
     keymap.set("n", "<leader>xa", ":XcodebuildCodeActions<CR>", { desc = "Show Code Actions" })
+    keymap.set("n", "<leader>xS", ":XcodebuildBootSimulator<CR>", { desc = "Boot simulator" })
 
     keymap.set("n", "<leader>xdd", dap.build_and_debug, { desc = "Build & Debug" })
     keymap.set("n", "<leader>xdr", dap.debug_without_build, { desc = "Debug Without Building" })
