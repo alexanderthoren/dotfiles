@@ -29,6 +29,10 @@ return {
       ensure_installed = {
         "prettier",
         "stylua",
+        "mypy",
+        "flake8",
+        "black",
+        "pyright",
       },
     })
   end,
