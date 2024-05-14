@@ -34,7 +34,7 @@ return {
       highlight = { enable = true },
       indent = { enable = true },
       incremental_selection = {
-        enable = true,
+        enable = false,
         keymaps = {
           init_selection = "<C-space>",
           node_incremental = "<C-space>",
