@@ -68,32 +68,26 @@ return {
       capabilities = capabilities,
     })
 
-    mason_lspconfig.setup_handlers({
+    local handlers = {
       function(server_name)
         lspconfig[server_name].setup({
           capabilities = capabilities,
         })
       end,
       ["lua_ls"] = function()
-        lspconfig["lua_ls"].setup({
+        lspconfig.lua_ls.setup({
           capabilities = capabilities,
           settings = {
             Lua = {
               diagnostics = {
                 globals = { "vim" },
               },
-              completion = {
-                callSnippet = "Replace",
-              },
             },
           },
         })
       end,
-      ["jedi_language_server"] = function()
-        lspconfig["jedi_language_server"].setup({
-          capabilities = capabilities,
-        })
-      end,
-    })
+    }
+
+    mason_lspconfig.setup({ handlers = handlers })
   end,
 }

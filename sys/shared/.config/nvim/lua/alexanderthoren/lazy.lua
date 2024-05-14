@@ -1,4 +1,5 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
     "git",
@@ -11,18 +12,15 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup(
-  {
-    { import = "alexanderthoren.plugins" },
-    { import = "alexanderthoren.plugins.lsp" },
+require("lazy").setup({
+  { import = "alexanderthoren.plugins" },
+  { import = "alexanderthoren.plugins.lsp" },
+}, {
+  checker = {
+    enabled = true,
+    notify = false,
   },
-    {
-    checker = {
-      enabled = true,
-      notify = false,
-    },
-    change_detection = {
-      notify = false,
-    },
-  }
-)
+  change_detection = {
+    notify = false,
+  },
+})

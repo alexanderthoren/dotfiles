@@ -39,6 +39,7 @@ brew install lazygit
 brew install xcbeautify
 brew install httpie
 brew install lua
+brew install luarocks
 brew install swiftlint
 brew install swiftformat
 
