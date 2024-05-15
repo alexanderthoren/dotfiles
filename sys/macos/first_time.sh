@@ -31,15 +31,23 @@ brew install eza
 brew install zsh-autosuggestions
 brew install grex
 brew install thefuck
-brew install shellcheck
 brew install slides
 brew install bartib
 brew install xcode-build-server
 brew install lazygit
 brew install xcbeautify
 brew install httpie
+
+# bash
+brew install shellcheck
+
+# lua
 brew install lua
+brew install stylua
 brew install luarocks
+luarocks install luacheck
+
+# swift
 brew install swiftlint
 brew install swiftformat
 

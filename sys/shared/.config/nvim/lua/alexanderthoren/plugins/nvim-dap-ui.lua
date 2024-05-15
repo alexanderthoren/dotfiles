@@ -99,6 +99,11 @@ return {
 
     local keymap = vim.keymap
 
-    keymap.set("n", "<leader>xu", ":lua require('dapui').toggle()<CR>", { desc = "Toggle DAP UI" })
+    keymap.set(
+      "n",
+      "<leader>xu",
+      ":lua require('dapui').toggle()<CR>",
+      { desc = "Toggle DAP UI" }
+    )
   end,
 }
