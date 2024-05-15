@@ -24,6 +24,7 @@ return {
 
     local keymap = vim.keymap
 
+    -- Xcodebuild
     keymap.set(
       "n",
       "<leader>X",
@@ -140,6 +141,7 @@ return {
       { desc = "Boot simulator" }
     )
 
+    -- Debugging
     keymap.set(
       "n",
       "<leader>xdd",
