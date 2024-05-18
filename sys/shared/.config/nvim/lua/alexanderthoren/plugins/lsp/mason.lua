@@ -34,6 +34,10 @@ return {
         "flake8",
         "black",
         "pyright",
+        "bashls",
+        "shfmt",
+        "shellcheck",
+        "debugpy",
       },
     })
   end,
