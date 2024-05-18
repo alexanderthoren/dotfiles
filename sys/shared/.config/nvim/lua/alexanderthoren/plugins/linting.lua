@@ -5,6 +5,7 @@ return {
     local lint = require("lint")
 
     lint.linters_by_ft = {
+      sh = { "shellcheck" },
       lua = { "luacheck" },
       python = { "mypy", "flake8" },
       swift = { "swiftlint" },

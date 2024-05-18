@@ -6,6 +6,7 @@ return {
 
     conform.setup({
       formatters_by_ft = {
+        sh = { "shfmt" },
         json = { "prettier" },
         yaml = { "prettier" },
         markdown = { "prettier" },

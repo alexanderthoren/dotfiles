@@ -92,6 +92,11 @@ return {
           },
         })
       end,
+      ["bashls"] = function()
+        lspconfig.bashls.setup({
+          capabilities = capabilities,
+        })
+      end,
     }
 
     mason_lspconfig.setup({ handlers = handlers })

@@ -20,6 +20,11 @@ cp ~/.zshrc "$dotfiles_dir/../shared/.home"
 cp ~/.gitignore "$dotfiles_dir/../shared/.home"
 
 # Copy shared ~/.config files
-cp  ~/.config/starship.toml "$dotfiles_dir/../shared/.config"
+cp ~/.config/starship.toml "$dotfiles_dir/../shared/.config"
 rm -r "$dotfiles_dir/../shared/.config/nvim"
-cp -r ~/.config/nvim "$dotfiles_dir/../shared/.config"
+mkdir "$dotfiles_dir/../shared/.config/nvim"
+cp -r ~/.config/nvim/lua "$dotfiles_dir/../shared/.config/nvim/lua"
+cp ~/.config/nvim/init.lua "$dotfiles_dir/../shared/.config/nvim"
+cp ~/.config/nvim/lazy-lock.json "$dotfiles_dir/../shared/.config/nvim"
+cp ~/.config/nvim/.luacheckrc "$dotfiles_dir/../../"
+cp ~/.config/nvim/.stylua.toml "$dotfiles_dir/../../"

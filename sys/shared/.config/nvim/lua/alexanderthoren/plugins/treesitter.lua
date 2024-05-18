@@ -24,6 +24,7 @@ return {
         "ruby",
         "swift",
         "toml",
+        "tmux",
         "vim",
         "vimdoc",
         "xml",
