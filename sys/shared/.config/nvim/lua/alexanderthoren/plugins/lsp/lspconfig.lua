@@ -72,6 +72,17 @@ return {
 
     lspconfig.sourcekit.setup({
       capabilities = capabilities,
+      cmd = { "sourcekit-lsp" },
+      filetypes = { "swift", "c", "cpp", "objective-c", "objective-cpp" },
+      root_dir = lspconfig.util.root_pattern(
+        "*.swift",
+        "buildServer.json",
+        "*.xcodeproj",
+        "*.xcworkspace",
+        ".git",
+        "compile_commands.json",
+        "Package.swift"
+      ),
     })
 
     local handlers = {

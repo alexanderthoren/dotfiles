@@ -101,7 +101,7 @@ return {
 
     keymap.set(
       "n",
-      "<leader>xu",
+      "<leader>du",
       ":lua require('dapui').toggle()<CR>",
       { desc = "Toggle DAP UI" }
     )
