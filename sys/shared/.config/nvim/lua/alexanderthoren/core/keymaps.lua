@@ -2,8 +2,6 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap
 
-keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
-
 keymap.set("n", "sf", ":source %<CR>", { desc = "Source file" })
 
 keymap.set("n", "<leader>q", ":qa<CR>", { desc = "Quit all buffers and exit" })
