@@ -21,6 +21,7 @@ return {
         "markdown",
         "python",
         "query",
+        "regex",
         "ruby",
         "swift",
         "toml",
