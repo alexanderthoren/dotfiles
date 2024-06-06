@@ -27,6 +27,7 @@ keymap.set("n", "da", "gg<S-v>Gd", { desc = "Delete all file" })
 
 keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Navigate down and center" })
 keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Navigate up and center" })
+keymap.set("n", "G", "Gzz", { desc = "Navigate to bottom and center" })
 
 keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })
 keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" })

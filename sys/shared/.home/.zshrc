@@ -1,3 +1,6 @@
+#!/bin/sh
+# shellcheck disable=SC2035,SC3028,SC3010,SC3046,SC1091,SC1090
+
 ostype=$OSTYPE
 if [[ $ostype == "linux-gnu"* ]]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
@@ -10,13 +13,14 @@ if [[ $ostype == "darwin"* ]]; then
   source ~/.orbstack/shell/init.zsh 2>/dev/null || :
 fi
 
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source "$(brew --prefix)"/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# shellcheck disable=SC2034
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#d3869b"
 
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
 eval "$(thefuck --alias fuck)"
-#eval "$(rbenv init - zsh)"
+eval "$(rbenv init - zsh)"
 
 # run tmux
 source .tmuxtheme.conf
@@ -58,7 +62,7 @@ alias bupg="brew upgrade"
 alias grex="grex -c"
 alias fuk='fuck'
 alias fuky='fuck --yeah'
-fappname () { mdls -name kMDItemCFBundleIdentifier -r /Applications/"$1".app; }
+fappname () { mdls -name kMDItemCFBundleIdentifier -r /Applications/"$1".app ; }
 alias getnf="~/.local/bin/getnf"
 alias lg="lazygit"
 
@@ -72,7 +76,7 @@ alias gba="git branch -a"
 alias gbd="git branch -D"
 alias gc="git commit"
 alias gcempty="git commit --allow-empty -m \"Empty-Commit\""
-alias gcb="git checkout -b $1"
+gcb () { git checkout -b "$1" ; }
 alias gcc="git checkout"
 alias gcp="git cherry-pick"
 alias gcpa="git cherry-pick --abort"
@@ -80,7 +84,7 @@ alias gcpc="git cherry-pick --continue"
 alias gcf="git clean -f ."
 alias gcl="git clone"
 alias gd="git diff" 
-alias gds="git diff $1 --stat"
+gds () { git diff "$1" --stat ; }
 alias gd-1="git diff head~1" 
 alias gdrg="git diff head~1 | rg" 
 alias gdt="git difftool -y"
@@ -114,29 +118,29 @@ alias rmcspm="rm -rf ~/Library/Caches/org.swift.swiftpm/"
 alias xo="xed ."
 
 # xcode server
-alias xbsw="xcode-build-server config -workspace *.xcworkspace -scheme $1"
-alias xbsp="xcode-build-server config -project *.xcodeproj -scheme $1"
+xbsw () { xcode-build-server config -workspace *.xcworkspace -scheme "$1" ; }
+xbsp () { xcode-build-server config -project *.xcodeproj -scheme "$1" ; }
 xbbw () {
   rm -rf .bundle;
   rm -rf .bundle.xcresult;
-  xcodebuild -workspace *.xcworkspace -scheme "$1" -destination "generic/platform=iOS Simulator" -resultBundlePath .bundle build | xcbeautify
+  xcodebuild -workspace *.xcworkspace -scheme "$1" -destination "generic/platform=iOS Simulator" -resultBundlePath .bundle build | xcbeautify ;
 }
 xbbp () {
   rm -rf .bundle;
-  xcodebuild build -alltargets -project $1.xcodeproj -destination "generic/platform=iOS Simulator" -resultBundlePath .bundle | xcbeautify
+  xcodebuild build -alltargets -project "$1".xcodeproj -destination "generic/platform=iOS Simulator" -resultBundlePath .bundle | xcbeautify ;
 }
 
 # xcode build
-xcblw () { xcodebuild -list -workspace $1.xcworkspace | xcbeautify }
-xcblp () { xcodebuild -list -project $1.xcodeproj | xcbeautify }
-xcbs () { xcodebuild build -workspace *.xcworkspace -scheme $1 -destination "platform=iOS Simulator,name=$2" -derivedDataPath . -archivePath . | xcbeautify }
-xcbst () { xcodebuild test -workspace *.xcworkspace -scheme $1 -destination "platform=iOS Simulator,name=$2" -derivedDataPath . | xcbeautify }
+xcblw () { xcodebuild -list -workspace "$1".xcworkspace | xcbeautify ; }
+xcblp () { xcodebuild -list -project "$1".xcodeproj | xcbeautify ; }
+xcbs () { xcodebuild build -workspace *.xcworkspace -scheme "$1" -destination "platform=iOS Simulator,name=$2" -derivedDataPath ./ -archivePath ./ | xcbeautify ; }
+xcbst () { xcodebuild test -workspace *.xcworkspace -scheme "$1" -destination "platform=iOS Simulator,name=$2" -derivedDataPath ./ | xcbeautify ; }
 
 # simulator
-xcrb () { xcrun simctl boot $1; open -a Simulator }
-alias xcri="xcrun simctl install booted $1"
-alias xcro="xcrun simctl launch booted $1"
-alias xcrou="xcrun simctl openurl booted $1"
+xcrb () { xcrun simctl boot "$1"; open -a Simulator ; }
+xcri () { xcrun simctl install booted "$1" ; }
+xcro () { xcrun simctl launch booted "$1" ; }
+xcrou () { xcrun simctl openurl booted "$1" ; } 
 alias xcrsa="xcrun simctl shutdown all"
 
 # swift
@@ -160,4 +164,4 @@ alias dcs="docker compose stop"
 
 # httpie
 alias http="http --pretty all"
-httpb() { http --pretty all $1 | bat }
+httpb() { http --pretty all "$1" | bat ; }
