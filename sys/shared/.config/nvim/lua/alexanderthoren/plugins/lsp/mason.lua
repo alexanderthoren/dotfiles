@@ -41,6 +41,7 @@ return {
         "astro",
         "angularls",
         "tsserver",
+        "eslint_d",
       },
     })
   end,

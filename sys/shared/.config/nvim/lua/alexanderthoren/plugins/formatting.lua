@@ -13,6 +13,7 @@ return {
         lua = { "stylua" },
         python = { "black" },
         swift = { "swiftformat" },
+        typescript = { "prettier" },
       },
       format_on_save = {
         lsp_fallback = true,
