@@ -164,4 +164,8 @@ alias dcs="docker compose stop"
 
 # httpie
 alias http="http --pretty all"
+alias https="https --pretty all"
 httpb() { http --pretty all "$1" | bat ; }
+httppb() { http --pretty all "$1" | pbcopy ; }
+httpsb() { https --pretty all "$1" | bat ; }
+httpspb() { https --pretty all "$1" | pbcopy ; }
