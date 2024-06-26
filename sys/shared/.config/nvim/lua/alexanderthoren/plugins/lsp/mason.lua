@@ -38,6 +38,9 @@ return {
         "shfmt",
         "shellcheck",
         "debugpy",
+        "astro",
+        "angularls",
+        "tsserver",
       },
     })
   end,
