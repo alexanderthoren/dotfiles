@@ -83,6 +83,12 @@ return {
     keymap.set(
       "n",
       "<leader>fr",
+      ":Telescope resume<cr>",
+      { desc = "Resume last search in telescope" }
+    )
+    keymap.set(
+      "n",
+      "<leader>fo",
       ":Telescope oldfiles<cr>",
       { desc = "Find recently open files" }
     )
