@@ -40,6 +40,7 @@ brew install zoxide
 brew install zsh-autosuggestions
 brew install luarocks
 luarocks install luacheck
+brew install lazygit
 
 # Install nerd fonts script
 curl -fsSL https://raw.githubusercontent.com/getnf/getnf/main/install.sh | bash
