@@ -5,7 +5,10 @@ sudo apt-get install git
 
 if [[ $(command -v brew) == "" ]]; then
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-	(echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/alexanderthoren/.bashrc
+	(
+		echo
+		echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"'
+	) >>/home/alexanderthoren/.bashrc
 	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 	sudo apt-get install build-essential
 	brew install gcc
@@ -35,6 +38,8 @@ brew install tmux
 brew install tree
 brew install zoxide
 brew install zsh-autosuggestions
+brew install luarocks
+luarocks install luacheck
 
 # Install nerd fonts script
 curl -fsSL https://raw.githubusercontent.com/getnf/getnf/main/install.sh | bash

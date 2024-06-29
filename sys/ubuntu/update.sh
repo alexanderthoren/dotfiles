@@ -24,3 +24,5 @@ if [ -d "$nvim_local_share_path" ]; then rm -rf $nvim_local_share_path; fi
 nvim_path=~/.config/nvim
 if [ -d "$nvim_path" ]; then rm -rf $nvim_path; fi
 cp -r "$dotfiles_dir/../shared/.config/nvim" ~/.config
+cp "$dotfiles_dir/../../.luacheckrc" $nvim_path
+cp "$dotfiles_dir/../../.stylua.toml" $nvim_path
