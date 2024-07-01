@@ -157,6 +157,7 @@ alias python="python3"
 alias pip="pip3"
 
 # docker
+alias dcb="docker compose build"
 alias dcu="docker compose up"
 alias dcud="docker compose up -d"
 alias dcd="docker compose down"
