@@ -170,3 +170,24 @@ httpb() { http --pretty all "$1" | bat ; }
 httppb() { http --pretty all "$1" | pbcopy ; }
 httpsb() { https --pretty all "$1" | bat ; }
 httpspb() { https --pretty all "$1" | pbcopy ; }
+
+# bartib
+alias bb="bartib -f ~/.dailylog"
+alias bbe="bartib -f ~/.dailylog edit -e nvim"
+alias bbcu="bartib -f ~/.dailylog current"
+alias bbla="bartib -f ~/.dailylog last"
+alias bbli="bartib -f ~/.dailylog list"
+bbstart() { bartib -f ~/.dailylog start -p $1 -d $2 ; }
+bbco() { bartib -f ~/.dailylog "continue" $1 ; }
+alias bbstop="bartib -f ~/.dailylog stop"
+alias bbr="bartib -f ~/.dailylog report"
+alias bbrt="bartib -f ~/.dailylog report --today"
+alias bbp="bartib -f ~/.dailylog projects"
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
