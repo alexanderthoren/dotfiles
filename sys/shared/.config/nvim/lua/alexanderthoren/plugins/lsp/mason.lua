@@ -42,6 +42,7 @@ return {
         "angularls",
         "tsserver",
         "eslint_d",
+        "terraformls",
       },
     })
   end,
