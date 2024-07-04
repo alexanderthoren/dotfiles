@@ -48,14 +48,17 @@ return {
         find_files = {
           hidden = true,
           file_ignore_patterns = file_ignore_patterns,
+          path_display = { "absolute" },
         },
         oldfiles = {
           hidden = true,
           file_ignore_patterns = file_ignore_patterns,
+          path_display = { "absolute" },
         },
         live_grep = {
           hidden = true,
           file_ignore_patterns = file_ignore_patterns,
+          path_display = { "absolute" },
           additional_args = function()
             return { "--hidden" }
           end,
@@ -63,6 +66,7 @@ return {
         grep_string = {
           hidden = true,
           file_ignore_patterns = file_ignore_patterns,
+          path_display = { "absolute" },
           additional_args = function()
             return { "--hidden" }
           end,
