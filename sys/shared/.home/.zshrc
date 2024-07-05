@@ -182,6 +182,9 @@ bbco() { bartib -f ~/.dailylog "continue" $1 ; }
 alias bbstop="bartib -f ~/.dailylog stop"
 alias bbr="bartib -f ~/.dailylog report"
 alias bbrt="bartib -f ~/.dailylog report --today"
+alias bbry="bartib -f ~/.dailylog report --yesterday"
+alias bbrwc="bartib -f ~/.dailylog report --current_week"
+alias bbrwl="bartib -f ~/.dailylog report --last_week"
 alias bbp="bartib -f ~/.dailylog projects"
 
 
