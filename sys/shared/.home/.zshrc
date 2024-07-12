@@ -177,6 +177,10 @@ alias bbe="bartib -f ~/.dailylog edit -e nvim"
 alias bbcu="bartib -f ~/.dailylog current"
 alias bbla="bartib -f ~/.dailylog last"
 alias bbli="bartib -f ~/.dailylog list"
+alias bblit="bartib -f ~/.dailylog list --today"
+alias bbliy="bartib -f ~/.dailylog list --yesterday"
+alias bbliwc="bartib -f ~/.dailylog list --current_week"
+alias bbliwl="bartib -f ~/.dailylog list --last_week"
 bbstart() { bartib -f ~/.dailylog start -p $1 -d $2 ; }
 bbco() { bartib -f ~/.dailylog "continue" $1 ; }
 alias bbstop="bartib -f ~/.dailylog stop"
