@@ -10,14 +10,8 @@ return {
   config = function()
     local telescope = require("telescope")
     local actions = require("telescope.actions")
-    local transform_mod = require("telescope.actions.mt").transform_mod
-    local trouble = require("trouble")
-
-    local custom_actions = transform_mod({
-      open_trouble_qflist = function()
-        trouble.toggle("quickfix")
-      end,
-    })
+    local open_ith_trouble = require("trouble.sources.telescope").open
+    local add_to_trouble = require("trouble.sources.telescope").add
 
     local file_ignore_patterns = {
       ".git/",
@@ -39,8 +33,8 @@ return {
           i = {
             ["<C-k>"] = actions.move_selection_previous,
             ["<C-j>"] = actions.move_selection_next,
-            ["<C-q>"] = actions.send_selected_to_qflist
-              + custom_actions.open_trouble_qflist,
+            ["<C-t>"] = open_ith_trouble,
+            ["<C-a>"] = add_to_trouble,
           },
         },
       },
