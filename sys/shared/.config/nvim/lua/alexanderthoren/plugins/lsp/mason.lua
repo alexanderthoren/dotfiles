@@ -40,7 +40,7 @@ return {
         "debugpy",
         "astro",
         "angularls",
-        "tsserver",
+        "ts_ls",
         "eslint_d",
         "terraformls",
       },
