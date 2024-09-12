@@ -6,6 +6,7 @@ return {
       { "github/copilot.vim" },
       { "nvim-lua/plenary.nvim" },
     },
+    build = "make tiktoken",
     config = function()
       local chat = require("CopilotChat")
 
@@ -73,6 +74,15 @@ return {
         ":CopilotChatCommitStaged<cr>",
         { desc = "Write commit message for changes" }
       )
+      keymap.set("n", "<leader>ccq", function()
+        local input = vim.fn.input("Quick Chat: ")
+        if input ~= "" then
+          require("CopilotChat").ask(
+            input,
+            { selection = require("CopilotChat.select").buffer }
+          )
+        end
+      end, { desc = "CopilotChat - Quick chat" })
     end,
   },
 }
