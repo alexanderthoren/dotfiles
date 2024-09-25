@@ -43,6 +43,7 @@ return {
         "ts_ls",
         "eslint_d",
         "terraformls",
+        "solargraph",
       },
     })
   end,
