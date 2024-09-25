@@ -37,7 +37,7 @@ return {
         keymap.set({ "n", "v" }, "<C-space>", vim.lsp.buf.code_action, opts)
 
         opts.desc = "Smart rename"
-        keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
+        keymap.set("n", "<leader>rr", vim.lsp.buf.rename, opts)
 
         opts.desc = "Show buffer diagnostics"
         keymap.set(
