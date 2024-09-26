@@ -74,6 +74,7 @@ alias gapb="pbpaste | git apply"
 alias gb="git branch"  
 alias gba="git branch -a"
 alias gbd="git branch -D"
+alias gbu="git branch -u origin/\$(git branch --show-current)"
 alias gc="git commit"
 alias gcempty="git commit --allow-empty -m \"Empty-Commit\""
 gcb () { git checkout -b "$1" ; }
