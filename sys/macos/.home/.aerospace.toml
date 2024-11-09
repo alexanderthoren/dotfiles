@@ -164,6 +164,10 @@ if.app-name-regex-substring = 'WebStorm'
 run = ['move-node-to-workspace 1']
 
 [[on-window-detected]]
+if.app-name-regex-substring = 'cursor'
+run = ['move-node-to-workspace 1']
+
+[[on-window-detected]]
 if.app-name-regex-substring = 'superlist'
 run = ['move-node-to-workspace 2']
 
@@ -184,7 +188,7 @@ if.app-name-regex-substring = 'slack'
 run = ['move-node-to-workspace 3']
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'postman'
+if.app-name-regex-substring = 'httpie'
 run = ['move-node-to-workspace 5']
 
 [[on-window-detected]]

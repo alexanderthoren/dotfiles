@@ -57,7 +57,6 @@ brew install raycast
 brew install notion
 brew install superlist
 brew install monitorcontrol
-brew install postman
 brew install proxyman
 brew install linear-linear
 
