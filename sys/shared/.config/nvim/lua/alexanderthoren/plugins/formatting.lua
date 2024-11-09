@@ -14,6 +14,7 @@ return {
         python = { "black" },
         swift = { "swiftformat" },
         typescript = { "prettier" },
+        html = { "prettier" },
       },
       -- format_on_save = {
       --   lsp_fallback = true,
