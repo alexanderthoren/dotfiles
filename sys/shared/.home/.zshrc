@@ -196,6 +196,9 @@ alias bbp="bartib -f ~/.dailylog projects"
 # Load Angular CLI autocompletion.
 source <(ng completion script)
 
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
-# Load Angular CLI autocompletion.
-source <(ng completion script)
+export DEBUGPY_ROOT="$HOME/.virtualenvs/debugpy"
+export PATH="$DEBUGPY_ROOT/bin:$PATH"
