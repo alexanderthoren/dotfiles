@@ -1,6 +1,6 @@
 {
   "Comment.nvim": { "branch": "master", "commit": "e30b7f2008e52442154b66f7c519bfd2f1e32acb" },
-  "CopilotChat.nvim": { "branch": "canary", "commit": "9bfe2e27e558dcbd92caea8f829867927a6ebfa8" },
+  "CopilotChat.nvim": { "branch": "canary", "commit": "8890c126e2147bac47fae830ccae389db70b3f74" },
   "LuaSnip": { "branch": "master", "commit": "03c8e67eb7293c404845b3982db895d59c0d1538" },
   "auto-session": { "branch": "main", "commit": "8d2eddb14ef66ed1019c92251e2d31bb7a2a2f87" },
   "bufferline.nvim": { "branch": "main", "commit": "5c528bee3dd797d5bd6bae5f229411939b25b203" },
@@ -45,9 +45,11 @@
   "render-markdown": { "branch": "main", "commit": "430a671655ac84a63f41cd3e940caebdd0a99434" },
   "telescope-fzf-native.nvim": { "branch": "main", "commit": "cf48d4dfce44e0b9a2e19a008d6ec6ea6f01a83b" },
   "telescope.nvim": { "branch": "0.1.x", "commit": "a0bbec21143c7bc5f8bb02e0005fa0b982edc026" },
+  "timerly": { "branch": "main", "commit": "18b37ea5b0663e0e748546a399f07458f6ba8675" },
   "todo-comments.nvim": { "branch": "main", "commit": "ae0a2afb47cf7395dc400e5dc4e05274bf4fb9e0" },
   "toggleterm.nvim": { "branch": "main", "commit": "022ff5594acccc8d90d2e46dc43994f7722ebdf7" },
   "trouble.nvim": { "branch": "main", "commit": "3dc00c0447c016cd43e03054c3d49436a1f2076d" },
+  "volt": { "branch": "main", "commit": "a36c576baae487634151377f601bf3f5de355f5a" },
   "which-key.nvim": { "branch": "main", "commit": "68e37e12913a66b60073906f5d3f14dee0de19f2" },
-  "xcodebuild.nvim": { "branch": "main", "commit": "77ef9b198caf07ffe722746db95b1a83e45f11ae" }
+  "xcodebuild.nvim": { "branch": "main", "commit": "a2fa1922e2c48ddf1a4efd0c81f91c386c8d1195" }
 }
