@@ -33,19 +33,23 @@ return {
       end
     end
 
-    local utils = require("alexanderthoren.utils")
+    local python_path = require("alexanderthoren.utils").Venv_python_path()
     dap.configurations.python = {
       {
-        -- The first three options are required by nvim-dap
-        type = "python", -- the type here established the link to the adapter definition: `dap.adapters.python`
+        type = "python",
         request = "launch",
-        name = "Launch file",
-
-        -- Options below are for debugpy, see https://github.com/microsoft/debugpy/wiki/Debug-configuration-settings
-        -- for supported options
-
-        program = "${file}", -- This configuration will launch the current file if used.
-        pythonPath = utils.Venv_python_path(),
+        name = "Launch current file",
+        program = "${file}",
+        pythonPath = python_path,
+        console = "externalTerminal",
+      },
+      {
+        type = "python",
+        request = "launch",
+        name = "Launch main",
+        program = vim.fn.getcwd() .. "/main.py",
+        pythonPath = python_path,
+        console = "externalTerminal",
       },
     }
 
