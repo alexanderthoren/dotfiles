@@ -1,4 +1,4 @@
 std = {
-  globals = { "vim" },
-  read_globals = { "os", "require", "lazy", "pairs" },
+  globals = { "vim", "assert" },
+  read_globals = { "os", "require", "lazy", "pairs", "io" },
 }
