@@ -64,15 +64,9 @@ return {
       )
       keymap.set(
         "n",
-        "<leader>cmm",
+        "<leader>cm",
         ":CopilotChatCommit<cr>",
         { desc = "Write commit message" }
-      )
-      keymap.set(
-        "n",
-        "<leader>cms",
-        ":CopilotChatCommitStaged<cr>",
-        { desc = "Write commit message for changes" }
       )
       keymap.set("n", "<leader>ccq", function()
         local input = vim.fn.input("Quick Chat: ")
