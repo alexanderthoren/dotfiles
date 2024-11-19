@@ -7,6 +7,7 @@ return {
   dependencies = {
     "MunifTanjim/nui.nvim",
     "rcarriga/nvim-notify",
+    "stevearc/dressing.nvim",
   },
   config = function()
     local noice = require("noice")
