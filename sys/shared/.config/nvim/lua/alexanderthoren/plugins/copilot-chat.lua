@@ -3,7 +3,7 @@ return {
     "CopilotC-Nvim/CopilotChat.nvim",
     branch = "canary",
     dependencies = {
-      { "github/copilot.vim" },
+      { "zbirenbaum/copilot.lua" },
       { "nvim-lua/plenary.nvim" },
     },
     build = "make tiktoken",
@@ -34,7 +34,7 @@ return {
       )
       keymap.set(
         "v",
-        "<leader>cff",
+        "<leader>cf",
         ":CopilotChatFix<cr>",
         { desc = "Fix active selection" }
       )
@@ -58,7 +58,7 @@ return {
       )
       keymap.set(
         "n",
-        "<leader>cfd",
+        "<leader>cx",
         ":CopilotChatFixDiagnostic<cr>",
         { desc = "Assit with a diagnostic for issues in file" }
       )
@@ -68,7 +68,7 @@ return {
         ":CopilotChatCommit<cr>",
         { desc = "Write commit message" }
       )
-      keymap.set("n", "<leader>ccq", function()
+      keymap.set("n", "<leader>cq", function()
         local input = vim.fn.input("Quick Chat: ")
         if input ~= "" then
           require("CopilotChat").ask(
