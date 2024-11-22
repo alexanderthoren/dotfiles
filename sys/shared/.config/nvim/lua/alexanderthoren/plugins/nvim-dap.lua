@@ -49,7 +49,7 @@ return {
         name = "Launch main",
         program = vim.fn.getcwd() .. "/main.py",
         pythonPath = python_path,
-        console = "externalTerminal",
+        console = "integratedTerminal",
       },
     }
 

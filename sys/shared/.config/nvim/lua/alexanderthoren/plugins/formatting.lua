@@ -11,10 +11,9 @@ return {
         yaml = { "prettier" },
         markdown = { "prettier" },
         lua = { "stylua" },
-        python = { "black" },
         swift = { "swiftformat" },
-        typescript = { "prettier" },
         html = { "prettier" },
+        python = { "ruff" },
       },
       -- format_on_save = {
       --   lsp_fallback = true,

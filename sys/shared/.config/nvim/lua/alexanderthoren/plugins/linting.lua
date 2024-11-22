@@ -7,9 +7,8 @@ return {
     lint.linters_by_ft = {
       sh = { "shellcheck" },
       lua = { "luacheck" },
-      python = { "mypy", "flake8" },
       swift = { "swiftlint" },
-      typescript = { "eslint_d" },
+      python = { "ruff" },
     }
 
     local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })

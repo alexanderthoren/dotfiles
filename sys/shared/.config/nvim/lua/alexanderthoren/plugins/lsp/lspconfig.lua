@@ -15,49 +15,85 @@ return {
 
     vim.api.nvim_create_autocmd("LspAttach", {
       group = vim.api.nvim_create_augroup("UserLspConfig", {}),
-      callback = function(ev)
-        local opts = { buffer = ev.buf, silent = true }
+      callback = function()
+        keymap.set(
+          "n",
+          "gr",
+          "<cmd>Telescope lsp_references<CR>",
+          { desc = "Show references" }
+        )
 
-        opts.desc = "Show LSP references"
-        keymap.set("n", "gr", "<cmd>Telescope lsp_references<CR>", opts)
+        keymap.set(
+          "n",
+          "gD",
+          vim.lsp.buf.declaration,
+          { desc = "Go to declaration" }
+        )
 
-        opts.desc = "Go to declaration"
-        keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
+        keymap.set(
+          "n",
+          "gd",
+          "<cmd>Telescope lsp_definitions<CR>",
+          { desc = "Show definitions" }
+        )
 
-        opts.desc = "Show LSP definitions"
-        keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts)
+        keymap.set(
+          "n",
+          "gi",
+          "<cmd>Telescope lsp_implementations<CR>",
+          { desc = "Show implementations" }
+        )
 
-        opts.desc = "Show LSP implementations"
-        keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>", opts)
+        keymap.set(
+          "n",
+          "gt",
+          "<cmd>Telescope lsp_type_definitions<CR>",
+          { desc = "Show type definitions" }
+        )
 
-        opts.desc = "Show LSP type definitions"
-        keymap.set("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts)
+        keymap.set(
+          { "n", "v" },
+          "<leader><space>",
+          vim.lsp.buf.code_action,
+          { desc = "Show code actions" }
+        )
 
-        opts.desc = "See available code actions"
-        keymap.set({ "n", "v" }, "<C-space>", vim.lsp.buf.code_action, opts)
+        keymap.set("n", "<leader>rr", vim.lsp.buf.rename, { desc = "Rename" })
 
-        opts.desc = "Smart rename"
-        keymap.set("n", "<leader>rr", vim.lsp.buf.rename, opts)
-
-        opts.desc = "Show buffer diagnostics"
         keymap.set(
           "n",
           "<leader>D",
           "<cmd>Telescope diagnostics bufnr=0<CR>",
-          opts
+          { desc = "Show buffer diagnostics" }
         )
 
-        opts.desc = "Show line diagnostics"
-        keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts)
+        keymap.set(
+          "n",
+          "<leader>d",
+          vim.diagnostic.open_float,
+          { desc = "Show line diagnostics" }
+        )
 
-        opts.desc = "Go to previous diagnostic"
-        keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
+        keymap.set(
+          "n",
+          "[d",
+          vim.diagnostic.goto_prev,
+          { desc = "Go to previous diagnostic" }
+        )
 
-        opts.desc = "Go to next diagnostic"
-        keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
+        keymap.set(
+          "n",
+          "]d",
+          vim.diagnostic.goto_next,
+          { desc = "Go to next diagnostic" }
+        )
 
-        opts.desc = "Show documentation for what is under cursor"
-        keymap.set("n", "K", vim.lsp.buf.hover, opts)
+        keymap.set(
+          "n",
+          "K",
+          vim.lsp.buf.hover,
+          { desc = "Show documentation for what is under cursor" }
+        )
       end,
     })
 
@@ -100,6 +136,16 @@ return {
       end,
       ["bashls"] = function()
         lspconfig.bashls.setup({
+          capabilities = capabilities,
+        })
+      end,
+      ["ruff"] = function()
+        lspconfig.ruff.setup({
+          capabilities = capabilities,
+        })
+      end,
+      ["pyright"] = function()
+        lspconfig.pyright.setup({
           capabilities = capabilities,
         })
       end,
