@@ -8,6 +8,10 @@ return {
     load_coverage_cb = function(ftype)
       vim.notify("Loaded " .. ftype .. " coverage")
     end,
+    highlights = {
+      covered = { fg = "#a9b665" },
+      uncovered = { fg = "#ea6962" },
+    },
     lang = {
       python = {
         coverage_file = vim.fn.getcwd() .. "/.coverage",

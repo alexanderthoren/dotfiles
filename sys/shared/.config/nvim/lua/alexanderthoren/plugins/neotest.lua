@@ -24,6 +24,13 @@ return {
 
     keymap.set(
       "n",
+      "<leader>ncr",
+      ":! " .. vim.fn.getcwd() .. "/.venv/bin/coverage run -m pytest<CR>",
+      { desc = "Run tests for coverage report", silent = true }
+    )
+
+    keymap.set(
+      "n",
       "<leader>nr",
       ":Neotest run<CR>",
       { desc = "Run tests in file" }
