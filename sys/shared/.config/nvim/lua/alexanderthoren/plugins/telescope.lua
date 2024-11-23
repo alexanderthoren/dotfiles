@@ -6,6 +6,13 @@ return {
     { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
     "nvim-tree/nvim-web-devicons",
     "folke/todo-comments.nvim",
+    {
+      "danielfalk/smart-open.nvim",
+      branch = "0.2.x",
+      dependencies = {
+        "kkharji/sqlite.lua",
+      },
+    },
   },
   config = function()
     local telescope = require("telescope")
@@ -44,11 +51,6 @@ return {
           file_ignore_patterns = file_ignore_patterns,
           path_display = { "absolute" },
         },
-        oldfiles = {
-          hidden = true,
-          file_ignore_patterns = file_ignore_patterns,
-          path_display = { "absolute" },
-        },
         live_grep = {
           hidden = true,
           file_ignore_patterns = file_ignore_patterns,
@@ -65,10 +67,19 @@ return {
             return { "--hidden" }
           end,
         },
+        smart_open = {
+          hidden = true,
+          file_ignore_patterns = file_ignore_patterns,
+          path_display = { "absolute" },
+          additional_args = function()
+            return { "--hidden" }
+          end,
+        },
       },
     })
 
     telescope.load_extension("fzf")
+    telescope.load_extension("smart_open")
 
     local keymap = vim.keymap
 
@@ -87,8 +98,8 @@ return {
     keymap.set(
       "n",
       "<leader>fo",
-      ":Telescope oldfiles<cr>",
-      { desc = "Find recently open files" }
+      ":Telescope smart_open<cr>",
+      { desc = "Smartly find recent files" }
     )
     keymap.set(
       "n",
