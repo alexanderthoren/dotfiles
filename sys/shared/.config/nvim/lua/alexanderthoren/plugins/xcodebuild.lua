@@ -118,12 +118,6 @@ return {
     )
     keymap.set(
       "n",
-      "<leader>xq",
-      ":Telescope quickfix<CR>",
-      { desc = "Show QuickFix List" }
-    )
-    keymap.set(
-      "n",
       "<leader>xx",
       ":XcodebuildQuickfixLine<CR>",
       { desc = "Quickfix Line" }
