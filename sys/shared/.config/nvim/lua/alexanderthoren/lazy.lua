@@ -14,7 +14,17 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   { import = "alexanderthoren.plugins" },
+  { import = "alexanderthoren.plugins.ai" },
+  { import = "alexanderthoren.plugins.color" },
+  { import = "alexanderthoren.plugins.debug" },
+  { import = "alexanderthoren.plugins.find" },
+  { import = "alexanderthoren.plugins.editor" },
+  { import = "alexanderthoren.plugins.git" },
   { import = "alexanderthoren.plugins.lsp" },
+  { import = "alexanderthoren.plugins.session" },
+  { import = "alexanderthoren.plugins.terminal" },
+  { import = "alexanderthoren.plugins.test" },
+  { import = "alexanderthoren.plugins.ui" },
 }, {
   checker = {
     enabled = true,
