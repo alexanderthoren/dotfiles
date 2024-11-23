@@ -19,6 +19,7 @@ require("lazy").setup({
   { import = "alexanderthoren.plugins.debug" },
   { import = "alexanderthoren.plugins.find" },
   { import = "alexanderthoren.plugins.editor" },
+  { import = "alexanderthoren.plugins.generate" },
   { import = "alexanderthoren.plugins.git" },
   { import = "alexanderthoren.plugins.lsp" },
   { import = "alexanderthoren.plugins.session" },
