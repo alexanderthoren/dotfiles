@@ -14,20 +14,19 @@ return {
         "~/Desktop/",
       },
     })
-
-    local keymap = vim.keymap
-
-    keymap.set(
-      "n",
+  end,
+  keys = {
+    {
       "<leader>sr",
       "<cmd>SessionRestore<CR>",
-      { desc = "Restore session for cwd" }
-    )
-    keymap.set(
-      "n",
+      mode = { "n" },
+      desc = "Restore session for cwd",
+    },
+    {
       "<leader>ss",
       "<cmd>SessionSave<CR>",
-      { desc = "Save session for auto session root dir" }
-    )
-  end,
+      mode = { "n" },
+      desc = "Save session for auto session root dir",
+    },
+  },
 }
