@@ -1,7 +1,7 @@
 return {
   "MeanderingProgrammer/markdown.nvim",
   name = "render-markdown",
-  -- ft = "markdown, copilot-chat",
+  ft = "markdown",
   lazy = true,
   dependencies = {
     "nvim-treesitter/nvim-treesitter",
