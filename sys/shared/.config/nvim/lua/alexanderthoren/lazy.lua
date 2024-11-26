@@ -22,6 +22,7 @@ require("lazy").setup({
   { import = "alexanderthoren.plugins.generate" },
   { import = "alexanderthoren.plugins.git" },
   { import = "alexanderthoren.plugins.lsp" },
+  { import = "alexanderthoren.plugins.rendering" },
   { import = "alexanderthoren.plugins.session" },
   { import = "alexanderthoren.plugins.terminal" },
   { import = "alexanderthoren.plugins.test" },
