@@ -8,10 +8,6 @@ return {
       direction = "float",
     })
 
-    local keymap = vim.keymap
-
-    keymap.set("n", "<C-\\>", ":ToggleTerm<cr>", { desc = "Toggle Terminal" })
-
     local function set_terminal_keymaps()
       local opts = { buffer = 0 }
       vim.keymap.set("t", "<esc>", [[<C-\><C-n>]], opts)
@@ -31,4 +27,12 @@ return {
       end,
     })
   end,
+  keys = {
+    {
+      "<C-\\>",
+      ":ToggleTerm<CR>",
+      mode = { "n" },
+      desc = "Toggle Terminal",
+    },
+  },
 }

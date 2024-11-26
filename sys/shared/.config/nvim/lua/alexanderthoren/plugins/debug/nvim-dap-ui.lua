@@ -1,7 +1,6 @@
 return {
   "rcarriga/nvim-dap-ui",
   dependencies = { "mfussenegger/nvim-dap" },
-  event = "VeryLazy",
   config = function()
     local dapui = require("dapui")
     local dap = require("dap")
@@ -96,14 +95,13 @@ return {
     dap.listeners.before.event_exited.dapui_config = function()
       dapui.close()
     end
-
-    local keymap = vim.keymap
-
-    keymap.set(
-      "n",
+  end,
+  keys = {
+    {
       "<leader>du",
       ":lua require('dapui').toggle()<CR>",
-      { desc = "Toggle DAP UI" }
-    )
-  end,
+      mode = { "n" },
+      { desc = "Toggle DAP UI" },
+    },
+  },
 }

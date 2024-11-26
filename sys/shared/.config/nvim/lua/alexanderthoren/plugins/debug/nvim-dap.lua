@@ -52,25 +52,49 @@ return {
         console = "integratedTerminal",
       },
     }
-
-    local keymap = vim.keymap
-
-    keymap.set(
-      "n",
+  end,
+  keys = {
+    {
       "<leader>db",
       ":DapToggleBreakpoint<CR>",
-      { desc = "Toggle breakpoint" }
-    )
-    keymap.set("n", "<leader>dc", ":DapContinue<CR>", { desc = "Contine" })
-    keymap.set("n", "<leader>dj", ":DapStepOver<CR>", { desc = "Step over" })
-    keymap.set("n", "<leader>di", ":DapStepInto<CR>", { desc = "Step into" })
-    keymap.set("n", "<leader>do", ":DapStepOut<CR>", { desc = "Step out" })
-    keymap.set(
-      "n",
+      mode = { "n" },
+      desc = "Toggle breakpoint",
+    },
+    {
+      "<leader>dc",
+      ":DapContinue<CR>",
+      mode = { "n" },
+      desc = "Contine",
+    },
+    {
+      "<leader>di",
+      ":DapStepInto<CR>",
+      mode = { "n" },
+      desc = "Step into",
+    },
+    {
+      "<leader>dj",
+      ":DapStepOver<CR>",
+      mode = { "n" },
+      desc = "Step over",
+    },
+    {
+      "<leader>do",
+      ":DapStepOut<CR>",
+      mode = { "n" },
+      desc = "Step out",
+    },
+    {
       "<leader>dr",
       ":DapToggleRepl<CR>",
-      { desc = "Toggle REPL" }
-    )
-    keymap.set("n", "<leader>dt", ":DapTerminate<CR>", { desc = "Terminate" })
-  end,
+      mode = { "n" },
+      desc = "Toggle REPL",
+    },
+    {
+      "<leader>dt",
+      ":DapTerminate<CR>",
+      mode = { "n" },
+      desc = "Terminate",
+    },
+  },
 }
