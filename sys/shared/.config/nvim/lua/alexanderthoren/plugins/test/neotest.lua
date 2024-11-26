@@ -19,57 +19,47 @@ return {
         }),
       },
     })
-
-    local keymap = vim.keymap
-
-    keymap.set(
-      "n",
+  end,
+  keys = {
+    {
       "<leader>ncr",
       ":! " .. vim.fn.getcwd() .. "/.venv/bin/coverage run -m pytest<CR>",
-      { desc = "Run tests for coverage report", silent = true }
-    )
-
-    keymap.set(
-      "n",
+      desc = "Run tests for coverage report",
+    },
+    {
       "<leader>nr",
       ":Neotest run<CR>",
-      { desc = "Run tests in file" }
-    )
-    keymap.set(
-      "n",
+      desc = "Run tests in file",
+    },
+    {
       "<leader>ns",
       ":Neotest stop<CR>",
-      { desc = "Stop the running tests" }
-    )
-    keymap.set(
-      "n",
+      desc = "Stop the running tests",
+    },
+    {
       "<leader>nj.",
       ":Neotest jump next<CR>",
-      { desc = "Jump to the next test" }
-    )
-    keymap.set(
-      "n",
+      desc = "Jump to the next test",
+    },
+    {
       "<leader>nj,",
       ":Neotest jump prev<CR>",
-      { desc = "Jump to the previous test" }
-    )
-    keymap.set(
-      "n",
+      desc = "Jump to the previous test",
+    },
+    {
       "<leader>no",
       ":Neotest output<CR>",
-      { desc = "Show tests results in floating view" }
-    )
-    keymap.set(
-      "n",
+      desc = "Show tests results in floating view",
+    },
+    {
       "<leader>np",
       ":Neotest output-panel<CR>",
-      { desc = "Show tests results in split view" }
-    )
-    keymap.set(
-      "n",
+      desc = "Show tests results in split view",
+    },
+    {
       "<leader>nn",
       ":Neotest summary<CR>",
-      { desc = "Show shummary" }
-    )
-  end,
+      desc = "Show shummary",
+    },
+  },
 }

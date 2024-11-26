@@ -87,51 +87,55 @@ return {
 
     telescope.load_extension("fzf")
     telescope.load_extension("smart_open")
-
-    local keymap = vim.keymap
-
-    keymap.set(
-      "n",
+  end,
+  keys = {
+    {
       "<leader>ff",
       ":Telescope find_files<cr>",
-      { desc = "Find files in current working directory" }
-    )
-    keymap.set(
-      "n",
+      mode = { "n" },
+      desc = "Find files in current working directory",
+    },
+    {
       "<leader>fr",
       ":Telescope resume<cr>",
-      { desc = "Resume last search in telescope" }
-    )
-    keymap.set(
-      "n",
+      mode = { "n" },
+      desc = "Resume last search in telescope",
+    },
+    {
       "<leader>fo",
       ":Telescope smart_open<cr>",
-      { desc = "Smartly find recent files" }
-    )
-    keymap.set(
-      "n",
+      mode = { "n" },
+      desc = "Smartly find recent files",
+    },
+    {
       "<leader>fs",
       ":Telescope live_grep<cr>",
-      { desc = "Find string in current working directory" }
-    )
-    keymap.set(
-      "n",
+      mode = { "n" },
+      desc = "Find string in current working directory",
+    },
+    {
       "<leader>fc",
       ":Telescope grep_string<cr>",
-      { desc = "Find string under cursor in current working directory" }
-    )
-    keymap.set(
-      "n",
+      mode = { "n" },
+      desc = "Find string under cursor in current working directory",
+    },
+    {
       "<leader>fd",
       ":Telescope git_status<cr>",
-      { desc = "Find changed files in Git" }
-    )
-    keymap.set("n", "<leader>ft", ":TodoTelescope<cr>", { desc = "Find TODOs" })
-    keymap.set(
-      "n",
+      mode = { "n" },
+      desc = "Find changed files in Git",
+    },
+    {
+      "<leader>ft",
+      ":TodoTelescope<cr>",
+      mode = { "n" },
+      desc = "Find TODOs",
+    },
+    {
       "<leader>fq",
       ":Telescope quickfix<CR>",
-      { desc = "Show QuickFix List" }
-    )
-  end,
+      mode = { "n" },
+      desc = "Show QuickFix List",
+    },
+  },
 }

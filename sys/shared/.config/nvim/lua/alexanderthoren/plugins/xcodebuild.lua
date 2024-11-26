@@ -1,11 +1,10 @@
 return {
   "wojciech-kulik/xcodebuild.nvim",
-  ft = "swift",
+  lazy = true,
   dependencies = {
     "nvim-telescope/telescope.nvim",
     "MunifTanjim/nui.nvim",
     "nvim-tree/nvim-tree.lua",
-    -- "stevearc/oil.nvim", -- (optional) to manage project files
     "nvim-treesitter/nvim-treesitter",
     "mfussenegger/nvim-dap",
   },
@@ -22,157 +21,160 @@ return {
     local codelldbPath = os.getenv("HOME")
       .. "/Developer/codelldb-aarch64-darwin/extension/adapter/codelldb"
     dap.setup(codelldbPath)
-
-    local keymap = vim.keymap
-
-    -- Xcodebuild
-    keymap.set(
-      "n",
+  end,
+  keys = {
+    {
       "<leader>X",
       ":XcodebuildPicker<CR>",
-      { desc = "Show Xcodebuild Actions" }
-    )
-    keymap.set(
-      "n",
+      mode = { "n" },
+      { desc = "Show Xcodebuild Actions" },
+    },
+    {
       "<leader>xf",
       ":XcodebuildProjectManager<CR>",
-      { desc = "Show Project Manager Actions" }
-    )
-    keymap.set(
-      "n",
+      mode = { "n" },
+      { desc = "Show Project Manager Actions" },
+    },
+    {
       "<leader>xb",
       ":XcodebuildBuild<CR>",
-      { desc = "Build Project" }
-    )
-    keymap.set(
-      "n",
+      mode = { "n" },
+      { desc = "Build Project" },
+    },
+    {
       "<leader>xB",
       ":XcodebuildBuildForTesting<CR>",
-      { desc = "Build For Testing" }
-    )
-    keymap.set(
-      "n",
+      mode = { "n" },
+      { desc = "Build For Testing" },
+    },
+    {
       "<leader>xr",
       ":XcodebuildBuildRun<CR>",
-      { desc = "Build & Run Project" }
-    )
-    keymap.set("n", "<leader>xt", ":XcodebuildTest<CR>", { desc = "Run Tests" })
-    keymap.set(
-      "v",
+      mode = { "n" },
+      { desc = "Build & Run Project" },
+    },
+    {
+      "<leader>xt",
+      ":XcodebuildTest<CR>",
+      mode = { "n" },
+      { desc = "Run Tests" },
+    },
+    {
       "<leader>xt",
       ":XcodebuildTestSelected<CR>",
-      { desc = "Run Selected Tests" }
-    )
-    keymap.set(
-      "n",
+      mode = { "v" },
+      { desc = "Run Selected Tests" },
+    },
+    {
       "<leader>xT",
       ":XcodebuildTestClass<CR>",
-      { desc = "Run Current Test Class" }
-    )
-    keymap.set(
-      "n",
+      mode = { "n" },
+      { desc = "Run Current Test Class" },
+    },
+    {
       "<leader>x.",
       ":XcodebuildTestRepeat<CR>",
-      { desc = "Repeat Last Test Run" }
-    )
-    keymap.set(
-      "n",
+      mode = { "n" },
+      { desc = "Repeat Last Test Run" },
+    },
+    {
       "<leader>xl",
       ":XcodebuildToggleLogs<CR>",
-      { desc = "Toggle Xcodebuild Logs" }
-    )
-    keymap.set(
-      "n",
+      mode = { "n" },
+      { desc = "Toggle Xcodebuild Logs" },
+    },
+    {
       "<leader>xc",
       ":XcodebuildToggleCodeCoverage<CR>",
-      { desc = "Toggle Code Coverage" }
-    )
-    keymap.set(
-      "n",
+      mode = { "n" },
+      { desc = "Toggle Code Coverage" },
+    },
+    {
       "<leader>xC",
       ":XcodebuildShowCodeCoverageReport<CR>",
-      { desc = "Show Code Coverage Report" }
-    )
-    keymap.set(
-      "n",
+      mode = { "n" },
+      { desc = "Show Code Coverage Report" },
+    },
+    {
       "<leader>xe",
       ":XcodebuildTestExplorerToggle<CR>",
-      { desc = "Toggle Test Explorer" }
-    )
-    keymap.set(
-      "n",
+      mode = { "n" },
+      { desc = "Toggle Test Explorer" },
+    },
+    {
       "<leader>xs",
       ":XcodebuildFailingSnapshots<CR>",
-      { desc = "Show Failing Snapshots" }
-    )
-    keymap.set(
-      "n",
+      mode = { "n" },
+      { desc = "Show Failing Snapshots" },
+    },
+    {
       "<leader>xD",
       ":XcodebuildSelectDevice<CR>",
-      { desc = "Select Device" }
-    )
-    keymap.set(
-      "n",
+      mode = { "n" },
+      { desc = "Select Device" },
+    },
+    {
       "<leader>xp",
       ":XcodebuildSelectTestPlan<CR>",
-      { desc = "Select Test Plan" }
-    )
-    keymap.set(
-      "n",
+      mode = { "n" },
+      { desc = "Select Test Plan" },
+    },
+    {
       "<leader>xx",
       ":XcodebuildQuickfixLine<CR>",
-      { desc = "Quickfix Line" }
-    )
-    keymap.set(
-      "n",
+      mode = { "n" },
+      { desc = "Quickfix Line" },
+    },
+    {
       "<leader>xa",
       ":XcodebuildCodeActions<CR>",
-      { desc = "Show Code Actions" }
-    )
-    keymap.set(
-      "n",
+      mode = { "n" },
+      { desc = "Show Code Actions" },
+    },
+    {
       "<leader>xS",
       ":XcodebuildBootSimulator<CR>",
-      { desc = "Boot simulator" }
-    )
+      mode = { "n" },
+      { desc = "Boot simulator" },
+    },
 
-    -- Debugging
-    keymap.set(
-      "n",
-      "<leader>xdd",
-      dap.build_and_debug,
-      { desc = "Build & Debug" }
-    )
-    keymap.set(
-      "n",
-      "<leader>xdr",
-      dap.debug_without_build,
-      { desc = "Debug Without Building" }
-    )
-    keymap.set("n", "<leader>xdt", dap.debug_tests, { desc = "Debug Tests" })
-    keymap.set(
-      "n",
-      "<leader>xdT",
-      dap.debug_class_tests,
-      { desc = "Debug Class Tests" }
-    )
-    keymap.set(
-      "n",
-      "<leader>xdb",
-      dap.toggle_breakpoint,
-      { desc = "Toggle Breakpoint" }
-    )
-    keymap.set(
-      "n",
-      "<leader>xdB",
-      dap.toggle_message_breakpoint,
-      { desc = "Toggle Message Breakpoint" }
-    )
-    keymap.set(
-      "n",
-      "<leader>xdx",
-      dap.terminate_session,
-      { desc = "Terminate Debugger" }
-    )
-  end,
+    -- -- Debugging
+    -- {
+    --   "n",
+    --   "<leader>xdd",
+    --   dap.build_and_debug,
+    --   { desc = "Build & Debug" },
+    -- },
+    -- {
+    --   "n",
+    --   "<leader>xdr",
+    --   dap.debug_without_build,
+    --   { desc = "Debug Without Building" },
+    -- },
+    -- { "n", "<leader>xdt", dap.debug_tests, { desc = "Debug Tests" } },
+    -- {
+    --   "n",
+    --   "<leader>xdT",
+    --   dap.debug_class_tests,
+    --   { desc = "Debug Class Tests" },
+    -- },
+    -- {
+    --   "n",
+    --   "<leader>xdb",
+    --   dap.toggle_breakpoint,
+    --   { desc = "Toggle Breakpoint" },
+    -- },
+    -- {
+    --   "n",
+    --   "<leader>xdB",
+    --   dap.toggle_message_breakpoint,
+    --   { desc = "Toggle Message Breakpoint" },
+    -- },
+    -- {
+    --   "n",
+    --   "<leader>xdx",
+    --   dap.terminate_session,
+    --   { desc = "Terminate Debugger" },
+    -- },
+  },
 }
