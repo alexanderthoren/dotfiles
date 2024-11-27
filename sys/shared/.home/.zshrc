@@ -192,13 +192,11 @@ alias bbrwc="bartib -f ~/.dailylog report --current_week"
 alias bbrwl="bartib -f ~/.dailylog report --last_week"
 alias bbp="bartib -f ~/.dailylog projects"
 
-
 # Load Angular CLI autocompletion.
 source <(ng completion script)
 
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
 export DEBUGPY_ROOT="$HOME/.virtualenvs/debugpy"
 export PATH="$DEBUGPY_ROOT/bin:$PATH"
+
+eval "$(uv generate-shell-completion zsh)"
+eval "$(uvx --generate-shell-completion zsh)"

@@ -31,8 +31,8 @@ return {
         keymap.set(
           "n",
           "gd",
-          "<cmd>Telescope lsp_definitions<CR>",
-          { desc = "Show definitions" }
+          vim.lsp.buf.definition,
+          { desc = "Go to definition" }
         )
 
         keymap.set(
