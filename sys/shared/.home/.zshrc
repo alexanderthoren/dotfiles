@@ -197,6 +197,3 @@ source <(ng completion script)
 
 export DEBUGPY_ROOT="$HOME/.virtualenvs/debugpy"
 export PATH="$DEBUGPY_ROOT/bin:$PATH"
-
-eval "$(uv generate-shell-completion zsh)"
-eval "$(uvx --generate-shell-completion zsh)"
