@@ -1,4 +1,6 @@
 vim.cmd("let g:netrw_liststyle = 3")
+vim.cmd("highlight Normal guibg=NONE ctermbg=NONE")
+vim.cmd("highlight NonText guibg=NONE ctermbg=NONE")
 
 local opt = vim.opt
 

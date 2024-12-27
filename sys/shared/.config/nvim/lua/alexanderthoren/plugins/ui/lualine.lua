@@ -14,39 +14,39 @@ return {
       red = "#ea6962",
       fg = "#ddc7a1",
       bg = "#1b1b1b",
-      inactive_bg = "#1b1b1b",
+      transparent = nil,
     }
 
     local my_lualine_theme = {
       normal = {
         a = { bg = colors.blue, fg = colors.bg, gui = "bold" },
-        b = { bg = colors.bg, fg = colors.fg },
-        c = { bg = colors.bg, fg = colors.fg },
+        b = { bg = colors.transparent, fg = colors.fg },
+        c = { bg = colors.transparent, fg = colors.fg },
       },
       insert = {
         a = { bg = colors.green, fg = colors.bg, gui = "bold" },
-        b = { bg = colors.bg, fg = colors.fg },
-        c = { bg = colors.bg, fg = colors.fg },
+        b = { bg = colors.transparent, fg = colors.fg },
+        c = { bg = colors.transparent, fg = colors.fg },
       },
       visual = {
         a = { bg = colors.violet, fg = colors.bg, gui = "bold" },
-        b = { bg = colors.bg, fg = colors.fg },
-        c = { bg = colors.bg, fg = colors.fg },
+        b = { bg = colors.transparent, fg = colors.fg },
+        c = { bg = colors.transparent, fg = colors.fg },
       },
       command = {
         a = { bg = colors.yellow, fg = colors.bg, gui = "bold" },
-        b = { bg = colors.bg, fg = colors.fg },
-        c = { bg = colors.bg, fg = colors.fg },
+        b = { bg = colors.transparent, fg = colors.fg },
+        c = { bg = colors.transparent, fg = colors.fg },
       },
       replace = {
         a = { bg = colors.red, fg = colors.bg, gui = "bold" },
-        b = { bg = colors.bg, fg = colors.fg },
-        c = { bg = colors.bg, fg = colors.fg },
+        b = { bg = colors.transparent, fg = colors.fg },
+        c = { bg = colors.transparent, fg = colors.fg },
       },
       inactive = {
-        a = { bg = colors.inactive_bg, fg = colors.semilightgray, gui = "bold" },
-        b = { bg = colors.inactive_bg, fg = colors.semilightgray },
-        c = { bg = colors.inactive_bg, fg = colors.semilightgray },
+        a = { bg = colors.transparent, fg = colors.semilightgray, gui = "bold" },
+        b = { bg = colors.transparent, fg = colors.semilightgray },
+        c = { bg = colors.transparent, fg = colors.semilightgray },
       },
     }
 

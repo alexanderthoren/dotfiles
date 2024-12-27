@@ -152,6 +152,10 @@ if.app-name-regex-substring = 'alacritty'
 run = ['move-node-to-workspace 1']
 
 [[on-window-detected]]
+if.app-name-regex-substring = 'ghostty'
+run = ['move-node-to-workspace 1']
+
+[[on-window-detected]]
 if.app-name-regex-substring = 'Xcode'
 run = ['move-node-to-workspace 1']
 
