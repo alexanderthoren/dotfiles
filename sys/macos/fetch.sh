@@ -6,6 +6,8 @@ dotfiles_dir="$(dirname "$0")"
 cp ~/.aerospace.toml "$dotfiles_dir/.home"
 
 # Copy macos ~/.config files
+rm -r "$dotfiles_dir/.config/ghostty"
+cp -r ~/.config/ghostty "$dotfiles_dir/.config"
 rm -r "$dotfiles_dir/.config/alacritty"
 cp -r ~/.config/alacritty "$dotfiles_dir/.config"
 rm -r "$dotfiles_dir/.config/sketchybar"

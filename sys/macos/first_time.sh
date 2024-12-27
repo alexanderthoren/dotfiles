@@ -44,6 +44,7 @@ brew install peripheryapp/periphery/periphery
 
 # Install apps
 brew install --no-quarantine alacritty
+brew install ghostty
 brew install arc
 brew install raycast
 brew install notion

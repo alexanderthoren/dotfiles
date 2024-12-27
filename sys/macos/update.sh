@@ -6,6 +6,9 @@ dotfiles_dir="$(dirname "$0")"
 cp "$dotfiles_dir/.home/.aerospace.toml" ~
 
 # Copy macos ~/.config files
+ghostty_path=~/.config/ghostty
+if [ -d "$ghostty_path" ]; then rm -rf "$ghostty_path"; fi
+cp -r "$dotfiles_dir/.config/ghostty" ~/.config
 alacrity_path=~/.config/alacritty
 if [ -d "$alacrity_path" ]; then rm -rf "$alacrity_path"; fi
 cp -r "$dotfiles_dir/.config/alacritty" ~/.config
