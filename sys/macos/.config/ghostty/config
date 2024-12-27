@@ -1,15 +1,17 @@
 shell-integration = zsh
 
 background-opacity = 0
-background-blur-radius = 15
+background-blur-radius = 100
 
 title = " "
+macos-titlebar-style = hidden
 
 font-family = "FiraCode Nerd Font Mono Med"
 font-size = 12
 
+background = "#000000"
 foreground = "#ddc7a1"
-cursor-color = "#ea6962"
+
 palette = 0=#15161e
 palette = 1=#ea6962
 palette = 2=#a9b665
@@ -26,3 +28,7 @@ palette = 12=#7daea3
 palette = 13=#d3869b
 palette = 14=#89b482
 palette = 15=#ddc7a1
+
+cursor-color = "#ea6962"
+selection-background = "#d3869b"
+selection-foreground = "#15161e"
