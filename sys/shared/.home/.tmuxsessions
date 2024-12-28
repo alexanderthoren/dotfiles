@@ -1,9 +1,21 @@
-# start tmux if it is not already running
+if [ -f .tmuxtheme.conf ]; then
+    source .tmuxtheme.conf
+fi
 
-tmux new -d -s 'default' -n 'Home' -c ~
-tmux neww -d -t 'default:1' -n 'Dotfiles' -c ~/Developer/dotfiles
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+    for session in default work; do
+        if ! tmux has-session -t "$session" 2>/dev/null; then
+            case $session in
+                default)
+                    tmux new-session -d -s 'default' -n 'Home' -c ~
+                    tmux new-window -d -t 'default:1' -n 'Dotfiles' -c ~/Developer/dotfiles
+                    ;;
+                work)
+                    tmux new-session -d -s 'work' -n 'developer' -c ~/Developer/
+                    ;;
+            esac
+        fi
+    done
 
-if [ -z "$TMUX" ]
-then
-	tmux attach -t 'default'
+    tmux attach-session -t 'default'
 fi

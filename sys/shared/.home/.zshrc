@@ -1,6 +1,9 @@
 #!/bin/sh
 # shellcheck disable=SC2035,SC3028,SC3010,SC3046,SC1091,SC1090
 
+autoload -Uz compinit
+compinit
+
 ostype=$OSTYPE
 if [[ $ostype == "linux-gnu"* ]]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
@@ -17,17 +20,19 @@ source "$(brew --prefix)"/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # shellcheck disable=SC2034
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#d3869b"
 
-eval "$(fzf --zsh)"
-eval "$(zoxide init zsh)"
-eval "$(thefuck --alias fuck)"
-eval "$(rbenv init - zsh)"
-
 # run tmux
-source .tmuxtheme.conf
 source ~/.tmuxsessions
 
 # run starship
 eval "$(starship init zsh)"
+
+# vim mode in zsh
+bindkey -v
+
+eval "$(fzf --zsh)"
+eval "$(zoxide init zsh)"
+eval "$(thefuck --alias fuck)"
+eval "$(rbenv init - zsh)"
 
 # bun completions
 [ -s "/Users/fever/.bun/_bun" ] && source "/Users/fever/.bun/_bun"
@@ -40,30 +45,20 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export SOURCEKIT_PATH=/usr/bin/sourcekit-lsp
 export PATH="$SOURCEKIT_PATH:$PATH"
 
-# vim mode in zsh
-bindkey -v
-
 # aliases
 # system
 alias cd="z"
 alias ..="cd .."
 alias ls="eza --oneline --icons=always --group-directories-first"
-alias lss="eza --oneline --icons=always --reverse --sort=size"
-alias lsg="eza --oneline --icons=always --long --header --inode --git"
+alias lsd="du -h -d 1"
+alias ll="ls -la"
 alias szsh="source ~/.zshrc"
 alias f.files="source ~/Developer/dotfiles/run.sh f"
 alias u.files="source ~/Developer/dotfiles/run.sh u"
-alias ll="ls -la"
 alias f="fzf"
 alias fe="fzf -e"
 alias n="nvim"
-alias bupd="brew update"
-alias bupg="brew upgrade"
 alias grex="grex -c"
-alias fuk='fuck'
-alias fuky='fuck --yeah'
-fappname () { mdls -name kMDItemCFBundleIdentifier -r /Applications/"$1".app ; }
-alias getnf="~/.local/bin/getnf"
 alias lg="lazygit"
 
 # git
