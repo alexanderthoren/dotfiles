@@ -10,10 +10,10 @@ return {
 
     keymap.set(
       "n",
-      "<leader>fh",
+      "<leader>fH",
       ":HopChar2<cr>",
       { desc = "Hop with 2 chars" }
     )
-    keymap.set("n", "<leader>fH", ":HopWord<cr>", { desc = "Hop to word" })
+    keymap.set("n", "<leader>fh", ":HopWord<cr>", { desc = "Hop to word" })
   end,
 }
