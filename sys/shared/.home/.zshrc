@@ -31,7 +31,6 @@ bindkey -v
 
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
-eval "$(thefuck --alias fuck)"
 eval "$(rbenv init - zsh)"
 
 # bun completions
@@ -186,9 +185,6 @@ alias bbry="bartib -f ~/.dailylog report --yesterday"
 alias bbrwc="bartib -f ~/.dailylog report --current_week"
 alias bbrwl="bartib -f ~/.dailylog report --last_week"
 alias bbp="bartib -f ~/.dailylog projects"
-
-# Load Angular CLI autocompletion.
-source <(ng completion script)
 
 export DEBUGPY_ROOT="$HOME/.virtualenvs/debugpy"
 export PATH="$DEBUGPY_ROOT/bin:$PATH"
