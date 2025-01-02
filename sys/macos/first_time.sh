@@ -27,6 +27,10 @@ brew install lazygit
 brew install xcbeautify
 brew install httpie
 brew install silicon
+brew install uv
+
+# Install uv plugins
+uv tool install --python 3.12 posting
 
 # bash
 brew install shellcheck
