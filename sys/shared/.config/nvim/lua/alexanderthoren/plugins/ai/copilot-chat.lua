@@ -9,6 +9,7 @@ return {
     local chat = require("CopilotChat")
 
     chat.setup({
+      model = "claude-3.5-sonnet",
       highlight_headers = false,
       separator = "---",
       error_header = "> [!ERROR] Error",

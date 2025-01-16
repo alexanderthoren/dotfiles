@@ -13,6 +13,7 @@ return {
         lua = { "stylua" },
         swift = { "swiftformat" },
         html = { "prettier" },
+        xhtml = { "prettier" },
         python = { "ruff_format" },
       },
       -- format_on_save = {
