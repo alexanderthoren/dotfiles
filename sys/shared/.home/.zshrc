@@ -60,6 +60,9 @@ alias n="nvim"
 alias grex="grex -c"
 alias lg="lazygit"
 
+# github cli
+alias gai="gh copilot"
+
 # git
 alias g="git"
 alias ga="git add"
