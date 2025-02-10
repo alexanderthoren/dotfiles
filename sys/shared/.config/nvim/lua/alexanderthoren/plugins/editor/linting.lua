@@ -9,6 +9,8 @@ return {
       lua = { "luacheck" },
       swift = { "swiftlint" },
       python = { "ruff" },
+      typescript = { "eslint" },
+      javascript = { "eslint" },
     }
 
     local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })

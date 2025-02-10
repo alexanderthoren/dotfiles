@@ -15,6 +15,8 @@ return {
         html = { "prettier" },
         xhtml = { "prettier" },
         python = { "ruff_format" },
+        javascript = { "prettier" },
+        typescript = { "prettier" },
       },
       -- format_on_save = {
       --   lsp_fallback = true,
