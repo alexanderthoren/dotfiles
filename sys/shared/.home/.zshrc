@@ -61,7 +61,9 @@ alias grex="grex -c"
 alias lg="lazygit"
 
 # github cli
-alias gai="gh copilot"
+alias ghc="gh copilot"
+alias ghce="gh copilot explain"
+alias ghcs="gh copilot suggest"
 
 # git
 alias g="git"

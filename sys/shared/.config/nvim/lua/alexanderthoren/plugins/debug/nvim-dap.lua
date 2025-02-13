@@ -52,30 +52,6 @@ return {
         console = "integratedTerminal",
       },
     }
-
-    dap.adapters.lldb = {
-      type = "executable",
-      command = "/Applications/Xcode-16.2.0.app/Contents/SharedFrameworks/LLDB.framework",
-      name = "lldb",
-    }
-
-    dap.configurations.swift = {
-      {
-        name = "Launch",
-        type = "lldb",
-        request = "launch",
-        program = function()
-          return vim.fn.input(
-            "Path to executable: ",
-            vim.fn.getcwd() .. "/.build/debug/",
-            "file"
-          )
-        end,
-        cwd = "${workspaceFolder}",
-        stopOnEntry = false,
-        args = {},
-      },
-    }
   end,
   keys = {
     {
