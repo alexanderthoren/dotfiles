@@ -2,7 +2,7 @@ return {
   "yetone/avante.nvim",
   event = "VeryLazy",
   lazy = false,
-  version = "*", -- Set this to "*" to always pull the latest release version, or set it to false to update to the latest code changes.
+  version = "*",
   opts = {
     provider = "copilot",
     copilot = {
@@ -46,6 +46,14 @@ return {
         file_types = { "markdown", "Avante" },
       },
       ft = { "markdown", "Avante" },
+    },
+  },
+  keys = {
+    {
+      "<leader>am",
+      ':AvanteAsk "Generate a commit message for this changes following git convention."<cr>',
+      mode = { "n" },
+      desc = "Write commit message",
     },
   },
 }
