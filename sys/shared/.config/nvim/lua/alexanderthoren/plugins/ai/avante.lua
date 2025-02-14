@@ -55,5 +55,11 @@ return {
       mode = { "n" },
       desc = "Write commit message",
     },
+    {
+      "<leader>ax",
+      ':AvanteClear<cr>',
+      mode = { "n" },
+      desc = "Clear chat",
+    },
   },
 }

@@ -16,6 +16,8 @@ return {
         "shellcheck",
         "ruff",
         "pyright",
+        "ruby_lsp",
+        "rubocop",
       },
     })
   end,
