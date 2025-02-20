@@ -47,4 +47,4 @@ local codecompanion = {
   },
 }
 
-return codecompanion
+return {}

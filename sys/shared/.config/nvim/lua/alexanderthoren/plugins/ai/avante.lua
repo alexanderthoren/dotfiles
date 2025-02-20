@@ -120,34 +120,26 @@ local ollama = {
   parse_stream_data = parse_stream_data,
 }
 
-return {
+local avante = {
   "yetone/avante.nvim",
   event = "VeryLazy",
   lazy = false,
   version = "*",
   opts = {
-    -- provider = "copilot",
-    -- copilot = {
-    --   endpoint = "https://api.githubcopilot.com/",
-    --   model = "claude-3.5-sonnet",
-    --   proxy = nil, -- [protocol://]host[:port] Use this proxy
-    --   allow_insecure = false, -- Do not allow insecure server connections
-    --   timeout = 30000, -- Timeout in milliseconds
-    --   temperature = 0.1, -- kinda creative
-    --   max_tokens = 8192,
-    -- },
-    auto_suggestions_provider = "ollama",
-    provider = "ollama",
-    vendors = {
-      ollama = ollama,
+    provider = "copilot",
+    copilot = {
+      endpoint = "https://api.githubcopilot.com/",
+      model = "claude-3.5-sonnet",
+      proxy = nil, -- [protocol://]host[:port] Use this proxy
+      allow_insecure = false, -- Do not allow insecure server connections
+      timeout = 30000, -- Timeout in milliseconds
+      temperature = 0.1, -- kinda creative
+      max_tokens = 8192,
     },
+    -- auto_suggestions_provider = "ollama",
+    -- provider = "ollama",
     -- vendors = {
-    --   ollama = {
-    --     __inherited_from = "openai",
-    --     api_key_name = "",
-    --     endpoint = "http://127.0.0.1:11434/v1/chat/completions",
-    --     model = "deepseek-coder-v2:16b",
-    --   },
+    --   ollama = ollama,
     -- },
   },
   build = "make",
@@ -198,3 +190,5 @@ return {
     },
   },
 }
+
+return avante
