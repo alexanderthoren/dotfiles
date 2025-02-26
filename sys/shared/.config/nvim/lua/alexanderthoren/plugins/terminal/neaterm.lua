@@ -1,4 +1,4 @@
-return {
+local neaterm = {
   "Dan7h3x/neaterm.nvim",
   dependencies = {
     "nvim-lua/plenary.nvim",
@@ -57,3 +57,5 @@ return {
     },
   },
 }
+
+return neaterm

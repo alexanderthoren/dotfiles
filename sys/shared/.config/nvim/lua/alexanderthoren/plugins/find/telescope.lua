@@ -1,4 +1,4 @@
-return {
+local telescope = {
   "nvim-telescope/telescope.nvim",
   dependencies = {
     "nvim-lua/plenary.nvim",
@@ -139,3 +139,5 @@ return {
     },
   },
 }
+
+return telescope

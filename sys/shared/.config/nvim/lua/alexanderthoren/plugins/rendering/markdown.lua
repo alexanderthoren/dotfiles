@@ -1,4 +1,4 @@
-return {
+local render_markdown = {
   "MeanderingProgrammer/markdown.nvim",
   name = "render-markdown",
   ft = "markdown",
@@ -14,3 +14,5 @@ return {
     })
   end,
 }
+
+return render_markdown

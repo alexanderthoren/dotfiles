@@ -1,4 +1,4 @@
-return {
+local bufferline = {
   "akinsho/bufferline.nvim",
   version = "*",
   dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -6,7 +6,9 @@ return {
   opts = {
     options = {
       mode = "tabs",
-      separator_style = {" ", " "},
+      separator_style = { " ", " " },
     },
   },
 }
+
+return bufferline

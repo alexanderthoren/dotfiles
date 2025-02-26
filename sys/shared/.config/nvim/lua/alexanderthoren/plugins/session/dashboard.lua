@@ -8,7 +8,7 @@ local logo = {
   "   ░▒▓█▓▒░     ░▒▓█▓▒░░▒▓█▓▒░  ░▒▓██████▓▒░  ░▒▓█▓▒░░▒▓█▓▒░ ░▒▓█▓▒░░▒▓█▓▒░    ░▒▓██▓▒░    ░▒▓█▓▒░ ░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░",
 }
 
-return {
+local dashboard = {
   "nvimdev/dashboard-nvim",
   dependencies = { { "nvim-tree/nvim-web-devicons" } },
   event = "VimEnter",
@@ -28,3 +28,5 @@ return {
     })
   end,
 }
+
+return dashboard

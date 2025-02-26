@@ -1,4 +1,4 @@
-return {
+local auto_session = {
   "rmagatti/auto-session",
   lazy = true,
   config = function()
@@ -30,3 +30,5 @@ return {
     },
   },
 }
+
+return auto_session

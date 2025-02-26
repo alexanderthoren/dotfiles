@@ -1,4 +1,4 @@
-return {
+local mason_lspconfig = {
   "williamboman/mason-lspconfig.nvim",
   dependencies = {
     "williamboman/mason.nvim",
@@ -13,3 +13,5 @@ return {
     })
   end,
 }
+
+return mason_lspconfig

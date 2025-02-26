@@ -1,4 +1,4 @@
-return {
+local lazygit = {
   "kdheepak/lazygit.nvim",
   cmd = {
     "LazyGit",
@@ -14,3 +14,5 @@ return {
     { "<leader>lg", "<cmd>LazyGit<cr>", desc = "Open lazy git" },
   },
 }
+
+return lazygit

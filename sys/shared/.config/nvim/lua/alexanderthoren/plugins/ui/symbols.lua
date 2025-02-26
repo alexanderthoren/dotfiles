@@ -1,4 +1,4 @@
-return {
+local symbols = {
   "oskarrrrrrr/symbols.nvim",
   config = function()
     local r = require("symbols.recipes")
@@ -30,3 +30,5 @@ return {
     },
   },
 }
+
+return symbols

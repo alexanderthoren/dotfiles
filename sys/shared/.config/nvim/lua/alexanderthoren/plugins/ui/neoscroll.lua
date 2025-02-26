@@ -1,4 +1,4 @@
-return {
+local neoscroll = {
   "karb94/neoscroll.nvim",
   event = { "BufReadPre", "BufNewFile" },
   config = function()
@@ -54,3 +54,5 @@ return {
     end
   end,
 }
+
+return neoscroll

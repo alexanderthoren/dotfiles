@@ -1,4 +1,4 @@
-return {
+local nvim_dap = {
   "mfussenegger/nvim-dap",
   dependencies = { "nvim-neotest/nvim-nio" },
   config = function()
@@ -98,3 +98,5 @@ return {
     },
   },
 }
+
+return nvim_dap

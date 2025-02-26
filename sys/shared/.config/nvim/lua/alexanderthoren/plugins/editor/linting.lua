@@ -1,4 +1,4 @@
-return {
+local linting = {
   "mfussenegger/nvim-lint",
   event = { "BufReadPre", "BufNewFile" },
   config = function()
@@ -28,3 +28,5 @@ return {
     end, { desc = "Lint file" })
   end,
 }
+
+return linting

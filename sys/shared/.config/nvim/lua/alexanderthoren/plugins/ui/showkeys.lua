@@ -1,4 +1,4 @@
-return {
+local showkeys = {
   "nvzone/showkeys",
   opts = {
     position = "bottom-center",
@@ -7,3 +7,5 @@ return {
     { "<leader>mk", ":ShowkeysToggle<CR>", mode = { "n" }, desc = "Show keys" },
   },
 }
+
+return showkeys

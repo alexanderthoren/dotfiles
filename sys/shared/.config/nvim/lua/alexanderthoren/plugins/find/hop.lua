@@ -1,4 +1,4 @@
-return {
+local hop = {
   "phaazon/hop.nvim",
   event = "BufRead",
   config = function()
@@ -17,3 +17,5 @@ return {
     keymap.set("n", "<leader>fh", ":HopWord<cr>", { desc = "Hop to word" })
   end,
 }
+
+return hop

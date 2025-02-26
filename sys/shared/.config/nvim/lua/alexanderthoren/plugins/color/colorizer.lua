@@ -1,4 +1,4 @@
-return {
+local colorizer = {
   "norcalli/nvim-colorizer.lua",
   event = "BufEnter",
   config = function()
@@ -9,3 +9,5 @@ return {
     vim.cmd("autocmd! BufRead * :ColorizerAttachToBuffer")
   end,
 }
+
+return colorizer

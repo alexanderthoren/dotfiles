@@ -1,4 +1,4 @@
-return {
+local nvim_dap_ui = {
   "rcarriga/nvim-dap-ui",
   dependencies = { "mfussenegger/nvim-dap" },
   config = function()
@@ -105,3 +105,5 @@ return {
     },
   },
 }
+
+return nvim_dap_ui

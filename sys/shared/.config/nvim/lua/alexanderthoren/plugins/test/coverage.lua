@@ -1,4 +1,4 @@
-return {
+local coverage = {
   "andythigpen/nvim-coverage",
   dependencies = {
     "nvim-lua/plenary.nvim",
@@ -65,3 +65,5 @@ return {
     },
   },
 }
+
+return coverage

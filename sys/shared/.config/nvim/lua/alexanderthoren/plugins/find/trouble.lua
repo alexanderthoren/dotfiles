@@ -1,4 +1,4 @@
-return {
+local trouble = {
   "folke/trouble.nvim",
   dependencies = { "folke/todo-comments.nvim" },
   opts = {},
@@ -36,3 +36,5 @@ return {
     },
   },
 }
+
+return trouble

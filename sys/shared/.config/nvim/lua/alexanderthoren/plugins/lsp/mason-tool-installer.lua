@@ -1,4 +1,4 @@
-return {
+local mason_tool_installer = {
   "WhoIsSethDaniel/mason-tool-installer.nvim",
   dependencies = {
     "williamboman/mason.nvim",
@@ -22,3 +22,5 @@ return {
     })
   end,
 }
+
+return mason_tool_installer

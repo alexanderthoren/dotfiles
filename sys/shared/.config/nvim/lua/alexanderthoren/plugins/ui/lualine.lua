@@ -1,4 +1,4 @@
-return {
+local lualine = {
   "nvim-lualine/lualine.nvim",
   dependencies = { "nvim-tree/nvim-web-devicons" },
   event = { "BufReadPre", "BufNewFile" },
@@ -86,3 +86,5 @@ return {
     })
   end,
 }
+
+return lualine

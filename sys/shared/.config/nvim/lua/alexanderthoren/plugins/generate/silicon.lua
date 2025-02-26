@@ -1,4 +1,4 @@
-return {
+local silicon = {
   "michaelrommel/nvim-silicon",
   event = "BufRead",
   cmd = "Silicon",
@@ -27,3 +27,5 @@ return {
     )
   end,
 }
+
+return silicon

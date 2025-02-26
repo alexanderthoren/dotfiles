@@ -1,4 +1,4 @@
-return {
+local live_preview = {
   "brianhuster/live-preview.nvim",
   opts = {
     sync_scroll = true,
@@ -8,3 +8,5 @@ return {
     { "<leader>pc", "<cmd>LivePreview close<CR>" },
   },
 }
+
+return live_preview

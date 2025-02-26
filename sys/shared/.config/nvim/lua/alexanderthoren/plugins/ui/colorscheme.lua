@@ -1,4 +1,4 @@
-return {
+local colorscheme = {
   "sainnhe/gruvbox-material",
   priority = 1000,
   config = function()
@@ -8,3 +8,5 @@ return {
     vim.cmd("colorscheme gruvbox-material")
   end,
 }
+
+return colorscheme

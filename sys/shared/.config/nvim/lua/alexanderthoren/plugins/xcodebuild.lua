@@ -1,4 +1,4 @@
-return {
+local xcodebuild = {
   "wojciech-kulik/xcodebuild.nvim",
   dependencies = {
     "nvim-telescope/telescope.nvim",
@@ -165,3 +165,5 @@ return {
     )
   end,
 }
+
+return xcodebuild

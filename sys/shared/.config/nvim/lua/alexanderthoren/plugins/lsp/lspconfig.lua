@@ -1,4 +1,4 @@
-return {
+local lspconfig = {
   "neovim/nvim-lspconfig",
   dependencies = {
     "hrsh7th/cmp-nvim-lsp",
@@ -157,3 +157,5 @@ return {
     mason_lspconfig.setup({ handlers = handlers })
   end,
 }
+
+return lspconfig

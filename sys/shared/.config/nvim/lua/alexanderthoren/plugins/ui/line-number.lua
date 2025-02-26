@@ -1,4 +1,4 @@
-return {
+local line_number = {
   "sethen/line-number-change-mode.nvim",
   event = { "BufReadPre", "BufNewFile" },
   config = function()
@@ -43,3 +43,5 @@ return {
     })
   end,
 }
+
+return line_number
