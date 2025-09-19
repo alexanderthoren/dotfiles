@@ -10,3 +10,4 @@ SDKStatCaches.noindex
 TestResults
 Logs
 .nvim
+.vscode

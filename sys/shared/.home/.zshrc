@@ -89,6 +89,7 @@ alias gd-1="git diff head~1"
 alias gdrg="git diff head~1 | rg" 
 alias gdt="git difftool -y"
 alias gdpb="git diff | pbcopy"
+gdpbc () { git diff "$1" | pbcopy ; }
 alias gf="git fetch --all -p"
 alias gl="git log" 
 alias gm="git merge"
@@ -198,3 +199,4 @@ eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"
 
 export PYTHONPATH="${PYTHONPATH}:./src"
+export PATH="$HOME/.local/bin:$PATH"
