@@ -12,6 +12,7 @@ font-size = 12
 background = "#000000"
 foreground = "#ddc7a1"
 
+# Normal colors (0-7) - darker
 palette = 0=#15161e
 palette = 1=#ea6962
 palette = 2=#a9b665
@@ -20,15 +21,17 @@ palette = 4=#7daea3
 palette = 5=#d3869b
 palette = 6=#89b482
 palette = 7=#ddc7a1
-palette = 8=#15161e
-palette = 9=#ea6962
-palette = 10=#a9b665
-palette = 11=#d8a657
-palette = 12=#7daea3
-palette = 13=#d3869b
-palette = 14=#89b482
-palette = 15=#ddc7a1
+
+# Bright colors (8-15) - brighter
+palette = 8=#504945
+palette = 9=#f28b86
+palette = 10=#bfd095
+palette = 11=#e5ba7a
+palette = 12=#9dc2b8
+palette = 13=#e5a0b5
+palette = 14=#a0c89a
+palette = 15=#f0e7d2
 
 cursor-color = "#ea6962"
-selection-background = "#d3869b"
-selection-foreground = "#15161e"
+selection-background = "#504945"
+selection-foreground = "#fbf1c7"

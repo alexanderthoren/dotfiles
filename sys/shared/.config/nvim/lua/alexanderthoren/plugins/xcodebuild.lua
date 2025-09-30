@@ -13,7 +13,13 @@ local xcodebuild = {
 
     xcodebuild.setup({
       code_coverage = {
-        enabled = true,
+        enabled = true, -- generate code coverage report and show marks
+        file_pattern = "*.swift", -- coverage will be shown in files matching this pattern
+        -- configuration of line coverage presentation:
+        covered_sign = "",
+        partially_covered_sign = "┃",
+        not_covered_sign = "┃",
+        not_executable_sign = "",
       },
     })
 

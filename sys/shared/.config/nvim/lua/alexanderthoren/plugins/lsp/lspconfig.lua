@@ -152,6 +152,11 @@ local lspconfig = {
           capabilities = capabilities,
         })
       end,
+      ["zls"] = function()
+        lspconfig.zls.setup({
+          capabilities = capabilities,
+        })
+      end,
     }
 
     mason_lspconfig.setup({ handlers = handlers })

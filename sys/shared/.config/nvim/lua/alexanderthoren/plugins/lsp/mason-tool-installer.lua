@@ -18,6 +18,7 @@ local mason_tool_installer = {
         "pyright",
         "ruby_lsp",
         "rubocop",
+        "zls",
       },
     })
   end,

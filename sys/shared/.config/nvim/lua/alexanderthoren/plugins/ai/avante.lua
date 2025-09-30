@@ -178,7 +178,8 @@ local avante = {
   keys = {
     {
       "<leader>am",
-      ':AvanteAsk "Generate a commit message for this changes following git convention."<cr>',
+      ':AvanteAsk "Generate a commit message for this changes following git '
+        .. "commit convention. Don't apply the commit, let me decide and apply it manually.\"<cr>",
       mode = { "n" },
       desc = "Write commit message",
     },
