@@ -200,3 +200,4 @@ eval "$(uvx --generate-shell-completion zsh)"
 
 export PYTHONPATH="${PYTHONPATH}:./src"
 export PATH="$HOME/.local/bin:$PATH"
+source ~/.invoke-completion.sh
