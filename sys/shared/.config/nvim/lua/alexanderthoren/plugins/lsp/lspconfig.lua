@@ -5,7 +5,6 @@ local lspconfig = {
   },
   event = { "BufReadPre", "BufNewFile" },
   config = function()
-    local lspconfig = require("lspconfig")
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
     local mason_lspconfig = require("mason-lspconfig")
 
@@ -104,7 +103,8 @@ local lspconfig = {
       vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
     end
 
-    lspconfig.sourcekit.setup({
+    -- Configure sourcekit LSP
+    vim.lsp.config.sourcekit = {
       capabilities = {
         workspace = {
           didChangeWatchedFiles = {
@@ -112,16 +112,18 @@ local lspconfig = {
           },
         },
       },
-    })
+    }
+    vim.lsp.enable("sourcekit")
 
     local handlers = {
       function(server_name)
-        lspconfig[server_name].setup({
+        vim.lsp.config[server_name] = {
           capabilities = capabilities,
-        })
+        }
+        vim.lsp.enable(server_name)
       end,
       ["lua_ls"] = function()
-        lspconfig.lua_ls.setup({
+        vim.lsp.config.lua_ls = {
           capabilities = capabilities,
           settings = {
             Lua = {
@@ -130,32 +132,38 @@ local lspconfig = {
               },
             },
           },
-        })
+        }
+        vim.lsp.enable("lua_ls")
       end,
       ["bashls"] = function()
-        lspconfig.bashls.setup({
+        vim.lsp.config.bashls = {
           capabilities = capabilities,
-        })
+        }
+        vim.lsp.enable("bashls")
       end,
       ["ruff"] = function()
-        lspconfig.ruff.setup({
+        vim.lsp.config.ruff = {
           capabilities = capabilities,
-        })
+        }
+        vim.lsp.enable("ruff")
       end,
       ["pyright"] = function()
-        lspconfig.pyright.setup({
+        vim.lsp.config.pyright = {
           capabilities = capabilities,
-        })
+        }
+        vim.lsp.enable("pyright")
       end,
       ["ruby_lsp"] = function()
-        lspconfig.ruby_lsp.setup({
+        vim.lsp.config.ruby_lsp = {
           capabilities = capabilities,
-        })
+        }
+        vim.lsp.enable("ruby_lsp")
       end,
       ["zls"] = function()
-        lspconfig.zls.setup({
+        vim.lsp.config.zls = {
           capabilities = capabilities,
-        })
+        }
+        vim.lsp.enable("zls")
       end,
     }
 
