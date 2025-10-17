@@ -11,3 +11,5 @@ TestResults
 Logs
 .nvim
 .vscode
+smart-resolve-pr-comments.md
+smart-pr-from-ticket.md

@@ -192,6 +192,10 @@ alias bbrwc="bartib -f ~/.dailylog report --current_week"
 alias bbrwl="bartib -f ~/.dailylog report --last_week"
 alias bbp="bartib -f ~/.dailylog projects"
 
+# cursor
+alias c="cursor"
+alias ca="cursor-agent"
+
 export DEBUGPY_ROOT="$HOME/.virtualenvs/debugpy"
 export PATH="$DEBUGPY_ROOT/bin:$PATH"
 
